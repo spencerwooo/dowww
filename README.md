@@ -2,13 +2,13 @@
 
 <h1 align="center">💎 Dev on Windows with WSL 👨‍💻</h1>
 
-<br>
+<br></br>
+
+> 在 Windows 上面用 WSL 优雅开发
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
 ![windows](https://img.shields.io/badge/Perfect-Windows-orange.svg)
-
-> 在 Windows 上面用 WSL 优雅开发
 
 - [前言](#前言)
 - [准备工作](#准备工作)
