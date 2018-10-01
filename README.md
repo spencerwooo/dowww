@@ -383,4 +383,4 @@ WSL + Hyper 终端的环境是完全可用的一个完美 Linux 环境。美观�
 
 Authored and maintained by Spencer Woo.
 
-[@Blog](https://spencerwoo.com/) · [ⒿJiKe](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwoo98)
+[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwoo98)
