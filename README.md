@@ -289,9 +289,9 @@ bash.exe -c "autopep8 %v_params%"
 - 在 VSCode 设置中加入：
 
 ```json
-"python.linting.pylintPath": "C:\\Users\\spenc\\.vscode_bats\\pylint.bat",
-"python.workspaceSymbols.ctagsPath": "C:\\Users\\spenc\\.vscode_bats\\ctags.bat",
-"python.formatting.autopep8Path": "C:\\Users\\spenc\\.vscode_bats\\autopep8.bat"
+"python.linting.pylintPath": "C:\\Users\\$用户名$\\.vscode_bats\\pylint.bat",
+"python.workspaceSymbols.ctagsPath": "C:\\Users\\$用户名$\\.vscode_bats\\ctags.bat",
+"python.formatting.autopep8Path": "C:\\Users\\$用户名$\\.vscode_bats\\autopep8.bat"
 ```
 
 那么现在拿 VSCode 写 Python 项目的时候应该可以自动代码补全、IntelliSense、跳转定义和自动美化了。👍
