@@ -148,7 +148,7 @@ compinit
 
 基本的终端环境就到这里了。推荐安装 `zsh` 组件：[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)。
 
-<div style="text-align: center;"><img src="https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png" width="60%"></div>
+<div align="center"><img src="https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png" width="60%"></div>
 
 最后成品大概是这样的。🎉🎉🎉
 
@@ -174,7 +174,7 @@ compinit
 
 `wsl-open` 是类似于 macOS 里面 `open` 命令的程序。它能够在 WSL 中用 Windows 文件资源管理器打开文件夹，用 Windows 默认照片打开图片等等，方便开发。
 
-<div style="text-align: center;"><img src="https://i.loli.net/2018/10/01/5bb1b57c6f8ee.gif" alt="wsl-open gif" width="80%"></div>
+<div align="center"><img src="https://i.loli.net/2018/10/01/5bb1b57c6f8ee.gif" alt="wsl-open gif" width="80%"></div>
 
 下载：
 
