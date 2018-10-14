@@ -2,8 +2,6 @@
 
 <h1 align="center">💎 Dev on Windows with WSL 👨‍💻</h1>
 
-<br>
-
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
 ![windows](https://img.shields.io/badge/Perfect-Windows-orange.svg)
@@ -18,11 +16,16 @@
     - [终端环境](#终端环境)
         - [bash](#bash)
         - [Hyper 终端](#hyper-终端)
+- [Disable the bell sound on backspace](#disable-the-bell-sound-on-backspace)
         - [zsh & oh-my-zsh](#zsh--oh-my-zsh)
+- [Change ls colours](#change-ls-colours)
+- [make cd use the ls colours](#make-cd-use-the-ls-colours)
     - [开发工具](#开发工具)
         - [git](#git)
         - [ssh](#ssh)
         - [wsl-open](#wsl-open)
+- [Get npm if you don't have it already](#get-npm-if-you-dont-have-it-already)
+- [Install](#install)
     - [使用 Visual Studio Code 作为主要代码编辑工具](#使用-visual-studio-code-作为主要代码编辑工具)
         - [让 VSCode 使用 WSL 内的 `git` 进行版本控制](#让-vscode-使用-wsl-内的-git-进行版本控制)
         - [Python](#python)
