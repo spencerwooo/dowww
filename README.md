@@ -1,6 +1,6 @@
 ![1.jpg](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
-<h1 align="center">💎 Dev on Windows with WSL 👨‍💻</h1>
+<h1 align="center">Dev on Windows with WSL 👨‍💻</h1>
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
