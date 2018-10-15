@@ -1,6 +1,6 @@
 # 准备工作
 
-![img](https://i.loli.net/2018/09/30/5bb0d9c859392.png)
+![Run Linux on Windows 10](https://i.loli.net/2018/09/30/5bb0d9c859392.png)
 
 ## Windows 10 💻
 

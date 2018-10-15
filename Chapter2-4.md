@@ -8,7 +8,7 @@
 
 - 推荐安装 [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/)，并以这样的配置打开：
 
-![img](https://i.loli.net/2018/10/01/5bb1c9d292ce0.jpg)
+![](https://i.loli.net/2018/10/01/5bb1c9d292ce0.jpg)
 
 - 在 WSL 中安装必要组件：
 
@@ -28,7 +28,7 @@ echo 'export DISPLAY=:0.0' >> .profile
 sudo apt install x11-apps -y && xeyes
 ```
 
-![img](https://i.loli.net/2018/10/01/5bb1cc9565f02.png)
+![](https://i.loli.net/2018/10/01/5bb1cc9565f02.png)
 
 如果出现了这样的小眼睛盯着你的鼠标看，那么说明我们的 XServer 安装成功了。
 

@@ -76,6 +76,6 @@ compinit
 
 基本的终端环境就到这里了。推荐安装 `zsh` 组件：[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)。
 
-<div align="center"><img src="https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png" width="60%"></div>
+![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
 
 最后成品大概是这样的。🎉🎉🎉

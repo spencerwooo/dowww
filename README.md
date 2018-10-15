@@ -1,4 +1,4 @@
-![1.jpg](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
+![](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
 <h1 align="center">👨‍💻 Dev on Windows with WSL</h1>
 
