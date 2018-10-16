@@ -1,6 +1,7 @@
 language: node_js
 
-node_js: - "8"
+node_js: 
+  - "8"
 
 cache: 
   directories: 
@@ -14,19 +15,19 @@ install:
   - gitbook install
 
 script:
-  - gitbook build . ./build 
-  # - gitbook build . ./build/$CUSTOM_PATH 
+  - gitbook build . ./build/$CUSTOM_PATH
 
-branches: 
-  only: - master
-  
-deploy: 
-  provider: pages 
+branches:
+  only:
+    - master
+
+deploy:
+  provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
   local_dir: build
-  name: $GIT_NAME 
+  name: $GIT_NAME
   email: $GIT_EMAIL
   keep-history: true
-  on: 
+  on:
     branch: master
