@@ -2,6 +2,8 @@
 
 <h1 align="center">👨‍💻 Dev on Windows with WSL</h1>
 
+<br>
+
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
 ![windows](https://img.shields.io/badge/Perfect-Windows-orange.svg)
@@ -16,7 +18,7 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 # 相关信息
 
-本仓库由 Gitbook 生成，已经发布于：https://spencerwoo.gitbook.io/dev-on-win-with-wsl/
+本仓库由 Gitbook 生成，已经发布于：🔗 https://spencerwoo.com/Dev-on-Windows-with-WSL/
 
 目前仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目。鞠躬。
 
