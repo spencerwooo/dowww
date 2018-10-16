@@ -25,7 +25,13 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 ---
 
-**👨‍💻 Dev on Windows with WSL** ©Spencer Woo. Released under the MIT License.
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="創用 CC 授權條款" style="border-width:0;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+
+本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">創用 CC 姓名標示-非商業性-禁止改作 4.0 國際 授權條款</a>授權。
+
+---
+
+**👨‍💻 Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
 
 Authored and maintained by Spencer Woo.
 
