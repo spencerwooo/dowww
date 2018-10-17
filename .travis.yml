@@ -38,6 +38,6 @@ deploy:
   name: $GIT_NAME
   email: $GIT_EMAIL
   keep-history: true
-  target-branch: master
+  target-branch: gh-pages
   on:
     branch: master
