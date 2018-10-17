@@ -24,7 +24,7 @@ next: /3-VSCode/
 
 `wsl-open` 是类似于 macOS 里面 `open` 命令的程序。它能够在 WSL 中用 Windows 文件资源管理器打开文件夹，用 Windows 默认照片打开图片等等，方便开发。
 
-![](https://i.loli.net/2018/10/01/5bb1b57c6f8ee.gif)
+<div align="center"><img src="https://i.loli.net/2018/10/01/5bb1b57c6f8ee.gif" alt="wsl-open" /></div>
 
 下载：
 
