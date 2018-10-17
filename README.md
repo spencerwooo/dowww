@@ -1,4 +1,4 @@
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="Icon Badge" /></div>
+<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="Icon Badge" width="40%" /></div>
 
 <h1 align="center">👨‍💻 Dev on Windows with WSL</h1>
 
