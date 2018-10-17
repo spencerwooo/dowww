@@ -1,4 +1,4 @@
-![](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
+<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="Icon Badge" /></div>
 
 <h1 align="center">👨‍💻 Dev on Windows with WSL</h1>
 
@@ -21,7 +21,7 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 目前仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目。鞠躬。
 
-详细请见 > [💗💗💗 Help needed.](/3-VSCode/3-3-HelpNeeded.html)
+详细请见 > [💗💗💗 Help needed.](https://spencerwoo.com/Dev-on-Windows-with-WSL/3-VSCode/3-3-HelpNeeded.html)
 
 # License 许可
 

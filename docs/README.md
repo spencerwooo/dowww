@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg
+heroImage: https://i.loli.net/2018/10/17/5bc6e7ca735bb.png
 actionText: 入坑指南 →
 actionLink: /1-Preparations/
 features:

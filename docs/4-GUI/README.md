@@ -3,6 +3,8 @@ prev: /3-VSCode/3-3-HelpNeeded
 next: /5-Experience/
 ---
 
+<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div>
+
 # GUI 图形化窗口
 
 > 虽然上面的方案有时候能够解决问题，但是最为深度整合的方案是：在 WSL 侧的 Linux 环境下安装 VSCode 并从 Linux 侧打开，这样就一定能保证 VSCode 使用的工具链全部是 WSL 侧工具链了。

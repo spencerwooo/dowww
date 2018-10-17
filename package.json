@@ -1,4 +1,7 @@
 {
+  "name": "Dev-on-Windows-with-WSL",
+  "version": "2.0.0",
+  "description": "👨‍💻 Dev on Windows with WSL",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"

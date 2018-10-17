@@ -1,6 +1,12 @@
+---
+sidebarDepth: 4
+---
+
 # 终端环境
 
-> 💎 按照安装顺序介绍：
+:::tip 💎
+按照安装顺序介绍：
+:::
 
 ## bash
 
@@ -10,9 +16,17 @@
 
 ## Hyper 终端
 
-Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」去和我们的 `shell` 进行交互），也可能是目前 Windows 上面可定制化程度最高的终端模拟器了。当然，Hyper 也支持 macOS 和 Linux。
+Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」去和我们的 `shell` 进行交互），也可能是目前 Windows 上面可定制化程度最高的终端模拟器了。当然，Hyper 也支持 macOS 和 Linux。有关 macOS 终端美化的具体方法可以参考这篇文章 > [HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
+
+![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
+
+按照下面的步骤进行配置，最后成品大概是这样的。🎉🎉🎉
+
+### 下载 Node.js
 
 首先，下载 [Node.js for Windows](https://nodejs.org/en/download/) 并安装。
+
+### 下载 Hyper
 
 然后，下载 Hyper 终端：
 
@@ -22,6 +36,8 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 安装一些主题：
 
 - [Awesome Hyper](https://github.com/bnb/awesome-hyper) - 有趣的与 Hyper 相关的内容、项目，可以找到合适的主题配置、字体、插件和 Hyper 的使用指南。
+
+### 配置 Hyper 终端
 
 配置 Hyper 终端默认使用 WSL 的 `bash`：
 
@@ -35,7 +51,8 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 
 - 在 Hyper 中打开位于 Linux 文件系统根目录的 `.bashrc` 并添加以下代码:
 
-```shell
+```bash
+# Disable the bell sound on backspace
 set bell-style none
 ```
 
@@ -48,7 +65,7 @@ set bell-style none
 - 利用 Ubuntu 的包管理器安装 `zsh`：`sudo apt install zsh`
 - 修改 `.bashrc` 加入以下代码，使得默认 `shell` 变成 `zsh`：
 
-```shell
+```bash
 if [ -t 1 ]; then
 exec zsh
 fi
@@ -64,9 +81,11 @@ fi
 
 - 修改 `.zshrc`，添加如下代码
 
-```shell
+```bash
+# Change ls colours
 LS_COLORS="ow=01;36;40" && export LS_COLORS
 
+# make cd use the ls colours
 zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
 autoload -Uz compinit
 compinit
@@ -74,8 +93,6 @@ compinit
 
 - 加载设置：`source ~/.zshrc`
 
-基本的终端环境就到这里了。推荐安装 `zsh` 组件：[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)。
+基本的终端环境就到这里了。
 
-![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
-
-最后成品大概是这样的。🎉🎉🎉
+💡 推荐安装 `zsh` 组件：[zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)。

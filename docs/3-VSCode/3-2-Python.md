@@ -14,6 +14,10 @@
 
 ## 让 VSCode 集成 WSL 侧 Python
 
+::: warning 注意
+以下步骤需要全部在 WSL 或 Visual Studio Code 中进行，包括创建文件、创建文件夹和写入文件内容。在 Windows 文件资源管理器中创建文件夹与文件会造成 Visual Studio Code 无法识别相应的批处理文件，导致 Python 插件无法正常进行代码实时检查、代码美化与快速定位等功能。
+:::
+
 - 在 WSL 终端中进入 Windows 系统用户根目录（即：`/mnt/c/Users/$Windows 用户名$`）
 - 创建文件夹：`mkdir .vscode_bats`
 - 进入文件夹 `cd .vscode_bats`，**⚠ 用 VSCode 创建文件 `code python.bat &`**

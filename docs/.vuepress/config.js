@@ -1,11 +1,11 @@
 module.exports = {
-  title: '👨‍💻 Dev on Windows with WSL',
+  title: 'Dev on Windows with WSL 👨‍💻',
   description: '在 Windows 上面用 WSL 优雅开发',
   base: '/Dev-on-Windows-with-WSL/',
   head: [
     ['link', {
       rel: 'icon',
-      href: 'https://i.loli.net/2018/10/17/5bc6a4fd00bd0.png'
+      href: 'https://i.loli.net/2018/10/17/5bc6e7ca735bb.png'
     }]
   ],
   themeConfig: {
@@ -26,12 +26,8 @@ module.exports = {
         link: '/4-GUI/'
       },
       {
-        text: '后记与使用',
+        text: '体验与参考',
         link: '/5-Experience/'
-      },
-      {
-        text: '参考与关于',
-        link: '/6-Reference/'
       },
       {
         text: 'GitHub',
