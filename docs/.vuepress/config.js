@@ -15,12 +15,42 @@ module.exports = {
       },
       {
         text: '工具链',
-        link: '/2-Toolchain/'
+        items: [{
+            text: '概要',
+            link: '/2-Toolchain/'
+          },
+          {
+            text: '终端环境',
+            link: '/2-Toolchain/2-1-TerminalEnv'
+          },
+          {
+            text: '开发工具',
+            link: '/2-Toolchain/2-2-DevTools'
+          }
+        ]
       },
       {
         text: 'Visual Studio Code',
-        link: '/3-VSCode/'
-      },
+        items: [{
+          text: '概要',
+          link: '/3-VSCode/'
+        },
+        {
+          text: 'Git on WSL',
+          link: '/3-VSCode/3-1-Git'
+        },
+        {
+          text: 'Python',
+          link: '/3-VSCode/3-2-Python'
+        },
+        {
+          text: 'Help Needed',
+          link: '/3-VSCode/3-3-HelpNeeded'
+        }
+      ]
+    },
+        
+      
       {
         text: 'GUI',
         link: '/4-GUI/'
