@@ -1,21 +1,30 @@
 language: node_js
 
 node_js: 
-  - "8"
+  - "10"
+
+env:
+  - CXX=g++-4.8
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 
 cache: 
   directories: 
-    - $HOME/.npm 
+    - "node_modules"
 
 before_install: 
   - export TZ='Asia/Shanghai'
 
 install: 
-  - npm install gitbook-cli -g
-  - gitbook install
+  - yarn global add vuepress
 
 script:
-  - gitbook build . ./build/
+  - yarn docs:build
 
 branches:
   only:
@@ -25,9 +34,10 @@ deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: build
+  local_dir: docs/.vuepress/dist
   name: $GIT_NAME
   email: $GIT_EMAIL
   keep-history: true
+  target-branch: master
   on:
     branch: master

@@ -1,6 +1,17 @@
-![](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
-
-<h1 align="center">👨‍💻 Dev on Windows with WSL</h1>
+---
+home: true
+heroImage: https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg
+actionText: 入坑指南 →
+actionLink: /1-Preparations/
+features:
+- title: 💻
+  details: Windows 开发，解决那令人烦恼的非 Unix 终端环境。
+- title: 👨‍🏭
+  details: Windows Subsystem for Linux，近似原生 Unix 的体验，又有着 Windows 强大的生产力。
+- title: 🎉
+  details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
+footer: ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
+---
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Python | 👨‍💻 Dev on Windows with WSL</title>
+    <meta name="description" content="在 Windows 上面用 WSL 优雅开发">
+    <link rel="icon" href="https://i.loli.net/2018/10/17/5bc6a4fd00bd0.png">
+    
+    <link rel="preload" href="/assets/css/styles.c07ce285.css" as="style"><link rel="preload" href="/assets/js/app.c07ce285.js" as="script"><link rel="preload" href="/assets/js/8.abd12a11.js" as="script"><link rel="prefetch" href="/assets/js/5.52d76a99.js"><link rel="prefetch" href="/assets/css/1.styles.3c3b5234.css"><link rel="prefetch" href="/assets/js/1.3c3b5234.js"><link rel="prefetch" href="/assets/css/2.styles.a2209d0a.css"><link rel="prefetch" href="/assets/js/2.a2209d0a.js"><link rel="prefetch" href="/assets/js/3.c64ae4fc.js"><link rel="prefetch" href="/assets/js/4.8a273997.js"><link rel="prefetch" href="/assets/js/6.e89b6557.js"><link rel="prefetch" href="/assets/js/7.f65c59cf.js"><link rel="prefetch" href="/assets/js/9.84e55b60.js"><link rel="prefetch" href="/assets/js/10.cadb7bf3.js"><link rel="prefetch" href="/assets/js/11.10489505.js"><link rel="prefetch" href="/assets/js/12.2923a8bd.js"><link rel="prefetch" href="/assets/js/13.17888669.js"><link rel="prefetch" href="/assets/js/14.4863e218.js">
+    <link rel="stylesheet" href="/assets/css/1.styles.3c3b5234.css"><link rel="stylesheet" href="/assets/css/2.styles.a2209d0a.css"><link rel="stylesheet" href="/assets/css/styles.c07ce285.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">👨‍💻 Dev on Windows with WSL</span></a> <div class="links" style="max-width:nullpx;"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/1-Preparations/" class="nav-link">准备工作</a></div><div class="nav-item"><a href="/2-Toolchain/" class="nav-link">工具链</a></div><div class="nav-item"><a href="/3-VSCode/" class="nav-link router-link-active">Visual Studio Code</a></div><div class="nav-item"><a href="/4-GUI/" class="nav-link">GUI</a></div><div class="nav-item"><a href="/5-Experience/" class="nav-link">体验</a></div><div class="nav-item"><a href="/6-Reference/" class="nav-link">参考与关于</a></div><div class="nav-item"><a href="https://github.com/spencerwoo98/Dev-on-Windows-with-WSL" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/1-Preparations/" class="nav-link">准备工作</a></div><div class="nav-item"><a href="/2-Toolchain/" class="nav-link">工具链</a></div><div class="nav-item"><a href="/3-VSCode/" class="nav-link router-link-active">Visual Studio Code</a></div><div class="nav-item"><a href="/4-GUI/" class="nav-link">GUI</a></div><div class="nav-item"><a href="/5-Experience/" class="nav-link">体验</a></div><div class="nav-item"><a href="/6-Reference/" class="nav-link">参考与关于</a></div><div class="nav-item"><a href="https://github.com/spencerwoo98/Dev-on-Windows-with-WSL" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/3-VSCode/" class="sidebar-link">使用 Visual Studio Code 作为主要代码编辑工具</a></li><li><a href="/3-VSCode/3-1-Git.html" class="sidebar-link">让 VSCode 使用 WSL 内的 git 进行版本控制</a></li><li><a href="/3-VSCode/3-2-Python.html" class="active sidebar-link">Python</a></li><li><a href="/3-VSCode/3-3-HelpNeeded.html" class="sidebar-link">其他语言 期待补充 💗💗💗</a></li></ul> </div> <div class="page"> <div class="content"><h1 id="python"><a href="#python" aria-hidden="true" class="header-anchor">#</a> Python</h1> <p>首先安装 Visual Studio Code <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" target="_blank" rel="noopener noreferrer">官方 Python 插件<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>。</p> <p>在 WSL 侧安装 Python：</p> <ul><li><p>安装必备工具：<code>sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev</code></p></li> <li><p>安装 Python 3（或者你想要的 Python 版本）：<code>sudo apt install python3</code></p></li></ul> <p>让 VSCode 集成 WSL 侧 Python：</p> <ul><li>在 WSL 终端中进入 Windows 系统用户根目录（即：<code>/mnt/c/Users/$Windows 用户名$</code>）</li> <li>创建文件夹：<code>mkdir .vscode_bats</code></li> <li>进入文件夹 <code>cd .vscode_bats</code>，<strong>⚠ 用 VSCode 创建文件 <code>code python.bat &amp;</code></strong></li> <li>将下面内容 <strong>在 VSCode 中</strong> 加入文件 <code>python.bat</code>：</li></ul> <div class="language-bat extra-class"><pre class="language-text"><code>@echo off
+set v_params=%*
+set v_params=%v_params:\=/%
+set v_params=%v_params:c:=/mnt/c%
+set v_params=%v_params:&quot;=\&quot;%
+bash.exe -c &quot;/usr/bin/python3 %v_params%&quot;
+</code></pre></div><ul><li>在 VSCode 设置中加入：</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;python.pythonPath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;C:\\Users\\$用户名$\\.vscode_bats\\python3.bat&quot;</span><span class="token punctuation">,</span>
+</code></pre></div><p>官方 Python 插件集成了实时代码风格检查工具 <code>pylint</code>，快速定位工具 <code>ctags</code> 和代码美化插件 <code>autopep8</code>。这些同样也可以在 WSL 侧安装并从 Windows VSCode 侧调用。</p> <ul><li>安装 Python 包管理器 <code>pip</code>：<code>sudo apt install python3-pip</code></li> <li>安装 <code>pylint</code>：<code>pip3 install pylint</code></li> <li>安装 <code>exuberant ctags</code>：<code>sudo apt install exuberant-ctags</code></li> <li>安装 <code>autopep8</code>：<code>pip3 install autopep8</code></li> <li>在刚刚创建的 <code>.vscode_bats</code> 文件夹下<strong>用 VSCode 创建</strong> <code>pylint.bat</code>：<code>code pylint.bat &amp;</code> 并加入以下内容：</li></ul> <div class="language-bat extra-class"><pre class="language-text"><code>@echo off
+set v_params=%*
+set v_params=%v_params:\=/%
+set v_params=%v_params:c:=/mnt/c%
+set v_params=%v_params:&quot;=\&quot;%
+bash.exe -c &quot;/usr/bin/pylint %v_params%&quot;
+</code></pre></div><ul><li>在刚刚创建的 <code>.vscode_bats</code> 文件夹下<strong>用 VSCode 创建</strong> <code>ctags.bat</code>：<code>code ctags.bat &amp;</code> 并加入以下内容：</li></ul> <div class="language-bat extra-class"><pre class="language-text"><code>@echo off
+set v_params=%*
+set v_params=%v_params:\=/%
+set v_params=%v_params:c:=/mnt/c%
+set v_params=%v_params:&quot;=\&quot;%
+bash.exe -c &quot;ctags %v_params%&quot;
+</code></pre></div><ul><li>在刚刚创建的 <code>.vscode_bats</code> 文件夹下<strong>用 VSCode 创建</strong> <code>autopep8.bat</code>：<code>code autopep8.bat &amp;</code> 并加入以下内容：</li></ul> <div class="language-bat extra-class"><pre class="language-text"><code>@echo off
+set v_params=%*
+set v_params=%v_params:\=/%
+set v_params=%v_params:c:=/mnt/c%
+set v_params=%v_params:&quot;=\&quot;%
+bash.exe -c &quot;autopep8 %v_params%&quot;
+</code></pre></div><ul><li>在 VSCode 设置中加入：</li></ul> <div class="language-json extra-class"><pre class="language-json"><code><span class="token property">&quot;python.linting.pylintPath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;C:\\Users\\$用户名$\\.vscode_bats\\pylint.bat&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;python.workspaceSymbols.ctagsPath&quot;</span><span class="token operator">:</span> <span class="token string">&quot;C:\\Users\\$用户名$\\.vscode_bats\\ctags.bat&quot;</span><span class="token punctuation">,</span>
+<span class="token property">&quot;python.formatting.autopep8Path&quot;</span><span class="token operator">:</span> <span class="token string">&quot;C:\\Users\\$用户名$\\.vscode_bats\\autopep8.bat&quot;</span>
+</code></pre></div><p>那么现在拿 VSCode 写 Python 项目的时候应该可以自动代码补全、IntelliSense、跳转定义和自动美化了。👍</p></div> <div class="page-edit"><!----> <!----></div> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/3-VSCode/3-1-Git.html" class="prev">
+          让 VSCode 使用 WSL 内的 git 进行版本控制
+        </a></span> <span class="next"><a href="/3-VSCode/3-3-HelpNeeded.html">
+          其他语言 期待补充 💗💗💗
+        </a>
+        →
+      </span></p></div> </div> <!----></div></div>
+    <script src="/assets/js/8.abd12a11.js" defer></script><script src="/assets/js/app.c07ce285.js" defer></script>
+  </body>
+</html>
