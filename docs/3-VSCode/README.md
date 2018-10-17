@@ -3,7 +3,7 @@ prev: /2-Toolchain/
 next: 
 ---
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e33f82174.png" alt="Visual Studio Code" width="30%"/></div>
+<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e33f82174.png" alt="Visual Studio Code" width="40%"/></div>
 
 # 使用 Visual Studio Code 作为主要代码编辑工具
 

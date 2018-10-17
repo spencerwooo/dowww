@@ -1,9 +1,12 @@
 {
-  "name": "Dev-on-Windows-with-WSL",
+  "name": "dev-on-win-with-wsl",
   "version": "2.0.0",
   "description": "👨‍💻 Dev on Windows with WSL",
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
-  }
+  },
+  "repository": "https://github.com/spencerwoo98/Dev-on-Windows-with-WSL",
+  "author": "spencerwoo98 <spencerwoo98@foxmail.com>",
+  "license": "CC BY-NC-ND 4.0"
 }
