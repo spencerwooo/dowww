@@ -1,5 +1,5 @@
 ---
-prev: /3-VSCode/3-3-HelpNeeded
+prev: /3-VSCode/HelpNeeded
 next: /5-Experience/
 ---
 

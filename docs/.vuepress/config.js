@@ -66,10 +66,12 @@ module.exports = {
           {
             text: 'Python',
             link: '/3-VSCode/3-2-Python'
-          },
-          {
+          },{
+            text: 'C 和 C++',
+            link: '/3-VSCode/3-3-C_Cpp'
+          },{
             text: 'Help Needed',
-            link: '/3-VSCode/3-3-HelpNeeded'
+            link: '/3-VSCode/HelpNeeded'
           }
         ]
       },
@@ -97,7 +99,8 @@ module.exports = {
         '',
         '3-1-Git',
         '3-2-Python',
-        '3-3-HelpNeeded'
+        '3-3-C_Cpp',
+        'HelpNeeded'
       ],
       '/4-GUI/': [''],
       '/5-Experience/': [''],
