@@ -26,7 +26,9 @@ WSL + Hyper 终端的环境是完全可用的一个完美 Linux 环境。美观�
 - [如何在 Windows Subsystem for Linux (WSL) 上运行 Linux GUI 软件](http://www.yuan-ji.me/%E5%A6%82%E4%BD%95%E5%9C%A8Windows-Subsystem-for-Linux-\(WSL\)-%E4%B8%8A%E8%BF%90%E8%A1%8CLinux-GUI-%E8%BD%AF%E4%BB%B6/)
 - [在 WSL 下启动 VSCode](https://zhuanlan.zhihu.com/p/33226830)
 
-<a href='https://www.freepik.com/free-vector/modern-web-design-concept-with-isometric-view_3086978.htm'>Website Icon and affiliated designs are licensed by Freepik</a>
+也感谢 Freepik 给我提供如此优秀的平面设计灵感。
+
+- Website icons and its affiliated designs are licensed by [Freepik](https://www.freepik.com/free-vector/modern-web-design-concept-with-isometric-view_3086978.htm).
 
 ## License 许可
 

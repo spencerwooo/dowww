@@ -30,7 +30,7 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 - 💻 一套比 Windows 原生开发工具体验更好的 Unix 开发环境
 - 🎈 [一个可能是 Windows 上可定制化程度最高的终端模拟器与终端环境](/2-Toolchain/)
-- 🍗 [一些利用 Visual Studio Code 在 Windows 上利用 WSL 中的工具进行开发和调试的 Tips](/3-VSCode/)
+- 🍗 [一些利用 Visual Studio Code 在 Windows 上与 WSL 中的工具配合进行开发和调试的 Tips](/3-VSCode/)
 - 🍳 [利用 X-Server 在 WSL 中进行原生开发的操作指北](/4-GUI/)
 
 # 但是在这里我不想详细介绍这些内容：
