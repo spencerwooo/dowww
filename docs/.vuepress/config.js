@@ -1,11 +1,35 @@
 module.exports = {
   title: 'Dev on Windows with WSL 👨‍💻',
-  description: '在 Windows 上面用 WSL 优雅开发',
+  description: '在 Windows 上用 WSL 优雅开发',
   base: '/Dev-on-Windows-with-WSL/',
   head: [
     ['link', {
       rel: 'icon',
       href: 'https://i.loli.net/2018/10/17/5bc6e7ca735bb.png'
+    }],
+    ['meta', {
+      name: 'theme-color',
+      content: '#3eaf7c'
+    }],
+    ['meta', {
+      name: 'apple-mobile-web-app-capable',
+      content: 'yes'
+    }],
+    ['meta', {
+      name: 'apple-mobile-web-app-status-bar-style',
+      content: 'black'
+    }],
+    ['link', {
+      rel: 'apple-touch-icon',
+      href: `https://i.loli.net/2018/10/17/5bc6e7ca735bb.png`
+    }],
+    ['meta', {
+      name: 'msapplication-TileImage',
+      content: 'https://i.loli.net/2018/10/17/5bc6e7ca735bb.png'
+    }],
+    ['meta', {
+      name: 'msapplication-TileColor',
+      content: '#000000'
     }]
   ],
   themeConfig: {
@@ -32,25 +56,23 @@ module.exports = {
       {
         text: 'Visual Studio Code',
         items: [{
-          text: '概要',
-          link: '/3-VSCode/'
-        },
-        {
-          text: 'Git on WSL',
-          link: '/3-VSCode/3-1-Git'
-        },
-        {
-          text: 'Python',
-          link: '/3-VSCode/3-2-Python'
-        },
-        {
-          text: 'Help Needed',
-          link: '/3-VSCode/3-3-HelpNeeded'
-        }
-      ]
-    },
-        
-      
+            text: '概要',
+            link: '/3-VSCode/'
+          },
+          {
+            text: 'Git on WSL',
+            link: '/3-VSCode/3-1-Git'
+          },
+          {
+            text: 'Python',
+            link: '/3-VSCode/3-2-Python'
+          },
+          {
+            text: 'Help Needed',
+            link: '/3-VSCode/3-3-HelpNeeded'
+          }
+        ]
+      },
       {
         text: 'GUI',
         link: '/4-GUI/'

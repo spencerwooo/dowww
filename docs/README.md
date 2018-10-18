@@ -10,7 +10,7 @@ features:
   details: Windows Subsystem for Linux，近似原生 Unix 的体验，又有着 Windows 强大的生产力。
 - title: 🎉
   details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
-footer: ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
+footer: 2018 ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
 ---
 
 [![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
@@ -25,6 +25,13 @@ footer: ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
 首先达成一个共识：**Windows 给编程初学者带来了很大的困难**。比如缺乏好用的包管理系统、终端环境难看难用和环境变量不易配置等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS（不包括一定需要 IDE 支持的语言，比如 Java 和 .NET 等等）。然而 Linux 桌面环境虽然在 2018 年的今天有很大的改善，但是相比 Windows 还是有很大的差距，程序假死、卡住、崩掉的情况数不胜数。（还有 Linux 每一个发行版几乎都没有很好的支持 Emoji 啊！😫）
 
 WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Windows Subsystem for Linux 来给我们的 Windows 配置一个可用的开发环境，包括：Linux 终端环境 `zsh`、Linux 下的包管理器 `apt`、Visual Studio Code 开发环境等等。这篇文章的意义即此。🎉🎉🎉
+
+# 你在这里能学到什么？
+
+- 💻 一套比 Windows 原生开发工具体验更好的 Unix 开发环境
+- 🎈 一个可能是 Windows 上可定制化程度最高的终端模拟器与终端环境
+- 🍗 一些利用 Visual Studio Code 在 Windows 上利用 WSL 中的工具进行开发和调试的 Tips
+- 🍳 利用 X-Server 在 WSL 中进行原生开发的操作指北
 
 # 相关信息
 
