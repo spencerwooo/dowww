@@ -16,13 +16,15 @@ sidebarDepth: 4
 - 代码编辑器：Visual Studio Code
 - 具体到语言的开发环境配置：
     - `Python` 的开发环境配置
+    - `C/C++` 的开发环境配置
     - ~~`Node.js` 的开发环境配置~~
-    - ~~`C/C++` 的开发环境配置~~
+    - ~~`Golang` 的开发环境配置~~
+    - ~~`PHP` 的开发环境配置~~
 
 ## 其他语言 期待补充 💗💗💗
 
-💨 深坑待补：C/C++、Javascript/Node.js、Typescript、Golang...
+💨 深坑待补：Javascript/Node.js、Typescript、Golang...
 
 💨 任何有经验的同学欢迎来这里添加补充内容。Fork > PR > Review > Merge 一条龙。
 
-💗 项目地址位于 > https://github.com/spencerwoo98/Dev-on-Windows-with-WSL 🎉🎉🎉
+💗 项目地址位于 > [Dev on Win with WSL](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL) 🎉🎉🎉

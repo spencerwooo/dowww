@@ -13,7 +13,7 @@ next: /2-Toolchain/
 2. 安装之前必须保证为 Windows 10 开启了「Windows Subsystem for Linux」的可选功能。
 3. Windows 用户名不能有空格。（有空格会对 WSL 环境造成影响。）
 
-::: warning 注意
+::: danger 注意
 在任何情况下都不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
 :::
 
