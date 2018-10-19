@@ -4,10 +4,10 @@
 
 <br>
 
-[![license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/blob/master/LICENSE)
-![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
-![windows](https://img.shields.io/badge/Perfect-Windows-orange.svg)
 [![Build Status](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL.svg?branch=master)](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL)
+![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
+![windows](https://img.shields.io/badge/Perfect-Windows-FFE411.svg)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-03A9F4.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 > 在 Windows 上面用 WSL 优雅开发
 
