@@ -11,5 +11,7 @@
     - 在 VSCode 设置中添加：
 
 ```json
-"git.path": "C:\\$更换为 wslgit.exe 的路径$\\wslgit.exe"
+{
+    "git.path": "C:\\$更换为 wslgit.exe 的路径$\\wslgit.exe"
+}
 ```
