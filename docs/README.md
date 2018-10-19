@@ -13,10 +13,11 @@ features:
 footer: 2018 ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
 ---
 
-[![Build Status](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL.svg?branch=master)](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL)
-![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg)
-![windows](https://img.shields.io/badge/Perfect-Windows-FFE411.svg)
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-03A9F4.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![Build Status](https://img.shields.io/travis/spencerwoo98/Dev-on-Windows-with-WSL.svg?style=flat-square)](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL)
+[![GitHub stars](https://img.shields.io/github/stars/spencerwoo98/Dev-on-Windows-with-WSL.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL)
+![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
+![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 > 在 Windows 上用 WSL 优雅开发
 
