@@ -2,8 +2,6 @@
 
 <h1 align="center">👨‍💻 Dev on Windows with WSL</h1>
 
-<br>
-
 [![Build Status](https://img.shields.io/travis/spencerwoo98/Dev-on-Windows-with-WSL.svg?style=flat-square)](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL)
 [![GitHub stars](https://img.shields.io/github/stars/spencerwoo98/Dev-on-Windows-with-WSL.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
