@@ -29,11 +29,21 @@
 
 接着下载安装 Code Runner 插件：[Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner).
 
-并在 Visual Studio Code 设置中将 Code Runner 设置为在终端中运行：
+并在 Visual Studio Code 设置中将 Code Runner 进行配置
+
+1. 设置为在终端中运行：
 
 ```json
 {
     "code-runner.runInTerminal": true
+}
+```
+
+2. 配置路径为 WSL 路径（感谢 [江枫同学 @jiangbianyiye](https://github.com/jiangbianyiye) 的补充，见 [Issue #1](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/issues/1)）：
+
+```json
+{
+    "code-runner.terminalRoot": "/mnt/"
 }
 ```
 
