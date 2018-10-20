@@ -1,8 +1,20 @@
 # Python
 
+::: tip
+目前存在的一个问题是：VSCode Python 插件和 WSL 侧的工具链兼容性很糟糕，都需要一定的配置才能丝滑工作。这也是一个当前微软 VSCode 各大语言插件组和 WSL 开发组都知道并在解决的问题（参考 [VSCode Python 插件 Issue #67](https://github.com/Microsoft/vscode-python/issues/67)）。
+
+在此之前，下面的解决方法是一个 work-around，请严格按照下面讲述的步骤进行操作，否则很大概率不会成功。
+:::
+
 ## 安装插件
 
-首先安装 Visual Studio Code [官方 Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python)。
+::: warning 注意
+请先从 `WSL` 的终端环境中打开 Visual Studio Code：`code &`
+:::
+
+安装 Visual Studio Code [官方 Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python)。
+
+然后重启 Visual Studio Code.
 
 ## 安装 Python
 
@@ -15,7 +27,7 @@
 ## 让 VSCode 集成 WSL 侧 Python
 
 ::: warning 注意
-以下步骤需要全部在 WSL 或 Visual Studio Code 中进行，包括创建文件、创建文件夹和写入文件内容。在 Windows 文件资源管理器中创建文件夹与文件会造成 Visual Studio Code 无法识别相应的批处理文件，导致 Python 插件无法正常进行代码实时检查、代码美化与快速定位等功能。
+以下步骤需要全部在 WSL 中进行，包括创建文件、创建文件夹和写入文件内容。在 Windows 文件资源管理器中创建文件夹与文件会造成 Visual Studio Code 无法识别相应的批处理文件，导致 Python 插件无法正常进行代码实时检查、代码美化与快速定位等功能。
 :::
 
 - 在 WSL 终端中进入 Windows 系统用户根目录（即：`/mnt/c/Users/$Windows 用户名$`）

@@ -60,6 +60,10 @@ module.exports = {
             link: '/3-VSCode/'
           },
           {
+            text: '终端 Terminal',
+            link: '/3-VSCode/3-0-Terminal'
+          },
+          {
             text: 'Git on WSL',
             link: '/3-VSCode/3-1-Git'
           },
@@ -97,6 +101,7 @@ module.exports = {
       ],
       '/3-VSCode/': [
         '',
+        '3-0-Terminal',
         '3-1-Git',
         '3-2-Python',
         '3-3-C_Cpp',
