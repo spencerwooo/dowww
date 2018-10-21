@@ -93,6 +93,10 @@ module.exports = {
         link: '/5-Experience/'
       },
       {
+        text: '反馈',
+        link: 'https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/issues/new/choose'
+      },
+      {
         text: 'GitHub',
         link: 'https://github.com/spencerwoo98/Dev-on-Windows-with-WSL'
       },
