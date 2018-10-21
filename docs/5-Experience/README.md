@@ -25,6 +25,7 @@ WSL + Hyper 终端的环境是完全可用的一个完美 Linux 环境。美观�
 - [ethanhs/WSL-Programs](https://github.com/ethanhs/WSL-Programs)
 - [如何在 Windows Subsystem for Linux (WSL) 上运行 Linux GUI 软件](http://www.yuan-ji.me/%E5%A6%82%E4%BD%95%E5%9C%A8Windows-Subsystem-for-Linux-\(WSL\)-%E4%B8%8A%E8%BF%90%E8%A1%8CLinux-GUI-%E8%BD%AF%E4%BB%B6/)
 - [在 WSL 下启动 VSCode](https://zhuanlan.zhihu.com/p/33226830)
+- [Setting proxy in git](https://gist.github.com/laispace/666dd7b27e9116faece6)
 
 也感谢 Freepik 给我提供如此优秀的平面设计灵感。
 

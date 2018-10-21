@@ -3,7 +3,7 @@ prev: /1-Preparations/
 sidebarDepth: 4
 ---
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e10ee254f.png" alt="oh-my-zsh" /></div>
+<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e10ee254f.png" alt="oh-my-zsh" width="40%"/></div>
 
 # 工具链
 

@@ -44,11 +44,11 @@ module.exports = {
             link: '/2-Toolchain/'
           },
           {
-            text: '终端环境',
+            text: '终端环境 | zsh、Hyper',
             link: '/2-Toolchain/2-1-TerminalEnv'
           },
           {
-            text: '开发工具',
+            text: '开发工具 | git、ssh',
             link: '/2-Toolchain/2-2-DevTools'
           }
         ]
@@ -60,21 +60,26 @@ module.exports = {
             link: '/3-VSCode/'
           },
           {
-            text: '终端 Terminal',
+            text: '集成终端',
             link: '/3-VSCode/3-0-Terminal'
           },
+          
           {
             text: 'Git on WSL',
             link: '/3-VSCode/3-1-Git'
           },
           {
+            text: 'Code Runner',
+            link: '/3-VSCode/3-2-Code-Runner'
+          },
+          {
             text: 'Python',
-            link: '/3-VSCode/3-2-Python'
+            link: '/3-VSCode/3-3-Python'
           },{
-            text: 'C 和 C++',
-            link: '/3-VSCode/3-3-C_Cpp'
+            text: 'C/C++',
+            link: '/3-VSCode/3-4-C_Cpp'
           },{
-            text: 'Help Needed',
+            text: '帮助完善',
             link: '/3-VSCode/HelpNeeded'
           }
         ]
@@ -103,8 +108,9 @@ module.exports = {
         '',
         '3-0-Terminal',
         '3-1-Git',
-        '3-2-Python',
-        '3-3-C_Cpp',
+        '3-2-Code-Runner',
+        '3-3-Python',
+        '3-4-C_Cpp',
         'HelpNeeded'
       ],
       '/4-GUI/': [''],

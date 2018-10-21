@@ -1,4 +1,6 @@
-# 配置 VSCode 终端默认使用 WSL 的 bash：
+# 集成终端使用 WSL
+
+> 配置 VSCode 终端默认使用 WSL 的 bash
 
 为了不浪费资源、方便开发，我们从这一步开始试图将 WSL(Linux) 侧的工具链全部整合到 Windows 侧的 Visual Studio Code。
 

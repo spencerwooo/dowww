@@ -5,11 +5,13 @@ next:
 
 <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e33f82174.png" alt="Visual Studio Code" width="40%"/></div>
 
-# 使用 Visual Studio Code 作为主要代码编辑工具
+# Visual Studio Code
 
-💎
-
+:::tip 💎
 以下步骤适用于 Windows 这边安装的 Visual Studio Code。
+ 
+推荐使用 VSCode 的理由 > [#为什么我极力推荐 Visual Studio Code](/#为什么我极力推荐-visual-studio-code)
+:::
 
 ## 下载
 
@@ -27,7 +29,7 @@ Redefined.](https://code.visualstudio.com/)
 
 目前存在的一个问题是：VSCode 和 WSL 侧的工具链兼容性都很糟糕（除了 Node.js），都需要一定的配置才能丝滑工作。这也是一个当前微软 VSCode 各大语言插件组和 WSL 开发组都知道并在解决的问题（参考 [VSCode Python 插件 Issue #67](https://github.com/Microsoft/vscode-python/issues/67)）。
 
-由于 WSL 是一个 Runtime 环境，而 VSCode 只和 Windows 侧的组件进行沟通，因此当前一个比较好的解决方法是：在 Windows 侧手动创建一些脚本帮助 VSCode 和 WSL 侧安装的组件沟通。[详见 Python 配置板块。](/3-VSCode/3-2-Python.html)
+由于 WSL 是一个 Runtime 环境，而 VSCode 只和 Windows 侧的组件进行沟通，因此当前一个比较好的解决方法是：在 Windows 侧手动创建一些脚本帮助 VSCode 和 WSL 侧安装的组件沟通。[详见 Python 配置板块。](/3-VSCode/3-3-Python.html)
 
 ## 参考配置
 
@@ -57,4 +59,4 @@ Redefined.](https://code.visualstudio.com/)
 }
 ```
 
-你可以在这里看到我的 Visual Studio Code 具体的样子 > [C/C++ 开发 | 前言](/3-VSCode/3-3-C_Cpp.html#前言)。
+你可以在这里看到我的 Visual Studio Code 具体的样子 > [C/C++ 开发 | 前言](/3-VSCode/3-4-C_Cpp.html#前言)。
