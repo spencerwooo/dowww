@@ -1,5 +1,5 @@
 module.exports = {
-  title: 'Dev on Windows with WSL 👨‍💻',
+  title: 'Dev on Windows with WSL 💡',
   description: '在 Windows 上用 WSL 优雅开发',
   base: '/Dev-on-Windows-with-WSL/',
   head: [

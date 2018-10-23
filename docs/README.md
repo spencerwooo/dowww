@@ -4,9 +4,9 @@ heroImage: https://i.loli.net/2018/10/17/5bc6e7ca735bb.png
 actionText: 入坑指南 →
 actionLink: /1-Preparations/
 features:
-- title: 💻
+- title: 🍳
   details: Windows 开发，解决那令人烦恼的非 Unix 终端环境。
-- title: 👨‍🏭
+- title: 💡
   details: Windows Subsystem for Linux，近似原生 Unix 的体验，又有着 Windows 强大的生产力。
 - title: 🎉
   details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
@@ -29,7 +29,7 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 # 你在这里能学到什么？
 
-- 💻 一套比 Windows 原生开发工具体验更好的 Unix 开发环境
+- 💡 一套比 Windows 原生开发工具体验更好的 Unix 开发环境
 - 🎈 [一个可能是 Windows 上可定制化程度最高的终端模拟器与终端环境](/2-Toolchain/)
 - 🍗 [一些利用 Visual Studio Code 在 Windows 上与 WSL 中的工具配合进行开发和调试的 Tips](/3-VSCode/)（包括 Python 和 C/C++ 的开发）
 - 🍳 [利用 X-Server 直接打开 Linux 上的 GUI 窗口程序进行原生开发的操作指北](/4-GUI/)
@@ -66,7 +66,7 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 # 相关信息
 
-本仓库由 [VuePress](https://github.com/vuejs/vuepress) 生成，已经发布于：🔗 [Spencer Woo | 👨‍💻 Dev on Win with WSL](https://spencerwoo.com/Dev-on-Windows-with-WSL/)
+本仓库由 [VuePress](https://github.com/vuejs/vuepress) 生成，已经发布于：🔗 [Spencer Woo | Dev on Win with WSL](https://spencerwoo.com/Dev-on-Windows-with-WSL/)
 
 目前仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目。鞠躬。
 
@@ -80,7 +80,7 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 ---
 
-**👨‍💻 Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
+💡 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
 
 Authored and maintained by Spencer Woo.
 

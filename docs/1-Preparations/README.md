@@ -7,7 +7,7 @@ next: /2-Toolchain/
 
 # 准备工作
 
-## Windows 10 💻
+## Windows 10 💡
 
 1. 需要保证 Windows 10 至少为 Windows 10 Fall Creators Update 及之后的版本。
 2. 安装之前必须保证为 Windows 10 开启了「Windows Subsystem for Linux」的可选功能。

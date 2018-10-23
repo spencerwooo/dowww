@@ -39,7 +39,7 @@ WSL + Hyper 终端的环境是完全可用的一个完美 Linux 环境。美观�
 
 ---
 
-**👨‍💻 Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
+💡 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
 
 Authored and maintained by Spencer Woo.
 
