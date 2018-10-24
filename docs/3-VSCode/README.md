@@ -15,15 +15,19 @@ next:
 
 ## 下载
 
-下载安装 Visual Studio Code 在这里 > [Visual Studio Code | Code editing.
-Redefined.](https://code.visualstudio.com/)
-
 ::: warning
 请注意，在 Windows 侧安装过程中务必：
 
 1. 安装至 C 盘（否则会有路径与访问权限的问题）
 2. 在「选择其他任务」界面勾选「其他」下的全部四个选项（为了后面在 WSL 中直接调用 `code` 命令来打开 Visual Studio Code 打下基础。）
 :::
+
+::: danger
+在 Windows 文件夹与文件中出现的名字不能有特殊符号，包括 Emoji，否则会出现无法识别 WSL 中的 Git 路径和无法打开终端直接进入相应文件夹的问题。
+:::
+
+下载安装 Visual Studio Code 在这里 > [Visual Studio Code | Code editing.
+Redefined.](https://code.visualstudio.com/)
 
 ## 问题
 

@@ -44,11 +44,11 @@ module.exports = {
             link: '/2-Toolchain/'
           },
           {
-            text: '终端环境 | zsh、Hyper',
+            text: '终端环境 zsh、Hyper',
             link: '/2-Toolchain/2-1-TerminalEnv'
           },
           {
-            text: '开发工具 | git、ssh',
+            text: '开发工具 git、ssh',
             link: '/2-Toolchain/2-2-DevTools'
           }
         ]
