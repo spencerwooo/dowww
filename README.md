@@ -1,6 +1,6 @@
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="Icon Badge" width="40%" /></div>
+<img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="logo" width="35%" height="35%" align="right">
 
-<h1 align="center">💡 Dev on Windows with WSL</h1>
+# 💡 Dev on Windows with WSL
 
 [![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww)
 [![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo/dowww)
