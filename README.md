@@ -1,4 +1,4 @@
-<img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="logo" width="30%" height="30%" align="right">
+<img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="logo" width="25%" height="25%" align="right">
 
 # 💡 Dev on Windows with WSL
 
