@@ -1,7 +1,7 @@
 module.exports = {
   title: 'Dev on Windows with WSL 💡',
   description: '在 Windows 上用 WSL 优雅开发',
-  base: '/Dev-on-Windows-with-WSL/',
+  base: '/dowww/',
   head: [
     ['link', {
       rel: 'icon',
@@ -94,11 +94,11 @@ module.exports = {
       },
       {
         text: '反馈',
-        link: 'https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/issues/new/choose'
+        link: 'https://github.com/spencerwooo/dowww/issues/new/choose'
       },
       {
         text: 'GitHub',
-        link: 'https://github.com/spencerwoo98/Dev-on-Windows-with-WSL'
+        link: 'https://github.com/spencerwooo/dowww'
       },
     ],
     sidebar: {

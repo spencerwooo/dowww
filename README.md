@@ -2,13 +2,13 @@
 
 <h1 align="center">💡 Dev on Windows with WSL</h1>
 
-[![Build Status](https://img.shields.io/travis/spencerwoo98/Dev-on-Windows-with-WSL.svg?style=flat-square)](https://travis-ci.org/spencerwoo98/Dev-on-Windows-with-WSL)
-[![GitHub stars](https://img.shields.io/github/stars/spencerwoo98/Dev-on-Windows-with-WSL.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL)
+[![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww)
+[![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo/dowww)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
 ![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-> [直达链接 > 💡 在 Windows 上用 WSL 优雅开发](https://spencerwoo.com/Dev-on-Windows-with-WSL/)
+> [直达链接 > 💡 在 Windows 上用 WSL 优雅开发](https://spencerwoo.com/dowww/)
 
 # 前言
 
@@ -19,9 +19,9 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 # 你在这里能学到什么？
 
 - 💡 一套比 Windows 原生开发工具体验更好的 Unix 开发环境
-- 🎈 [一个可能是 Windows 上可定制化程度最高的终端模拟器与终端环境](https://spencerwoo.com/Dev-on-Windows-with-WSL/2-Toolchain/)
-- 🍗 [一些利用 Visual Studio Code 在 Windows 上与 WSL 中的工具配合进行开发和调试的 Tips](https://spencerwoo.com/Dev-on-Windows-with-WSL/3-VSCode/)（包括 Python 和 C/C++ 的开发）
-- 🍳 [利用 X-Server 直接打开 Linux 上的 GUI 窗口程序进行原生开发的操作指北](https://spencerwoo.com/Dev-on-Windows-with-WSL/4-GUI/)
+- 🎈 [一个可能是 Windows 上可定制化程度最高的终端模拟器与终端环境](https://spencerwoo.com/dowww/2-Toolchain/)
+- 🍗 [一些利用 Visual Studio Code 在 Windows 上与 WSL 中的工具配合进行开发和调试的 Tips](https://spencerwoo.com/dowww/3-VSCode/)（包括 Python 和 C/C++ 的开发）
+- 🍳 [利用 X-Server 直接打开 Linux 上的 GUI 窗口程序进行原生开发的操作指北](https://spencerwoo.com/dowww/4-GUI/)
 
 # 但是在这里我不想详细介绍这些内容：
 
@@ -54,11 +54,11 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 # 相关信息
 
-本仓库由 [VuePress](https://github.com/vuejs/vuepress) 生成，已经发布于：🔗 [Spencer Woo | Dev on Win with WSL](https://spencerwoo.com/Dev-on-Windows-with-WSL/)
+本仓库由 [VuePress](https://github.com/vuejs/vuepress) 生成，已经发布于：🔗 [Spencer Woo | Dev on Win with WSL](https://spencerwoo.com/dowww/)
 
 目前仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目。鞠躬。
 
-详细请见 > [💗💗💗 Help needed.](https://spencerwoo.com/Dev-on-Windows-with-WSL/3-VSCode/HelpNeeded.html)
+详细请见 > [💗💗💗 Help needed.](https://spencerwoo.com/dowww/3-VSCode/HelpNeeded.html)
 
 # License 许可
 
@@ -72,4 +72,4 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 Authored and maintained by Spencer Woo.
 
-[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwoo98)
+[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwoo)
