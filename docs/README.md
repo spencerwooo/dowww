@@ -84,4 +84,4 @@ WSL 的出现似乎缓解了这些烦恼。我们可以在 Windows 上借助 Win
 
 Authored and maintained by Spencer Woo.
 
-[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwoo)
+[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwooo)

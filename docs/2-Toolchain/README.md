@@ -27,4 +27,4 @@ sidebarDepth: 4
 
 💨 任何有经验的同学欢迎来这里添加补充内容。Fork > PR > Review > Merge 一条龙。
 
-💗 项目地址位于 > [Dev on Win with WSL](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL) 🎉🎉🎉
+💗 项目地址位于 > [Dev on Win with WSL](https://github.com/spencerwooo/dowww) 🎉🎉🎉
