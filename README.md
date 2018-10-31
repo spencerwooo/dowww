@@ -1,6 +1,16 @@
 <div align="center"><img src="https://raw.githubusercontent.com/spencerwooo/dowww/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div> 
 
-# 💡 Dev on Windows with WSL
+
+<h1 align="center">Dev on Windows with WSL</h1>
+
+<h3 align="center">🍳💡🎉</h3>
+
+<p align="center">
+<strong>在 Windows 上面用 WSL 优雅开发</strong><br>
+优秀的 Unix style 开发环境、包管理、迅捷稳定的开发调试环境、美丽养眼的开发工具与更多
+</p>
+
+<div align="center">
 
 [![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww)
 [![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo/dowww)
@@ -8,7 +18,21 @@
 ![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-> [直达链接 > 💡 在 Windows 上用 WSL 优雅开发](https://spencerwoo.com/dowww/)
+</div>
+
+<h3 align="center">
+    <a href="https://spencerwoo.com/dowww/">入坑指北</a>
+    <span> · </span>
+    <a href="https://spencerwoo.com/dowww/1-Preparations/">准备工作</a>
+    <span> · </span>
+    <a href="https://spencerwoo.com/dowww/2-Toolchain/">工具链</a>
+    <span> · </span>
+    <a href="https://spencerwoo.com/dowww/3-VSCode/">Visual Studio Code</a>
+    <span> · </span>
+    <a href="https://spencerwoo.com/dowww/4-GUI/">图形界面 GUI</a>
+    <span> · </span>
+    <a href="https://spencerwoo.com/dowww/5-Experience/">体验与参考</a>
+</h3>
 
 # 前言
 
