@@ -4,4 +4,3 @@ db.json
 *.log
 node_modules/
 .vscode/
-docs/.vuepress/dist
