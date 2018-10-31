@@ -22,6 +22,10 @@ install:
 script:
   - yarn docs:build
 
+cache:
+    directories:
+        - "node_modules"
+
 branches:
   only:
     - master
