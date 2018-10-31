@@ -1,4 +1,4 @@
-<img src="https://i.loli.net/2018/10/17/5bc6e7ca735bb.png" alt="logo" width="25%" height="25%" align="right">
+<div align="center"><img src="https://github.com/spencerwooo/dowww/tree/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div> 
 
 # 💡 Dev on Windows with WSL
 

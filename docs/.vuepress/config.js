@@ -1,15 +1,15 @@
 module.exports = {
-  title: 'Dev on Windows with WSL 💡',
+  title: 'Dev on Windows with WSL',
   description: '在 Windows 上用 WSL 优雅开发',
   base: '/dowww/',
   head: [
     ['link', {
       rel: 'icon',
-      href: 'https://i.loli.net/2018/10/17/5bc6e7ca735bb.png'
+      href: '/favicon.png'
     }],
     ['meta', {
       name: 'theme-color',
-      content: '#3eaf7c'
+      content: '#00ABE9'
     }],
     ['meta', {
       name: 'apple-mobile-web-app-capable',
@@ -21,15 +21,15 @@ module.exports = {
     }],
     ['link', {
       rel: 'apple-touch-icon',
-      href: `https://i.loli.net/2018/10/17/5bc6e7ca735bb.png`
+      href: '/favicon.png'
     }],
     ['meta', {
       name: 'msapplication-TileImage',
-      content: 'https://i.loli.net/2018/10/17/5bc6e7ca735bb.png'
+      content: '/favicon.png'
     }],
     ['meta', {
       name: 'msapplication-TileColor',
-      content: '#000000'
+      content: '#06BDFF'
     }]
   ],
   themeConfig: {
@@ -44,11 +44,11 @@ module.exports = {
             link: '/2-Toolchain/'
           },
           {
-            text: '终端环境 zsh、Hyper',
+            text: '终端环境',
             link: '/2-Toolchain/2-1-TerminalEnv'
           },
           {
-            text: '开发工具 git、ssh',
+            text: '开发工具',
             link: '/2-Toolchain/2-2-DevTools'
           }
         ]
