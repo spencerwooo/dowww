@@ -15,9 +15,10 @@ addons:
 
 before_install: 
   - export TZ='Asia/Shanghai'
+  - yarn global add vuepress
 
 install: 
-  - yarn global add vuepress
+  - yarn install
 
 script:
   - yarn docs:build
