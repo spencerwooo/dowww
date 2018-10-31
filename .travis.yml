@@ -1,7 +1,7 @@
 language: node_js
 
 node_js: 
-  - "10"
+  - "lts/*"
 
 # env:
 #   - CXX=g++-4.8
@@ -17,12 +17,11 @@ before_install:
   - export TZ='Asia/Shanghai'
 
 install: 
-  # - yarn global add vuepress
-  - npm install -g vuepress
+  - yarn global add vuepress
 
 script:
-  # - yarn docs:build
-  npm run docs:build
+  - yarn install
+  - yarn docs:build
 
 branches:
   only:
