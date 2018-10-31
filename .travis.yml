@@ -3,24 +3,26 @@ language: node_js
 node_js: 
   - "10"
 
-env:
-  - CXX=g++-4.8
+# env:
+#   - CXX=g++-4.8
 
-addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
+# addons:
+#   apt:
+#     sources:
+#       - ubuntu-toolchain-r-test
+#     packages:
+#       - g++-4.8
 
 before_install: 
   - export TZ='Asia/Shanghai'
 
 install: 
-  - yarn global add vuepress
+  # - yarn global add vuepress
+  - npm install -g vuepress
 
 script:
-  - yarn docs:build
+  # - yarn docs:build
+  npm run docs:build
 
 branches:
   only:
