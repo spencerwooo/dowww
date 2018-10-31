@@ -1,4 +1,4 @@
-<div align="center"><img src="https://github.com/spencerwooo/dowww/tree/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div> 
+<div align="center"><img src="https://raw.githubusercontent.com/spencerwooo/dowww/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div> 
 
 # 💡 Dev on Windows with WSL
 
