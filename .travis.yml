@@ -1,0 +1,31 @@
+language: node_js
+
+sudo: required
+
+node_js: '10'
+
+branches:
+  only:
+    - master
+
+before_install: 
+  - export TZ='Asia/Shanghai'
+  - yarn global add vuepress
+
+install:
+  - yarn install
+
+script:
+  - yarn docs:build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: docs/.vuepress/dist
+  name: $GIT_NAME
+  email: $GIT_EMAIL
+  keep-history: true
+  target-branch: gh-pages
+  on:
+    branch: master
