@@ -20,6 +20,12 @@ next: /2-Toolchain/
 
 ## WSL - Windows Subsystem for Linux
 
+### WSL 的介绍与使用
+
+由少数派作者 @[化学心情下2](https://sspai.com/user/78/posts) 介绍的有关具体的 WSL 安装使用参考阅读：[不用装双系统，直接在 Windows 上体验 Linux：Windows Subsystem for Linux](https://sspai.com/post/43813)
+
+### WSL 的下载与安装
+
 直接从微软商店下载。
 
 官方支持的 Linux 发行版有：
