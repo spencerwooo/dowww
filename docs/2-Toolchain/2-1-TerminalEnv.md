@@ -60,7 +60,7 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 
 ### 下载 Hyper
 
-然后，下载 Hyper 终端：
+下载 Hyper 终端：
 
 - [Hyper 终端官网](https://hyper.is/)
 - [Hyper 终端下载地址](https://hyper.is/#installation)
