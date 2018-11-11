@@ -114,7 +114,7 @@ sudo chsh -s $(which zsh)
 
 ## 解决 `ls` 和 `cd` 命令后背景色问题
 
-简单来说，由于 DrvFs 文件系统的权限问题，导致了 Windows 原有 NTFS 文件系统中的文件到 WSL 下权限全部成 0777。这样在 WSL 中执行 `ls` 和 `cd` 命令之后，显示出来的结果背景色就会出现问题。
+简单来说，由于 DrvFs 文件系统的权限问题，导致了 Windows 原有 NTFS 文件系统中的文件到 WSL 下权限全部变成 0777。这样在 WSL 中执行 `ls` 和 `cd` 命令之后，显示出来的结果背景色就会出现问题。
 
 > 感谢 [@printempw](https://github.com/printempw) 提供的从根源解决这个问题的方式。由于 DrvFs 文件权限问题导致出现有问题的背景色根本原因在于这里 > [DrvFs 文件权限问题](https://blessing.studio/wsl-guide/#6-6-DrvFs-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98)。
 
