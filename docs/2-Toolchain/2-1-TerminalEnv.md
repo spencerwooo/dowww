@@ -58,10 +58,6 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 
 按照下面的步骤进行配置，最后成品大概是这样的。🎉🎉🎉
 
-### 下载 Node.js
-
-首先，下载 [Node.js for Windows](https://nodejs.org/en/download/) 并安装。
-
 ### 下载 Hyper
 
 然后，下载 Hyper 终端：
@@ -75,10 +71,12 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 
 ### 配置 Hyper 终端
 
+> 感谢 [@printempw](https://github.com/printempw) 对唤起 WSL 的 Shell 环境方式进行反馈建议，参考 [Issue #6](https://github.com/spencerwooo/dowww/issues/6)。
+
 配置 Hyper 终端默认使用 WSL 的 `bash`：
 
 - 打开 Hyper，快捷键 `Ctrl` + `,`：开启配置文件；
-- 找到 `Shell` 选项，将其改成：`C:\\Windows\\System32\\bash.exe`
+- 找到 `Shell` 选项，将其改成：`C:\\Windows\\System32\\wsl.exe`
 - 重启 Hyper。
 
 > 💎 参考配置文件：[我的 `.hyper.js` 长这样儿。🎈🎈🎈](https://gist.github.com/spencerwoo98/f90d1ce8a24e7fc0fe6a3a7aab097f6e)
@@ -99,21 +97,19 @@ set bell-style none
 下载安装 `zsh` 代替自动补全功能欠缺的 `bash`：
 
 - 利用 Ubuntu 的包管理器安装 `zsh`：`sudo apt install zsh`
-- 修改 `.bashrc` 加入以下代码，使得默认 `shell` 变成 `zsh`：
+- 使用 `zsh` 作为默认的 Shell 环境：
 
 ```bash
-if [ -t 1 ]; then
-exec zsh
-fi
+sudo chsh -s $(which zsh)
 ```
-
-- 加载设置：`source ~/.bashrc`
 
 下载安装 [`oh-my-zsh`](https://ohmyz.sh/)，一个好用的 `zsh` 配置管理工具：
 
 - 运行命令下载安装：`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"` （提醒没有什么就安装什么。比如：没有 `curl` 的话，运行 `sudo apt-get install curl` 安装。然后再执行上述语句。）
 
 去除 `ls` 和 `cd` 命令之后背景色出现的问题：
+
+> 感谢 [@printempw](https://github.com/printempw) 提供的从根源解决这个问题的方式。由于 DrvFs 文件权限问题导致出现有问题的背景色根本原因在于这里 > [DrvFs 文件权限问题](https://blessing.studio/wsl-guide/#6-6-DrvFs-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98)。
 
 - 修改 `.zshrc`，添加如下代码
 
