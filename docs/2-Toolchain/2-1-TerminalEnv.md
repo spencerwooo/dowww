@@ -105,13 +105,17 @@ sudo chsh -s $(which zsh)
 
 下载安装 [`oh-my-zsh`](https://ohmyz.sh/)，一个好用的 `zsh` 配置管理工具：
 
-- 运行命令下载安装：`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"` （提醒没有什么就安装什么。比如：没有 `curl` 的话，运行 `sudo apt-get install curl` 安装。然后再执行上述语句。）
+- 运行命令下载安装：`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
-去除 `ls` 和 `cd` 命令之后背景色出现的问题：
+## 解决 `ls` 和 `cd` 命令后背景色问题
+
+简单来说，由于 DrvFs 文件系统的权限问题，导致了 Windows 原有 NTFS 文件系统中的文件到 WSL 下权限全部成 0777。这样在 WSL 中执行 `ls` 和 `cd` 命令之后，显示出来的结果背景色就会出现问题。
 
 > 感谢 [@printempw](https://github.com/printempw) 提供的从根源解决这个问题的方式。由于 DrvFs 文件权限问题导致出现有问题的背景色根本原因在于这里 > [DrvFs 文件权限问题](https://blessing.studio/wsl-guide/#6-6-DrvFs-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98)。
 
-- 修改 `.zshrc`，添加如下代码
+### 如果不想对文件系统的权限进行修改
+
+- 可以在 `.zshrc` 最尾部添加如下代码
 
 ```bash
 # Change ls colours
@@ -124,6 +128,28 @@ compinit
 ```
 
 - 加载设置：`source ~/.zshrc`
+
+### 如果希望从根本上解决 DrvFs 文件系统的权限问题
+
+- 在 WSL 中创建 `/etc/wsl.conf`，在其中填写如下内容：
+
+```
+[automount]
+enabled = true
+root = /mnt/
+options = "metadata,umask=22,fmask=111"
+mountFsTab = true
+```
+
+- 重启终端，所有的盘符就会使用上面的配置自动挂载（可以使用 `mount -l` 查看）
+
+另外，如果你想要给不同的盘符设定不同的挂载参数（上面的方法对所有盘符都有效，如果你想在 WSL 中运行 Windows 下的应用程序，就得每次都 `chmod +x` 一下，所以我一般都会把 C: 排除掉），就需要手动修改 `/etc/fstab`。首先确保 `wsl.conf` 中的 `mountFsTab` 为 `true`，然后编辑 `/etc/fstab`，添加如下内容：
+
+```
+# 不在此列表中的盘符会使用 wsl.conf 中的参数挂载
+# 格式可以自己去查 fstab 的帮助文档
+E: /mnt/e drvfs rw,relatime,uid=1000,gid=1000,metadata,umask=22,fmask=111 0 0
+```
 
 基本的终端环境就到这里了。
 
