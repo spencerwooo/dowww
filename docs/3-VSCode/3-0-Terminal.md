@@ -6,14 +6,16 @@
 
 ## 配置
 
+> 感谢 [@printempw](https://github.com/printempw) 对唤起 WSL 的 Shell 环境方式进行反馈建议，参考 [Issue #6](https://github.com/spencerwooo/dowww/issues/6)。
+
 在 Visual Studio Code 设置中新增如下内容：
 
 ```json
 {
-    "terminal.integrated.shell.windows": "C:\\WINDOWS\\Sysnative\\bash.exe"
+    "terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe"
 }
 ```
-重启 VSCode 终端，唤起的终端环境就是 WSL 的 bash 环境了。
+重启 VSCode 终端，唤起的终端环境就是 WSL 的 shell 环境了。
 
 更多详细内容请看下方说明。👇
 
