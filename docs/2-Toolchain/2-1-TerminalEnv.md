@@ -136,6 +136,8 @@ compinit
 
 ### 如果希望从根本上解决 DrvFs 文件系统的权限问题
 
+> 以下内容来自 [@printempw](https://github.com/printempw) 提供的这篇文章 > [DrvFs 文件权限问题](https://blessing.studio/wsl-guide/#6-6-DrvFs-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98)。
+
 - 在 WSL 中创建 `/etc/wsl.conf`，在其中填写如下内容：
 
 ```
