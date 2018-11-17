@@ -76,10 +76,19 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 配置 Hyper 终端默认使用 WSL 的 `bash`：
 
 - 打开 Hyper，快捷键 `Ctrl` + `,`：开启配置文件；
-- 找到 `Shell` 选项，将其改成：`C:\\Windows\\System32\\wsl.exe`
+- 将配置文件的这几项进行这样的配置：
+
+``` js
+config: {
+    shell: 'C:\\Windows\\System32\\wsl.exe',
+    shellArgs: [],
+    env: {}
+}
+```
+
 - 重启 Hyper。
 
-> 💎 参考配置文件：[我的 `.hyper.js` 长这样儿。🎈🎈🎈](https://gist.github.com/spencerwoo98/f90d1ce8a24e7fc0fe6a3a7aab097f6e)
+> 💎 参考配置文件：[.hyper.js](https://gist.github.com/spencerwooo/f90d1ce8a24e7fc0fe6a3a7aab097f6e)
 
 禁用令人闹心的终端提示音：
 

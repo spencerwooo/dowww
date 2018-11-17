@@ -20,7 +20,7 @@ Code Runner 是一个能够一键执行编译运行的 VSCode 插件，支持多
 }
 ```
 
-2. 配置路径为 WSL 路径（感谢 [江枫同学 @jiangbianyiye](https://github.com/jiangbianyiye) 的补充，见 [Issue #1](https://github.com/spencerwoo98/Dev-on-Windows-with-WSL/issues/1)）：
+2. 配置路径为 WSL 路径（感谢 [江枫同学 @jiangbianyiye](https://github.com/jiangbianyiye) 的补充，见 [Issue #1](https://github.com/spencerwooo/Dev-on-Windows-with-WSL/issues/1)）：
 
 ```json
 {

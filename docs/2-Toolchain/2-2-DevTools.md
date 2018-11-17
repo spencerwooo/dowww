@@ -39,7 +39,7 @@ alias unfuckgit="git config --global --unset http.proxy && git config --global -
 
 然后执行 `source .zshrc` 加载配置文件。
 
-更多有趣的 `alias` 可以参考我的配置文件：[`awesome-alias`](https://github.com/spencerwoo98/awesome-alias)
+更多有趣的 `alias` 可以参考我的配置文件：[`awesome-alias`](https://github.com/spencerwooo/awesome-alias)
 
 ## ssh
 

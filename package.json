@@ -6,7 +6,7 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs"
   },
-  "repository": "https://github.com/spencerwoo98/Dev-on-Windows-with-WSL",
-  "author": "spencerwoo98 <spencerwoo98@foxmail.com>",
+  "repository": "https://github.com/spencerwooo/dowww",
+  "author": "spencerwooo <spencerwoo98@foxmail.com>",
   "license": "CC-BY-NC-ND-4.0"
 }
