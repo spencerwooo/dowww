@@ -8,10 +8,6 @@
 
 ## 安装插件
 
-::: warning 注意
-请先从 `WSL` 的终端环境中打开 Visual Studio Code：`code &`
-:::
-
 安装 Visual Studio Code [官方 Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python)。
 
 然后重启 Visual Studio Code.
@@ -20,84 +16,75 @@
 
 在 WSL 侧安装 Python：
 
-- 安装必备工具：`sudo apt install -y make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev`
+- 安装一些必备工具：`sudo apt install -y make build-essential libssl-dev libffi-dev python3-dev`
+- 安装 Python 3.7（或者你想要的 Python 版本）：`sudo apt install python3.7`
+- 安装 Python 包管理 `pip`：`sudo apt install python3-pip`
+- 更新 `pip` 包管理源地址至清华大学 TUNA 站点：
+  - 在根目录下创建文件：`~/.pip/pip.conf`
+  - 在其中加入如下内容：
 
-- 安装 Python 3（或者你想要的 Python 版本）：`sudo apt install python3`
+```
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```
 
 ## 让 VSCode 集成 WSL 侧 Python
 
-::: warning 注意
-以下步骤需要全部在 WSL 中进行，包括创建文件、创建文件夹和写入文件内容。在 Windows 文件资源管理器中创建文件夹与文件会造成 Visual Studio Code 无法识别相应的批处理文件，导致 Python 插件无法正常进行代码实时检查、代码美化与快速定位等功能。
+> 以下内容、解决方案、代码和可执行文件来自 [plusls - VSCode using Python in WSL](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/)，致谢。
+
+首先从 [这里](blog.plusls.cn/windows/vscode-using-python-in-wsl/wsl.zip) 下载由 plusls 编译的一些工具，下载的文件内容有：
+
+```
+.
+├── LocalDebugClient.js
+├── completion.py
+├── pydevd_file_utils.py
+└── wsl-tools
+    ├── autopep8.exe
+    ├── ctags.exe
+    ├── pylint.exe
+    ├── python.exe
+    ├── python2.exe
+    └── python3.exe
+
+1 directory, 9 files
+
+```
+
+将下载文件解压至本地目录下，留作后续使用。
+
+### 让 VSCode Python 插件识别到 WSL 环境下的 Python
+
+::: tip TIP
+以下内容以 Python 3 为例，其他版本的 Python 原理相同。
 :::
 
-- 在 WSL 终端中进入 Windows 系统用户根目录（即：`/mnt/c/Users/$Windows 用户名$`）
-- 创建文件夹：`mkdir .vscode_bats`
-- 进入文件夹 `cd .vscode_bats`，**⚠ 用 VSCode 创建文件 `code python.bat &`**
-- 将下面内容 **在 VSCode 中** 加入文件 `python.bat`：
-
-```bat
-@echo off
-set v_params=%*
-set v_params=%v_params:\=/%
-set v_params=%v_params:c:=/mnt/c%
-set v_params=%v_params:"=\"%
-bash.exe -c "/usr/bin/python3 %v_params%"
-```
-
-- 在 VSCode 设置中加入：
+在 VSCode 中设置如下：
 
 ```json
-"python.pythonPath": "C:\\Users\\$用户名$\\.vscode_bats\\python3.bat",
+"python.pythonPath": "C:\\$更换为 python3.exe 的路径$\\python3.exe",
 ```
+
+### 让 Python 插件直接使用 WSL 侧的工具
 
 官方 Python 插件集成了实时代码风格检查工具 `pylint`，快速定位工具 `ctags` 和代码美化插件 `autopep8`。这些同样也可以在 WSL 侧安装并从 Windows VSCode 侧调用。
 
-- 安装 Python 包管理器 `pip`：`sudo apt install python3-pip`
 - 安装 `pylint`：`pip3 install pylint`
 - 安装 `exuberant ctags`：`sudo apt install exuberant-ctags`
 - 安装 `autopep8`：`pip3 install autopep8`
-- 在刚刚创建的 `.vscode_bats` 文件夹下**用 VSCode 创建** `pylint.bat`：`code pylint.bat &` 并加入以下内容：
-
-```bat
-@echo off
-set v_params=%*
-set v_params=%v_params:\=/%
-set v_params=%v_params:c:=/mnt/c%
-set v_params=%v_params:"=\"%
-bash.exe -c "/usr/bin/pylint %v_params%"
-```
-
-- 在刚刚创建的 `.vscode_bats` 文件夹下**用 VSCode 创建** `ctags.bat`：`code ctags.bat &` 并加入以下内容：
-
-```bat
-@echo off
-set v_params=%*
-set v_params=%v_params:\=/%
-set v_params=%v_params:c:=/mnt/c%
-set v_params=%v_params:"=\"%
-bash.exe -c "ctags %v_params%"
-```
-
-- 在刚刚创建的 `.vscode_bats` 文件夹下**用 VSCode 创建** `autopep8.bat`：`code autopep8.bat &` 并加入以下内容：
-
-```bat
-@echo off
-set v_params=%*
-set v_params=%v_params:\=/%
-set v_params=%v_params:c:=/mnt/c%
-set v_params=%v_params:"=\"%
-bash.exe -c "autopep8 %v_params%"
-```
-
 - 在 VSCode 设置中加入：
 
 ```json
-"python.linting.pylintPath": "C:\\Users\\$用户名$\\.vscode_bats\\pylint.bat",
-"python.workspaceSymbols.ctagsPath": "C:\\Users\\$用户名$\\.vscode_bats\\ctags.bat",
-"python.formatting.autopep8Path": "C:\\Users\\$用户名$\\.vscode_bats\\autopep8.bat"
+"python.linting.pylintPath": "C:\\$更换为 pylint.exe 的路径$\\pylint.exe",
+"python.workspaceSymbols.ctagsPath": "C:\\$更换为 ctags.exe 的路径$\\ctags.exe",
+"python.formatting.autopep8Path": "C:\\$更换为 autopep8.exe 的路径$\\autopep8.exe"
 ```
 
-那么现在拿 VSCode 写 Python 项目的时候应该可以自动代码补全、IntelliSense、跳转定义和自动美化了。👍
+那么现在拿 VSCode 写 Python 项目的时候应该可以自动代码补全、IntelliSense 和自动美化了。👍
+
+### 跳转定义、调试等内容的配置
+
+这部分内容由于涉及到修改 VSCode Python 官方插件代码，因此不建议进行配置。同时，随着插件的更新，修改的代码会失效，修改方法也不近相同，如果有需要可以考虑 [查看原文内容](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/) 自行配置。
 
 ## Code Runner
 

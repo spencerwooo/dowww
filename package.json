@@ -8,5 +8,8 @@
   },
   "repository": "https://github.com/spencerwooo/dowww",
   "author": "spencerwooo <spencerwoo98@foxmail.com>",
-  "license": "CC-BY-NC-ND-4.0"
+  "license": "CC-BY-NC-ND-4.0",
+  "dependencies": {
+    "vuepress": "^0.14.8"
+  }
 }
