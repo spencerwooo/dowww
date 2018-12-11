@@ -30,10 +30,17 @@ next: /2-Toolchain/
 
 官方支持的 Linux 发行版有：
 
-- Ubuntu
-- Debian
-- OpenSUSE / SUSE Enterprise Linux
-- Kali Linux
+- Ubuntu: [最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)，[16.04 LTS](https://www.microsoft.com/store/productId/9PJN388HP8C9)和[18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q)
+- OpenSUSE Leap：[42](https://www.microsoft.com/store/productId/9NJVJTS82TJX)， [15.0](https://www.microsoft.com/store/productId/9N1TB6FPVJ8C)
+- SUSE Linux Enterprise Server：[12](https://www.microsoft.com/store/productId/9P32MWBH6CNS)，[15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
+- [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
+- [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
+- WLinux：[普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)
+- [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395)
+
+社区支持的第三方WSL发行版：
+- [ArchWSL](https://github.com/yuk7/ArchWSL)
+- [AlpineWSL](https://github.com/yuk7/AlpineWSL)
 
 具体下载安装过程见 > [微软官方支持文档](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)。
 
