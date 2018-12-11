@@ -79,6 +79,9 @@ module.exports = {
             text: 'C/C++',
             link: '/3-VSCode/3-4-C_Cpp'
           },{
+            text: 'LaTeX',
+            link: '/3-VSCode/3-5-LaTeX'
+          },{
             text: '帮助完善',
             link: '/3-VSCode/HelpNeeded'
           }
@@ -115,6 +118,7 @@ module.exports = {
         '3-2-Code-Runner',
         '3-3-Python',
         '3-4-C_Cpp',
+        '3-5-LaTeX',
         'HelpNeeded'
       ],
       '/4-GUI/': [''],
