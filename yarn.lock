@@ -1704,14 +1704,14 @@ caniuse-api@^1.5.2:
     lodash.uniq "^4.5.0"
 
 caniuse-db@^1.0.30000529, caniuse-db@^1.0.30000634, caniuse-db@^1.0.30000639:
-  version "1.0.30000912"
-  resolved "http://registry.npm.taobao.org/caniuse-db/download/caniuse-db-1.0.30000912.tgz#29c739d8c8fae006de61b51f547bdbf02f5d867e"
-  integrity sha1-Kcc52Mj64AbeYbUfVHvb8C9dhn4=
+  version "1.0.30000913"
+  resolved "http://registry.npm.taobao.org/caniuse-db/download/caniuse-db-1.0.30000913.tgz#3b97db61ede29dbf2c215a3178b6633b3c554f17"
+  integrity sha1-O5fbYe3inb8sIVoxeLZjOzxVTxc=
 
 caniuse-lite@^1.0.30000844, caniuse-lite@^1.0.30000864:
-  version "1.0.30000912"
-  resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000912.tgz#08e650d4090a9c0ab06bfd2b46b7d3ad6dcaea28"
-  integrity sha1-COZQ1AkKnAqwa/0rRrfTrW3K6ig=
+  version "1.0.30000913"
+  resolved "http://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30000913.tgz#560311ecf242eaf12159b720e64b11ebd759b5e4"
+  integrity sha1-VgMR7PJC6vEhWbcg5ksR69dZteQ=
 
 capture-stack-trace@^1.0.0:
   version "1.0.1"
@@ -2584,9 +2584,9 @@ ee-first@1.1.1:
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
 electron-to-chromium@^1.2.7, electron-to-chromium@^1.3.47:
-  version "1.3.86"
-  resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.86.tgz#a45ea01da5b26500d12bca5e0f194ebb3e1fd14e"
-  integrity sha1-pF6gHaWyZQDRK8peDxlOuz4f0U4=
+  version "1.3.87"
+  resolved "http://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.87.tgz#f0481ca84824752bced51673396e9a6c74fe5ec7"
+  integrity sha1-8EgcqEgkdSvO1RZzOW6abHT+Xsc=
 
 elliptic@^6.0.0:
   version "6.4.1"
@@ -6667,9 +6667,9 @@ terser-webpack-plugin@^1.1.0:
     worker-farm "^1.5.2"
 
 terser@^3.8.1:
-  version "3.10.13"
-  resolved "http://registry.npm.taobao.org/terser/download/terser-3.10.13.tgz#00a8b2e9c1bec3f681257d90f96c3b1292ada97a"
-  integrity sha1-AKiy6cG+w/aBJX2Q+Ww7EpKtqXo=
+  version "3.11.0"
+  resolved "http://registry.npm.taobao.org/terser/download/terser-3.11.0.tgz#60782893e1f4d6788acc696351f40636d0e37af0"
+  integrity sha1-YHgok+H01niKzGljUfQGNtDjevA=
   dependencies:
     commander "~2.17.1"
     source-map "~0.6.1"
