@@ -1,6 +1,6 @@
 # LaTeX
 
-> Authored by [@patrick330602](https://listener.space), via [PR #10](https://github.com/spencerwooo/dowww/pull/10).
+> Authored by [@patrick330602](https://patrickwu.space/), via [PR #10](https://github.com/spencerwooo/dowww/pull/10).
 
 用 WSL 下的 TeXLive 和 Visual Studio Code 的 LaTeX Workshop 可以完全配置好一个可用的 Windows LaTeX 环境，摆脱 Windows 下蛋疼的 TexLive 安装包。
 
