@@ -50,15 +50,57 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted uni
 
 > 参考：[Shell、Terminal 和 Console 的区别。](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
 
-## Hyper 终端
+## 终端 Terminal
 
-Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」去和我们的 `shell` 进行交互），也可能是目前 Windows 上面可定制化程度最高的终端模拟器了。当然，Hyper 也支持 macOS 和 Linux。有关 macOS 终端美化的具体方法可以参考这篇文章 > [HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
+> 更新于 2018-12-13，新增了 Terminus 终端：一个可能比 Hyper 更用户友好的终端。
+
+Terminal，即「终端模拟器」。我们需要一个终端去和我们的 `shell` 进行交互。2018 年马上就要过去了，Windows 的自带终端依旧不支持 256 色彩，我们急需一个美丽可用的 Windows 终端与 WSL 环境进行交互。下面推荐两个支持全平台的 Terminal，任选一个就可以。
+
+### Terminus
+
+Terminus 是基于 Electron 的 Terminal，是本次我更加推荐的终端。因为相比下文推荐的 Hyper 终端，同样是 Electron 技术搭建的情况下，Terminus 优化的相对更好，启动快速，设置界面也是 GUI 形式而非直接修改配置文件。并且 Terminus 是 Windows 上唯一支持 Fluent Design 里 Vibrancy 色彩的稳定终端。总之体验更加爽快。👍
+
+![](https://i.loli.net/2018/12/13/5c11e99587274.png)
+
+#### 下载 Terminus
+
+下载 Terminus 终端：
+
+- [Terminus 官网](https://eugeny.github.io/terminus/)
+- [Terminus 项目主页](https://github.com/Eugeny/terminus)
+- [Terminus Release 下载页面](https://github.com/Eugeny/terminus/releases/latest)
+
+#### 配置 Terminus
+
+在设置中将默认 Shell 设置为「WSL / Default distro」即可默认每次打开 WSL 环境，如下：
+
+![](https://i.loli.net/2018/12/13/5c11e8a6eee87.png)
+
+Terminus 的设置是 GUI 界面的，配置简单友好，这里就不做过多描述了，如果要达到截图中的效果：
+
+- **字体**：[Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
+- **配色**：ayu
+- **Terminus 设置：**
+  - **Theme**: Standard
+  - **Acrylic background**: ✅
+  - **Background Type**: Fluent
+  - **Custom CSS**:
+
+```css
+::-webkit-scrollbar { 
+    display: none;
+}
+```
+
+Terminus 有很大的可玩性，不必拘泥于我的配置，尽情放飞自己 (づ￣ 3￣)づ
+
+### Hyper 终端
+
+Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定制化程度最高的终端模拟器了。当然，Hyper 也支持 macOS 和 Linux。有关 macOS 终端美化的具体方法可以参考这篇文章 > [HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
 
 ![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
 
-按照下面的步骤进行配置，最后成品大概是这样的。🎉🎉🎉
-
-### 下载 Hyper
+#### 下载 Hyper
 
 下载 Hyper 终端：
 
@@ -69,7 +111,7 @@ Hyper 是基于 Electron 的 Terminal（我们需要一个「终端模拟器」�
 
 - [Awesome Hyper](https://github.com/bnb/awesome-hyper) - 有趣的与 Hyper 相关的内容、项目，可以找到合适的主题配置、字体、插件和 Hyper 的使用指南。
 
-### 配置 Hyper 终端
+#### 配置 Hyper 终端
 
 > 感谢 [@printempw](https://github.com/printempw) 对唤起 WSL 的 Shell 环境方式进行反馈建议，参考 [Issue #6](https://github.com/spencerwooo/dowww/issues/6)。
 
