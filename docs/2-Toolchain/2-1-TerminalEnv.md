@@ -4,10 +4,6 @@ sidebarDepth: 4
 
 # 终端环境
 
-:::tip 💎
-按照安装顺序介绍：
-:::
-
 ## 准备
 
 为了加速 Ubuntu 18.04 软件包在中国大陆的下载速度，我们将包管理工具 `apt` 源更换至中科大镜像源：
@@ -54,7 +50,7 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted uni
 
 > 更新于 2018-12-13，新增了 Terminus 终端：一个可能比 Hyper 更用户友好的终端。
 
-Terminal，即「终端模拟器」。我们需要一个终端去和我们的 `shell` 进行交互。2018 年马上就要过去了，Windows 的自带终端依旧不支持 256 色彩，我们急需一个美丽可用的 Windows 终端与 WSL 环境进行交互。下面推荐两个支持全平台的 Terminal，任选一个就可以。
+Terminal，即「终端模拟器」。我们需要一个终端去和我们的 `shell` 进行交互。2018 年马上就要过去了，Windows 的自带终端依旧不支持 256 色彩，我们急需一个美丽可用的 Windows 终端与 WSL 环境进行交互。下面推荐两个支持全平台的 Terminal，**任选一个就可以**。
 
 ### Terminus
 
