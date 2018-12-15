@@ -41,17 +41,21 @@ Redefined.](https://code.visualstudio.com/)
 
 - 字体：
 
+> 主字体下载地址：[Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
+
 ```json
 {
-    "editor.fontFamily": "'Fira Mono for Powerline', 'Segoe UI Emoji', Consolas, sans-serif"
+    "editor.fontFamily": "'Iosevka', 'Microsoft YaHei UI', monospace"
 }
 ```
 
 - 主题配色：
 
+> VSCode 主题插件下载地址：[Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
+
 ```json
 {
-    "workbench.colorTheme": "Material Theme"
+    "workbench.colorTheme": "Ayu Mirage Bordered"
 }
 ```
 
@@ -59,7 +63,7 @@ Redefined.](https://code.visualstudio.com/)
 
 ```json
 {
-    "workbench.iconTheme": "material-icon-theme"
+    "workbench.iconTheme": "vscode-icons"
 }
 ```
 
