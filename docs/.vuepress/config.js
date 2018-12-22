@@ -65,7 +65,7 @@ module.exports = {
           },
           
           {
-            text: 'Git on WSL',
+            text: 'Git',
             link: '/3-VSCode/3-1-Git'
           },
           {
@@ -81,6 +81,9 @@ module.exports = {
           },{
             text: 'LaTeX',
             link: '/3-VSCode/3-5-LaTeX'
+          },{
+            text: 'Node.js',
+            link: '/3-VSCode/3-6-NodeJS'
           },{
             text: '帮助完善',
             link: '/3-VSCode/HelpNeeded'
@@ -119,6 +122,7 @@ module.exports = {
         '3-3-Python',
         '3-4-C_Cpp',
         '3-5-LaTeX',
+        '3-6-NodeJS.md',
         'HelpNeeded'
       ],
       '/4-GUI/': [''],
