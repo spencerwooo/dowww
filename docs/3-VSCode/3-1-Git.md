@@ -1,4 +1,4 @@
-# Git within WSL
+# Git
 
 > Use Git installed in Bash on Windows/Windows Subsystem for Linux (WSL) from Windows and Visual Studio Code (VSCode)
 
