@@ -106,7 +106,7 @@ $ yarn docs:dev
 - 在 `/docs/.vuepress/config.js` 中增加这些内容：
   - 在 `themeConfig` > `nav` > `Visual Studio Code` 的 `items` 下，`帮助完善` 项目前，增加：
 
-  ```json
+  ```javascript
   {
     text: 'AmazingLanguage',
     link: '/3-VSCode/3-7-AmazingLanguage'
@@ -115,7 +115,7 @@ $ yarn docs:dev
   
   - 在 `sidebar` 下，`/3-VSCode/` 项下，增加这样的内容：
 
-  ```json
+  ```javascript
   '3-6-AmazingLanguage.md'
   ```
 

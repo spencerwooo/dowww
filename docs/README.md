@@ -19,7 +19,7 @@ footer: 2018 ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International Lic
 ![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
-# 前言
+## 前言
 
 > 在 [少数派 | 在 Windows 上用 WSL 开发的操作体验指北](https://sspai.com/post/47719) 上阅读更多。
 
@@ -35,14 +35,14 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 如果你对这些内容感兴趣，那么 [**直接进入文档**](https://spencerwoo.com/dowww/)，放飞自我，尽情折腾。\\(￣︶￣*\\))
 
-# 更新日志
+## Changelog 更新日志
 
 - [2018-12-22]：增加了 VSCode 中 Node.js 环境的配置，[PR #11](https://github.com/spencerwooo/dowww/pull/11)
 - [2018-12-13]：新增了 Terminus 终端的推荐
 - [2018-12-11]：增加了 VSCode 中 LaTeX 环境的配置，[PR #10](https://github.com/spencerwooo/dowww/pull/10)
 - ...
 
-# 主要内容
+## Contents 主要内容
 
 在这里，我主要介绍了：
 
@@ -61,17 +61,30 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 这些问题太过主观，在这里我最想解决的是如何让 WSL 下的工具能够更加丝滑的与 Windows 开发工具配合，来提高我们的开发效率。并且说实话，**教程中介绍的工具无需进一步的配置就足够美观了**。
 
-# 贡献与其他
+## Contributing 贡献
+
+### Contributors 贡献者
+
+[![](https://opencollective.com/dowww/contributors.svg?width=890)](https://github.com/spencerwooo/dowww/graphs/contributors)
+
+### How to contribute 贡献规范
 
 目前来讲，Dev on Windows with WSL 仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目，鞠躬。
 
-详细请见 > [帮助完善](/3-VSCode/HelpNeeded.html) 与 [CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
+在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范 > [CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
 
-# License 许可
+## Sponsors 赞助
+
+感谢您考虑赞助我们的项目。我们接受以下形式的赞助：
+
+- [微信](https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg)
+- [支付宝](https://i.loli.net/2018/03/13/5aa7ae11339cd.jpg)
+
+## License 许可
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="創用 CC 授權條款" style="border-width:0; padding-top:10px;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 
-本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">創用 CC 姓名標示-非商業性-禁止改作 4.0 國際 授權條款</a>授權。
+本著作係採用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">創用 CC 姓名標示-非商業性-禁止改作 4.0 國際 授權條款</a> 授權。
 
 ---
 
