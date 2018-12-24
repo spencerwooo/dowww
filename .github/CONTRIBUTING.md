@@ -55,7 +55,16 @@
 $ git clone https://github.com/ $Your_GitHub_UserName /dowww.git
 ```
 
-3. 安装 `Node.js` 和其包管理 `yarn`
+3. 安装 `Node.js` 和其包管理 `yarn`：
+
+- 如果你已经开始（或很想）使用 WSL 进行开发，请直接用你所选择的 Linux 发行版的包管理安装上面所述的内容。更多内容请参考 - [Dev on Windows with WSL | Node.js](https://spencerwoo.com/dowww/3-VSCode/3-6-NodeJS.html)
+- 如果你依旧在使用 Windows 侧的开发环境，推荐使用 Windows 的「包管理」工具 - [`scoop`](https://github.com/lukesampson/scoop)：
+  - 安装 `scoop`，PowerShell 中运行：`iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
+  - 安装 `nvm`：`scoop install nvm`
+  - 安装最新稳定版本的 `Node.js`：`nvm install latest`
+  - 安装 `yarn`：`scoop install yarn`
+- 如果你并没有在用 Windows ... 那你怎么看到这个项目了 ∑( 口 ||
+
 4. 安装相关依赖：
 
 ```bash
