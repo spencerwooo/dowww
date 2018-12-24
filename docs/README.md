@@ -25,7 +25,7 @@ footer: 2018 ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International Lic
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
-![](https://i.loli.net/2018/12/13/5c11e99587274.png)
+![](https://i.loli.net/2018/12/24/5c2096c6baad0.png)
 
 WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linux，即适用于 Linux 的 Windows 子系统，是一个为在 Windows 10 上能够原生运行 Linux 二进制可执行文件的兼容层。WSL 的出现意味着我们可以借助它来给我们的 Windows 配置一个美观可用的 **学习编程的开发环境**，包括：
 
@@ -35,14 +35,16 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 如果你对这些内容感兴趣，那么 [**直接进入文档**](https://spencerwoo.com/dowww/)，放飞自我，尽情折腾。\\(￣︶￣*\\))
 
-# Changelog
+# 更新日志
 
+- [2018-12-22]：增加了 VSCode 中 Node.js 环境的配置，[PR #11](https://github.com/spencerwooo/dowww/pull/11)
 - [2018-12-13]：新增了 Terminus 终端的推荐
 - [2018-12-11]：增加了 VSCode 中 LaTeX 环境的配置，[PR #10](https://github.com/spencerwooo/dowww/pull/10)
-- [2018-12-22]：增加了 VSCode 中 Node.js 环境的配置，[PR #11](https://github.com/spencerwooo/dowww/pull/11)
 - ...
 
-# 我都介绍了什么？
+# 主要内容
+
+在这里，我主要介绍了：
 
 - 如何搭建一套比 Windows 原生开发工具体验更好的 Unix 开发环境
 - 如何配置一个可能是 Windows 上可定制化程度最高的终端模拟器与终端环境
@@ -57,13 +59,13 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 - 如何配置 Windows 下（或是 macOS 下）的终端环境更好看
 - 如何配置 Windows 更好看
 
-这些问题太过主观，在这里我最想解决的是如何让 WSL 下的工具能够更加丝滑的与 Windows 开发工具配合，来提高我们的开发效率。并且说实话，**教程中介绍的工具无需进一步的配置就足够美观了**。如有需求，可以查看我的往期文章（上面链接）进行自行查看甄别与折腾。
+这些问题太过主观，在这里我最想解决的是如何让 WSL 下的工具能够更加丝滑的与 Windows 开发工具配合，来提高我们的开发效率。并且说实话，**教程中介绍的工具无需进一步的配置就足够美观了**。
 
-# 体验
+# 贡献与其他
 
-目前仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目。鞠躬。
+目前来讲，Dev on Windows with WSL 仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目，鞠躬。
 
-详细请见 > [Help needed.](/3-VSCode/HelpNeeded.html)
+详细请见 > [帮助完善](/3-VSCode/HelpNeeded.html) 与 [CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
 
 # License 许可
 
