@@ -81,7 +81,7 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ### Contributors 贡献者
 
-[![](https://opencollective.com/dowww/contributors.svg?width=890)](https://github.com/spencerwooo/dowww/graphs/contributors)
+[![](https://opencollective.com/dowww/contributors.svg)](https://github.com/spencerwooo/dowww/graphs/contributors)
 
 ### How to contribute 贡献规范
 
