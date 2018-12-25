@@ -10,7 +10,7 @@ next:
 :::tip 💎
 以下步骤适用于 Windows 这边安装的 Visual Studio Code。
  
-推荐使用 VSCode 的理由 > [#为什么我极力推荐 Visual Studio Code](/#为什么我极力推荐-visual-studio-code)
+推荐使用 VSCode 的理由 > [💡 在 Windows 上用 WSL 开发的操作体验指北 | 为什么我这样推荐 Visual Studio Code？](https://sspai.com/post/47719)
 :::
 
 ## 下载
@@ -41,11 +41,11 @@ Redefined.](https://code.visualstudio.com/)
 
 - 字体：
 
-> 主字体下载地址：[Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
+> 主字体下载地址：[Sarasa Gothic / 更纱黑体 / 更紗黑體 / 更紗ゴシック](https://github.com/be5invis/Sarasa-Gothic)
 
 ```json
 {
-    "editor.fontFamily": "'Iosevka', 'Microsoft YaHei UI', monospace"
+    "editor.fontFamily": "'Sarasa Mono SC', 'Iosevka', monospace"
 }
 ```
 
