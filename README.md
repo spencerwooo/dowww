@@ -53,6 +53,9 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## Changelog 更新日志
 
+- [2018-12-26]：
+  - 新增了 `wslgit` 的加速方法指南
+  - 新增了 ArchWSL 入教指南
 - [2018-12-22]：增加了 VSCode 中 Node.js 环境的配置，[PR #11](https://github.com/spencerwooo/dowww/pull/11)
 - [2018-12-13]：新增了 Terminus 终端的推荐
 - [2018-12-11]：增加了 VSCode 中 LaTeX 环境的配置，[PR #10](https://github.com/spencerwooo/dowww/pull/10)
