@@ -42,3 +42,19 @@
 ![](https://i.loli.net/2018/12/26/5c231334cb26d.png)
 
 这样我们就可以让 `wslgit` 以「非交互模式」加载 `bash`：*force wslgit to start bash in non-interactive mode.*
+
+## 进一步提升 WSL 全局系统性能
+
+如果你对上面的改进还是不太满足，那么你可以试一试 [Arch WSL](https://github.com/yuk7/ArchWSL)。
+
+Arch Linux 是一个高度可定制的 Linux 发行版，轻量、精简。但是由于微软商店并没有明确支持 Arch Linux 发行版的 WSL 版本，因此安装过程比较复杂。**你可以选择以下三种方法中的任意一个进行安装：**
+
+- 手动安装：
+  - [Arch Linux Wiki | Install on WSL](https://wiki.archlinux.org/index.php/Install_on_WSL_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+- 参考 [`ArchWSL` - 一个 Arch Linux WSL 社区维护的版本教程](https://github.com/yuk7/ArchWSL#install) 进行安装
+- 使用 [`scoop` - Windows 上的包管理工具](https://github.com/lukesampson/scoop) 进行安装（在 PowerShell 中执行以下命令）：
+  - 安装 `scoop`：`iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
+  - 添加 `scoop-extras`：`scoop bucket add extras`
+  - 安装 `ArchWSL`：`scoop install archwsl`
+
+由于 Arch Linux for WSL 不是官方维护的版本，因此可能会遇到一些莫名的问题，安装与否还请自行斟酌。不过使用之后我觉得性能还是有着不小的提升。
