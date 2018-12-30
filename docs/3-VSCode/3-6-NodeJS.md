@@ -214,7 +214,7 @@ yarn debug
 
 - 开启 VSCode 的调试进程：快捷键 `F5`
 
-<div align="center"><img src="https://i.loli.net/2018/12/30/5c284b7eb888c.gif" alt="nodejs-debugger-demo"/></div>
+![](https://ws1.sinaimg.cn/large/e264e10ely1fyosaj40reg21wk13ze81.gif)
 
 经过这样的配置，我们就可以方便的利用 VSCode 强大的调试功能对我们的 Node.js 程序调试开发了。🍻
 
