@@ -37,9 +37,13 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## Changelog 更新日志
 
+- [2018-12-30]：
+  - 新增了 [ESLint 的配置](/3-VSCode/3-6-NodeJS.html#配置-eslint)
+  - 完善了 [Node.js 调试的配置](/3-VSCode/3-6-NodeJS.html#调试-node-js-程序)
+  - 完善了各部分作者的信息
 - [2018-12-26]：
-  - 新增了 `wslgit` 的加速方法指南
-  - 新增了 ArchWSL 入教指南
+  - 新增了 [`wslgit` 的加速方法指南](/3-VSCode/3-1-Git.html#提升-git-on-wsl-的性能)
+  - 新增了 [ArchWSL 入教指南](/3-VSCode/3-1-Git.html#提升-git-on-wsl-的性能)
 - [2018-12-22]：增加了 VSCode 中 Node.js 环境的配置，[PR #11](https://github.com/spencerwooo/dowww/pull/11)
 - [2018-12-13]：新增了 Terminus 终端的推荐
 - [2018-12-11]：增加了 VSCode 中 LaTeX 环境的配置，[PR #10](https://github.com/spencerwooo/dowww/pull/10)
