@@ -1,4 +1,4 @@
-# 集成终端使用 WSL
+# 集成终端使用 WSL <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
 
 > 配置 VSCode 终端默认使用 WSL 的 bash
 

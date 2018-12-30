@@ -1,4 +1,4 @@
-# Code Runner
+# Code Runner <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
 
 :::tip
 Code Runner 是一个能够一键执行编译运行的 VSCode 插件，支持多达 44 种语言。

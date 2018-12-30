@@ -1,4 +1,4 @@
-# Git
+# Git <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
 
 > Use Git installed in Bash on Windows/Windows Subsystem for Linux (WSL) from Windows and Visual Studio Code (VSCode)
 
