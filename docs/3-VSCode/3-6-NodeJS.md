@@ -101,17 +101,122 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
   $LANG=en.us-utf8
   ```
 
-## 在 VSCode 里调试 `Node.js`
+## 配置 ESLint <a href="https://github.com/spencerwooo"><Badge text="Updated by @SpencerWoo"/></a>
 
-只需要简单在 VSCode 的调试配置 `launch.json` 中添加下面一行属性：
+> A fully pluggable tool for identifying and reporting on patterns in JavaScript.
 
-```json
-"useWSL": true
+**ESLint 是 JavaScript 强大的代码实时风格检测与错误纠正工具**。我们可以直接利用 WSL 环境下的 ESLint 与 VSCode 中的 ESLint 插件配合工作。
+
+- 下载 VSCode 的 ESLint 插件：[ESLint | Integrates ESLint JavaScript into VS Code.](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- 在当前开发环境中加入 ESLint 模块：
+
+```bash
+yarn add eslint
 ```
 
-这样 VSCode 就会使用 WSL 来运行 `Node.js` 。
+- 初始化 ESLint 模块：
 
-**注意**：当 Windows 版本早于 `Windows 10, build 15063` 时，可能会遇到 `Error 0x80070057` 报错，这个时候可以尝试添加 `"console": "integratedTerminal"` 或者 `"console": "externalTerminal"` 到 `launch.json` 里。
+```bash
+# 如果 PATH 中有 eslint
+eslint --init
+# 如果没识别到 eslint
+./node_modules/.bin/eslint --init
+```
+
+![](https://i.loli.net/2018/12/30/5c284ff7e19c0.png)
+
+- 让 ESLint 和 VSCode 的 ESLint 插件配合：
+  - 在 Windows 用户根目录下创建 `.vscode_wsl/node.bat`
+  - 在 `node.bat` 中加入以下内容：
+
+  ```
+  @echo off
+  set v_params=%*
+  set v_params=%v_params:\=/%
+  set v_params=%v_params:c:=/mnt/c%
+  set v_params=%v_params:"=\"%
+  wsl.exe -c "node %v_params%"
+  ```
+
+  - 在 VSCode 中配置 ESLint 的 node 路径为刚刚的 `node.bat`
+
+  ```json
+  "eslint.nodePath": "C:\\Users\\$用户名\\.vscode_wsl\\node.bat"
+  ```
+
+需要注意的是，这种解决方法虽然确实能让 VSCode 中的 ESLint 插件正确的实时识别错误、检测风格，但是并不完美，有时候还会报一些如下的错误。(#｀-_ゝ-)
+
+![](https://i.loli.net/2018/12/30/5c2850d9813fd.png)
+
+不过实际使用的时候，这些错误并不影响开发体验。
+
+## 调试 `Node.js` 程序 <a href="https://github.com/spencerwooo"><Badge text="Modified by @SpencerWoo"/></a>
+
+:::warning 注意
+在最新的 Node.js 插件中，开发组引入了 `useWSL` 这一参数，以方便我们在 WSL 中对 Node.js 程序进行调试。实际配置下来，几乎是没有用处的。因为 `useWSL` 会先 `cd` 一个 Windows style 的路径，之后 `bash.exe -c $你的命令`。而我们使用 WSL 开发的同学，几乎都会偏向于将默认终端配置成为 WSL 环境，这让 debug 无法进行。
+
+**下面的 remote debugger 方法更加适合我们环境的调试开发。**
+:::
+
+我们利用 [Node.js Remote debugger](https://code.visualstudio.com/docs/nodejs/nodejs-debugging#_remote-debugging) 来实现在 WSL 上的调试。
+
+- 下载插件：[WSL workspaceFolder](https://marketplace.visualstudio.com/items?itemName=lfurzewaddock.vscode-wsl-workspacefolder)，来保证下一步 `launch.json` 中路径的正确配置。
+- 配置 `.vscode/launch.json`：
+
+```json
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach to Remote",
+      "address": "localhost",
+      "port": 9229,
+      "sourceMaps": false,
+      "localRoot": "${workspaceFolder}",
+      "remoteRoot": "${command:extension.vscode-wsl-workspaceFolder}",
+    }
+  ]
+}
+```
+
+其中 `port` 参数为默认 debugger 监听端口。（即：`--inspect-brk` 参数的默认端口）
+
+**开启一次调试：**
+
+- 以调试模式运行你的程序（以 `app.js` 为例）：
+
+```bash
+node --inspect-brk app.js
+```
+
+- 将调试进程链接至 VSCode Remote Debugger：快捷键 `F5` (Start debugging)
+
+**更加方便的：**
+
+- 配置 `package.json` 中的 debug 脚本选项（入口程序以 `app.js` 为例）：
+
+```json
+"scripts": {
+  "debug": "node --inspect-brk app.js"
+}
+```
+
+- 以调试模式运行程序：
+  
+```bash
+yarn debug
+```
+
+- 开启 VSCode 的调试进程：快捷键 `F5`
+
+<div align="center"><img src="https://i.loli.net/2018/12/30/5c284b7eb888c.gif" alt="nodejs-debugger-demo"/></div>
+
+经过这样的配置，我们就可以方便的利用 VSCode 强大的调试功能对我们的 Node.js 程序调试开发了。🍻
 
 ## `NativeModule` 的再编译
 
