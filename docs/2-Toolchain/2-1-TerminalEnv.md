@@ -141,6 +141,8 @@ set bell-style none
 
 ## zsh & oh-my-zsh
 
+### 配置 zsh
+
 下载安装 `zsh` 代替自动补全功能欠缺的 `bash`：
 
 - 利用 Ubuntu 的包管理器安装 `zsh`：`sudo apt install zsh`
@@ -154,10 +156,35 @@ sudo chsh -s $(which zsh)
 
 - 运行命令下载安装：`sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"`
 
-由于 Hyper 终端对全角 Unicode 字符支持不完善，因此 `oh-my-zsh` 默认主题 `robbyrussell` 在 Hyper 终端下会出现光标位置不正确的问题（见 [Issue #5](https://github.com/spencerwooo/dowww/issues/5))。解决方法：
+### 解决光标位置无法正确显示的问题
+
+由于 Windows 下所有终端都尚未很好的 **支持全角（Double width）的 Unicode 字体**，因此 `oh-my-zsh` 默认主题 `robbyrussell` 在 Hyper 终端下会出现光标位置不正确的问题（见 [Issue #5](https://github.com/spencerwooo/dowww/issues/5))。解决方法：
 
 - 在 `~/.oh-my-zsh/themes` 目录下打开 `oh-my-zsh` 默认主题文件：`robbyrussell.zsh-theme`，将其中的全角 Unicode 字符「➜」更改为其他字符（比如「>」或者「→」）
 - 加载设置：`source ~/.zshrc`
+
+需要注意的是，很多 `oh-my-zsh` 主题（包括 [更加酷炫的 `Powerlevel9k` 主题包](https://github.com/bhilburn/powerlevel9k)）都用到了上文提到的 Powerline Fonts 和 Nerd Fonts，而这些字形在 Windows 任何终端下都没有很好的支持，因此目前一个很好的解决方法是：
+
+- 将酷炫的命令前部分放在一行单独显示
+- 将需要输入的带有光标的命令部分放在第二行显示
+
+![](https://user-images.githubusercontent.com/32114380/50538113-00a78a00-0ba5-11e9-8a7a-db8d709e8d88.png)
+
+比如：如果你使用了 [`Powerlevel9k` 主题包](https://github.com/bhilburn/powerlevel9k)，可以考虑将下面的内容加入 `.zshrc` 来实现命令单独在第二行的显示：
+
+```shell
+# 让命令主体单独在第二行显示
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+# 让右侧命令不显示（右侧命令同样无法正常在 Windows 下渲染）
+POWERLEVEL9K_DISABLE_RPROMPT=true
+# 上文截图中的两行命令前部字符的配置
+POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX="╭"
+POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\u276F\u276F\u276F "
+```
+
+这样配置之后，终端中的光标位置就不会出现错位问题了，同时也不影响终端的炫酷和易用。🍻
+
+更多配置可以参考我的 [`dotfiles`](https://github.com/spencerwooo/dotfiles) 里面 [`_wsl_zshrc`](https://github.com/spencerwooo/dotfiles/blob/master/_wsl_zshrc) 的部分内容。折腾愉快！
 
 ## 解决 `ls` 和 `cd` 命令后背景色问题
 
