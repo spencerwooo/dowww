@@ -11,7 +11,7 @@
 
 经过本章的配置，你的开发工程流应该是这样的：
 
-![](https://i.loli.net/2018/12/15/5c14b8864db56.png)
+![](https://i.loli.net/2019/01/01/5c2ad015eb6d7.png)
 
 - 在代码工作区编写代码
 - 在输入、输出框区域配置输入与输出
@@ -30,15 +30,52 @@
 3. 再次确认安装状态：
     - 运行：`gcc --version` 与 `g++ --version`：
 
-    ![](https://i.loli.net/2018/12/25/5c21c2c0baef6.png)
+    ![](https://i.loli.net/2019/01/01/5c2ad07c722b9.png)
     
     这样我们的 C/C++ 编译环境就安装成功了。
 
     - 运行：`gdb --version`：
 
-    ![](https://i.loli.net/2018/12/25/5c21c359b9256.png)
+    ![](https://i.loli.net/2019/01/01/5c2ad09f6eb99.png)
 
     这样我们的 C/C++ 调试环境就安装成功了。
+
+## 配置 VSCode 使用 WSL 侧的 C/C++ 环境 Intellisense
+
+快捷键 `Ctrl + Shift + P` 打开 Command Palette，输入 C/Cpp: Select a configuration，选择新建，并在生成的 `.vscode/c_cpp_properties.json` 中加入下面内容： 
+
+```json
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        },
+        {
+            "name": "WSL",
+            "intelliSenseMode": "gcc-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [],
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
+```
+
+两个 Configurations 分别是 Win32（即 Windows 侧）的工具链和 WSL 侧的工具链的环境配置。之后再 `Ctrl + Shift + P` 唤出 Command Palette，在“C/Cpp: Select a configuration”下选择 WSL 即可使用 WSL 环境进行配置 Intellisense、调试等等功能了。
 
 ## 文件结构
 
@@ -189,7 +226,7 @@ Visual Studio Code 有着其他编辑器无法比拟的调试功能。强大到�
 
 1. 修改两个文件中的 `$工作区文件夹路径` 为你自己的具体文件路径，路径可以通过在终端执行 `pwd` 获取：
 
-![](https://i.loli.net/2018/12/25/5c21c3883880f.png)
+![](https://i.loli.net/2019/01/01/5c2ad10d409d9.png)
 
 2. 可以看到，在 `launch.json` 中的 `pipeTransport` 属性就是 C/C++ 插件对 WSL 进行的适配，通过一个 wslBridge 来让 Windows 端调试能够链接到 WSL 中的可执行文件。
    
