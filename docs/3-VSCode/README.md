@@ -37,25 +37,28 @@ Redefined.](https://code.visualstudio.com/)
 
 ## 参考配置
 
+![](https://i.loli.net/2019/01/01/5c2aecf7acc1d.png)
+
 为了方便参考，我使用的 Visual Studio Code 具体配置如下：
 
 - 字体：
 
-> 主字体下载地址：[Sarasa Gothic / 更纱黑体 / 更紗黑體 / 更紗ゴシック](https://github.com/be5invis/Sarasa-Gothic)
+  - 附带有 Cursive 的字体叫做 Operator Mono，它是一个 $200 的付费字体，需要单独购买。
+  - 推荐免费开源的字体 - 下载地址：[Sarasa Gothic / 更纱黑体 / 更紗黑體 / 更紗ゴシック](https://github.com/be5invis/Sarasa-Gothic)
 
 ```json
 {
-    "editor.fontFamily": "'Sarasa Mono SC', 'Iosevka', monospace"
+    "editor.fontFamily": "'Operator Mono', 'Iosevka', 'Sarasa Mono T SC', monospace"
 }
 ```
 
 - 主题配色：
 
-> VSCode 主题插件下载地址：[Ayu](https://marketplace.visualstudio.com/items?itemName=teabyii.ayu)
+  - [Cobalt2 Theme for VS Code](https://github.com/wesbos/cobalt2-vscode)
 
 ```json
 {
-    "workbench.colorTheme": "Ayu Mirage Bordered"
+    "workbench.colorTheme": "Cobalt2"
 }
 ```
 
@@ -63,8 +66,6 @@ Redefined.](https://code.visualstudio.com/)
 
 ```json
 {
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "material-icon-theme"
 }
 ```
-
-你可以在这里看到我的 Visual Studio Code 具体的样子 > [C/C++ 开发 | 前言](/3-VSCode/3-4-C_Cpp.html#前言)。
