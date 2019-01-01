@@ -37,6 +37,9 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## Changelog 更新日志
 
+- [2019-1-1]:
+  - 完善了 C/Cpp 部分的环境配置指南
+  - 更新了 C/Cpp 部分的配图
 - [2018-12-30]：
   - 新增了 [ESLint 的配置](/3-VSCode/3-6-NodeJS.html#配置-eslint)
   - 完善了 [Node.js 调试的配置](/3-VSCode/3-6-NodeJS.html#调试-node-js-程序)
