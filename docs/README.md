@@ -37,6 +37,8 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## Changelog 更新日志
 
+- [2019-1-3]:
+  - 更新了 [VSCode 参考配置内容](https://spencerwoo.com/dowww/3-VSCode/#%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE)
 - [2019-1-1]:
   - 完善了 C/Cpp 部分的环境配置指南
   - 更新了 C/Cpp 部分的配图
