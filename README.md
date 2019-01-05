@@ -53,7 +53,7 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## Changelog 更新日志
 
-<img src="https://i.loli.net/2019/01/05/5c3016a926a14.png" alt="watch-repo" width="250" align="right">
+<img src="https://i.loli.net/2019/01/05/5c3016a926a14.png" alt="watch-repo" width="40%" align="right">
 
 Star and watch，时刻掌握最新教程。💪
 
