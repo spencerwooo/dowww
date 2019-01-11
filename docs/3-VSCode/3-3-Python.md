@@ -32,7 +32,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 > 以下内容、解决方案、代码和可执行文件来自 [plusls - VSCode using Python in WSL](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/)，致谢。
 
-首先从 [这里](blog.plusls.cn/windows/vscode-using-python-in-wsl/wsl.zip) 下载由 plusls 编译的一些工具，下载的文件内容有：
+首先从 [这里](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/wsl.zip) 下载由 plusls 编译的一些工具，下载的文件内容有：
 
 ```
 .
