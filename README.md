@@ -12,7 +12,7 @@
 
 <div align="center">
 
-[![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww)
+[![Backers on Open Collective](https://opencollective.com/dowww/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/dowww/sponsors/badge.svg)](#sponsors) [![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww)
 [![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo/dowww)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
 ![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
@@ -111,6 +111,36 @@ Star and watch，时刻掌握最新教程。💪
 
 - [微信](https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg)
 - [支付宝](https://i.loli.net/2018/03/13/5aa7ae11339cd.jpg)
+
+## Contributors
+
+This project exists thanks to all the people who contribute. 
+<a href="https://github.com/spencerwooo/dowww/graphs/contributors"><img src="https://opencollective.com/dowww/contributors.svg?width=890&button=false" /></a>
+
+
+## Backers
+
+Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)]
+
+<a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg?width=890"></a>
+
+
+## Sponsors
+
+Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/dowww#sponsor)]
+
+<a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/1/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/1/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/2/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/2/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/3/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/3/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/4/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/4/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/5/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/5/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/6/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/6/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/7/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/7/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/8/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/8/avatar.svg"></a>
+<a href="https://opencollective.com/dowww/sponsor/9/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/9/avatar.svg"></a>
+
+
 
 ## License 许可
 
