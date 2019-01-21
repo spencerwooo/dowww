@@ -4,12 +4,19 @@
   "description": "Dev on Windows with WSL",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
+    "docs:build": "vuepress build docs",
+    "postinstall": "opencollective-postinstall"
   },
   "repository": "https://github.com/spencerwooo/dowww",
   "author": "spencerwooo <spencerwoo98@foxmail.com>",
   "license": "CC-BY-NC-ND-4.0",
   "dependencies": {
-    "vuepress": "^0.14.8"
+    "opencollective-postinstall": "^2.0.1",
+    "vuepress": "^0.14.8",
+    "opencollective": "^1.0.3"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/dowww"
   }
 }
