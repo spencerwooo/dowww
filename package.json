@@ -9,7 +9,7 @@
   },
   "repository": "https://github.com/spencerwooo/dowww",
   "author": "spencerwooo <spencerwoo98@foxmail.com>",
-  "license": "CC-BY-NC-ND-4.0",
+  "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
     "opencollective-postinstall": "^2.0.1",
     "vuepress": "^0.14.8",
