@@ -101,7 +101,7 @@ This project exists thanks to all the people who contribute.
 
 Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)]
 
-<a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg?width=890"></a>
+<a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>
 
 ### Sponsors 赞助商
 
