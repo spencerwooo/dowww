@@ -31,15 +31,17 @@ WSL + Hyper 终端的环境是完全可用的一个完美 Linux 环境。美观�
 
 - Website icons and its affiliated designs are licensed by [Freepik](https://www.freepik.com/free-vector/modern-web-design-concept-with-isometric-view_3086978.htm).
 
-## License 许可
+## License 许可 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a>
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="創用 CC 授權條款" style="border-width:0; padding-top:10px;" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
+本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
 
-本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">創用 CC 姓名標示-非商業性-禁止改作 4.0 國際 授權條款</a>授權。
+本著作係採用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">創用 CC 姓名標示-非商業性-相同方式分享 4.0 國際 授權條款</a>授權。
+
+This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.
 
 ---
 
-💡 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
+💡 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
 
 Authored and maintained by Spencer Woo.
 
