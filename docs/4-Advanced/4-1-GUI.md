@@ -1,8 +1,3 @@
----
-prev: /3-VSCode/HelpNeeded
-next: /5-Experience/
----
-
 <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div>
 
 # GUI 图形化窗口
