@@ -1,6 +1,6 @@
 ---
 prev:
-next: /4-GUI/
+next: /4-Advanced/
 ---
 
 # 参与贡献

@@ -131,7 +131,7 @@ module.exports = {
         '3-3-Python',
         '3-4-C_Cpp',
         '3-5-LaTeX',
-        '3-6-NodeJS.md',
+        '3-6-NodeJS',
         'HelpNeeded'
       ],
       '/4-Advanced/': [
