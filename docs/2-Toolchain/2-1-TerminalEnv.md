@@ -42,15 +42,71 @@ deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted uni
 
 ## bash
 
-下载安装的 Windows Subsystem for Linux 自带。`bash` 是 `Unix shell` 的一种，是我们开发环境的基础。
+下载安装的 Windows Subsystem for Linux 默认就是 `bash` 的终端环境。`bash` 是 `Unix shell` 的一种，是我们开发环境的基础。
 
 > 参考：[Shell、Terminal 和 Console 的区别。](https://unix.stackexchange.com/questions/4126/what-is-the-exact-difference-between-a-terminal-a-shell-a-tty-and-a-con)
 
 ## 终端 Terminal
 
-> 更新于 2018-12-13，新增了 Terminus 终端：一个可能比 Hyper 更用户友好的终端。
+Terminal，即「终端模拟器」。我们需要一个终端去和我们的 `shell` 进行交互。你可能看到了，在下载好 Ubuntu 的时候，在开始菜单有一个 Ubuntu 的 Logo，这就是 Windows 为 WSL 准备的默认终端模拟器的入口。从 2018 年 8 月，Windows 正式引入了 ConPTY 这个工具，即：Windows Pseudo Console。详细请见 Windows 官方博客 > [Windows Command-Line: Introducing the Windows Pseudo Console (ConPTY)](https://blogs.msdn.microsoft.com/commandline/2018/08/02/windows-command-line-introducing-the-windows-pseudo-console-conpty/)。
 
-Terminal，即「终端模拟器」。我们需要一个终端去和我们的 `shell` 进行交互。2018 年马上就要过去了，Windows 的自带终端依旧不支持 256 色彩，我们急需一个美丽可用的 Windows 终端与 WSL 环境进行交互。下面推荐两个支持全平台的 Terminal，**任选一个就可以**。
+ConPTY 的引入意味着 Windows 命令行环境有了更多的现代终端应具备的功能，比如：
+
+- 支持 256 颜色
+- 输出 UTF-8 格式的文本
+
+等等。这是个好兆头，至少 Windows 开始对 CLI 环境的使用体验开始重视了。我们先来讲讲如何把 WSL 默认的终端变美。
+
+### 默认的 WSL 终端模拟器
+
+:::tip
+感谢 [Issue #16](https://github.com/spencerwooo/dowww/issues/16) 中，[@12101111](https://github.com/12101111) 提醒我介绍默认终端的配置。
+
+虽然 [下面的下面](/2-Toolchain/2-1-TerminalEnv.html#terminus)，我提到了两个基于 Electron、更加方便自定义、从某种程度上也更好看的终端模拟器，但是 **它们都没有原生的 Windows 默认终端性能快**。因此，如果你追求性能高过美丽，也可以通过下面的方法稍微让 Windows 默认终端好看一些。
+
+下文中，**「Windows 默认的终端模拟器」指 PowerShell 开启的终端或点击开始菜单中的 Ubuntu 图标开启的终端**。其中，如果你用 PowerShell 开启终端，可以直接用 `wsl` 命令进入 WSL 环境。
+:::
+
+#### 字体
+
+由于中文的大环境，默认的 Windows 终端字体是新宋体。相信你和我一样，对这个模糊不清的字体深恶痛绝。但是由于 Windows 默认终端是一个极为底层的应用，没有使用通用 UI 渲染层，因此它对字体有着严格的要求，支持这一要求的字体（在中文环境下）只有 [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic)。下载安装这个字体之后，你就可以在 Windows 默认终端的设置项目下设置这个字体了。特别的，`Sarasa Mono T SC`（或者中文叫等距更纱黑体）是我们编码所需的等宽字体。
+
+![](https://wx3.sinaimg.cn/large/e264e10ely1fzgxtcb4taj21rc0tgjun.jpg)
+
+#### 配色
+
+在 [Microsoft/console](https://github.com/Microsoft/console) 这个仓库里面，微软为我们提供了一个方便更改默认终端配色的工具：[ColorTool](https://github.com/Microsoft/console/tree/master/tools/ColorTool)，我们可以通过这个工具方便的对我们默认终端的配色进行更改，同时这个工具也支持读取 iTerm 主题文件。
+
+- 首先，我们在这里 > <https://github.com/Microsoft/console/releases> 下载 ColorTool 至本地，并解压
+- 然后，打开 Windows 默认终端模拟器，定位至刚刚解压好有 `ColorTool.exe` 的下载文件夹
+- 首先我们通过这个命令来看看默认有哪些自带的主题供我们使用：
+
+```powershell
+ColorTool.exe -s
+```
+
+:::tip
+是的，不需要怀疑自己，你可以直接在 WSL 里面执行 `exe` 程序，只是需要输全程序名称包括 `exe` 程序后缀。但是如果你在 WSL 的默认终端里面运行 ColorTool，可能能正常显示主题有哪些，但是可能没办法设置主题。
+:::
+
+![](https://wx4.sinaimg.cn/large/e264e10ely1fzgxu3h1bdj21620cpdhc.jpg)
+
+
+- 之后，我们就可以通过 `ColorTool.exe $主题名称` 命令来更新我们当前使用的终端主题，比如：
+
+```powershell
+ColorTool.exe solarized_dark
+```
+
+![](https://ws3.sinaimg.cn/large/e264e10ely1fzgy1scz8oj21cb0jpwhh.jpg)
+
+- 然后，在终端的菜单栏右键 > 属性 > 颜色，点击确定来应用主题
+
+![](https://wx4.sinaimg.cn/large/e264e10ely1fzgyeqxig3j21f30w8jww.jpg)
+
+ColorTool 自带了两个常见的主题供我们直接使用，你也可以从这里下载更多的 iTerm 主题配置文件：[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) 来使用。
+
+当然，你并不一定要使用 Windows 给 WSL 准备的默认终端模拟器。下面推荐两个支持全平台的，基于 Electron 技术的 Terminal，得益于优秀现代的前端技术，他们都很「好看」，任选一个就可以。
 
 ### Terminus
 
