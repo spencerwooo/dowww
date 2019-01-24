@@ -42,6 +42,8 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 Star and watch，时刻掌握最新教程。💪
 
+- [2019-1-24]：新增了进阶操作 - [LxRunOffline 的使用配置](https://spencerwoo.com/dowww/4-Advanced/4-2-LxRunOffline.html)，[PR #18](https://github.com/spencerwooo/dowww/pull/18)
+- [2019-1-23]：新增了 [对 Windows 默认终端模拟器的配置](https://spencerwoo.com/dowww/2-Toolchain/2-1-TerminalEnv.html#%E9%BB%98%E8%AE%A4%E7%9A%84-wsl-%E7%BB%88%E7%AB%AF%E6%A8%A1%E6%8B%9F%E5%99%A8)
 - [2019-1-3]:
   - 更新了 [VSCode 参考配置内容](https://spencerwoo.com/dowww/3-VSCode/#%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE)
 - [2019-1-1]:
