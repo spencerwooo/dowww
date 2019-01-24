@@ -10,7 +10,7 @@ features:
   details: Windows Subsystem for Linux，近似原生 Unix 的体验，又有着 Windows 强大的生产力。
 - title: 🎉
   details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
-footer: 2018 ©Spencer Woo. Released under the CC BY-NC-ND 4.0 International License.
+footer: 2018 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
 ---
 
 [![Backers on Open Collective](https://img.shields.io/opencollective/backers/dowww.svg?colorB=brightgreen&style=flat-square)](#backers-支持者)
