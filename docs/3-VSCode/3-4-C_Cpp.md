@@ -1,4 +1,4 @@
-# C/C++ <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
+# C/C++ <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
 
 ::: tip
 目前来看利用 WSL 中的 `gcc/g++/gdb` 来调试我们的 C/C++ 的**单个程序**应该是比较完善的了。详细的由微软 Visual Studio Code 团队与官方 CppTools 插件团队维护的文档位于这里 > [vscode-cpptools | `gdb` on Windows Subsystem for Linux.md

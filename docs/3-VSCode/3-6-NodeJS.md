@@ -1,4 +1,4 @@
-# Node.js <a href="https://github.com/suyanhanx"><Badge text="@suyanhanx"/></a><a href="https://github.com/spencerwooo/dowww/pull/11"><Badge text="PR #11" type="warn"/></a>
+# Node.js <a href="https://github.com/suyanhanx"><Badge text="@suyanhanx" vertical="middle"/></a><a href="https://github.com/spencerwooo/dowww/pull/11"><Badge text="PR #11" type="warn" vertical="middle"/></a>
 
 :::tip ⏰ 一些概念：
 - `Node.js` - a JavaScript runtime built on Chrome's V8 JavaScript engine：一个 JavaScript 运行环境
@@ -101,7 +101,7 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
   $LANG=en.us-utf8
   ```
 
-## 配置 ESLint <a href="https://github.com/spencerwooo"><Badge text="Updated by @SpencerWoo"/></a>
+## 配置 ESLint <a href="https://github.com/spencerwooo"><Badge text="Updated by @SpencerWoo" vertical="middle"/></a>
 
 > A fully pluggable tool for identifying and reporting on patterns in JavaScript.
 

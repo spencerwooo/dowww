@@ -1,4 +1,4 @@
-# Python <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
+# Python <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
 
 ::: tip
 目前存在的一个问题是：VSCode Python 插件和 WSL 侧的工具链兼容性很糟糕，都需要一定的配置才能丝滑工作。这也是一个当前微软 VSCode 各大语言插件组和 WSL 开发组都知道并在解决的问题（参考 [VSCode Python 插件 Issue #67](https://github.com/Microsoft/vscode-python/issues/67)）。

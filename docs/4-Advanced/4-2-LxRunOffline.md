@@ -2,7 +2,7 @@
 next: /5-Experience/
 ---
 
-# LxRunOffline
+# LxRunOffline <a href="https://github.com/llinfeng"><Badge text="@llinfeng" vertical="middle"/></a>
 
 <!-- 大佬自由发挥！ -->
 [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline) is a Windows
@@ -13,7 +13,9 @@ would like.
       link](https://github.com/DDoSolitary/LxRunOffline/wiki).
 
 ## Quick start:
+
 ### Gte LxRunOffline ready
+
 The best way to install is to use `choco`. As suggested in the project's home
 page, pick either Command Prompt or Power Shell to execud the following
 installation command:
@@ -23,10 +25,12 @@ choco install lxrunoffline
 Note, you will need to press `y` key, for once, to confirm something.
 
 ### Download and install the Linux image
+
 [This table](https://github.com/DDoSolitary/LxRunOffline/wiki) details
 all possibilties, but can be a bit overwhelming. In particular, most of the
 entires in the table are meant for building dockers, which I know very little
 about. Here goes a layman approach to getting a _fully_ functional Linux.
+
 1. Download the image from:
    <https://lxrunoffline.apphb.com/download/UbuntuFromMS/16>
 2. Store it some where, and run the following `LxRunOffline` command through,
@@ -48,6 +52,7 @@ MB. Yet, with these skinny super-light-weight Linux distro, at times, you won't
 even have the `apt-get` command.
 
 ### Accessing the newly installed image
+
 From any console interface, be it Power Shell or Command Prompt, if you have
 followed the naming convention above, the following set of command will load the
 newly minted Linux distro:
@@ -61,6 +66,7 @@ Other frequently commands include:
 
 
 ### Caveats
+
 1. `LxRunOffline i` can only install a Linux distro with `root`.
 2. `LxRunOffline r -n Name_of_Distro` will get you to the root access.
 3. You will need to create your user account, if you prefer to have one.
@@ -70,6 +76,7 @@ Other frequently commands include:
    `0x80070040` error.)
 
 ## Advanced usage
+
 Here goes a wish list of pending items to be added, including:
 1. Getting X11 forwarding to work:
     1. Use the default settings for Xming, which open port `:0` for display
