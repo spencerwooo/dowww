@@ -1,4 +1,4 @@
-<div align="center"><img src="https://raw.githubusercontent.com/spencerwooo/dowww/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div> 
+<div align="center"><img src="https://raw.githubusercontent.com/spencerwooo/dowww/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div>
 
 
 <h1 align="center">Dev on Windows with WSL</h1>
@@ -14,10 +14,10 @@
 
 [![Backers on Open Collective](https://img.shields.io/opencollective/backers/dowww.svg?colorB=brightgreen&style=flat-square)](#backers)
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/dowww.svg?colorB=brightgreen&style=flat-square)](#sponsors)
-[![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=flat-square&label=⭐%20Stars)](https://github.com/spencerwoo/dowww)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
 ![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
 [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=social)](https://github.com/spencerwooo/dowww)
 
 <!-- [![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww) -->
 
