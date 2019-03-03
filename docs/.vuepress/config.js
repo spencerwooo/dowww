@@ -84,6 +84,10 @@ module.exports = {
       }, {
         text: 'Node.js',
         link: '/3-VSCode/3-6-NodeJS'
+      },
+      {
+        text: '.Net Core',
+        link: '/3-VSCode/3-7-DotNetCore'
       }, {
         text: '帮助完善',
         link: '/3-VSCode/HelpNeeded'
@@ -132,6 +136,7 @@ module.exports = {
         '3-4-C_Cpp',
         '3-5-LaTeX',
         '3-6-NodeJS',
+        '3-7-DotNetCore',
         'HelpNeeded'
       ],
       '/4-Advanced/': [
