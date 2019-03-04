@@ -38,28 +38,9 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## Changelog 更新日志
 
-<img src="https://i.loli.net/2019/01/05/5c3016a926a14.png" alt="watch-repo" width="40%" align="right">
+**Star and watch**，时刻掌握最新教程。💪
 
-Star and watch，时刻掌握最新教程。💪
-
-- [2019-1-24]：新增了进阶操作 - [LxRunOffline 的使用配置](https://spencerwoo.com/dowww/4-Advanced/4-2-LxRunOffline.html)，[PR #18](https://github.com/spencerwooo/dowww/pull/18)
-- [2019-1-23]：新增了 [对 Windows 默认终端模拟器的配置](https://spencerwoo.com/dowww/2-Toolchain/2-1-TerminalEnv.html#%E9%BB%98%E8%AE%A4%E7%9A%84-wsl-%E7%BB%88%E7%AB%AF%E6%A8%A1%E6%8B%9F%E5%99%A8)
-- [2019-1-3]:
-  - 更新了 [VSCode 参考配置内容](https://spencerwoo.com/dowww/3-VSCode/#%E5%8F%82%E8%80%83%E9%85%8D%E7%BD%AE)
-- [2019-1-1]:
-  - 完善了 C/Cpp 部分的环境配置指南
-  - 更新了 C/Cpp 部分的配图
-- [2018-12-30]：
-  - 新增了 [ESLint 的配置](https://spencerwoo.com/dowww/3-VSCode/3-6-NodeJS.html#配置-eslint)
-  - 完善了 [Node.js 调试的配置](https://spencerwoo.com/dowww/3-VSCode/3-6-NodeJS.html#调试-node-js-程序)
-  - 完善了各部分作者的信息
-- [2018-12-26]：
-  - 新增了 [`wslgit` 的加速方法指南](https://spencerwoo.com/dowww/3-VSCode/3-1-Git.html#提升-git-on-wsl-的性能)
-  - 新增了 [ArchWSL 入教指南](https://spencerwoo.com/dowww/3-VSCode/3-1-Git.html#提升-git-on-wsl-的性能)
-- [2018-12-22]：增加了 VSCode 中 Node.js 环境的配置，[PR #11](https://github.com/spencerwooo/dowww/pull/11)
-- [2018-12-13]：新增了 Terminus 终端的推荐
-- [2018-12-11]：增加了 VSCode 中 LaTeX 环境的配置，[PR #10](https://github.com/spencerwooo/dowww/pull/10)
-- ...
+更新日志在 [CHANGELOG.md](https://github.com/spencerwooo/dowww/blob/master/CHANGELOG.md) 中维护，请直接参考链接内容进行查看。
 
 ## Contributing 贡献
 
