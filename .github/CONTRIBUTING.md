@@ -106,7 +106,7 @@ $ yarn docs:dev
 
 #### 增加一门语言的环境配置指南
 
-请在 `/docs/3-VSCode` 下新建一个文件，命名为 `3-*-***.md`。其中 `*` 表示第几篇文章，`***` 表示语言的名称，比如：`3-7-AmazingLanguage.md`。请在这个文件下进行文章的撰写。
+请在 `/docs/3-VSCode` 下新建一个文件，命名为 `3-*-***.md`。其中 `*` 表示第几篇文章，`***` 表示语言的名称，比如：`3-8-AmazingLanguage.md`。请在这个文件下进行文章的撰写。
 
 一般情况下，到这里就可以了，在本地写好文章之后将新增内容 push 到 GitHub 并提交 PR，我就会将你的新增内容更新至文档中。
 
@@ -118,14 +118,14 @@ $ yarn docs:dev
   ```javascript
   {
     text: 'AmazingLanguage',
-    link: '/3-VSCode/3-7-AmazingLanguage'
+    link: '/3-VSCode/3-8-AmazingLanguage'
   }
   ```
   
   - 在 `sidebar` 下，`/3-VSCode/` 项下，增加这样的内容：
 
   ```javascript
-  '3-6-AmazingLanguage.md'
+  '3-8-AmazingLanguage.md'
   ```
 
 - 在本地构建预览：
