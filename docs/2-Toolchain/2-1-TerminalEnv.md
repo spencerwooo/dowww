@@ -180,9 +180,11 @@ config: {
 }
 ```
 
-- 重启 Hyper。
+- 重启 Hyper 即可。
 
-> 💎 参考配置文件：[.hyper.js](https://gist.github.com/spencerwooo/f90d1ce8a24e7fc0fe6a3a7aab097f6e)
+:::tip
+参考配置文件：[.hyper.js](https://github.com/spencerwooo/dotfiles/blob/master/_hyper.js)
+:::
 
 禁用令人闹心的终端提示音：
 
@@ -216,6 +218,8 @@ sudo chsh -s $(which zsh)
 
 由于 Windows 下所有终端都尚未很好的 **支持全角（Double width）的 Unicode 字体**，因此 `oh-my-zsh` 默认主题 `robbyrussell` 在 Hyper 终端下会出现光标位置不正确的问题（见 [Issue #5](https://github.com/spencerwooo/dowww/issues/5))。解决方法：
 
+#### 1. 修改终端显示内容
+
 - 在 `~/.oh-my-zsh/themes` 目录下打开 `oh-my-zsh` 默认主题文件：`robbyrussell.zsh-theme`，将其中的全角 Unicode 字符「➜」更改为其他字符（比如「>」或者「→」）
 - 加载设置：`source ~/.zshrc`
 
@@ -226,7 +230,7 @@ sudo chsh -s $(which zsh)
 
 ![](https://user-images.githubusercontent.com/32114380/50538113-00a78a00-0ba5-11e9-8a7a-db8d709e8d88.png)
 
-比如：如果你使用了 [`Powerlevel9k` 主题包](https://github.com/bhilburn/powerlevel9k)，可以考虑将下面的内容加入 `.zshrc` 来实现命令单独在第二行的显示：
+比如：如果你使用了 [Powerlevel9k 主题包](https://github.com/bhilburn/powerlevel9k)，可以考虑将下面的内容加入 `.zshrc` 来实现命令单独在第二行的显示：
 
 ```shell
 # 让命令主体单独在第二行显示
@@ -239,6 +243,22 @@ POWERLEVEL9K_MULTILINE_LAST_PROMPT_PREFIX="╰\u276F\u276F\u276F "
 ```
 
 这样配置之后，终端中的光标位置就不会出现错位问题了，同时也不影响终端的炫酷和易用。🍻
+
+#### 2. 修改 Windows 终端为 UTF-8 环境
+
+Windows 终端输出错位、光标错位的根本原因在于 Windows 终端默认并非是 UTF-8 的环境（至少中文默认环境下不是）。我们可以通过下面的方法保证 Windows 终端环境为 UTF-8 的编码方式：
+
+- 首先，在「控制面板 → 区域」，选择「非 Unicode 程序语言设置」，更改为「英语」，并勾选下方「Beta：使用 Unicode UTF-8 支持全球语言」的选项
+
+![](https://i.loli.net/2019/04/08/5cab126f55e54.png)
+
+- 之后，在 PowerShell 终端中输入 `chcp 65001`，切换为 UTF-8 代码页
+
+理论上，你就可以成功将 Windows 全部终端环境切换为 UTF-8 的编码格式了。也就是说，就算是下面带有左右 Prompt 的 Powerlevel9k 配置，你的终端显示都是正确无误的，光标位置也是符合预期的。
+
+![](https://i.loli.net/2019/04/08/5cab1506db02b.png)
+
+但是这种方法比较玄学，因此如果你并没有成功解决问题，还请使用第一种办法。
 
 更多配置可以参考我的 [`dotfiles`](https://github.com/spencerwooo/dotfiles) 里面 [`_wsl_zshrc`](https://github.com/spencerwooo/dotfiles/blob/master/_wsl_zshrc) 的部分内容。折腾愉快！
 
