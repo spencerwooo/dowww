@@ -1,5 +1,11 @@
 # Changelog 更新日志
 
+## [0.1.0] - 2019-5-12
+
+- 新增了对 [Windows Terminal](https://spencerwoo.com/dowww/2-Toolchain/2-1-TerminalEnv.html#windows-terminal) 和 [Fluent Terminal](https://spencerwoo.com/dowww/2-Toolchain/2-1-TerminalEnv.html#fluent-terminal) 的介绍
+- 新增了 VS Code [Remote-WSL 支持的介绍](https://spencerwoo.com/dowww/3-VSCode/3-0-Terminal.html#remote-wsl-%E6%8F%92%E4%BB%B6)
+- 新增了 Arch Linux 上架微软官方商店的介绍
+
 ## [0.0.7] - 2019-3-3
 
 ### Add
