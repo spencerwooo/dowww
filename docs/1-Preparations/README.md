@@ -37,6 +37,7 @@ next: /2-Toolchain/
 - [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
 - WLinux: [普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)
 - [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395)
+- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>
 
 社区支持的第三方WSL发行版：
 - [ArchWSL](https://github.com/yuk7/ArchWSL)
