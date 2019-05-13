@@ -1,5 +1,9 @@
 # Changelog 更新日志
 
+## [0.1.1] - 2019-5.13
+
+- 新增了 [Remote-WSL](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6) 更加详细的介绍
+
 ## [0.1.0] - 2019-5-12
 
 - 新增了对 [Windows Terminal](https://spencerwoo.com/dowww/2-Toolchain/2-1-TerminalEnv.html#windows-terminal) 和 [Fluent Terminal](https://spencerwoo.com/dowww/2-Toolchain/2-1-TerminalEnv.html#fluent-terminal) 的介绍
