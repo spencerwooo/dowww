@@ -4,7 +4,7 @@ next:
 sidebarDepth: 4
 ---
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e33f82174.png" alt="Visual Studio Code" width="40%"/></div>
+![](https://i.loli.net/2019/05/13/5cd96b08b7f1f38773.png)
 
 # Visual Studio Code
 

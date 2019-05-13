@@ -2,7 +2,7 @@
 prev: /3-VSCode/HelpNeeded
 ---
 
-<div align="center"><img src="https://ws2.sinaimg.cn/large/e264e10ely1fzh2y1rt4nj2334334qpe.jpg" alt="Advanced operations" width="20%"></div>
+![](https://i.loli.net/2019/05/13/5cd96b8cdc55749567.png)
 
 # 高阶操作 🚀
 
