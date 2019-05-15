@@ -62,7 +62,7 @@ Redefined.](https://code.visualstudio.com/)
 
 ![](https://i.loli.net/2019/05/13/5cd965adeb6f377829.png)
 
-当然，我们也可以通过 `/mnt/C/USers/..` 来访问 Windows 用户文件夹下的内容，如下图例子：
+当然，我们也可以通过 `/mnt/C/Users/..` 来访问 Windows 用户文件夹下的内容，如下图例子：
 
 ![](https://i.loli.net/2019/05/13/5cd965aeaf68710972.png)
 
@@ -70,7 +70,7 @@ Redefined.](https://code.visualstudio.com/)
 
 ![](https://i.loli.net/2019/05/13/5cd965adcbe5b68941.png)
 
-:::warning
+:::warning WARNING
 这里似乎有一些 bug，我使用的 VS Code Insiders 版本在 WSL 环境下，即使我设置了默认 Shell 为 `zsh`，其默认打开的 Shell 依旧是 `bash`。
 :::
 
@@ -78,7 +78,7 @@ Redefined.](https://code.visualstudio.com/)
 
 ## 问题（不存在了！）<Badge text="deprecated" type="error" vertical="middle"/>
 
-:::danger
+:::danger DANGER
 这些问题在 2019 年 5 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不复存在了。
 :::
 
@@ -92,7 +92,7 @@ Redefined.](https://code.visualstudio.com/)
 
 ## 参考配置 <Badge text="deprecated" type="error" vertical="middle"/>
 
-:::tip
+:::tip TIP
 VS Code 配色方案因人而异，大家都有自己不同的喜好，这里仅仅留作参考。
 :::
 
