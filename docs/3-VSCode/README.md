@@ -62,7 +62,7 @@ Redefined.](https://code.visualstudio.com/)
 
 ![](https://i.loli.net/2019/05/13/5cd965adeb6f377829.png)
 
-当然，我们也可以通过 `/mnt/C/USers/..` 来访问 Windows 用户文件夹下的内容，如下图例子：
+当然，我们也可以通过 `/mnt/C/Users/..` 来访问 Windows 用户文件夹下的内容，如下图例子：
 
 ![](https://i.loli.net/2019/05/13/5cd965aeaf68710972.png)
 
