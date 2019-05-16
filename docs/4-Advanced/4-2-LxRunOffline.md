@@ -2,72 +2,90 @@
 next: /5-Experience/
 ---
 
-# LxRunOffline <a href="https://github.com/llinfeng"><Badge text="@llinfeng" vertical="middle"/></a>
+# LxRunOffline <a href="https://github.com/llinfeng"><Badge text="@llinfeng" vertical="middle"/></a> <a href="https://github.com/ChungZH"><Badge text="@ChungZH" vertical="middle"/></a>
 
 <!-- 大佬自由发挥！ -->
 
-[LxRunOffline](https://github.com/DDoSolitary/LxRunOffline) is a **Windows command line tool** that can dispatch whatever Linux distributions, however you would like. Following the WSL tradition, you are free to pick from whatever Linux distributions. For a complete list of all possibilities, [visit this link](https://github.com/DDoSolitary/LxRunOffline/wiki).
+[LxRunOffline](https://github.com/DDoSolitary/LxRunOffline) 是一个 **Windows 命令行工具** 可以根据你的需要调度任何 Linux 发行版。遵循 WSL 的惯例，您可以自由选择任何 Linux 发行版。有关所有可能性的完整列表，[请访问这个链接](https://github.com/DDoSolitary/LxRunOffline/wiki).
 
-## Quick start
+## 快速开始
 
-### Get LxRunOffline ready
+### 准备好 LxRunOffline
 
-The best way to install is to use `choco`. As suggested in the project's home page, pick either Command Prompt or PowerShell to execud the following installation command:
+最好的方法是使用 `choco`。像在这个项目的主页中说的那样，选择 命令提示符 或 PowerShell 来执行以下安装命令：
 
 ```powershell
 choco install lxrunoffline
 ```
 
-Note, you will need to press `y` key, for once, to confirm something.
+注意，您还需要按一次“Y”键，以确认某些内容。
 
-### Download and install the Linux image
+同时你也可以使用 `scoop`。同样的，选择 命令提示符 或 PowerShell 来执行以下安装命令：
 
-[This table](https://github.com/DDoSolitary/LxRunOffline/wiki) details all possibilties, but can be a bit overwhelming. In particular, most of the entries in the table are meant for building dockers, which I know very little about. Here goes a layman approach to getting a _fully_ functional Linux.
+```powershell
+scoop bucket add extras
+scoop install lxrunoffline
+```
 
-1. Download the image from:
+> 关于 Scoop，如果您还想了解更多，请阅读：
+> - [「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件 - SpencerWoo](https://spencerwoo.com/posts/2019/01/12/scoop.html)
+> - [ 给 Scoop 加上这些软件仓库，让它变成强大的 Windows 软件管理器 - SpencerWoo](https://spencerwoo.com/posts/2019/02/06/scoop-bucket.html)
+
+或者您还可以直接下载二进制文件：
+
+- Latest releases: https://github.com/DDoSolitary/LxRunOffline/releases
+- Development builds: https://ci.appveyor.com/project/DDoSolitary/lxrunoffline > 选择第一个工作 > ARTIFACTS
+
+### 下载并安装 Linux 镜像
+
+<!-- but can be a bit overwhelming 这句翻译得可能有点问题 还有 Here goes a layman approach to getting a fully functional Linux 这句-->
+[这个表格](https://github.com/DDoSolitary/LxRunOffline/wiki) 列出所有可能性，但可能有点压倒性。特别是，表中的大多数条目都是用于构建 docker，我对 docker 不太熟悉。这是一个获得功能 _齐全_ 的 Linux 的外行人方法。
+
+1. 从这里下载镜像:
    <https://lxrunoffline.apphb.com/download/UbuntuFromMS/16>
-2. Store it somewhere, and run the following `LxRunOffline` command through, preferrably, a Command Prompt window with Admin privilege. (You can press `Win + X`, and then `A`, to get it.)
+2. 将刚刚下载的镜像存储在某一个地方，并运行以下的 `LxRunOffline` 命令，最好是在具有 Admin 权限的命令提示符窗口。（您可以按“Win + X”，然后按“A”来获取它。）
 
 ```powershell
 LxRunOffline i -n UF -d c:\WSL\Full -f <c:\whereabouts_of_the_downloaded_image> -s
 ```
 
-Upon filling up the precise absolute path to the `16.04.2-server-cloudimg-amd64-root.tar.gz` file, the command shall create a distribution named as UF, in directory `c:\WSL\UFull`.
+在填写 `16.04.2-server-cloudimg-amd64-root.tar.gz` 文件准确的绝对路径后，该命令将在目录 `c:\WSL\UFull` 中创建一个名为 UF 的分发。
 
-:::tip
-**Comments about those "docker images"**: docker is meant to be as light-weight as possbile, and a functional Linux distribution may come in size of less than 20MB. Yet, with these skinny super-light-weight Linux distro, at times, you won't even have the `apt-get` command.
+:::tip TIP
+**有关那些 "docker images" 的评论**: docker
+意味着尽可能轻量级，而功能性 Linux 发行版的大小可能不到 20MB。然而，有了这些超轻量级的 Linux 发行版，有时侯你甚至连 `apt-get` 命令都没有。
 :::
 
-### Accessing the newly installed image
+### 访问新安装的镜像
 
-From any console interface, be it PowerShell or Command Prompt, if you have followed the naming convention above, the following set of command will load the newly minted Linux distro:
+从任何控制台界面，无论是 PowerShell 还是 命令提示符，如果您遵循上面的命名约定，以下命令集将加载新创建的 Linux 发行版：
 
 ```powershell
 Lx Run Offline run -n UF
 ```
 
-Other frequently commands include:
+其他常用命令包括：
 
-* `LxRunOffline l`: for listing all isntalled distributions;
-* `LxRunOffline`: for admiring the list of possible other commands.
+* `LxRunOffline l`: 列出所有已安装的发行版；
+* `LxRunOffline`: 用于欣赏可能的其他命令列表。
 
-### Caveats
+### 注意事项
 
-1. `LxRunOffline i` can only install a Linux distro with `root`.
-2. `LxRunOffline r -n Name_of_Distro` will get you to the root access.
-3. You will need to create your user account, if you prefer to have one.
-4. For now, you cannot deploy the linux distribution you installed in PC-1 to PC-2, should they don't share the same Windows build number. (I tested to copy the folder generated on Build 1809 to a Build 1803 machine, and get a `0x80070040` error.)
+1. `LxRunOffline i` 只能用 `root` 安装一个 Linux 发行版。
+2. `LxRunOffline r -n Name_of_Distro` 将使您获得 root 访问权限。
+3. 如果您愿意，我们需要创建您的用户帐户。
+4. 目前，如果它们不共享相同的 Windows 内部版本号，则无法将安装在 PC-1 中的 Linux 发行版部署到 PC-2。 （我测试把在 Build 1809 上生成的文件夹复制到 Build 1803 机器，并得到了 `0x80070040` 错误。）
 
-## Advanced usage
+## 高级用法
 
-Here goes a wish list of pending items to be added, including:
-1. Getting X11 forwarding to work:
-    1. Use the default settings for Xming, which open port `:0` for display
-    2. Add the following setting into `~/.bashrc` (or the setup file for your Fish/Zsh shell):
+这里列出了要添加的待处理项目的愿望清单，包括：
+1. 让 X11 转发工作：
+    1. 使用 Xming 的默认设置，打开端口 `：0` 进行显示
+    2. 将以下设置添加到 `~/ .bashrc`（或 Fish / Zsh shell 的安装文件）中：
        ```bash
        export DISPLAY=:0
        ```
-2. Firing `LxRunOffline`-deployed WSL from a console emulator (ConEmu, Hyper.is,
-   or Cmder). Currently, one will need to access the Comand Prompt or PowerShell first, then to the root user, then to the desired user.
-    * It should be doable to put up some `*.sh` script to set the non-`root` user as the default user? Pending instruction on this.
+2. 从控制台模拟器（ConEmu，Hyper.is，
+   Cmder）`LxRunOffline` 部署 WSL)。目前，首先需要访问命令提示符或 PowerShell，然后访问 root 用户，然后访问所需的用户。
+    * 应该设置一些 `* .sh` 脚本来将非 `root` 用户设置为默认用户？有待这方面的指令。
    
