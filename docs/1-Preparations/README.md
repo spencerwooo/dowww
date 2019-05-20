@@ -16,6 +16,8 @@ next: /2-Toolchain/
 
 ::: danger 注意
 在任何情况下都不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
+
+除了在 VS Code 的 Remote-WSL 下。
 :::
 
 ## WSL - Windows Subsystem for Linux
@@ -35,13 +37,15 @@ next: /2-Toolchain/
 - SUSE Linux Enterprise Server: [12](https://www.microsoft.com/store/productId/9P32MWBH6CNS), [15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
 - [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
 - [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
-- WLinux: [普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)
+- Pengwin（前名为 WLinux）: [普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)，[普通版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin)，[企业版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin-Enterprise)
 - [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395)
-- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>
+- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>]
+- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc)：[GitHub 仓库](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL)
 
-社区支持的第三方WSL发行版：
+社区支持的第三方 WSL 发行版：
 - [ArchWSL](https://github.com/yuk7/ArchWSL)
 - [AlpineWSL](https://github.com/yuk7/AlpineWSL)
+- 
 
 具体下载安装过程见 > [微软官方支持文档](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)。
 
