@@ -14,10 +14,8 @@ next: /2-Toolchain/
 3. Windows 用户名不能有空格。（有空格会对 WSL 环境造成影响。）
 4. **Windows 用户名不能为中文。（两个系统下的编码格式不一样，会对 VSCode 的调试功能造成影响。）**
 
-::: danger 注意
-在任何情况下都不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
-
-除了在 VS Code 的 Remote-WSL 下。
+::: danger
+除了在稳定可控的环境下（比如 VS Code - Insiders 的 Remote-WSL 环境），切记不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
 :::
 
 ## WSL - Windows Subsystem for Linux
@@ -45,7 +43,6 @@ next: /2-Toolchain/
 社区支持的第三方 WSL 发行版：
 - [ArchWSL](https://github.com/yuk7/ArchWSL)
 - [AlpineWSL](https://github.com/yuk7/AlpineWSL)
-- 
 
 具体下载安装过程见 > [微软官方支持文档](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)。
 
