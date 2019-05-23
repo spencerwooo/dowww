@@ -37,7 +37,7 @@ next: /2-Toolchain/
 - [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
 - Pengwin（前名为 WLinux）: [普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)，[普通版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin)，[企业版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin-Enterprise)
 - [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395)
-- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>]
+- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>
 - [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc)：[GitHub 仓库](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL)
 
 社区支持的第三方 WSL 发行版：
