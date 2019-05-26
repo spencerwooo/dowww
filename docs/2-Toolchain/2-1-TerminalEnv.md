@@ -71,7 +71,7 @@ ConPTY 的引入意味着 Windows 命令行环境有了更多的现代终端应�
 
 由于中文的大环境，默认的 Windows 终端字体是新宋体。相信你和我一样，对这个模糊不清的字体深恶痛绝。但是由于 Windows 默认终端是一个极为底层的应用，没有使用通用 UI 渲染层，因此它对字体有着严格的要求，支持这一要求的字体（在中文环境下）只有 [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic)。下载安装这个字体之后，你就可以在 Windows 默认终端的设置项目下设置这个字体了。特别的，`Sarasa Mono T SC`（或者中文叫等距更纱黑体）是我们编码所需的等宽字体。
 
-![](https://i.loli.net/2019/05/22/5ce54f0320ef428817.png)
+![](https://i.loli.net/2019/05/26/5cea07d5e7c9387041.png)
 
 #### 配色
 
@@ -89,20 +89,24 @@ ColorTool.exe -s
 是的，不需要怀疑自己，你可以直接在 WSL 里面执行 `exe` 程序，只是需要输全程序名称包括 `exe` 程序后缀。但是如果你在 WSL 的默认终端里面运行 ColorTool，可能能正常显示主题有哪些，但是可能没办法设置主题。
 :::
 
-![](https://i.loli.net/2019/05/22/5ce54f42f15fa72195.png)
+![](https://i.loli.net/2019/05/26/5cea085a8972c33685.png)
 
 
-- 之后，我们就可以通过 `ColorTool.exe $主题名称` 命令来更新我们当前使用的终端主题，比如：
+- 之后，我们就可以通过 `ColorTool.exe <主题名称>` 命令来预览我们当前使用的终端主题，比如：
 
 ```powershell
-ColorTool.exe solarized_dark
+ColorTool.exe solarized_dark.itermcolors
 ```
 
-![](https://i.loli.net/2019/05/22/5ce54f889e07d97188.jpg)
+![](https://i.loli.net/2019/05/26/5cea092e0236268278.png)
 
-- 然后，在终端的菜单栏右键 > 属性 > 颜色，点击确定来应用主题
+- 使用下面的命令应用主题：
 
-![](https://i.loli.net/2019/05/22/5ce54f89ab39571980.jpg)
+```powershell
+ColorTool.exe -d <主题名称>
+```
+
+**推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始](https://sspai.com/post/52868)
 
 ColorTool 自带了两个常见的主题供我们直接使用，你也可以从这里下载更多的 iTerm 主题配置文件：[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) 来使用。
 
@@ -155,7 +159,7 @@ Terminus 的设置是 GUI 界面的，配置简单友好，这里就不做过多
   - **Custom CSS**:
 
 ```css
-::-webkit-scrollbar { 
+::-webkit-scrollbar {
     display: none;
 }
 ```
