@@ -48,7 +48,7 @@ Lx Run Offline run -n UF
 
 Other frequently commands include:
 
-* `LxRunOffline l`: for listing all isntalled distributions;
+* `LxRunOffline l`: for listing all installed distributions;
 * `LxRunOffline`: for admiring the list of possible other commands.
 
 ### Caveats
