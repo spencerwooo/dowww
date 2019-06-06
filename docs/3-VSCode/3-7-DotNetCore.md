@@ -1,7 +1,7 @@
 # .Net Core  <a href="https://github.com/dhssingle"><Badge text="@dhssingle" vertical="middle"/></a>
 
 :::tip
-[.NET Core](https://docs.microsoft.com/zh-cn/dotnet/core/about) 是开放源代码通用开发平台，由 Microsoft 和 .NET 社区在 [GitHub](https://github.com/dotnet/core) 上共同维护。 它跨平台（支持                Windows、macOS 和 Linux），并且可用于生成设备、云和 IoT 应用程序。
+[.NET Core](https://docs.microsoft.com/zh-cn/dotnet/core/about) 是开放源代码通用开发平台，由 Microsoft 和 .NET 社区在 [GitHub](https://github.com/dotnet/core) 上共同维护。 它跨平台（支持 Windows、macOS 和 Linux），并且可用于生成设备、云和 IoT 应用程序。
 :::
 
 ## 安装插件

@@ -1,6 +1,6 @@
 ---
 prev: /2-Toolchain/
-next: 
+next:
 sidebarDepth: 4
 ---
 
@@ -9,7 +9,7 @@ sidebarDepth: 4
 # Visual Studio Code
 
 :::tip TIP
-以下步骤适用于 Windows 这边安装的 Visual Studio Code。2019 年 5 月的今天，我不仅因为 [这里陈述的理由](https://sspai.com/post/47719) 推荐 VS Code，更因为 VS Code（Insider 版本）已经通过 Remote 插件家族直接支持了 WSL 下的开发调试。一句话：如果你希望使用 WSL 作为你的主要开发环境，请直接考虑 VS Code。
+以下步骤适用于 Windows 这边安装的 Visual Studio Code。2019 年 6 月的今天，我不仅因为 [这里陈述的理由](https://sspai.com/post/47719) 推荐 VS Code，更因为 VS Code Stable 已经通过 Remote 插件家族直接支持了 WSL 下的开发调试。一句话：如果你希望使用 WSL 作为你的主要开发环境，请直接考虑 VS Code。
 :::
 
 ## 下载
@@ -32,9 +32,11 @@ Redefined.](https://code.visualstudio.com/)
 
 前些天，VS Code 官方团队终于放出了正式的对 WSL 环境下利用 VS Code 开发的组件包：Visual Studio Code Remote - WSL，详见：[Developing in WSL](https://code.visualstudio.com/docs/remote/wsl#_debugging-in-wsl)。
 
-**目前这个插件包只能在 VS Code Insider 版本中使用**，请大家期待一下正式版本的上线。接下来，如果你使用了 Insider 版本的 VS Code，下面是一些基本的「使用 Remote-WSL 插件在 WSL 下开发的」特性。
+Remote-WSL 组件包已经正式上线 VS Code Stable 版本。可以正常使用。
 
 ### 安装并启动 Remote-WSL 插件 <Badge text="new" vertical="middle"/>
+
+在 VS Code 插件中搜索「Remote-WSL」之后即可下载安装。
 
 ![](https://i.loli.net/2019/05/13/5cd9614ee52a165502.png)
 
@@ -70,9 +72,6 @@ Redefined.](https://code.visualstudio.com/)
 
 ![](https://i.loli.net/2019/05/13/5cd965adcbe5b68941.png)
 
-:::warning
-这里似乎有一些 bug，我使用的 VS Code Insiders 版本在 WSL 环境下，即使我设置了默认 Shell 为 `zsh`，其默认打开的 Shell 依旧是 `bash`。
-:::
 
 在 WSL 环境下的 VS Code 打开的终端默认就是 `bash`，也就是 WSL 的终端环境。
 
