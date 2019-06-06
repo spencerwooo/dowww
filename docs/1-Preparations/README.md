@@ -15,7 +15,7 @@ next: /2-Toolchain/
 4. **Windows 用户名不能为中文。（两个系统下的编码格式不一样，会对 VSCode 的调试功能造成影响。）**
 
 ::: danger
-除了在稳定可控的环境下（比如 VS Code - Insiders 的 Remote-WSL 环境），切记不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
+除了在稳定可控的环境下（比如 VS Code 的 Remote-WSL 环境），切记不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
 :::
 
 ## WSL - Windows Subsystem for Linux

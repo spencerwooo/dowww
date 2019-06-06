@@ -8,11 +8,11 @@ prev: /4-Advanced/
 
 ## 终端
 
-WSL + Hyper 终端的环境是完全可用的一个完美 Linux 环境。美观、稳定、可定制化程度高。完美。👌
+WSL 终端下的开发环境是完全可用的一个完美 Linux 环境。美观、稳定、可定制化程度高。完美。👌
 
 ## VSCode + WSL 工具链
 
-还是有诸多不完美的地方。代码实时风格检查正常使用，代码美化正常执行，IntelliSense 有时候会抽风，但是跳转定义很多情况会出现问题。
+在 Remote-WSL 诞生之后，我们完全可以直接使用 WSL 下的全部工具进行开发工作。详情请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
 
 ## 参考资料
 

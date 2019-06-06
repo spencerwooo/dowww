@@ -1,16 +1,12 @@
 # Python <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
 
 ::: tip
-目前存在的一个问题是：VSCode Python 插件和 WSL 侧的工具链兼容性很糟糕，都需要一定的配置才能丝滑工作。这也是一个当前微软 VSCode 各大语言插件组和 WSL 开发组都知道并在解决的问题（参考 [VSCode Python 插件 Issue #67](https://github.com/Microsoft/vscode-python/issues/67)）。
-
-在此之前，下面的解决方法是一个 work-around，请严格按照下面讲述的步骤进行操作，否则很大概率不会成功。
+在 Remote-WSL 环境下使用 VS Code 与 WSL 环境下安装的 Python 进行开发工作已经非常完善了。曾经所需要的复杂配置方法已经不再需要，按照在 Linux 下配置 Python 开发环境的方法进行即可。
 :::
 
 ## 安装插件
 
 安装 Visual Studio Code [官方 Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python)。
-
-然后重启 Visual Studio Code.
 
 ## 安装 Python
 
@@ -28,7 +24,27 @@
 index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 ```
 
-## 让 VSCode 集成 WSL 侧 Python
+## 使用 pip 安装必要的代码优化工具
+
+- 安装自动代码检查 `pylint`
+
+```bash
+python -u pip install pylint
+```
+
+- 安装自动格式化代码工具 `autopep8`
+
+```bash
+python -u pip install autopep8
+```
+
+:::warning
+下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不需要了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+:::
+
+<details>
+
+## 让 VSCode 集成 WSL 侧 Python <Badge text="deprecated" type="error" vertical="middle"/>
 
 > 以下内容、解决方案、代码和可执行文件来自 [plusls - VSCode using Python in WSL](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/)，致谢。
 
@@ -53,7 +69,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 将下载文件解压至本地目录下，留作后续使用。
 
-### 让 VSCode Python 插件识别到 WSL 环境下的 Python
+### 让 VSCode Python 插件识别到 WSL 环境下的 Python <Badge text="deprecated" type="error" vertical="middle"/>
 
 ::: tip TIP
 以下内容以 Python 3 为例，其他版本的 Python 原理相同。
@@ -65,7 +81,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 "python.pythonPath": "C:\\$更换为 python3.exe 的路径$\\python3.exe",
 ```
 
-### 让 Python 插件直接使用 WSL 侧的工具
+### 让 Python 插件直接使用 WSL 侧的工具 <Badge text="deprecated" type="error" vertical="middle"/>
 
 官方 Python 插件集成了实时代码风格检查工具 `pylint`，快速定位工具 `ctags` 和代码美化插件 `autopep8`。这些同样也可以在 WSL 侧安装并从 Windows VSCode 侧调用。
 
@@ -82,7 +98,7 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 
 那么现在拿 VSCode 写 Python 项目的时候应该可以自动代码补全、IntelliSense 和自动美化了。👍
 
-### 跳转定义、调试等内容的配置
+### 跳转定义、调试等内容的配置 <Badge text="deprecated" type="error" vertical="middle"/>
 
 这部分内容由于涉及到修改 VSCode Python 官方插件代码，因此不建议进行配置。同时，随着插件的更新，修改的代码会失效，修改方法也不近相同，如果有需要可以考虑 [查看原文内容](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/) 自行配置。
 
@@ -91,3 +107,5 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 > 基础配置详见 > [Code Runner](/3-VSCode/3-2-Code-Runner.html)
 
 无需特殊配置，单个文件可以直接右键 `Run Code` 执行。
+
+</details>

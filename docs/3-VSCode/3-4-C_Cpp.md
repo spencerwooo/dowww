@@ -4,7 +4,11 @@
 目前来看利用 WSL 中的 `gcc/g++/gdb` 来调试我们的 C/C++ 的**单个程序**应该是比较完善的了。详细的由微软 Visual Studio Code 团队与官方 CppTools 插件团队维护的文档位于这里 > [vscode-cpptools | `gdb` on Windows Subsystem for Linux.md
 ](https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/Debugger/gdb/Windows%20Subsystem%20for%20Linux.md)。
 
-如果涉及到巨大的 C/C++ 项目，我更加推荐利用 Visual Studio 直接项目开发，或通过 SSH 链接到 WSL 系统进行编译调试，感谢即刻的同学给我提供的思路。
+如果涉及到巨大的 C/C++ 项目，我更加推荐利用 Visual Studio 直接项目开发。
+:::
+
+:::warning
+下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后可能是冗余的操作了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
 :::
 
 ## 前言
@@ -31,7 +35,7 @@
     - 运行：`gcc --version` 与 `g++ --version`：
 
     ![](https://i.loli.net/2019/01/01/5c2ad07c722b9.png)
-    
+
     这样我们的 C/C++ 编译环境就安装成功了。
 
     - 运行：`gdb --version`：
@@ -42,7 +46,7 @@
 
 ## 配置 VSCode 使用 WSL 侧的 C/C++ 环境 Intellisense
 
-快捷键 `Ctrl + Shift + P` 打开 Command Palette，输入 C/Cpp: Select a configuration，选择新建，并在生成的 `.vscode/c_cpp_properties.json` 中加入下面内容： 
+快捷键 `Ctrl + Shift + P` 打开 Command Palette，输入 C/Cpp: Select a configuration，选择新建，并在生成的 `.vscode/c_cpp_properties.json` 中加入下面内容：
 
 ```json
 {
@@ -229,7 +233,7 @@ Visual Studio Code 有着其他编辑器无法比拟的调试功能。强大到�
 ![](https://i.loli.net/2019/01/01/5c2ad10d409d9.png)
 
 2. 可以看到，在 `launch.json` 中的 `pipeTransport` 属性就是 C/C++ 插件对 WSL 进行的适配，通过一个 wslBridge 来让 Windows 端调试能够链接到 WSL 中的可执行文件。
-   
+
 调试通过快捷键 `F5` 执行，经过如上配置，进入调试的界面应该如下：
 
 ![](https://i.loli.net/2018/10/18/5bc876d88afe4.png)

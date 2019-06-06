@@ -16,7 +16,7 @@
 [![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/dowww.svg?colorB=brightgreen&style=flat-square)](#sponsors)
 ![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
 ![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
-[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
+[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-sa/4.0/)
 [![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=social)](https://github.com/spencerwooo/dowww)
 
 <!-- [![Build Status](https://img.shields.io/travis/spencerwooo/dowww.svg?style=flat-square)](https://travis-ci.org/spencerwooo/dowww) -->
@@ -37,6 +37,7 @@
     <a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
 </h3>
 
+> Remote-WSL 环境让 VS Code 可以直接在便捷可靠的 WSL Linux 环境下进行开发。目前 Remote-WSL 已经可以在 Stable 稳定版本的 VS Code 中下载使用。详细信息：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
 
 ## 前言
 

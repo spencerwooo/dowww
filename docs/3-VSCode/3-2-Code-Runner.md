@@ -10,9 +10,7 @@ Code Runner 是一个能够一键执行编译运行的 VSCode 插件，支持多
 
 下载安装 Code Runner 插件：[Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner).
 
-并在 Visual Studio Code 设置中将 Code Runner 进行配置：
-
-1. 设置为在终端中运行：
+并在 Visual Studio Code 设置中将 Code Runner 设置为在终端中运行：
 
 ```json
 {
@@ -20,7 +18,13 @@ Code Runner 是一个能够一键执行编译运行的 VSCode 插件，支持多
 }
 ```
 
-2. 配置路径为 WSL 路径（感谢 [江枫同学 @jiangbianyiye](https://github.com/jiangbianyiye) 的补充，见 [Issue #1](https://github.com/spencerwooo/Dev-on-Windows-with-WSL/issues/1)）：
+:::warning
+下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不需要了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+:::
+
+<details>
+
+配置路径为 WSL 路径（感谢 [江枫同学 @jiangbianyiye](https://github.com/jiangbianyiye) 的补充，见 [Issue #1](https://github.com/spencerwooo/Dev-on-Windows-with-WSL/issues/1)）：
 
 ```json
 {
@@ -28,7 +32,9 @@ Code Runner 是一个能够一键执行编译运行的 VSCode 插件，支持多
 }
 ```
 
-## 具体语言的适配
+## 具体语言的适配 <Badge text="deprecated" type="error" vertical="middle"/>
 
 - [Python](/3-VSCode/3-3-Python.html#code-runner)
 - [C/C++](/3-VSCode/3-4-C_Cpp.html#一键编译运行)
+
+</details>

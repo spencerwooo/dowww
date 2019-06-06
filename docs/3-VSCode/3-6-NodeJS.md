@@ -53,7 +53,7 @@ export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
 
 - 加速在中国大陆地区 `npm` 的下载速度：
   - 考虑将 `npm` 更换源至淘宝镜像（推荐）：
-  
+
   ```bash
   npm set registry https://registry.npm.taobao.org
   ```
@@ -65,7 +65,7 @@ export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
   ```
 
 - 给 `npm` 下的模块命令添加权限：
-  
+
 :::tip 重要
 没有权限会很容易在安装某些需要编译的模块发生失败。
 :::
@@ -125,6 +125,12 @@ eslint --init
 
 ![](https://i.loli.net/2018/12/30/5c284ff7e19c0.png)
 
+:::warning
+下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不需要了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+:::
+
+<details>
+
 - 让 ESLint 和 VSCode 的 ESLint 插件配合：
   - 在 Windows 用户根目录下创建 `.vscode_wsl/node.bat`
   - 在 `node.bat` 中加入以下内容：
@@ -150,7 +156,17 @@ eslint --init
 
 不过实际使用的时候，这些错误并不影响开发体验。
 
+</details>
+
 ## 调试 `Node.js` 程序 <a href="https://github.com/spencerwooo"><Badge text="Modified by @SpencerWoo"/></a>
+
+在 Remote-WSL 诞生之后，使用 WSL 环境进行开发调试就不需要特殊的配置了。
+
+:::warning
+下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不需要了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+:::
+
+<details>
 
 :::warning 注意
 在最新的 Node.js 插件中，开发组引入了 `useWSL` 这一参数，以方便我们在 WSL 中对 Node.js 程序进行调试。实际配置下来，几乎是没有用处的。因为 `useWSL` 会先 `cd` 一个 Windows style 的路径，之后 `bash.exe -c $你的命令`。而我们使用 WSL 开发的同学，几乎都会偏向于将默认终端配置成为 WSL 环境，这让 debug 无法进行。
@@ -207,7 +223,7 @@ node --inspect-brk app.js
 ```
 
 - 以调试模式运行程序：
-  
+
 ```bash
 yarn debug
 ```
@@ -217,6 +233,8 @@ yarn debug
 ![](https://ws1.sinaimg.cn/large/e264e10ely1fyosaj40reg21wk13ze81.gif)
 
 经过这样的配置，我们就可以方便的利用 VSCode 强大的调试功能对我们的 Node.js 程序调试开发了。🍻
+
+</details>
 
 ## `NativeModule` 的再编译
 

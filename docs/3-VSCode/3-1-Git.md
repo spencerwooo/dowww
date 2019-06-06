@@ -2,6 +2,18 @@
 
 > Use Git installed in Bash on Windows/Windows Subsystem for Linux (WSL) from Windows and Visual Studio Code (VSCode)
 
+## 使用 Remote-WSL 环境下的 Git
+
+![](https://i.loli.net/2019/06/06/5cf8b4da946f923275.png)
+
+Remote-WSL 环境下开启的 Git 版本控制默认使用的就是 WSL 下安装的 Git。无需过多的配置即可直接使用。
+
+:::warning
+下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不需要了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+:::
+
+<details>
+
 :::tip
 这里的配置是为了让 VSCode 使用 WSL 内的 `git` 进行版本控制。
 
@@ -62,3 +74,5 @@ Arch Linux 是一个高度可定制的 Linux 发行版，轻量、精简。但�
   - 安装 `ArchWSL`：`scoop install archwsl`
 
 由于 Arch Linux for WSL 不是官方维护的版本，因此可能会遇到一些莫名的问题，安装与否还请自行斟酌。不过使用之后我觉得性能还是有着不小的提升。
+
+</details>

@@ -28,7 +28,7 @@ sidebarDepth: 4
 下载安装 Visual Studio Code 在这里 > [Visual Studio Code | Code editing.
 Redefined.](https://code.visualstudio.com/)
 
-## Remote-WSL 插件 <Badge text="new" vertical="middle"/><Badge text="preview" type="error" vertical="middle"/>
+## Remote-WSL 插件 <Badge text="new" vertical="middle"/>
 
 前些天，VS Code 官方团队终于放出了正式的对 WSL 环境下利用 VS Code 开发的组件包：Visual Studio Code Remote - WSL，详见：[Developing in WSL](https://code.visualstudio.com/docs/remote/wsl#_debugging-in-wsl)。
 
