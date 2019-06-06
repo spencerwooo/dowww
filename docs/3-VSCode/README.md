@@ -36,7 +36,7 @@ Remote-WSL 组件包已经正式上线 VS Code Stable 版本。可以正常使�
 
 ### 安装并启动 Remote-WSL 插件 <Badge text="new" vertical="middle"/>
 
-在 VS Code 插件中搜索「Remote-WSL」之后即可下载安装。
+在 VS Code 插件中搜索「Remote - WSL」之后即可下载安装。
 
 ![](https://i.loli.net/2019/05/13/5cd9614ee52a165502.png)
 
