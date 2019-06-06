@@ -217,6 +217,21 @@ set bell-style none
 
 - 加载设置：`source ~/.bashrc`
 
+### wsl-terminal
+
+wsl-terminal 是基于 mintty 的终端，相比 Terminus 、 Fluent Terminal 和 Hyper ，wsl-terminal 要精简很多，解压后总体积10MB左右，启动速度也比较快。如果你是个极简主义者，那么 wsl-terminal 很适合你。
+![](https://raw.githubusercontent.com/loopio/blog/master/picture/wsl-terminal.png)
+
+#### 使用 wsl-terminal
+下载 wsl-terminal 终端：
+- [wsl-terminal 官网](https://goreliu.github.io/wsl-terminal/)
+- [wsl-terminal 下载地址](https://github.com/goreliu/wsl-terminal/releases)
+
+安装：
+- 将下载的 wsl-terminal 压缩包解压到本地目录，即 wsl-terminal 安装目录。运行目录里的 open-wsl.exe 就可以在当前目录打开一个 wsl-terminal 终端 。
+- 运行 tools/1-add-open-wsl-terminal-here-menu.js 就可以将 Open wsl-terminal Here 添加到资源管理器右键菜单。这样你就可以愉快地在本地目录和WSL 玩耍了。运行 tools/1-remove-open-wsl-terminal-here-menu.js 可以将其删除。
+- [官方使用手册]([](https://goreliu.github.io/wsl-terminal/README.zh_CN.html))还有更加详细的说明
+
 ## zsh & oh-my-zsh
 
 ### 配置 zsh
