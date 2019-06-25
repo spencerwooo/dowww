@@ -29,13 +29,13 @@ index-url = https://pypi.tuna.tsinghua.edu.cn/simple
 - 安装自动代码检查 `pylint`
 
 ```bash
-python -u pip install pylint
+pip install pylint
 ```
 
 - 安装自动格式化代码工具 `autopep8`
 
 ```bash
-python -u pip install autopep8
+pip install autopep8
 ```
 
 :::warning
