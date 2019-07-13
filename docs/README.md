@@ -104,7 +104,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inte
 
 ---
 
-💡 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-SA 4.0 International License.
+📟 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-SA 4.0 International License.
 
 Authored and maintained by Spencer Woo.
 

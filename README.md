@@ -1,6 +1,5 @@
 <div align="center"><img src="https://raw.githubusercontent.com/spencerwooo/dowww/master/docs/.vuepress/public/hero.png" alt="Icon Badge" width="30%" /></div>
 
-
 <h1 align="center">Dev on Windows with WSL</h1>
 
 <h3 align="center">🍳💡🎉</h3>
@@ -119,7 +118,7 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inte
 
 ---
 
-💡 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-SA 4.0 International License.
+📟 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-SA 4.0 International License.
 
 Authored and maintained by Spencer Woo.
 
