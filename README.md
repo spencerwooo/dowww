@@ -1,4 +1,4 @@
-<div align="center"><img src="docs/.vuepress/public/hero.png" alt="icon" width="30%" /></div>
+<div align="center"><img src="docs/.vuepress/public/hero.png" alt="icon" width="200px" /></div>
 
 <h1 align="center">Dev on Windows with WSL</h1>
 
