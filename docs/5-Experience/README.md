@@ -12,7 +12,7 @@ WSL 终端下的开发环境是完全可用的一个完美 Linux 环境。美观
 
 ## VSCode + WSL 工具链
 
-在 Remote-WSL 诞生之后，我们完全可以直接使用 WSL 下的全部工具进行开发工作。详情请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+在 Remote-WSL 诞生之后，我们完全可以直接使用 WSL 下的全部工具进行开发工作。详情请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
 
 ## 参考资料
 

@@ -23,20 +23,20 @@
 </div>
 
 <h3 align="center">
-    <a href="https://spencerwoo.com/dowww/1-Preparations/">准备工作</a>
+    <a href="https://dowww.spencerwoo.com/1-Preparations/">准备工作</a>
     <span> · </span>
-    <a href="https://spencerwoo.com/dowww/2-Toolchain/">工具链</a>
+    <a href="https://dowww.spencerwoo.com/2-Toolchain/">工具链</a>
     <span> · </span>
-    <a href="https://spencerwoo.com/dowww/3-VSCode/">Visual Studio Code</a>
+    <a href="https://dowww.spencerwoo.com/3-VSCode/">Visual Studio Code</a>
     <span> · </span>
-    <a href="https://spencerwoo.com/dowww/4-GUI/">图形界面</a>
+    <a href="https://dowww.spencerwoo.com/4-GUI/">图形界面</a>
     <span> · </span>
-    <a href="https://spencerwoo.com/dowww/5-Experience/">体验与参考</a>
+    <a href="https://dowww.spencerwoo.com/5-Experience/">体验与参考</a>
     <span> · </span>
     <a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
 </h3>
 
-> Remote-WSL 环境让 VS Code 可以直接在便捷可靠的 WSL Linux 环境下进行开发。目前 Remote-WSL 已经可以在 Stable 稳定版本的 VS Code 中下载使用。详细信息：[Remote-WSL 环境下 VS Code 的配置与特性](https://spencerwoo.com/dowww/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+> Remote-WSL 环境让 VS Code 可以直接在便捷可靠的 WSL Linux 环境下进行开发。目前 Remote-WSL 已经可以在 Stable 稳定版本的 VS Code 中下载使用。详细信息：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
 
 ## 前言
 
@@ -52,7 +52,7 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 - 🔨 与 macOS 的 Homebrew 一样原理的包管理器：`apt`（针对 Ubuntu）
 - 📰 与 Visual Studio Code 配合的编辑调试环境
 
-如果你对这些内容感兴趣，那么 [**直接进入文档**](https://spencerwoo.com/dowww/)，放飞自我，尽情折腾。\\(￣︶￣*\\))
+如果你对这些内容感兴趣，那么 [**直接进入文档**](https://dowww.spencerwoo.com/)，放飞自我，尽情折腾。\\(￣︶￣*\\))
 
 ## Changelog 更新日志
 
