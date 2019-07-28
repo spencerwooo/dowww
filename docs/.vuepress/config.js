@@ -1,7 +1,6 @@
 module.exports = {
   title: 'Dev on Windows with WSL',
   description: '在 Windows 上用 WSL 优雅开发',
-  base: '/dowww/',
   head: [
     ['link', {
       rel: 'icon',

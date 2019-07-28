@@ -8,7 +8,7 @@ branches:
   only:
     - master
 
-before_install: 
+before_install:
   - export TZ='Asia/Shanghai'
   - yarn global add vuepress
 
@@ -17,6 +17,8 @@ install:
 
 script:
   - yarn docs:build
+  #  Add CNAME record 'guoguo.spencerwoo.com' after each build
+  - echo "dowww.spencerwoo.com" > docs/.vuepress/dist/CNAME
 
 deploy:
   provider: pages
