@@ -4,7 +4,7 @@ module.exports = {
   head: [
     ['link', {
       rel: 'icon',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }],
     ['meta', {
       name: 'theme-color',
@@ -20,11 +20,11 @@ module.exports = {
     }],
     ['link', {
       rel: 'apple-touch-icon',
-      href: '/favicon.png'
+      href: '/favicon.ico'
     }],
     ['meta', {
       name: 'msapplication-TileImage',
-      content: '/favicon.png'
+      content: '/favicon.ico'
     }],
     ['meta', {
       name: 'msapplication-TileColor',
