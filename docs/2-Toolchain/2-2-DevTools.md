@@ -68,3 +68,9 @@ sudo apt-get install -yqq npm
 ```shell
 sudo npm install -g wsl-open
 ```
+
+```shell
+# 不需要安装依赖的替代方法
+echo alias wsl-open='explorer.exe' >> ~/.zshrc
+source ~/.zshrc
+```
