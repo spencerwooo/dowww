@@ -3,9 +3,9 @@ prev: false
 next: /2-Toolchain/
 ---
 
-![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
-
 # 准备工作
+
+![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
 ## Windows 10 💡
 

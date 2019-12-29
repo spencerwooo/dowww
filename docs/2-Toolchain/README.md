@@ -3,9 +3,9 @@ prev: /1-Preparations/
 sidebarDepth: 4
 ---
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e10ee254f.png" alt="oh-my-zsh" width="40%"/></div>
-
 # 工具链
+
+<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e10ee254f.png" alt="oh-my-zsh" width="40%"/></div>
 
 本章介绍具体的开发工具链如何在 WSL 下进行配置。
 

@@ -4,9 +4,9 @@ next:
 sidebarDepth: 4
 ---
 
-![](https://i.loli.net/2019/05/13/5cd96b08b7f1f38773.png)
-
 # Visual Studio Code
+
+![](https://i.loli.net/2019/05/13/5cd96b08b7f1f38773.png)
 
 :::tip TIP
 以下步骤适用于 Windows 这边安装的 Visual Studio Code。2019 年 6 月的今天，我不仅因为 [这里陈述的理由](https://sspai.com/post/47719) 推荐 VS Code，更因为 VS Code Stable 已经通过 Remote 插件家族直接支持了 WSL 下的开发调试。一句话：如果你希望使用 WSL 作为你的主要开发环境，请直接考虑 VS Code。
