@@ -1,7 +1,3 @@
----
-next: /5-Experience/
----
-
 # LxRunOffline <a href="https://github.com/llinfeng"><Badge text="@llinfeng" vertical="middle"/></a>
 
 <!-- 大佬自由发挥！ -->
@@ -70,4 +66,3 @@ Here goes a wish list of pending items to be added, including:
 2. Firing `LxRunOffline`-deployed WSL from a console emulator (ConEmu, Hyper.is,
    or Cmder). Currently, one will need to access the Comand Prompt or PowerShell first, then to the root user, then to the desired user.
     * It should be doable to put up some `*.sh` script to set the non-`root` user as the default user? Pending instruction on this.
-   

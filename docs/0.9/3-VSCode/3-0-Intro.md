@@ -1,6 +1,4 @@
 ---
-prev: /2-Toolchain/
-next:
 sidebarDepth: 4
 ---
 

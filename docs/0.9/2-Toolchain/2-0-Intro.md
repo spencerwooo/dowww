@@ -1,5 +1,4 @@
 ---
-prev: /1-Preparations/
 sidebarDepth: 4
 ---
 
