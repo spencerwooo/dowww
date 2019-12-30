@@ -1,6 +1,10 @@
 # Changelog 更新日志
 
-## [0.1.1] - 2019-5.13
+## [0.2.0] - 2019-12-30
+
+- 开始重构
+
+## [0.1.1] - 2019-5-13
 
 - 新增了 [Remote-WSL](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6) 更加详细的介绍
 
