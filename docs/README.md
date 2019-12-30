@@ -1,50 +1,44 @@
 ---
 home: true
 heroImage: /hero.png
+# heroText: null
 actionText: 入坑指南 →
 actionLink: /1-Preparations/
 features:
 - title: 🍳
-  details: Windows 开发，解决那令人烦恼的非 Unix 终端环境。
+  details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。
 - title: 💡
-  details: Windows Subsystem for Linux，近似原生 Unix 的体验，又有着 Windows 强大的生产力。
+  details: 原汁原味的 Unix 开发环境，又有着 Windows 强大的生产力。
 - title: 🎉
   details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
-footer: 2018 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
+footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
 ---
 
-[![Backers on Open Collective](https://img.shields.io/opencollective/backers/dowww.svg?colorB=brightgreen&style=flat-square)](#backers)
-[![Sponsors on Open Collective](https://img.shields.io/opencollective/sponsors/dowww.svg?colorB=brightgreen&style=flat-square)](#sponsors)
-![love](https://img.shields.io/badge/Made%20with-love-ff69b4.svg?style=flat-square)
-![Windows](https://img.shields.io/badge/Windows-♥-FFE411.svg?logo=windows&style=flat-square)
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/License-CC%20BY--SA%204.0-03A9F4.svg?style=flat-square)](http://creativecommons.org/licenses/by-sa/4.0/)
-[![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww.svg?style=social)](https://github.com/spencerwooo/dowww)
+<div align="right">
+<a href="#changelog-更新日志">Changelog 更新日志</a> | <a href="#contributing-贡献">Contributing 贡献</a> | <a href="#sponsoring-赞助">Sponsoring 赞助</a>
+</div>
 
-:::tip
-Remote-WSL 环境让 VS Code 可以直接在便捷可靠的 WSL Linux 环境下进行开发。目前 Remote-WSL 已经可以在 Stable 稳定版本的 VS Code 中下载使用。详细信息：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+:::callout 🚀 重构进行时
+Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进行，大家敬请期待。
 :::
 
-## 前言
+## 前言 <BlueBadge text="重构中" vertical="top"/>
 
-> 在 [少数派 | 在 Windows 上用 WSL 开发的操作体验指北](https://sspai.com/post/47719) 上阅读更多。
+<img alt="Demo screenshot" src="https://i.loli.net/2019/12/23/oduGKT5LqivekMh.png" width="55%" align="right" style="margin-left: 25px;"/>
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
-![](https://i.loli.net/2019/12/23/oduGKT5LqivekMh.png)
+WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linux，即适用于 Linux 的 Windows 子系统。在 2019 年的夏天，微软官方推出了 [WSL 2：基于最新虚拟化技术的 WSL 引擎。](https://docs.microsoft.com/en-us/windows/wsl/wsl2-about)强大的 WSL 2 直接将一个 Linux 内核放入 WSL 架构中，使得 Linux 子系统的 I/O 效率急速提升，也让 Linux 子系统能真正执行「全部 Linux 原生的系统调用（Full System Call Compatibility）」。无论是 WSL 还是 WSL 2，我们都可以借助之来给我们的 Windows 配置一个美观可用的 **学习编程的开发环境**，包括：
 
-WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linux，即适用于 Linux 的 Windows 子系统，是一个为在 Windows 10 上能够原生运行 Linux 二进制可执行文件的兼容层。WSL 的出现意味着我们可以借助它来给我们的 Windows 配置一个美观可用的 **学习编程的开发环境**，包括：
-
-- 💻 Unix style 终端环境：`zsh` 和 `oh-my-zsh`
-- 🔨 与 macOS 的 Homebrew 一样原理的包管理器：`apt`（针对 Ubuntu）
-- 📰 与 Visual Studio Code 配合的编辑调试环境
+- 原汁原味 Unix 风格的终端环境和开发环境
+- 一行命令管理所有软件包的 APT 包管理工具（Ubuntu's Advanced Packaging Tool）
+- 在 Visual Studio Code 中直接编写、开发、调试你的项目
 
 如果你对这些内容感兴趣，那么 [**直接进入文档**](https://dowww.spencerwoo.com/)，放飞自我，尽情折腾。\\(￣︶￣*\\))
 
 ## Changelog 更新日志
 
-**Star and watch**，时刻掌握最新教程。💪
-
-更新日志在 [CHANGELOG.md](https://github.com/spencerwooo/dowww/blob/master/CHANGELOG.md) 中维护，请直接参考链接内容进行查看。
+🌟 Star and watch，时刻掌握最新教程。更新日志在 [CHANGELOG.md](https://github.com/spencerwooo/dowww/blob/master/CHANGELOG.md) 中维护，请直接参考链接内容进行查看。
 
 ## Contributing 贡献
 
@@ -64,37 +58,22 @@ This project exists thanks to all the people who contribute.
 
 ## Sponsoring 赞助
 
-> 谢谢金主爸爸们，我们通过 Open Collective 平台接受赞助。
+谢谢金主爸爸们，我们通过 Open Collective 平台接受赞助。
 
-### Backers 支持者
+|                                                              Backers 支持者                                                              |                                                                            Sponsors 赞助商                                                                             |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Support this project by becoming a backer. Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)] | Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🌏 [[Become a sponsor](https://opencollective.com/dowww#sponsor)] |
+|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>      |           <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
 
-Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)]
+另外，我们同样接受以下形式的小额赞助，感谢您考虑赞助我们的项目：
 
-<a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg?width=890"></a>
+|                                        微信支付                                        |                                       支付宝支付                                       |
+| :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
+| <img src="https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg" alt="微信支付" width="40%"> | <img src="https://i.loli.net/2018/03/13/5aa7ae11339cd.jpg" alt="微信支付" width="40%"> |
 
-### Sponsors 赞助商
+## License 许可
 
-Support this project by becoming a sponsor. Your logo will show up here with a link to your website. [[Become a sponsor](https://opencollective.com/dowww#sponsor)]
-
-<a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/1/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/1/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/2/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/2/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/3/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/3/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/4/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/4/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/5/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/5/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/6/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/6/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/7/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/7/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/8/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/8/avatar.svg"></a>
-<a href="https://opencollective.com/dowww/sponsor/9/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/9/avatar.svg"></a>
-
-### 小额赞助
-
-感谢您考虑赞助我们的项目。我们同样接受以下形式的小额赞助：
-
-- [微信](https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg)
-- [支付宝](https://i.loli.net/2018/03/13/5aa7ae11339cd.jpg)
-
-## License 许可 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 
 本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
 
@@ -108,4 +87,4 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inte
 
 Authored and maintained by Spencer Woo.
 
-[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwooo)
+[@Portfolio](https://spencerwoo.com/) · [@Blog](https://blog.spencerwoo.com/) · [@GitHub](https://github.com/spencerwooo)
