@@ -1,3 +1,16 @@
+@import url("https://fonts.googleapis.com/css?family=Miriam+Libre:400,700&display=swap")
+
+// GENERAL
+
+body
+  font-family $secondaryFont !important
+
+h1, h2, h3, h4, h5, h6
+  font-family: $primaryFont, sans-serif
+
+h1, h2, h3
+  font-weight: 700 !important
+
 .callout
   margin 1rem 0
   padding .1rem 1.5rem
@@ -12,6 +25,64 @@
     font-size 0.9rem
     text-align right
 
-.hero
-  img
-    width 180px
+.hero img
+    height: 180px
+    width: 180px
+
+.action
+  line-height inherit
+
+// NAVBAR
+
+.navbar
+  border-bottom none !important
+  box-shadow 0 2px 4px 0 rgba(0,0,0,.05) !important
+
+.navbar .site-name
+  font-weight 400 !important
+  font-family: $primaryFont
+
+@media (max-width: 719px)
+  .navbar .home-link .can-hide
+    display: inline-block !important
+
+// SIDEBAR
+
+#app .sidebar
+  width  17rem !important
+  border-right none !important
+  background-color darken($backgroundColor, 60%) !important
+
+ .sidebar-group:not(.collapsable) .sidebar-heading,
+  .sidebar-heading
+    text-transform uppercase !important
+    letter-spacing 0.13rem !important
+    font-size 12px !important
+    font-weight 800 !important
+    color #C1CDDB !important
+
+  a.sidebar-link
+    color #fff !important
+    border-left 0.125rem solid transparent !important
+
+  a.sidebar-link:hover
+    color #fff !important
+    opacity 0.5 !important
+    border-left-color rgba(255, 255, 255, 0.7) !important
+
+  a.sidebar-link:active
+    color #fff !important
+    opacity 0.7 !important
+    border-left-color $accentColor !important
+
+  a.sidebar-link.active
+    color #fff !important
+    border-left-color $accentColor !important
+
+  @media (max-width 959px)
+    .sidebar .nav-links
+      border-bottom 2px solid rgba(255, 255, 255, 0.1)
+
+  @media (max-width 719px)
+    .nav-links a.nav-link, .nav-links a.repo-link, .nav-links .dropdown-title
+      color #fff
