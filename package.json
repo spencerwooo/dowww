@@ -5,16 +5,19 @@
   "scripts": {
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "postinstall": "opencollective-postinstall"
+    "postinstall": "opencollective-postinstall",
+    "bump-version": "cd ./docs && node -e 'require(\"./.vuepress/lib/versioning.js\").generate()'"
   },
   "repository": "https://github.com/spencerwooo/dowww",
   "author": "spencerwooo <spencerwoo98@foxmail.com>",
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
+    "fs-extra": "^8.1.0",
     "opencollective": "^1.0.3",
     "opencollective-postinstall": "^2.0.1",
     "vuepress": "^1.2.0",
-    "vuepress-plugin-container": "^2.1.2"
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-medium-zoom": "^1.1.8"
   },
   "collective": {
     "type": "opencollective",
