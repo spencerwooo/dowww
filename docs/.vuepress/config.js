@@ -146,6 +146,25 @@ module.exports = {
       '/5-Experience/': [''],
       '/': ['']
     },
-    lastUpdated: 'Last Updated'
-  }
+    lastUpdated: 'Last Updated',
+    logo: '/hero.png',
+    smoothScroll: true
+  },
+  plugins: [
+    [
+      'vuepress-plugin-container',
+      {
+        type: 'callout',
+        before: info => `<div class="callout"><p class="title">${info}</p>`,
+        after: '</div>'
+      }
+    ],
+    ['@vuepress/back-to-top'],
+    [
+      '@vuepress/google-analytics',
+      {
+        'ga': 'UA-111664763-3'
+      }
+    ]
+  ]
 }
