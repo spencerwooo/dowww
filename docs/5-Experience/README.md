@@ -45,4 +45,4 @@ This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 Inte
 
 Authored and maintained by Spencer Woo.
 
-[@Blog](https://spencerwoo.com/) · [ⒿJike](https://web.okjike.com/user/4DDA0425-FB41-4188-89E4-952CA15E3C5E/post) · [@GitHub](https://github.com/spencerwooo)
+[@Portfolio](https://spencerwoo.com/) · [@Blog](https://blog.spencerwoo.com/) · [@GitHub](https://github.com/spencerwooo)
