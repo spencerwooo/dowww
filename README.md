@@ -3,14 +3,9 @@
 
 <h1>Dev on Windows with WSL</h1>
 
-<h3>在 Windows 上面用 WSL 优雅开发</h3>
+<strong>在 Windows 上面用 WSL 优雅开发</strong>
 
-[![Contributors on Open Collective](https://flat.badgen.net/opencollective/contributors/dowww)](#contributing-贡献)
-[![Sponsors on Open Collective](https://flat.badgen.net/opencollective/backers/dowww)](#sponsoring-赞助)
-[![Windows](https://flat.badgen.net/badge/Windows/❤%20Linux/pink?icon=windows)](https://cloudblogs.microsoft.com/windowsserver/2015/05/06/microsoft-loves-linux/)
-[![License: CC BY-SA 4.0](https://flat.badgen.net/badge/license/CC%20BY-SA%204.0/03A9F4)](http://creativecommons.org/licenses/by-sa/4.0/)
-[![GitHub stars](https://flat.badgen.net/github/stars/spencerwooo/dowww?icon=github&color=orange)](https://github.com/spencerwooo/dowww)
-
+<h3>
 <a href="https://dowww.spencerwoo.com/1-Preparations/">准备工作</a>
 <span> · </span>
 <a href="https://dowww.spencerwoo.com/2-Toolchain/">工具链</a>
@@ -22,6 +17,13 @@
 <a href="https://dowww.spencerwoo.com/5-Experience/">体验与参考</a>
 <span> · </span>
 <a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
+</h3>
+
+[![Contributors on Open Collective](https://flat.badgen.net/opencollective/contributors/dowww)](#contributing-贡献)
+[![Sponsors on Open Collective](https://flat.badgen.net/opencollective/backers/dowww)](#sponsoring-赞助)
+[![Windows](https://flat.badgen.net/badge/Windows/❤%20Linux/pink?icon=windows)](https://cloudblogs.microsoft.com/windowsserver/2015/05/06/microsoft-loves-linux/)
+[![License: CC BY-SA 4.0](https://flat.badgen.net/badge/license/CC%20BY-SA%204.0/03A9F4)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![GitHub stars](https://flat.badgen.net/github/stars/spencerwooo/dowww?icon=github&color=orange)](https://github.com/spencerwooo/dowww)
 
 </div>
 
