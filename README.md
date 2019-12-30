@@ -1,15 +1,24 @@
-<div align="center"><img src="docs/.vuepress/public/hero.png" alt="icon" width="200px" /></div>
+<div align="right">
+  <a href="https://dowww.spencerwoo.com/1-Preparations/">准备工作</a>
+  <span> · </span>
+  <a href="https://dowww.spencerwoo.com/2-Toolchain/">工具链</a>
+  <span> · </span>
+  <a href="https://dowww.spencerwoo.com/3-VSCode/">Visual Studio Code</a>
+  <span> · </span>
+  <a href="https://dowww.spencerwoo.com/4-GUI/">图形界面</a>
+  <span> · </span>
+  <a href="https://dowww.spencerwoo.com/5-Experience/">体验与参考</a>
+  <span> · </span>
+  <a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
+</div>
 
-<h1 align="center">Dev on Windows with WSL</h1>
+<img src="docs/.vuepress/public/hero.png" alt="icon" width="180px" align="right"/>
 
-<h3 align="center">🍳💡🎉</h3>
+# Dev on Windows with WSL
 
-<p align="center">
-<strong>在 Windows 上面用 WSL 优雅开发</strong><br>
-优秀的 Unix style 开发环境、包管理、迅捷稳定的开发调试环境、美丽养眼的开发工具与更多
-</p>
+**在 Windows 上面用 WSL 优雅开发**
 
-<div align="center">
+*The best of Windows and Linux combined!*
 
 [![Contributors on Open Collective](https://flat.badgen.net/opencollective/contributors/dowww)](#contributing-贡献)
 [![Sponsors on Open Collective](https://flat.badgen.net/opencollective/backers/dowww)](#sponsoring-赞助)
@@ -17,25 +26,9 @@
 [![License: CC BY-SA 4.0](https://flat.badgen.net/badge/license/CC%20BY-SA%204.0/03A9F4)](http://creativecommons.org/licenses/by-sa/4.0/)
 [![GitHub stars](https://flat.badgen.net/github/stars/spencerwooo/dowww?icon=github&color=orange)](https://github.com/spencerwooo/dowww)
 
-</div>
+> 🚀 重构进行时：Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进行，大家敬请期待。
 
-<h3 align="center">
-    <a href="https://dowww.spencerwoo.com/1-Preparations/">准备工作</a>
-    <span> · </span>
-    <a href="https://dowww.spencerwoo.com/2-Toolchain/">工具链</a>
-    <span> · </span>
-    <a href="https://dowww.spencerwoo.com/3-VSCode/">Visual Studio Code</a>
-    <span> · </span>
-    <a href="https://dowww.spencerwoo.com/4-GUI/">图形界面</a>
-    <span> · </span>
-    <a href="https://dowww.spencerwoo.com/5-Experience/">体验与参考</a>
-    <span> · </span>
-    <a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
-</h3>
-
-> **🚀 重构进行时：**Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进行，大家敬请期待。
-
-<img alt="Demo screenshot" src="https://i.loli.net/2019/12/23/oduGKT5LqivekMh.png" width="55%" align="right" style="margin: 0 0 25px 25px;"/>
+![](https://i.loli.net/2019/12/23/oduGKT5LqivekMh.png)
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
