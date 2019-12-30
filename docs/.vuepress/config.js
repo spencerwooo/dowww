@@ -32,93 +32,115 @@ module.exports = {
     }]
   ],
   themeConfig: {
-    nav: [{
-      text: '准备工作',
-      link: '/1-Preparations/'
-    },
-    {
-      text: '工具链',
-      items: [{
-        text: '概要',
-        link: '/2-Toolchain/'
-      },
+    nav: [
       {
-        text: '终端环境',
-        link: '/2-Toolchain/2-1-TerminalEnv'
-      },
-      {
-        text: '开发工具',
-        link: '/2-Toolchain/2-2-DevTools'
-      }
-      ]
-    },
-    {
-      text: 'Visual Studio Code',
-      items: [{
-        text: '概要',
-        link: '/3-VSCode/'
-      },
-      {
-        text: '集成终端',
-        link: '/3-VSCode/3-0-Terminal'
-      },
+        text: '文档目录',
+        items: [
+          {
+            text: '准备工作', items: [
+              {
+                text: '准备工作',
+                link: '/1-Preparations/'
+              }
+            ]
+          }, {
+            text: '工具链', items: [
+              {
+                text: '概要',
+                link: '/2-Toolchain/'
+              },
+              {
+                text: '终端环境',
+                link: '/2-Toolchain/2-1-TerminalEnv'
+              },
+              {
+                text: '开发工具',
+                link: '/2-Toolchain/2-2-DevTools'
+              }
+            ]
+          }, {
+            text: 'Visual Studio Code', items: [
+              {
+                text: '概要',
+                link: '/3-VSCode/'
+              },
+              {
+                text: '集成终端',
+                link: '/3-VSCode/3-0-Terminal'
+              },
 
-      {
-        text: 'Git',
-        link: '/3-VSCode/3-1-Git'
+              {
+                text: 'Git',
+                link: '/3-VSCode/3-1-Git'
+              },
+              {
+                text: 'Code Runner',
+                link: '/3-VSCode/3-2-Code-Runner'
+              },
+              {
+                text: 'Python',
+                link: '/3-VSCode/3-3-Python'
+              }, {
+                text: 'C/C++',
+                link: '/3-VSCode/3-4-C_Cpp'
+              }, {
+                text: 'LaTeX',
+                link: '/3-VSCode/3-5-LaTeX'
+              }, {
+                text: 'Node.js',
+                link: '/3-VSCode/3-6-NodeJS'
+              },
+              {
+                text: '.Net Core',
+                link: '/3-VSCode/3-7-DotNetCore'
+              }, {
+                text: '帮助完善',
+                link: '/3-VSCode/HelpNeeded'
+              }
+            ]
+          }, {
+            text: '高阶操作', items: [
+              {
+                text: '概要',
+                link: '/4-Advanced/',
+              }, {
+                text: 'GUI',
+                link: '/4-Advanced/4-1-GUI'
+              }, {
+                text: 'LxRunOffline',
+                link: '/4-Advanced/4-2-LxRunOffline'
+              }
+            ]
+          }, {
+            text: '体验与参考', items: [
+              { text: '概要', link: '/5-Experience/' }
+            ]
+          }
+        ]
+      }, {
+
+        text: '版本', items: [
+          { text: 'new', link: '' },
+          { text: 'v0.x', link: '' }
+        ]
+
       },
       {
-        text: 'Code Runner',
-        link: '/3-VSCode/3-2-Code-Runner'
-      },
-      {
-        text: 'Python',
-        link: '/3-VSCode/3-3-Python'
-      }, {
-        text: 'C/C++',
-        link: '/3-VSCode/3-4-C_Cpp'
-      }, {
-        text: 'LaTeX',
-        link: '/3-VSCode/3-5-LaTeX'
-      }, {
-        text: 'Node.js',
-        link: '/3-VSCode/3-6-NodeJS'
-      },
-      {
-        text: '.Net Core',
-        link: '/3-VSCode/3-7-DotNetCore'
-      }, {
-        text: '帮助完善',
-        link: '/3-VSCode/HelpNeeded'
-      }
-      ]
-    },
-    {
-      text: '高阶操作',
-      items: [{
-        text: '概要',
-        link: '/4-Advanced/',
-      }, {
-        text: 'GUI',
-        link: '/4-Advanced/4-1-GUI'
-      }, {
-        text: 'LxRunOffline',
-        link: '/4-Advanced/4-2-LxRunOffline'
-      }]
-    },
-    {
-      text: '体验与参考',
-      link: '/5-Experience/'
-    },
-    {
-      text: '反馈',
-      link: 'https://github.com/spencerwooo/dowww/issues/new/choose'
-    },
-    {
-      text: 'GitHub',
-      link: 'https://github.com/spencerwooo/dowww'
-    },
-    ],
+        text: '了解更多',
+        items: [
+          {
+            text: '联系', items: [
+              { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
+              { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' }
+            ]
+          },
+          {
+            text: '加入讨论', items: [
+              { text: 'Telegram Channel', link: '' }
+            ]
+          },
+        ]
+      }],
     sidebar: {
       '/1-Preparations/': [''],
       '/2-Toolchain/': [
