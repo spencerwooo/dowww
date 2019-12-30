@@ -120,8 +120,16 @@ module.exports = {
       }, {
 
         text: '版本', items: [
-          { text: 'new', link: '' },
-          { text: 'v0.x', link: '' }
+          {
+            text: '最新', items: [
+              { text: 'new', link: 'https://dowww.spencerwoo.com/' },
+            ]
+          },
+          {
+            text: '历史版本', items: [
+              { text: 'v0.x', link: 'https://v0-dowww.spencerwoo.com/' }
+            ]
+          }
         ]
 
       },
