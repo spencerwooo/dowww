@@ -1,8 +1,8 @@
-# 准备工作
+# 准备工作 <BlueBadge text="重构中" vertical="top"/>
 
 ![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
-## Windows 10 💡
+## Windows 10
 
 1. 需要保证 Windows 10 至少为 Windows 10 Fall Creators Update 及之后的版本。
 2. 安装之前必须保证为 Windows 10 开启了「Windows Subsystem for Linux」的可选功能。
