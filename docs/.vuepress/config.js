@@ -11,17 +11,24 @@ module.exports = {
   ],
   themeConfig: {
     nav: [{
-        text: '历史版本', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
-      },{
-        text: '联系', items: [
-          { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
-          { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' }
-        ]
-      },{
-        text: '加入讨论', items: [
-          { text: 'Telegram Channel', link: 'https://t.me/realSpencerWoo' }
-        ]
-      }],
+      text: '版本', items: [
+        {
+          text: 'Dev 分支版本', items: [
+            { text: 'Dev', link: '/dev/1-Preparations/1-0-Intro' }
+          ]
+        },
+        { text: '历史版本', items: versioning.linksFor('1-Preparations/1-0-Intro.md') }
+      ]
+    }, {
+      text: '联系', items: [
+        { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
+        { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' }
+      ]
+    }, {
+      text: '加入讨论', items: [
+        { text: 'Telegram Channel', link: 'https://t.me/realSpencerWoo' }
+      ]
+    }],
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',

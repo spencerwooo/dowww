@@ -1,9 +1,8 @@
 ---
 home: true
 heroImage: /hero.png
-# heroText: null
 actionText: 入坑指南 →
-actionLink: /master/1-Preparations/1-0-Intro
+actionLink: /0.9/1-Preparations/1-0-Intro
 features:
 - title: 🍳
   details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。
@@ -22,7 +21,7 @@ footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 Internatio
 Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进行，大家敬请期待。
 :::
 
-## 前言 <BlueBadge text="重构中" vertical="top"/>
+## 前言
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 

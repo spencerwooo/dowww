@@ -32,8 +32,10 @@ module.exports = {
     let links = []
 
     versions.forEach(version => {
-      let item = { text: version, link: `/${version}/${url}` }
-      links.push(item)
+      if (version != 'dev') {
+        let item = { text: version, link: `/${version}/${url}` }
+        links.push(item)
+      }
     })
 
     return links
@@ -58,14 +60,14 @@ module.exports = {
     this.info(`Generating new version into 'docs/${version}' ...`)
 
     try {
-      fse.copySync(`${path}/master`, `${path}/${version}`)
+      fse.copySync(`${path}/dev`, `${path}/${version}`)
 
       // remove 'master' from the top of list
       versions.shift()
       // add new generated version on top of list
       versions.unshift(version)
       // add 'master' again on top of list
-      versions.unshift('master')
+      versions.unshift('dev')
 
       // write to versions.json
 
