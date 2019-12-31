@@ -17,6 +17,8 @@ footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 Internatio
 <a href="#changelog-更新日志">Changelog 更新日志</a> | <a href="#contributing-贡献">Contributing 贡献</a> | <a href="#sponsoring-赞助">Sponsoring 赞助</a>
 </div>
 
+<div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
+
 :::callout 🚀 重构进行时
 Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进行，大家敬请期待。
 :::
@@ -24,8 +26,6 @@ Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进�
 ## 前言
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
-
-<div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
 
 <!-- ![](https://i.loli.net/2019/12/23/oduGKT5LqivekMh.png) -->
 
