@@ -11,16 +11,7 @@ module.exports = {
   ],
   themeConfig: {
     nav: [{
-        text: '版本', items: [
-          {
-            text: '最新分支版本', items: [
-              { text: 'Dev', link: 'https://dowww.spencerwoo.com/' },
-            ]
-          },
-          {
-            text: '历史版本', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
-          }
-        ]
+        text: '历史版本', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
       },{
         text: '联系', items: [
           { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
