@@ -1,44 +1,33 @@
-# 准备工作 <BlueBadge text="重构中" vertical="top"/>
+# 序论 <BlueBadge text="New" vertical="top"/>
 
 ![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
-## Windows 10
-
-1. 需要保证 Windows 10 至少为 Windows 10 Fall Creators Update 及之后的版本。
-2. 安装之前必须保证为 Windows 10 开启了「Windows Subsystem for Linux」的可选功能。
-3. Windows 用户名不能有空格。（有空格会对 WSL 环境造成影响。）
-4. **Windows 用户名不能为中文。（两个系统下的编码格式不一样，会对 VSCode 的调试功能造成影响。）**
-
-::: danger
-除了在稳定可控的环境下（比如 VS Code 的 Remote-WSL 环境），切记不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
+:::callout 🍳 本章内容
+欢迎来到 **Dev on Windows with WSL —— 可能是市面上最详尽的中文 WSL 开发环境配置指南** 的文档现场，本章我们将对 WSL 本身、WSL 近期更新和 WSL 的优越特性进行简单介绍，带领你熟悉利用 WSL 在 Windows 上面开发学习的基本知识。
 :::
 
-## WSL - Windows Subsystem for Linux
+## 什么是 WSL
 
-### WSL 的介绍与使用
+WSL 的全称叫做：Windows Subsystem for Linux，即「适用于 Linux 的 Windows 子系统」。WSL 的诞生让 Windows 用户（开发人员）按原样运行 GNU/Linux 环境 —— 包括大多数命令行工具、实用工具和应用程序 —— 且不会产生虚拟机开销。
 
-由少数派作者 @[化学心情下2](https://sspai.com/user/78/posts) 介绍的有关具体的 WSL 安装使用参考阅读：[不用装双系统，直接在 Windows 上体验 Linux：Windows Subsystem for Linux](https://sspai.com/post/43813)
+## 用 WSL 可以做什么？
 
-### WSL 的下载与安装
+> 什么鬼？你上面那一大堆东西说的都是啥？能用中文吗？(╬▔皿▔)╯
 
-直接从微软商店下载。
+好的，在 Windows 上用 WSL 我们到底能干什么呢？
 
-官方支持的 Linux 发行版有：
+- 你可以在 Windows 上「安装」你喜欢的 GNU/Linux 发行版
+- 你可以直接在 Windows 上运行 `grep`、`awk`、`sed` 等 Linux 原生可执行文件
+- 你可以在 Windows 上直接使用 Vim、Emacs 等工具，直接使用 Linux 版本的 Javascript/Node.js、Ruby、Python、C/C++、Rust、Go 等语言进行开发，直接运行 MySQL、Apache 等 Linux 原生应用和服务等
 
-- Ubuntu: [最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)，[16.04 LTS](https://www.microsoft.com/store/productId/9PJN388HP8C9) 和 [18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q)
-- OpenSUSE Leap: [42](https://www.microsoft.com/store/productId/9NJVJTS82TJX), [15.0](https://www.microsoft.com/store/productId/9N1TB6FPVJ8C)
-- SUSE Linux Enterprise Server: [12](https://www.microsoft.com/store/productId/9P32MWBH6CNS), [15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
-- [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
-- [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
-- Pengwin（前名为 WLinux）: [普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)，[普通版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin)，[企业版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin-Enterprise)
-- [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395)
-- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>
-- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc)：[GitHub 仓库](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL)
+最为重要的是，利用 WSL 我们可以直接在 **不抛弃 Windows 全部优秀工具的前提下**，**在没有因为虚拟机开销而牺牲太多性能的情况下**，直接运行使用完整的 Linux 系统。
 
-社区支持的第三方 WSL 发行版：
-- [ArchWSL](https://github.com/yuk7/ArchWSL)
-- [AlpineWSL](https://github.com/yuk7/AlpineWSL)
+在[前言](/#前言)中我提到了：
 
-具体下载安装过程见 > [微软官方支持文档](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)。
+> Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
-下文以 Ubuntu 18.04 发行版为例。
+WSL 的超能力，就是为我们扫清了 Windows 对开发人员不友好的障碍，让我们在 Windows 上同样享受 Linux 等 Unix 风格系统的开发特色。
+
+## WSL 与 WSL 2
+
+从技术层面来说，WSL 实质上就是让 Linux 原生的 ELF64 二进制文件能够在 Windows 上面运行。这一切都是通过 WSL 兼容层

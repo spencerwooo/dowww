@@ -2,7 +2,8 @@ module.exports = [
   {
     title: 'Preparations 准备工作',
     children: [
-      '1-Preparations/1-0-Intro'
+      '1-Preparations/1-0-Intro',
+      '1-Preparations/1-1-Installation'
     ]
   },
   {
