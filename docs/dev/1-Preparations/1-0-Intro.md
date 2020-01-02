@@ -14,7 +14,7 @@ WSL 的全称叫做：Windows Subsystem for Linux，即「适用于 Linux 的 Wi
 
 > 什么鬼？你上面那一大堆东西说的都是啥？能讲中文吗？(╬▔皿▔)╯
 
-好的，在 Windows 上用 WSL 我们到底能干什么呢？
+好的，在 Windows 上用 WSL 我们到底能干什么呢？[^1]
 
 - 你可以在 Windows 上「安装」你喜欢的 GNU/Linux 发行版
 - 你可以直接在 Windows 上运行 `grep`、`awk`、`sed` 等 Linux 原生可执行文件
@@ -30,15 +30,21 @@ WSL 的超能力，就是为我们扫清了 Windows 对开发人员不友好的�
 
 ## WSL 与 WSL 2
 
+:::callout 💡 背景知识
+WSL 是微软 2016 年春天发布的适用于 Linux 的 Windows 子系统 1.0 版本，WSL 2 是 2019 年春天微软为了解决一系列 WSL 在 1.0 版本中出现的问题而开发的新「框架」。二者都能够满足我们在 Windows 上面进行 Linux 原生开发环境部署的需求，**但是 WSL 2 的基因更为优秀**，能够避免 WSL 在 1.0 版本中体现出的种种局限性。接下来我们简单介绍 WSL 与 WSL 2 各自的特点和优势。
+:::
+
 从技术层面来说，WSL 实质上就是让 Linux 原生的 ELF64 二进制文件能够在 Windows 上面运行。但是目前 WSL 和 WSL 2 在实现这一功能的方法上大有不同。
 
 ### WSL 诞生之初的实现手段
 
-在 WSL 时代（也就是 WSL 1.0 版本），这一切都是通过 WSL 兼容层来实现的。WSL 在 1.0 版本中，是一系列保证 Linux ELF64 二进制文件能够在 Windows 上面运行的组件的集合，这其中包含了「用户态」和「核心态」的组件，主要由以下内容构成：
+在 WSL 时代（也就是 WSL 1.0 版本），这一切都是通过 WSL 兼容层来实现的。WSL 在 1.0 版本中，是一系列保证 Linux ELF64 二进制文件能够在 Windows 上面运行的组件的集合[^2]，这其中包含了「用户态」和「核心态」的组件，主要由以下内容构成：
 
 - 用户态会话进程维持服务（User mode session manager service），用于维护 Linux 实例的生命周期
 - Pico 进程驱动 —— Pico provider drivers（包括 `lxss.sys`、`lxcore.sys`），**通过直接翻译「Linux 系统调用」来模拟一个 Linux 内核**
-- Pico 进程本体 —— Pico processes，用于托管（Host）原生 Linux 用户态进程（比如 `/bin/bash` 等）
+- Pico 进程本体 —— Pico processes[^3]，用于托管（Host）原生 Linux 用户态进程（比如 `/bin/bash` 等）
+
+![LXSS-diagram.jpg](https://i.loli.net/2020/01/02/O2LG5gqriISujUm.jpg)
 
 最为重要的就是 WSL 中间兼容层：Pico provider drivers，正是这一层让 WSL 能够将 Linux 进程中请求的系统调用转换为 Windows 系统调用。
 
@@ -47,3 +53,8 @@ WSL 的超能力，就是为我们扫清了 Windows 对开发人员不友好的�
 WSL 的 1.0 版本确实为 Windows 带来了新鲜的血液，但是 WSL 自发布以来就伴随着用户对「应用性能」以及「I/O 速度」的抱怨，这些都是由于兼容层的缘故，使得 WSL 在 1.0 时代牺牲了很多性能。另外 WSL 在 1.0 时代也不支持 Docker 等虚拟化技术。通过强行「翻译」Linux 系统调用带来的局限性在 WSL 1.0 中体现的淋漓尽致。
 
 WSL 2 是 WSL 发展历史中的突破性进步，上述问题在 WSL 2 中得到了根本性的解决。
+
+
+[^1]: [Windows Subsystem for Linux Documentation - Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/about)
+[^2]: [Windows Subsystem for Linux Overview - Microsoft Developer Blog](https://blogs.msdn.microsoft.com/wsl/2016/04/22/windows-subsystem-for-linux-overview)
+[^3]: [Pico Process Overview - Microsoft Developer Blog](https://blogs.msdn.microsoft.com/wsl/2016/05/23/pico-process-overview/)
