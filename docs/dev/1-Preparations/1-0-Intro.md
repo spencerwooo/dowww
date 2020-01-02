@@ -3,7 +3,7 @@
 ![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
 :::callout 🍳 本章内容
-欢迎来到 **Dev on Windows with WSL —— 可能是市面上最详尽的中文 WSL 开发环境配置指南** 的文档现场，本章我们将对 WSL 本身、WSL 近期更新和 WSL 的优越特性进行简单介绍，带领你熟悉利用 WSL 在 Windows 上面开发学习的基本知识。
+欢迎来到 **Dev on Windows with WSL —— 可能是市面上最详尽的中文 WSL 开发环境配置指南** 的文档现场，本章我们将对 WSL 本身、WSL 近期更新和 WSL 的优越特性进行简单介绍，带领你熟悉利用 WSL 在 Windows 上面开发学习的基础知识。
 :::
 
 ## 什么是 WSL
@@ -34,6 +34,16 @@ WSL 的超能力，就是为我们扫清了 Windows 对开发人员不友好的�
 
 ### WSL 诞生之初的实现手段
 
-在 WSL 时代（也就是 WSL 1），这一切都是通过 WSL 兼容层来实现的。
+在 WSL 时代（也就是 WSL 1.0 版本），这一切都是通过 WSL 兼容层来实现的。WSL 在 1.0 版本中，是一系列保证 Linux ELF64 二进制文件能够在 Windows 上面运行的组件的集合，这其中包含了「用户态」和「核心态」的组件，主要由以下内容构成：
 
-### 2019 年 WSL 2 的新措施
+- 用户态会话进程维持服务（User mode session manager service），用于维护 Linux 实例的生命周期
+- Pico 进程驱动 —— Pico provider drivers（包括 `lxss.sys`、`lxcore.sys`），**通过直接翻译「Linux 系统调用」来模拟一个 Linux 内核**
+- Pico 进程本体 —— Pico processes，用于托管（Host）原生 Linux 用户态进程（比如 `/bin/bash` 等）
+
+最为重要的就是 WSL 中间兼容层：Pico provider drivers，正是这一层让 WSL 能够将 Linux 进程中请求的系统调用转换为 Windows 系统调用。
+
+### WSL 2 中的新措施
+
+WSL 的 1.0 版本确实为 Windows 带来了新鲜的血液，但是 WSL 自发布以来就伴随着用户对「应用性能」以及「I/O 速度」的抱怨，这些都是由于兼容层的缘故，使得 WSL 在 1.0 时代牺牲了很多性能。另外 WSL 在 1.0 时代也不支持 Docker 等虚拟化技术。通过强行「翻译」Linux 系统调用带来的局限性在 WSL 1.0 中体现的淋漓尽致。
+
+WSL 2 是 WSL 发展历史中的突破性进步，上述问题在 WSL 2 中得到了根本性的解决。
