@@ -1,25 +1,41 @@
-# 安装 WSL 的准备
+# 安装 <BlueBadge text="New" vertical="middle"/>
 
-## Windows 10
- 
-1. 需要保证 Windows 10 至少为 Windows 10 Fall Creators Update 及之后的版本。
-2. 安装之前必须保证为 Windows 10 开启了「Windows Subsystem for Linux」的可选功能。
-3. Windows 用户名不能有空格。（有空格会对 WSL 环境造成影响。）
-4. **Windows 用户名不能为中文。（两个系统下的编码格式不一样，会对 VSCode 的调试功能造成影响。）**
-
-::: danger
-除了在稳定可控的环境下（比如 VS Code 的 Remote-WSL 环境），切记不要在 Windows 侧对 Linux 文件进行修改，否则会出现严重问题，甚至会对 Linux 子系统造成不可逆转的破坏与影响。
+::: callout 🍫 本章内容
+在安装 WSL 之前，有一些对 Windows 的配置工作必不可少，也有一些常识性的问题需要知道。本章主要介绍 Windows 方面的准备工作、WSL 的安装方法以及注意事项。 
 :::
 
-## WSL - Windows Subsystem for Linux
+## Windows 10
 
-### WSL 的介绍与使用
+### 确认 Windows 版本
 
-由少数派作者 @[化学心情下2](https://sspai.com/user/78/posts) 介绍的有关具体的 WSL 安装使用参考阅读：[不用装双系统，直接在 Windows 上体验 Linux：Windows Subsystem for Linux](https://sspai.com/post/43813)
+只有 Windows 10 才能安装使用 WSL。Windows 7、8 或之前的任何版本都无法使用，请及时将系统版本更新至最新。
 
-### WSL 的下载与安装
+只有 Windows 10 版本 16215 或以后的版本才能够正常运行 WSL。你可以在「Windows 设置 > 系统 > 关于」处找到你的 Windows 10 操作系统版本。
 
-直接从微软商店下载。
+**只有 Windows 10 版本 18917 或以后的版本才能够正常运行 WSL 2**。需要明确，WSL 2 目前依旧只能在 Windows 10 预览体验计划的版本中使用，因此你需要在「Windows 设置 > 更新和安全 > Windows 预览体验计划」处选择加入 Fast ring 或 Slow ring，这样才能使用正确的 Windows 10 版本安装 WSL 2。
+
+### 开启「适用于 Linux 的 Windows 子系统」的附加功能
+
+无论使用 WSL 1 还是 WSL 2，我们都需要开启「适用于 Linux 的 Windows 子系统」的附加功能：
+
+- 以管理员身份打开 PowerShell 终端
+- 运行下面的命令：
+
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
+
+- 按照提示重启电脑
+
+## WSL
+
+::: callout 🍰 Linux 发行版
+市面上基于 WSL 有很多 Linux 发行版，有广受大家欢迎的 Ubuntu、备受黑客喜爱的 Kali Linux、以及极客们都说好的 Arch Linux。大家可以根据自己的选择进行安装。如果没有特殊的需求，那么直接[安装 Ubuntu 最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)准没错。如果你想我一样，喜欢滚动更新的 Arch Linux 发行版，那么[安装 Arch WSL](https://github.com/yuk7/ArchWSL) 即可。
+:::
+
+### 官方版本 WSL
+
+微软官方支持的 WSL Linux 发行版可以直接从微软商店下载。
 
 官方支持的 Linux 发行版有：
 
@@ -28,15 +44,85 @@
 - SUSE Linux Enterprise Server: [12](https://www.microsoft.com/store/productId/9P32MWBH6CNS), [15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
 - [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
 - [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
-- Pengwin（前名为 WLinux）: [普通版](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P)，[企业版](https://www.microsoft.com/store/productId/9N8LP0X93VCP)，[普通版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin)，[企业版 GitHub 仓库](https://github.com/WhitewaterFoundry/Pengwin-Enterprise)
-- [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395)
-- [WSL Arch Linux](https://www.microsoft.com/zh-cn/p/wsl-arch-linux/9p2s3qr49vnn) <Badge text="new"/>
-- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc)：[GitHub 仓库](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL)
+- [Pengwin](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P) - [GitHub | WhitewaterFoundry/Pengwin](https://github.com/WhitewaterFoundry/Pengwin)<BlueBadge text="付费" vertical="top"/>
+- [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395) - [GitHub | agowa338/WSL-DistroLauncher-Alpine](https://github.com/agowa338/WSL-DistroLauncher-Alpine)
+- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc) - [GitHub | WhitewaterFoundry/Fedora-Remix-for-WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL) <BlueBadge text="付费" vertical="top"/>
 
-社区支持的第三方 WSL 发行版：
-- [ArchWSL](https://github.com/yuk7/ArchWSL)
-- [AlpineWSL](https://github.com/yuk7/AlpineWSL)
+### 社区支持的 WSL
 
-具体下载安装过程见 > [微软官方支持文档](https://docs.microsoft.com/zh-cn/windows/wsl/install-win10)。
+另外也有社区支持的 WSL Linux 发行版，社区支持的第三方 WSL 发行版：
 
-下文以 Ubuntu 18.04 发行版为例。
+- [Arch Linux](https://github.com/yuk7/ArchWSL)
+- [Alpine Linux](https://github.com/yuk7/AlpineWSL)
+
+第三方支持的发行版需要按照其官方使用说明进行安装。有需要的同学请自行查看。
+
+## WSL 的安装
+
+![](https://i.loli.net/2020/01/02/lRCjZ5uJ7KzkVY6.png)
+
+在 [开启「适用于 Linux 的 Windows 子系统」的附加功能](#开启「适用于-linux-的-windows-子系统」的附加功能) 之后，我们以 Ubuntu 最新版为例，在微软商店中点击安装即可。下载成功后，我们需要对刚刚这一发行版进行初始化。
+
+在开始菜单中，没有意外的话，你应该看到刚刚下载完成的 Ubuntu 快捷方式，我们点击打开 Ubuntu，等待初始化完成即可。（初始化过程会将下载好的 Linux 发行版的文件解压缩，并存储在电脑上供你使用，往往会需要 1 分钟甚至更多。）
+
+![](https://i.loli.net/2020/01/02/q2e8AzdJwC4pO67.png)
+
+初始化完成之后，Linux 会提示你输入一个 UNIX 用户名并为之设置一个 UNIX 密码。这一用户名和密码与你的 Windows 登录账号密码完全无关，你可以任意设置。完成之后，你的 Ubuntu 发行版就安装成功了。
+
+## WSL 2 的安装
+
+::: callout 🧊 注意
+WSL 2 需要在 WSL 已经安装完毕的基础之上才能进行安装。
+:::
+
+### 开启支持 WSL 2 的可选组件
+
+如果你希望安装 WSL 2，你需要确保你已安装「适用于 Linux 的 Windows 子系统」和「已安装的虚拟机平台」这两个可选组件。[^1]同样：
+
+- 以管理员身份打开 PowerShell 终端
+- 运行下面的命令：
+
+```powershell
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+```
+
+- 根据提示重启电脑
+
+### 使用命令行设置需要由 WSL 2 支持的发行版
+
+同样，用管理员身份打开 PowerShell 终端：
+
+- 执行下面命令找到你当前安装的 Linux 发行版及其名字：
+
+```powershell
+wsl --list
+```
+
+- 之后，执行下面的命令将你需要的发行版设置为由 WSL 2 支持，将其中的 `<Distro>` 修改为 Linux 发行版名称：
+
+```powershell
+wsl --set-version <Distro> 2
+```
+
+- 另外，你也可以通过下面的命令将之后新安装的发行版均设置为默认由 WSL 2 支持：
+
+```powershell
+wsl --set-default-version 2
+```
+
+- 执行下面的命令，如果发现最后一列的 `VERSION` 数为 2，说明你的配置是成功的：
+
+```powershell
+wsl --list --verbose
+```
+
+![](https://i.loli.net/2020/01/02/6lr8QJL2f1xInRi.png)
+
+到这里，你应该已经成功安装完成了 WSL 的某个发行版，并成功设置了 UNIX 用户名和密码，登入 WSL 系统。接下来，我将以 Ubuntu 为例子，介绍如何对 WSL 进行配置，使之更加「开发环境友好」。
+
+## 遇到问题？
+
+如果你在安装过程中遇到了一些问题，请查阅微软官方提供的 WSL 疑难排查文档：[排查适用于 Linux 的 Windows 子系统问题 - Microsoft Docs](https://docs.microsoft.com/zh-cn/windows/wsl/troubleshooting)
+
+[^1]: [Installation Instructions for WSL 2 - Microsoft Docs](https://docs.microsoft.com/en-us/windows/wsl/wsl2-install)

@@ -1,4 +1,4 @@
-# 序论 <BlueBadge text="New" vertical="top"/>
+# 序论 <BlueBadge text="New" vertical="middle"/>
 
 ![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
 
@@ -48,7 +48,7 @@ WSL 是微软 2016 年春天发布的适用于 Linux 的 Windows 子系统 1.0 �
 
 最为重要的就是 WSL 中间兼容层：Pico provider drivers，正是这一层让 WSL 能够将 Linux 进程中请求的系统调用转换为 Windows 系统调用。
 
-### WSL 2 中的新措施
+### WSL 2 中采用的新措施
 
 WSL 的 1.0 版本确实为 Windows 带来了新鲜的血液，但是 WSL 自发布以来就伴随着用户对「应用性能」以及「I/O 速度」的抱怨，这些都是由于兼容层的缘故，使得 WSL 在 1.0 时代牺牲了很多性能。另外 WSL 在 1.0 时代也不支持 Docker 等虚拟化技术。通过强行「翻译」Linux 系统调用带来的局限性在 WSL 1.0 中体现的淋漓尽致。
 
