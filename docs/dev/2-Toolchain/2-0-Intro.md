@@ -1,7 +1,3 @@
----
-sidebarDepth: 4
----
-
 # 工具链
 
 <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e10ee254f.png" alt="oh-my-zsh" width="40%"/></div>

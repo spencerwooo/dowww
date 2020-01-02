@@ -1,7 +1,3 @@
----
-sidebarDepth: 4
----
-
 # Visual Studio Code
 
 ![](https://i.loli.net/2019/05/13/5cd96b08b7f1f38773.png)
