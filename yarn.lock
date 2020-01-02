@@ -674,6 +674,18 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@gerhobbelt/markdown-it-footnote@^3.0.2-3":
+  version "3.0.2-3"
+  resolved "https://registry.yarnpkg.com/@gerhobbelt/markdown-it-footnote/-/markdown-it-footnote-3.0.2-3.tgz#47803583492a0daa268052ebe3e64cec3893a9f2"
+  integrity sha512-j5joSQPOuw7t5V1CEKGLLFBkSawWugmUc3wq3PSOVqgTS4rLM2Qhe7yNT5W18kliRwNVG7i0WRzwtOctNNBzTg==
+
+"@markspec/vuepress-plugin-footnote@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@markspec/vuepress-plugin-footnote/-/vuepress-plugin-footnote-1.1.1.tgz#1b8c655e229434df5ba7c8d55f5214d2ffcb2dad"
+  integrity sha512-gwfdYJXV35bBlZdMrzCPvug7Wpw2dplounIVxNBekks3dI9dTqf/P9B8Qyczb1Z36TctQQZp4hzpNuAWZMxdrw==
+  dependencies:
+    "@gerhobbelt/markdown-it-footnote" "^3.0.2-3"
+
 "@mrmlnc/readdir-enhanced@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@mrmlnc/readdir-enhanced/-/readdir-enhanced-2.2.1.tgz#524af240d1a360527b730475ecfa1344aa540dde"

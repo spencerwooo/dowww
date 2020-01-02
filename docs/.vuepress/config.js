@@ -61,6 +61,7 @@ module.exports = {
           scrollOffset: 0,
         },
       },
-    ]
+    ],
+    ['@markspec/vuepress-plugin-footnote']
   ]
 }
