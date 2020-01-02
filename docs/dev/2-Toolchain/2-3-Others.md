@@ -1,4 +1,4 @@
-# 开发工具
+# 其他工具
 
 :::tip
 日常运行 `sudo apt update && sudo apt upgrade` 来保证所安装的组件最新。

@@ -10,8 +10,9 @@ module.exports = [
     title: 'Toolchain 工具链',
     children: [
       '2-Toolchain/2-0-Intro',
-      '2-Toolchain/2-1-TerminalEnv',
-      '2-Toolchain/2-2-DevTools'
+      '2-Toolchain/2-1-Terminal',
+      '2-Toolchain/2-2-Shell',
+      '2-Toolchain/2-3-Others'
     ]
   },
   {
