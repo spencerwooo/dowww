@@ -100,11 +100,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 
 ## WSL 默认终端
 
-::: callout 🔋 贡献
-感谢 [Issue #16](https://github.com/spencerwooo/dowww/issues/16) 中，[@12101111](https://github.com/12101111) 提醒我介绍默认终端的配置。
-:::
-
-我们下载好 Ubuntu 的之后，点击开始菜单 Ubuntu 的 Logo，我们就打开了 WSL 默认的终端。
+我们下载好 Ubuntu 的之后，点击开始菜单 Ubuntu 的 Logo，就可以打开 WSL 默认的终端。
 
 ### 字体
 
@@ -147,21 +143,30 @@ ColorTool.exe -d <主题名称>
 
 **推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始](https://sspai.com/post/52868)
 
-ColorTool 自带了两个常见的主题供我们直接使用，你也可以从这里下载更多的 iTerm 主题配置文件：[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) 来使用。
+ColorTool 自带了一些常见的主题供我们直接使用，你也可以从这里下载更多的 iTerm 主题配置文件 — [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes)  — 来使用。
 
-当然，你并不一定要使用 Windows 给 WSL 准备的默认终端模拟器。下面推荐几个更好看的，一些是基于 Electron 技术的 Terminal。得益于优秀现代的前端技术，他们都很「美丽」，任选一个就可以。
+## Fluent Terminal
 
-## Fluent Terminal <Badge text="new"/>
-
-在 Windows Terminal 发布之前，我们先可以用 Fluent Terminal 来缓解一下 Windows 下终端的使用体验。Fluent Terminal 是目前相对稳定的非 Electron 构建的终端。得益于 UWP 技术，Fluent Terminal 能够同样拥有美丽的亚克力半透明背景，同时也支持 iTerm2 色彩主题。
+Fluent Terminal 是目前相对稳定的非 Electron 构建的终端。得益于 UWP 技术，Fluent Terminal 能够同样拥有美丽的亚克力半透明背景，同时也支持 iTerm2 色彩主题。
 
 ![](https://i.loli.net/2019/05/12/5cd7c2f1daee9.png)
 
-Fluent Terminal 开源在 [felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)，详细的安装过程请直接参考其官方 Wiki。
+Fluent Terminal 开源在 [felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)，由于种种原因，Fluent Terminal 并没有上架 Microsoft Store。这里推荐大家使用 Windows 上可能是最好的「包管理工具」— [Scoop](https://scoop.sh/) — 进行安装。
+
+**推荐阅读：**[「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件](https://sspai.com/post/52496)
+
+安装 Scoop 之后，我们在 PowerShell 中执行下面的命令，即可安装 Fluent Terminal：
+
+```powershell
+scoop bucket add nonportable
+scoop install fluent-terminal-np
+```
+
+拥有图形化设置界面的 Fluent Terminal 配置非常直观简单，这里就不再赘述。
 
 ## Terminus
 
-Terminus 是基于 Electron 的 Terminal，是本次我更加推荐的终端。因为相比下文推荐的 Hyper 终端，同样是 Electron 技术搭建的情况下，Terminus 优化的相对更好，启动快速，设置界面也是 GUI 形式而非直接修改配置文件，更用户友好。
+Terminus 是基于 Electron 的 Terminal。相比下文推荐的 Hyper 终端，同样是 Electron 技术搭建的情况下，Terminus 优化的相对更好，启动快速，设置界面也是 GUI 形式而非直接修改配置文件，更用户友好。
 
 ![](https://i.loli.net/2018/12/13/5c11e99587274.png)
 
@@ -191,22 +196,14 @@ Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定�
 
 ![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
 
-### 下载 Hyper
-
 下载 Hyper 终端：
 
 - [Hyper 终端官网](https://hyper.is/)
 - [Hyper 终端下载地址](https://hyper.is/#installation)
 
-安装一些主题：
+安装一些主题、插件：
 
 - [Awesome Hyper](https://github.com/bnb/awesome-hyper) - 有趣的与 Hyper 相关的内容、项目，可以找到合适的主题配置、字体、插件和 Hyper 的使用指南。
-
-### 配置 Hyper 终端
-
-::: callout 🔋 贡献
-感谢 [@printempw](https://github.com/printempw) 对唤起 WSL 的 Shell 环境方式进行反馈建议，参考 [Issue #6](https://github.com/spencerwooo/dowww/issues/6)。
-:::
 
 配置 Hyper 终端默认打开 WSL 环境：
 
