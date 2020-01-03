@@ -17,8 +17,7 @@
     "opencollective": "^1.0.3",
     "opencollective-postinstall": "^2.0.1",
     "vuepress": "^1.2.0",
-    "vuepress-plugin-container": "^2.1.2",
-    "vuepress-plugin-medium-zoom": "^1.1.8"
+    "vuepress-plugin-container": "^2.1.2"
   },
   "collective": {
     "type": "opencollective",
@@ -26,6 +25,7 @@
   },
   "devDependencies": {
     "@vuepress/plugin-back-to-top": "^1.2.0",
-    "@vuepress/plugin-google-analytics": "^1.2.0"
+    "@vuepress/plugin-google-analytics": "^1.2.0",
+    "@vuepress/plugin-medium-zoom": "^1.2.0"
   }
 }

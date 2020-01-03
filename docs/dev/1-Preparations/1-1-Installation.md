@@ -61,9 +61,11 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ![](https://i.loli.net/2020/01/02/lRCjZ5uJ7KzkVY6.png)
 
-在 [开启「适用于 Linux 的 Windows 子系统」的附加功能](#开启「适用于-linux-的-windows-子系统」的附加功能) 之后，我们以 Ubuntu 最新版为例，在微软商店中点击安装即可。下载成功后，我们需要对刚刚这一发行版进行初始化。
+在 [开启「适用于 Linux 的 Windows 子系统」的附加功能](#开启「适用于-linux-的-windows-子系统」的附加功能) 之后，我们以 Ubuntu 最新版为例，在微软商店中点击安装即可。
 
-在开始菜单中，没有意外的话，你应该看到刚刚下载完成的 Ubuntu 快捷方式，我们点击打开 Ubuntu，等待初始化完成即可。（初始化过程会将下载好的 Linux 发行版的文件解压缩，并存储在电脑上供你使用，往往会需要 1 分钟甚至更多。）
+<a href='//www.microsoft.com/store/apps/9nblggh4msv6?cid=storebadge&ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge' style='width: 160px;'/></a>
+
+下载成功后，我们需要对刚刚这一发行版进行初始化。在开始菜单中，没有意外的话，你应该看到刚刚下载完成的 Ubuntu 快捷方式，我们点击打开 Ubuntu，等待初始化完成即可。（初始化过程会将下载好的 Linux 发行版的文件解压缩，并存储在电脑上供你使用，往往会需要 1 分钟甚至更多。）
 
 ![](https://i.loli.net/2020/01/02/q2e8AzdJwC4pO67.png)
 

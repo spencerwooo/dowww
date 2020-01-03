@@ -21,8 +21,9 @@ module.exports = {
       ]
     }, {
       text: '联系', items: [
+        { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' },
+        { text: '作者 @SpencerWoo', link: 'https://spencerwoo.com' },
         { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
-        { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' }
       ]
     }, {
       text: '加入讨论', items: [
@@ -51,17 +52,7 @@ module.exports = {
         'ga': 'UA-111664763-3'
       }
     ],
-    [
-      'vuepress-plugin-medium-zoom',
-      {
-        delay: 1000,
-        options: {
-          margin: 24,
-          background: '#0f2440',
-          scrollOffset: 0,
-        },
-      },
-    ],
+    ['@vuepress/medium-zoom'],
     ['@markspec/vuepress-plugin-footnote']
   ]
 }
