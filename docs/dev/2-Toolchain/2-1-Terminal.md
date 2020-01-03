@@ -1,47 +1,134 @@
 # 终端 Terminal
 
-Terminal，即「终端模拟器」。我们需要一个终端去和我们的 `shell` 进行交互。你可能看到了，在下载好 Ubuntu 的时候，在开始菜单有一个 Ubuntu 的 Logo，这就是 Windows 为 WSL 准备的默认终端模拟器的入口。从 2018 年 8 月，Windows 正式引入了 ConPTY 这个工具，即：Windows Pseudo Console。详细请见 Windows 官方博客 > [Windows Command-Line: Introducing the Windows Pseudo Console (ConPTY)](https://blogs.msdn.microsoft.com/commandline/2018/08/02/windows-command-line-introducing-the-windows-pseudo-console-conpty/)。
-
-ConPTY 的引入意味着 Windows 命令行环境有了更多的现代终端应具备的功能，比如：
-
-- 支持 256 颜色
-- 输出 UTF-8 格式的文本
-
-等等。这是个好兆头，至少 Windows 开始对 CLI 环境的使用体验开始重视了。我们先来讲讲如何把 WSL 默认的终端变美。
-
-## 默认的 WSL 终端模拟器
-
-:::tip
-感谢 [Issue #16](https://github.com/spencerwooo/dowww/issues/16) 中，[@12101111](https://github.com/12101111) 提醒我介绍默认终端的配置。
-
-虽然 [下面的下面](/2-Toolchain/2-1-TerminalEnv.html#terminus)，我提到了两个基于 Electron、更加方便自定义、从某种程度上也更好看的终端模拟器，但是 **它们都没有原生的 Windows 默认终端性能快**。因此，如果你追求性能高过美丽，也可以通过下面的方法稍微让 Windows 默认终端好看一些。
-
-下文中，**「Windows 默认的终端模拟器」指 PowerShell 开启的终端或点击开始菜单中的 Ubuntu 图标开启的终端**。其中，如果你用 PowerShell 开启终端，可以直接用 `wsl` 命令进入 WSL 环境。
+::: callout 🎮 本文内容
+本文中，除了默认 WSL 终端，我们还将介绍由微软官方开发的 Windows Terminal、Windows 上面第一个 UWP 终端 Fluent Terminal、跨平台的终端 Hyper 和 Terminus 的配置。在这里面，**我更加推荐 Windows Terminal**，因为这一终端是由 WSL 项目组自己开发的原生 Windows 终端，拥有最好的性能、最美的外观和最强的定制性。
 :::
+
+## Windows Terminal <BlueBadge text="best"/>
+
+在 Microsoft Build 2019 大会上，微软发布了新一代 Windows 终端工具：Windows Terminal。其令人惊艳的 Fluent UI 设计、亚克力半透明材质的背景和对 UTF-8、Emoji 等特殊字符的支持让大家赞叹不已。^[[Introducing Windows Terminal - Windows Command Line](https://devblogs.microsoft.com/commandline/introducing-windows-terminal/)]目前，Windows Terminal 已经可以直接从 Microsoft Store 中直接下载。
+
+<a href='//www.microsoft.com/store/apps/9n0dx20hk701?cid=storebadge&ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge' style='width: 120px;'/></a>
+
+安装成功之后，Windows Terminal 就应该直接识别出来我们本机上面安装的全部 WSL 环境、PowerShell 环境和 Command Prompt 环境。点击下拉菜单，我们就可以看到 Windows Terminal 唤起的「环境」，可以看到，我安装的 Ubuntu 和 Arch WSL 均被识别成功。
+
+![](https://i.loli.net/2020/01/03/JwyxRAO67jF3ls8.png)
+
+Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Code，那么你可以直接点击 Settings（或者快捷键 `Ctrl + ,`）唤起 VS Code 打开设置文件。
+
+![](https://i.loli.net/2020/01/03/OicSBRreyPmYufx.png)
+
+在 VS Code 中打开 Windows Terminal 配置文件进行设置的时候，是可以直接自动补全的。我们对 Windows Terminal 的字体、配色、快捷键和 Profile 等一系列设置项目均在这一 `JSON` 文件中配置。其中：
+
+- 如果希望始终保持 Windows Terminal 的主题颜色为暗色方案，而不跟随 Windows 系统亮暗主题：可以在 `globals` 项目下的 `requestedTheme` 属性中这样配置：
+
+```json {4}
+{
+  "globals":
+  {
+    "requestedTheme": "dark",
+  }
+}
+```
+
+- 如果希望将 Ubuntu WSL 设置为 Windows Terminal 打开唤起的默认环境：可以复制 Ubuntu WSL Profile 中的 `guid`，将之粘贴至 `globals` 项目下的 `defaultProfile` 属性，类似这样：
+
+```json {4,10}
+{
+  "globals":
+  {
+    "defaultProfile": "{d317d852-8b6a-4936-b241-58c11be8aeb2}",
+    // …
+  },
+  "profiles": 
+  [
+    {
+      "guid": "{d317d852-8b6a-4936-b241-58c11be8aeb2}",
+      "name": "Ubuntu",
+      "source": "Windows.Terminal.Wsl"
+    }
+    // …
+  ]
+}
+```
+- 如果希望将 Dracula 的配色方案添加进入 Windows Terminal：可以到 [iTerm2-Color-Scheme - Windows Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal) 仓库下找到自己想要使用的配色方案，将 `JSON` 格式的配色复制进入 Windows Terminal 配置文件即可。比如我希望添加 Dracula 配色方案，只需要访问 [Dracula.json](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/Dracula.json)，将代码部分复制，并粘贴到 Windows Terminal `JSON` 配置文件中：
+
+```json {6}
+{
+  // …
+  "schemes" : 
+  [
+    {
+      "name" : "Dracula",
+      "background" : "#282A36",
+      "foreground" : "#F8F8F2",
+      "black" : "#21222C",
+      // …
+    }
+  ]
+}
+```
+
+
+- 如果希望更改 Arch WSL Profile 的字体和配色方案为 FuraCode NF 和 Dracula（FuraCode NF 是 Fira Code 的 Nerd Font 变种），并为之开启 Fluent Design 的亚克力透明背景效果：在 `commandline` 项为 `wsl.exe -d Arch` 的 Profile 中修改
+  - 将 `fontFace` 设置为 `FuraCode NF`
+  - 将 `colorScheme` 设置为 `Dracula`
+  - 将 `useAcrylic` 设置为 `true`
+  - 将 `acrylicOpacity` 设置为 `0.95`
+
+```json {5-6,8-9,11-12}
+{
+  "profiles":
+  [
+    {
+      "acrylicOpacity" : 0.95,
+      "useAcrylic" : true,
+      "closeOnExit" : true,
+      "colorScheme" : "Dracula",
+      "commandline" : "wsl.exe -d Arch",
+      // …
+      "fontFace" : "FuraCode NF",
+      "fontSize" : 12,
+      // …
+    }
+    // …
+  ]
+}
+```
+
+配置项目相对较多，这里不一一列举，如果有更多配置需求的同学请参考我的 Dotfile^[[spencerwooo/dotfiles - wt_profiles.json](https://github.com/spencerwooo/dotfiles/blob/master/Windows/wt_profiles.json)]。
+
+## WSL 默认终端
+
+::: callout 🔋 贡献
+感谢 [Issue #16](https://github.com/spencerwooo/dowww/issues/16) 中，[@12101111](https://github.com/12101111) 提醒我介绍默认终端的配置。
+:::
+
+我们下载好 Ubuntu 的之后，点击开始菜单 Ubuntu 的 Logo，我们就打开了 WSL 默认的终端。
 
 ### 字体
 
 由于中文的大环境，默认的 Windows 终端字体是新宋体。相信你和我一样，对这个模糊不清的字体深恶痛绝。但是由于 Windows 默认终端是一个极为底层的应用，没有使用通用 UI 渲染层，因此它对字体有着严格的要求，支持这一要求的字体（在中文环境下）只有 [Sarasa Gothic](https://github.com/be5invis/Sarasa-Gothic)。下载安装这个字体之后，你就可以在 Windows 默认终端的设置项目下设置这个字体了。特别的，`Sarasa Mono T SC`（或者中文叫等距更纱黑体）是我们编码所需的等宽字体。
 
-![](https://i.loli.net/2019/05/26/5cea07d5e7c9387041.png)
+![](https://i.loli.net/2020/01/03/kKqJ6LB1vdC8igx.png)
 
 ### 配色
 
-在 [Microsoft/console](https://github.com/Microsoft/console) 这个仓库里面，微软为我们提供了一个方便更改默认终端配色的工具：[ColorTool](https://github.com/Microsoft/console/tree/master/tools/ColorTool)，我们可以通过这个工具方便的对我们默认终端的配色进行更改，同时这个工具也支持读取 iTerm 主题文件。
+微软为我们提供了一个方便更改默认终端配色的工具：[ColorTool](https://github.com/microsoft/terminal/tree/master/src/tools/ColorTool)，我们可以通过这个工具方便的对我们默认终端的配色进行更改，**这不仅包括 WSL 默认终端的配色更改，还包括 PowerShell 终端的配色更改**。另外，这个工具也支持读取 iTerm 主题文件。
 
-- 首先，我们在这里 > <https://github.com/Microsoft/console/releases> 下载 ColorTool 至本地，并解压
-- 然后，打开 Windows 默认终端模拟器，定位至刚刚解压好有 `ColorTool.exe` 的下载文件夹
+- 首先，我们在 [ColorTool 在 GitHub 的 Release 页面](https://github.com/microsoft/terminal/releases/tag/1904.29002) 下载 ColorTool 至本地，并解压
+- 然后，打开 Windows 默认终端，定位至刚刚解压好有 `ColorTool.exe` 的下载文件夹
 - 首先我们通过这个命令来看看默认有哪些自带的主题供我们使用：
 
 ```powershell
 ColorTool.exe -s
 ```
 
-:::tip
-是的，不需要怀疑自己，你可以直接在 WSL 里面执行 `exe` 程序，只是需要输全程序名称包括 `exe` 程序后缀。但是如果你在 WSL 的默认终端里面运行 ColorTool，可能能正常显示主题有哪些，但是可能没办法设置主题。
+::: callout 🤗 没关系
+是的，不需要怀疑自己，你可以直接在 WSL 里面执行 `exe` 程序，只是需要输全程序名称包括 `exe` 程序后缀。
 :::
 
-![](https://i.loli.net/2019/05/26/5cea085a8972c33685.png)
+![](https://i.loli.net/2020/01/03/wkxhMoglQs12mqN.png)
 
 
 - 之后，我们就可以通过 `ColorTool.exe <主题名称>` 命令来预览我们当前使用的终端主题，比如：
@@ -50,27 +137,19 @@ ColorTool.exe -s
 ColorTool.exe solarized_dark.itermcolors
 ```
 
-![](https://i.loli.net/2019/05/26/5cea092e0236268278.png)
-
 - 使用下面的命令应用主题：
 
 ```powershell
 ColorTool.exe -d <主题名称>
 ```
 
+![](https://i.loli.net/2020/01/03/eKE1WhpvlVqrJQU.png)
+
 **推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始](https://sspai.com/post/52868)
 
 ColorTool 自带了两个常见的主题供我们直接使用，你也可以从这里下载更多的 iTerm 主题配置文件：[iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) 来使用。
 
 当然，你并不一定要使用 Windows 给 WSL 准备的默认终端模拟器。下面推荐几个更好看的，一些是基于 Electron 技术的 Terminal。得益于优秀现代的前端技术，他们都很「美丽」，任选一个就可以。
-
-## Windows Terminal <Badge text="new"/>
-
-在前几天 Microsoft Build 2019 大会上，微软发布了新一代 Windows 终端工具：Windows Terminal。其令人惊艳的 Fluent UI 设计、亚克力半透明材质的背景和对 UTF-8、Emoji 等特殊字符的支持让大家赞叹不已。详见：[Introducing Windows Terminal](https://devblogs.microsoft.com/commandline/introducing-windows-terminal/)
-
-![](https://i.loli.net/2019/05/12/5cd7c30fd3dd3.png)
-
-Windows Terminal 将于今年（2019 年）中发布第一个测试版本，其开源地址位于：[microsoft/Terminal](https://github.com/microsoft/Terminal)，**请大家期待一下。**
 
 ## Fluent Terminal <Badge text="new"/>
 
@@ -82,43 +161,31 @@ Fluent Terminal 开源在 [felixse/FluentTerminal](https://github.com/felixse/Fl
 
 ## Terminus
 
-Terminus 是基于 Electron 的 Terminal，是本次我更加推荐的终端。因为相比下文推荐的 Hyper 终端，同样是 Electron 技术搭建的情况下，Terminus 优化的相对更好，启动快速，设置界面也是 GUI 形式而非直接修改配置文件。体验更加爽快。👍
+Terminus 是基于 Electron 的 Terminal，是本次我更加推荐的终端。因为相比下文推荐的 Hyper 终端，同样是 Electron 技术搭建的情况下，Terminus 优化的相对更好，启动快速，设置界面也是 GUI 形式而非直接修改配置文件，更用户友好。
 
 ![](https://i.loli.net/2018/12/13/5c11e99587274.png)
 
-### 下载 Terminus
-
-下载 Terminus 终端：
+你可以在这里下载 Terminus 终端：
 
 - [Terminus 官网](https://eugeny.github.io/terminus/)
 - [Terminus 项目主页](https://github.com/Eugeny/terminus)
 - [Terminus Release 下载页面](https://github.com/Eugeny/terminus/releases/latest)
 
-### 配置 Terminus
-
-在设置中将默认 Shell 设置为「WSL / Default distro」即可默认每次打开 WSL 环境，如下：
+安装 Terminus 之后，在设置中将默认 Shell 设置为「WSL / Default distro」即可默认每次打开 WSL 环境，如下：
 
 ![](https://i.loli.net/2018/12/13/5c11e8a6eee87.png)
 
 Terminus 的设置是 GUI 界面的，配置简单友好，这里就不做过多描述了，如果要达到截图中的效果：
 
-- **字体**：[Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka)
-- **配色**：ayu
-- **Terminus 设置：**
-  - **Theme**: Standard
-  - **Acrylic background**: ✅
-  - **Background Type**: Fluent
-  - **Custom CSS**:
+| 设置项 | 参数 / 属性 |
+|:-:|:-:|
+| 字体 | [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) |
+| 配色 | [ayu](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/ayu.itermcolors) |
+| Terminus 主题 | Standard |
+| Terminus Acrylic background | ✔ 勾选 |
+| Terminus Background Type | Fluent |
 
-```css
-::-webkit-scrollbar {
-    display: none;
-}
-```
-
-Terminus 有很大的可玩性，不必拘泥于我的配置，尽情放飞自己 (づ￣ 3￣)づ
-
-## Hyper 终端
+## Hyper
 
 Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定制化程度最高的终端模拟器了。当然，Hyper 也支持 macOS 和 Linux。有关 macOS 终端美化的具体方法可以参考这篇文章 > [HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
 
@@ -137,11 +204,13 @@ Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定�
 
 ### 配置 Hyper 终端
 
-> 感谢 [@printempw](https://github.com/printempw) 对唤起 WSL 的 Shell 环境方式进行反馈建议，参考 [Issue #6](https://github.com/spencerwooo/dowww/issues/6)。
+::: callout 🔋 贡献
+感谢 [@printempw](https://github.com/printempw) 对唤起 WSL 的 Shell 环境方式进行反馈建议，参考 [Issue #6](https://github.com/spencerwooo/dowww/issues/6)。
+:::
 
-配置 Hyper 终端默认使用 WSL 的 `bash`：
+配置 Hyper 终端默认打开 WSL 环境：
 
-- 打开 Hyper，快捷键 `Ctrl` + `,`：开启配置文件；
+- 打开 Hyper，快捷键 `Ctrl + ,` 开启配置文件；
 - 将配置文件的这几项进行这样的配置：
 
 ``` js
@@ -152,11 +221,7 @@ config: {
 }
 ```
 
-- 重启 Hyper 即可。
-
-:::tip
-参考配置文件：[.hyper.js](https://github.com/spencerwooo/dotfiles/blob/master/_hyper.js)
-:::
+- 重启 Hyper 即可
 
 禁用令人闹心的终端提示音：
 
@@ -168,3 +233,5 @@ set bell-style none
 ```
 
 - 加载设置：`source ~/.bashrc`
+
+其他有关 Hyper 终端的配置，请参考我的 [Dotfiles](https://github.com/spencerwooo/dotfiles)。
