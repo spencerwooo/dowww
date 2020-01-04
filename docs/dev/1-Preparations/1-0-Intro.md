@@ -44,7 +44,7 @@ WSL 是微软 2016 年春天发布的适用于 Linux 的 Windows 子系统 1.0 �
 - Pico 进程驱动 —— Pico provider drivers（包括 `lxss.sys`、`lxcore.sys`），**通过直接翻译「Linux 系统调用」来模拟一个 Linux 内核**
 - Pico 进程本体 —— Pico processes[^3]，用于托管（Host）原生 Linux 用户态进程（比如 `/bin/bash` 等）
 
-![](https://i.loli.net/2020/01/02/O2LG5gqriISujUm.jpg)
+![](https://i.loli.net/2020/01/04/b6OrutxehGVWRKI.png)^[[Windows for Linux Nerds](https://blog.jessfraz.com/post/windows-for-linux-nerds/)]
 
 最为重要的就是 WSL 中间兼容层：Pico provider drivers，正是这一层让 WSL 能够将 Linux 进程中请求的系统调用转换为 Windows 系统调用。
 
