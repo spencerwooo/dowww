@@ -28,7 +28,7 @@
 - Ubuntu 包管理工具：`apt` - Ubuntu's Advanced Packaging Tool
 - 版本控制工具：Git
 - 远程登陆工具：SSH - Secure Shell、Mosh - the mobile shell
-- 一套适用于 Windows 10 Linux 子系统的工具组：wslu
+- Windows 和 WSL 文件互访的方法
 - ……
 
 本章内容将聚焦于 WSL 在命令行界面上的使用，不会涉及到 VS Code 或其他图形界面的工具。

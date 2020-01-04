@@ -58,7 +58,7 @@ APT - Ubuntu's Advanced Packaging Tool 是 Ubuntu 默认包管理工具。使用
 - `fish` 更加注重「开箱即用」的体验，让我们安装完成即拥有一个包含了命令高亮、自动补全等强大功能的 Shell 环境
 - `zsh` 则更加重视拓展性，借助于社区中优秀的 `zsh` 插件系统 oh-my-zsh 以及无数优秀的插件，`zsh` 同样能有比肩 `fish` 甚至比 `fish` 更高阶的功能和体验
 
-同学们可以根据自己实际情况，在这两个 Shell 中二选一即可。
+同学们可以根据自己实际情况，在这两个 Shell 中二选一即可。**在之后的文档中，我会用 zsh 作为默认的 Shell 进行介绍。**
 
 **推荐阅读：**[为什么说 zsh 是 shell 中的极品？ - 韦易笑的回答 - 知乎](https://www.zhihu.com/question/21418449/answer/300879747)。
 
@@ -214,7 +214,7 @@ Windows 终端输出错位、光标错位的根本原因在于 Windows 终端默
 
 可以发现，上面我们在 Linux 自己的文件系统中时，`ls` 命令的输出没什么问题，但是当我们在 WSL 中进入 Windows 文件系统中时，`ls` 命令输出则变成了白底绿色背景。简单来说，这是由于 DrvFs 文件系统的权限问题，导致 Windows 原有 NTFS 文件系统中的文件到 WSL 下权限全部变成 0777。这样在 WSL 中执行 `ls` 和 `cd` 命令之后，显示出来的结果背景色就会出现「问题」。（不过，事实上这是有意而为之的。）
 
-### 如果不想对文件系统的权限进行修改
+#### 如果不想对文件系统的权限进行修改
 
 - 可以在 `.zshrc` 最尾部添加如下代码
 
@@ -230,7 +230,7 @@ compinit
 
 - 加载设置：`source ~/.zshrc`
 
-### 如果希望从根本上解决 DrvFs 文件系统的权限问题
+#### 如果希望从根本上解决 DrvFs 文件系统的权限问题
 
 > 以下内容来自 [@printempw](https://github.com/printempw) 提供的这篇文章 > [DrvFs 文件权限问题](https://printempw.github.io/wsl-guide/#6-6-DrvFs-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98)。
 
