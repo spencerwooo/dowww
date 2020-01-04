@@ -1,7 +1,7 @@
 # 其他工具
 
 ::: callout 🍊 本文内容
-本文将对 WSL 上常用命令、常见工具、常见使用场景等内容进行介绍和说明。接下来的内容为了方便介绍，我将以 zsh 为默认 Shell 进行讲述。
+本文将对 WSL 上常用命令、常见工具、常见使用场景等内容进行介绍和说明。接下来的内容为了方便介绍，我将以 zsh 为 WSL 的默认 Shell 进行讲述。
 :::
 
 ## 代理配置
@@ -169,9 +169,20 @@ sudo firewall-cmd --zone=public --permanent --add-port=60000-61000/udp
 mosh {USERNAME}@{HOST_IP_OR_URL} --ssh="ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem"
 ```
 
-## 文件互访、交叉执行命令
+## Windows 和 WSL 之间互相访问
 
-Windows 和 WSL 相互配合的一大利好就是能够直接在 Linux 中执行 Windows 可执行文件（`exe` 文件），也可以反过来在 Windows 中执行 Linux 可执行文件。同时，WSL 2 的出现让我们能够直接在 Windows 的文件资源管理器中访问 Linux 文件系统，而不对 Linux 中的文件造成无法逆转的影响。
+Windows 和 WSL 相互配合的一大利好就是能够直接在 Linux 中执行 Windows 可执行文件（`exe` 文件），也可以反过来在 Windows 中执行 Linux 可执行文件。同时，WSL 2 的出现让我们能够直接在 Windows 的文件资源管理器中访问 Linux 文件系统，而不会像 WSL 1.0 一样对 Linux 中的文件造成无法逆转的影响。
+
+### 文件系统
+
+::: callout ❗ 注意
+[WSL 2 架构](/dev/1-Preparations/1-0-Intro.html#wsl-2-中采用的新措施)允许我们通过 [Plan 9 文件系统协议（9P protocol server）](https://en.wikipedia.org/wiki/9P_(protocol))来从 Windows 侧访问 Linux 文件，与访问网络资源类似。这不意味着你可以直接通过 AppData 文件目录去访问 Linux 文件，如果你这样做，依旧会对 WSL 造成不可逆的影响。
+:::
+
+在 WSL 环境中：
+
+- Windows 目录往往位于 `/mnt/c/Users/{WINDOWS_USERNAME}` 下
+- Linux 目录往往位于 `/home/{WSL_USERNAME}` 下
 
 我们在 WSL 中可以通过下面的命令在文件资源管理器中打开 Linux 文件系统中的某个目录：
 
@@ -185,4 +196,41 @@ explorer.exe .
 
 ![](https://i.loli.net/2020/01/04/s1vB2WfHgmQ7ikU.png)
 
-我们也可以直接在 WSL 中用 `explorer.exe` 打开图片
+日后，为了方便我们直接访问 WSL 文件系统中的用户根目录，我们甚至可以直接将这一路径固定在「快速访问」中，完全没有任何问题。WSL 环境中的文件可以被 Windows 直接无障碍访问，用正常 Windows 应用程序打开，没有问题。
+
+![](https://i.loli.net/2020/01/04/K9boPU2S5CwXeuk.png)
+
+事实上，Windows 的 `explorer.exe` 命令能够将任意文件按照默认打开方式打开。也就是说，我们也可以直接在 WSL 中用 `explorer.exe` 打开图片、Markdown 文件、音频、视频等。比如，我们在 WSL 环境下进入 Linux 文件系统中的某个目录，希望用 Windows 的「照片」应用打开其中的一张 PNG 图片，那么我们可以直接：
+
+```bash
+explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
+```
+
+![](https://i.loli.net/2020/01/04/NPO3zAcMSGgKnWQ.png)
+
+### 命令执行
+
+在 WSL 环境下执行 Windows 侧的命令非常直接易懂，就是在 Windows 命令后面加上可执行文件后缀 `exe`。比如：
+
+- 执行 `explorer.exe` 打开文件资源管理器，和上面的介绍类似
+- 工具 `clip.exe` 是 Windows 侧的剪贴板，我们可以将 WSL 侧的命令输出利用 `clip.exe` 导入 Windows 剪贴板。比如：
+
+```bash
+uname -r | clip.exe
+```
+
+![](https://i.loli.net/2020/01/04/yhBra9jMVXe3EDN.png)
+
+在 Windows 侧（PowerShell 中）执行 WSL 的命令也同样相似，我们只需要在命令之前加上 `wsl` 即可。比如：
+
+```powershell
+# 查看 WSL 内核版本
+wsl uname -a
+
+# 查看 WSL 发行版信息
+wsl cat /etc/os-release
+```
+
+![](https://i.loli.net/2020/01/04/DZfJjm9PUhxl1AI.png)
+
+WSL 命令行方面的配置、工具、操作和问题异常处理等内容基本介绍完毕。接下来的一章，我们将对利用 Visual Studio Code 和 WSL 配合进行工作开发的内容进行介绍。
