@@ -33,7 +33,7 @@ module.exports = {
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
-    sidebarDepth: 1,
+    sidebarDepth: 2,
     smoothScroll: true
   },
   plugins: [
