@@ -187,12 +187,14 @@ Terminus 的设置是 GUI 界面的，配置简单友好，这里就不做过多
 | 字体 | [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) |
 | 配色 | [ayu](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/ayu.itermcolors) |
 | Terminus 主题 | Standard |
-| Terminus Acrylic background | ✔ 勾选 |
+| Terminus Acrylic background | ✔ |
 | Terminus Background Type | Fluent |
 
 ## Hyper
 
-Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定制化程度最高的终端模拟器了。当然，Hyper 也支持 macOS 和 Linux。有关 macOS 终端美化的具体方法可以参考这篇文章 > [HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
+Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定制化程度最高的终端。
+
+**推荐阅读：**[HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
 
 ![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
 
