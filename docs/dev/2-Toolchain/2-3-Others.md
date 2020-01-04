@@ -135,6 +135,8 @@ ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem {USERNAME}@{HOST_IP_OR_URL}
 
 ![](https://i.loli.net/2020/01/04/YW6m7wMkHt4dR2D.png)
 
+另外，我们可以配置将 Windows 侧和 WSL 2 的 SSH 密钥共享使用。详见：[Sharing SSH keys between Windows and WSL 2 - Windows Command Line](https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/)
+
 ### Mosh
 
 [Mosh](https://mosh.org/) 是新一代远程登录工具。Mosh 全新的「服务器 —— 客户端」沟通方式让我们客户端不再需要因为「延迟」或「切换网络」而需要重新登录服务器、重建 session，而丢失工作进度。Mosh 让远程服务器的连接能「持久化」，从而让我们能长时间、多网络保持同一个 session 不变。
@@ -167,4 +169,20 @@ sudo firewall-cmd --zone=public --permanent --add-port=60000-61000/udp
 mosh {USERNAME}@{HOST_IP_OR_URL} --ssh="ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem"
 ```
 
-## 文件互访
+## 文件互访、交叉执行命令
+
+Windows 和 WSL 相互配合的一大利好就是能够直接在 Linux 中执行 Windows 可执行文件（`exe` 文件），也可以反过来在 Windows 中执行 Linux 可执行文件。同时，WSL 2 的出现让我们能够直接在 Windows 的文件资源管理器中访问 Linux 文件系统，而不对 Linux 中的文件造成无法逆转的影响。
+
+我们在 WSL 中可以通过下面的命令在文件资源管理器中打开 Linux 文件系统中的某个目录：
+
+```bash
+# 进入目标目录
+cd /home/spencer
+
+# 用 Windows 文件资源管理器打开目录
+explorer.exe .
+```
+
+![](https://i.loli.net/2020/01/04/s1vB2WfHgmQ7ikU.png)
+
+我们也可以直接在 WSL 中用 `explorer.exe` 打开图片
