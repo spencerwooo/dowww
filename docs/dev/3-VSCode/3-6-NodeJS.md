@@ -1,4 +1,4 @@
-# Node.js <a href="https://github.com/suyanhanx"><Badge text="@suyanhanx" vertical="middle"/></a><a href="https://github.com/spencerwooo/dowww/pull/11"><Badge text="PR #11" type="warn" vertical="middle"/></a>
+# Node.js <a href="https://github.com/suyanhanx"><BlueBadge text="@suyanhanx" vertical="middle"/></a>
 
 :::tip ⏰ 一些概念：
 - `Node.js` - a JavaScript runtime built on Chrome's V8 JavaScript engine：一个 JavaScript 运行环境

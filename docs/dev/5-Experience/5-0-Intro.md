@@ -1,4 +1,4 @@
-# 后记、体验与参考
+# 后记
 
 <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e3d608b81.png" alt="Thinking" width="20%"/></div>
 

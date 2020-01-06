@@ -252,7 +252,7 @@ sudo chsh -s $(which zsh)
 
 比如：如果你使用了 [Powerlevel9k 主题包](https://github.com/bhilburn/powerlevel9k)，可以考虑将下面的内容加入 `.zshrc` 来实现命令单独在第二行的显示：
 
-```shell
+```bash
 # 让命令主体单独在第二行显示
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # 让右侧命令不显示（右侧命令同样无法正常在 Windows 下渲染）

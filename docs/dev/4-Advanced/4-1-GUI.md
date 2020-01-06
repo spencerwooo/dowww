@@ -1,6 +1,6 @@
 # GUI 图形化窗口
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div>
+<!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div> -->
 
 > 虽然上面的方案有时候能够解决问题，但是最为深度整合的方案是：在 WSL 侧的 Linux 环境下安装 VSCode 并从 Linux 侧打开，这样就一定能保证 VSCode 使用的工具链全部是 WSL 侧工具链了。
 >
@@ -14,19 +14,19 @@
 
 - 在 WSL 中安装必要组件：
 
-```shell
+```bash
 sudo apt install libgtk2.0-0 libxss1 libasound2
 ```
 
 - 配置 WSL 参数：
 
-```shell
+```bash
 echo 'export DISPLAY=:0.0' >> .profile
 ```
 
 - 安装一个小眼睛，看看图形窗口安装成功没有：
 
-```shell
+```bash
 sudo apt install x11-apps -y && xeyes
 ```
 
@@ -38,7 +38,7 @@ sudo apt install x11-apps -y && xeyes
 
 - 添加 Visual Studio Code 库：
 
-```shell
+```bash
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
 sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
@@ -46,7 +46,7 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 
 - 安装 Visual Studio Code：
 
-```shell
+```bash
 sudo apt update && sudo apt upgrade
 sudo apt install code
 ```

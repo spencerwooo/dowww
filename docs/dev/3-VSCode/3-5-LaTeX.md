@@ -1,4 +1,4 @@
-# LaTeX <a href="https://patrickwu.space"><Badge text="@patrick330602" vertical="middle"/></a> <a href="https://github.com/spencerwooo/dowww/pull/10"><Badge text="PR #10" type="warn" vertical="middle"/></a>
+# LaTeX <a href="https://patrickwu.space"><BlueBadge text="@patrick330602" vertical="middle"/></a>
 
 用 WSL 下的 TeXLive 和 Visual Studio Code 的 LaTeX Workshop 可以完全配置好一个可用的 Windows LaTeX 环境，摆脱 Windows 下蛋疼的 TexLive 安装包。
 
@@ -25,7 +25,7 @@ sudo apt install -y texlive-full
 }],
 "latex-workshop.latex.tools": [{
   "name": "wsl-texlive",
-  "command": "wsl", 
+  "command": "wsl",
   "args": [
     "latexmk",
     "-synctex=1",

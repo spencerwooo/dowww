@@ -55,12 +55,12 @@ alias unfuckgit="git config --global --unset http.proxy && git config --global -
 
 - 如果还没安装 npm 的话：
 
-```shell
+```bash
 sudo apt-get install -yqq npm
 ```
 
 - 然后安装 wsl-open：
 
-```shell
+```bash
 sudo npm install -g wsl-open
 ```

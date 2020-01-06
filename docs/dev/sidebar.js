@@ -25,8 +25,7 @@ module.exports = [
       '3-VSCode/3-4-C_Cpp',
       '3-VSCode/3-5-LaTeX',
       '3-VSCode/3-6-NodeJS',
-      '3-VSCode/3-7-DotNetCore',
-      '3-VSCode/HelpNeeded'
+      '3-VSCode/3-7-DotNetCore'
     ]
   },
   {

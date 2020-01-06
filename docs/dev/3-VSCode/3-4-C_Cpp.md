@@ -1,15 +1,4 @@
-# C/C++ <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
-
-::: tip
-目前来看利用 WSL 中的 `gcc/g++/gdb` 来调试我们的 C/C++ 的**单个程序**应该是比较完善的了。详细的由微软 Visual Studio Code 团队与官方 CppTools 插件团队维护的文档位于这里 > [vscode-cpptools | `gdb` on Windows Subsystem for Linux.md
-](https://github.com/Microsoft/vscode-cpptools/blob/master/Documentation/Debugger/gdb/Windows%20Subsystem%20for%20Linux.md)。
-
-如果涉及到巨大的 C/C++ 项目，我更加推荐利用 Visual Studio 直接项目开发。
-:::
-
-:::warning
-下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后可能是冗余的操作了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
-:::
+# C/C++ <a href="https://github.com/spencerwooo"><BlueBadge text="@SpencerWoo" vertical="middle"/></a>
 
 ## 前言
 
