@@ -2,7 +2,7 @@
 
 <!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div> -->
 
-> 虽然上面的方案有时候能够解决问题，但是最为深度整合的方案是：在 WSL 侧的 Linux 环境下安装 VSCode 并从 Linux 侧打开，这样就一定能保证 VSCode 使用的工具链全部是 WSL 侧工具链了。
+> 虽然上面的方案有时候能够解决问题，但是最为深度整合的方案是：在 WSL 侧的 Linux 环境下安装 VS Code 并从 Linux 侧打开，这样就一定能保证 VS Code 使用的工具链全部是 WSL 侧工具链了。
 >
 > 方案：安装一个 XServer 来让 Linux 侧 GUI 程序有窗口显示。
 
@@ -57,4 +57,4 @@ sudo apt install code
 ![vscode-libx11-xcb1.png](https://i.loli.net/2019/04/05/5ca705028ca16.png)
 :::
 
-- 打开 XServer 窗口，在 WSL 终端执行 `code`，应该就可以看到 WSL 中的 VSCode 窗口启动了。
+- 打开 XServer 窗口，在 WSL 终端执行 `code`，应该就可以看到 WSL 中的 VS Code 窗口启动了。

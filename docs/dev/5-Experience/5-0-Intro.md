@@ -6,7 +6,7 @@
 
 WSL 终端下的开发环境是完全可用的一个完美 Linux 环境。美观、稳定、可定制化程度高。完美。👌
 
-## VSCode + WSL 工具链
+## VS Code + WSL 工具链
 
 在 Remote-WSL 诞生之后，我们完全可以直接使用 WSL 下的全部工具进行开发工作。详情请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
 
@@ -16,11 +16,11 @@ WSL 终端下的开发环境是完全可用的一个完美 Linux 环境。美观
 
 - [lloydstubber/my-wsl-setup](https://github.com/lloydstubber/my-wsl-setup)
 - [Voronoff/wsl_setup.md](https://gist.github.com/Voronoff/059c50f9fd354386c305c55af1f3a61f#install-and-set-up-python-to-work-with-vscode-and-wsl)
-- [Running VSCode for Linux in WSL #2760](https://github.com/Microsoft/WSL/issues/2760)
+- [Running VS Code for Linux in WSL #2760](https://github.com/Microsoft/WSL/issues/2760)
 - [sirredbeard/Awesome-WSL](https://github.com/sirredbeard/Awesome-WSL)
 - [ethanhs/WSL-Programs](https://github.com/ethanhs/WSL-Programs)
 - [如何在 Windows Subsystem for Linux (WSL) 上运行 Linux GUI 软件](http://www.yuan-ji.me/%E5%A6%82%E4%BD%95%E5%9C%A8Windows-Subsystem-for-Linux-\(WSL\)-%E4%B8%8A%E8%BF%90%E8%A1%8CLinux-GUI-%E8%BD%AF%E4%BB%B6/)
-- [在 WSL 下启动 VSCode](https://zhuanlan.zhihu.com/p/33226830)
+- [在 WSL 下启动 VS Code](https://zhuanlan.zhihu.com/p/33226830)
 - [Setting proxy in git](https://gist.github.com/laispace/666dd7b27e9116faece6)
 
 也感谢 Freepik 给我提供如此优秀的平面设计灵感。
