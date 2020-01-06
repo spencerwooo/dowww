@@ -22,14 +22,14 @@ module.exports = {
     }, {
       text: '联系', items: [
         { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' },
-        { text: '作者 @SpencerWoo', link: 'https://spencerwoo.com' },
         { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
+        { text: '贡献规范', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md'}
       ]
     }, {
       text: '加入讨论', items: [
         { text: 'Telegram Channel', link: 'https://t.me/realSpencerWoo' }
       ]
-    }],
+    }, { text: '作者', link: 'https://spencerwoo.com' }],
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
