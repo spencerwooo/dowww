@@ -1,5 +1,9 @@
 # LxRunOffline <a href="https://github.com/llinfeng"><BlueBadge text="@llinfeng" vertical="middle"/></a>
 
+::: callout 🥞 本文内容
+本文重点关注如何在 WSL 中从头部署一个完整的 Linux 发行版。如果你希望使用的 Linux 发行版并未被官方支持，当前也没有社区的支持，那么你可能需要按照下面的方法进行配置。
+:::
+
 <!-- 大佬自由发挥！ -->
 
 [LxRunOffline](https://github.com/DDoSolitary/LxRunOffline) is a **Windows command line tool** that can dispatch whatever Linux distributions, however you would like. Following the WSL tradition, you are free to pick from whatever Linux distributions. For a complete list of all possibilities, [visit this link](https://github.com/DDoSolitary/LxRunOffline/wiki).
