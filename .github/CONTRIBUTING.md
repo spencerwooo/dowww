@@ -6,19 +6,19 @@
 
 **Table of contents - 文章目录**
 
-- [贡献](#%E8%B4%A1%E7%8C%AE)
-  - [在贡献之前，我应该了解些什么？](#%E5%9C%A8%E8%B4%A1%E7%8C%AE%E4%B9%8B%E5%89%8D%E6%88%91%E5%BA%94%E8%AF%A5%E4%BA%86%E8%A7%A3%E4%BA%9B%E4%BB%80%E4%B9%88)
+- [贡献](#%e8%b4%a1%e7%8c%ae)
+  - [在贡献之前，我应该了解些什么？](#%e5%9c%a8%e8%b4%a1%e7%8c%ae%e4%b9%8b%e5%89%8d%e6%88%91%e5%ba%94%e8%af%a5%e4%ba%86%e8%a7%a3%e4%ba%9b%e4%bb%80%e4%b9%88)
     - [Code of Conduct](#code-of-conduct)
-    - [开发路线](#%E5%BC%80%E5%8F%91%E8%B7%AF%E7%BA%BF)
-  - [我应该从哪里下手？](#%E6%88%91%E5%BA%94%E8%AF%A5%E4%BB%8E%E5%93%AA%E9%87%8C%E4%B8%8B%E6%89%8B)
-    - [反馈问题](#%E5%8F%8D%E9%A6%88%E9%97%AE%E9%A2%98)
-    - [新增内容](#%E6%96%B0%E5%A2%9E%E5%86%85%E5%AE%B9)
-      - [熟悉项目](#%E7%86%9F%E6%82%89%E9%A1%B9%E7%9B%AE)
-        - [构建方式](#%E6%9E%84%E5%BB%BA%E6%96%B9%E5%BC%8F)
-        - [结构](#%E7%BB%93%E6%9E%84)
-      - [明确行文准则](#%E6%98%8E%E7%A1%AE%E8%A1%8C%E6%96%87%E5%87%86%E5%88%99)
-      - [增加一门语言的环境配置指南](#%E5%A2%9E%E5%8A%A0%E4%B8%80%E9%97%A8%E8%AF%AD%E8%A8%80%E7%9A%84%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE%E6%8C%87%E5%8D%97)
-  - [其他](#%E5%85%B6%E4%BB%96)
+    - [开发路线](#%e5%bc%80%e5%8f%91%e8%b7%af%e7%ba%bf)
+  - [我应该从哪里下手？](#%e6%88%91%e5%ba%94%e8%af%a5%e4%bb%8e%e5%93%aa%e9%87%8c%e4%b8%8b%e6%89%8b)
+    - [反馈问题](#%e5%8f%8d%e9%a6%88%e9%97%ae%e9%a2%98)
+    - [新增内容](#%e6%96%b0%e5%a2%9e%e5%86%85%e5%ae%b9)
+      - [熟悉项目](#%e7%86%9f%e6%82%89%e9%a1%b9%e7%9b%ae)
+        - [构建方式](#%e6%9e%84%e5%bb%ba%e6%96%b9%e5%bc%8f)
+        - [结构](#%e7%bb%93%e6%9e%84)
+      - [明确行文准则](#%e6%98%8e%e7%a1%ae%e8%a1%8c%e6%96%87%e5%87%86%e5%88%99)
+      - [增加一门语言的环境配置指南](#%e5%a2%9e%e5%8a%a0%e4%b8%80%e9%97%a8%e8%af%ad%e8%a8%80%e7%9a%84%e7%8e%af%e5%a2%83%e9%85%8d%e7%bd%ae%e6%8c%87%e5%8d%97)
+  - [其他](#%e5%85%b6%e4%bb%96)
 
 ## 在贡献之前，我应该了解些什么？
 
@@ -44,7 +44,7 @@
 
 #### 熟悉项目
 
-由于项目是由 VuePress 构建，部署并托管在 GitHub Pages 上的静态网页，因此希望你在对项目做任何改变前，先熟悉项目的结构和构建方式：
+由于项目是由 VuePress 构建，部署并托管在 Netlify 上的静态网页，因此希望你在对项目做任何改变前，先熟悉项目的结构和构建方式：
 
 ##### 构建方式
 
@@ -52,18 +52,38 @@
 2. 将项目 `clone` 到你的本机：
 
 ```bash
-$ git clone https://github.com/ $Your_GitHub_UserName /dowww.git
+$ git clone https://github.com/{YOUR_USER_NAME}/dowww.git
 ```
 
 3. 安装 `Node.js` 和其包管理 `yarn`：
 
-- 如果你已经开始（或很想）使用 WSL 进行开发，请直接用你所选择的 Linux 发行版的包管理安装上面所述的内容。更多内容请参考 - [Dev on Windows with WSL | Node.js](https://dowww.spencerwoo.com/3-VSCode/3-6-NodeJS.html)
-- 如果你依旧在使用 Windows 侧的开发环境，推荐使用 Windows 的「包管理」工具 - [`scoop`](https://github.com/lukesampson/scoop)：
-  - 安装 `scoop`，PowerShell 中运行：`iex (new-object net.webclient).downloadstring('https://get.scoop.sh')`
-  - 安装 `nvm`：`scoop install nvm`
-  - 安装最新稳定版本的 `Node.js`：`nvm install latest`
-  - 安装 `yarn`：`scoop install yarn`
-- 如果你并没有在用 Windows ... 那你怎么看到这个项目了 ∑( 口 ||
+   - 如果你已经开始（或很想）使用 WSL 进行开发，请直接用你所选择的 Linux 发行版的包管理安装上面所述的内容。更多内容请参考 - [Dev on Windows with WSL | Node.js](https://dowww.spencerwoo.com/dev/3-VSCode/3-6-NodeJS.html)
+   - 如果你依旧在使用 Windows 侧的开发环境，推荐使用 Windows 的「包管理」工具 - [`scoop`](https://github.com/lukesampson/scoop)：
+     - 安装 `scoop`，PowerShell 中运行：
+
+       ```powershell
+       iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+       ```
+
+     - 安装 `nvm`：
+
+       ```powershell
+       scoop install nvm
+       ```
+
+     - 安装最新稳定版本的 `Node.js`：
+
+       ```powershell
+       nvm install latest
+       ```
+
+     - 安装 `yarn`：
+
+       ```powershell
+       scoop install yarn
+       ```
+
+   - 如果你并没有在用 Windows ... 那你怎么看到这个项目了 ∑( 口 ||
 
 4. 安装相关依赖：
 
@@ -80,6 +100,8 @@ $ yarn docs:dev
 ##### 结构
 
 - `/docs` 文件夹下存放文档 Markdown 文件。文件夹名、文件名等即表示相应的文档内容
+  - `/docs/0.9` 目录下为上一个版本的文档，历史归档，不做修改
+  - `/docs/dev` 目录下为当前开发版本的文档，你应该重点关注这一文件夹下的内容
 - `/docs/.vuepress` 文件夹下为 VuePress 的配置文件，请不要非必要情况下任意修改
 
 #### 明确行文准则
@@ -106,35 +128,35 @@ $ yarn docs:dev
 
 #### 增加一门语言的环境配置指南
 
-请在 `/docs/3-VSCode` 下新建一个文件，命名为 `3-*-***.md`。其中 `*` 表示第几篇文章，`***` 表示语言的名称，比如：`3-8-AmazingLanguage.md`。请在这个文件下进行文章的撰写。
+请在 `/docs/dev/3-VSCode` 下新建一个文件，命名为 `3-*-***.md`。其中 `*` 表示第几篇文章，`***` 表示语言的名称，比如：`3-8-AmazingLanguage.md`。请在这个文件下进行文章的撰写。
 
-一般情况下，到这里就可以了，在本地写好文章之后将新增内容 push 到 GitHub 并提交 PR，我就会将你的新增内容更新至文档中。
+撰写完成之后，请不要忘记在 `docs/dev/sidebar.js` 中的相应位置增加你撰写的文档路径，比如：
 
-如果你希望在本地预览这部分内容，以上面的新增文件为例：
-
-- 在 `/docs/.vuepress/config.js` 中增加这些内容：
-  - 在 `themeConfig` > `nav` > `Visual Studio Code` 的 `items` 下，`帮助完善` 项目前，增加：
-
-  ```javascript
+```javascript
+module.exports = [
+  // ……
   {
-    text: 'AmazingLanguage',
-    link: '/3-VSCode/3-8-AmazingLanguage'
+    title: 'Visual Studio Code',
+    children: [
+      // ……
+      '3-VSCode/3-7-DotNetCore',
+      // 你应该下面添加 3-8-AmazingLanguage 的路径
+      '3-VSCode/3-8-AmazingLanguage'
+    ]
   }
-  ```
+  // ……
+]
+```
 
-  - 在 `sidebar` 下，`/3-VSCode/` 项下，增加这样的内容：
-
-  ```javascript
-  '3-8-AmazingLanguage.md'
-  ```
-
-- 在本地构建预览：
+之后，在本地构建预览：
 
 ```bash
 $ yarn docs:dev
 ```
 
 这样就可以在本地预览你的文章了。
+
+一般情况下，到这里就可以了，在本地写好文章之后将新增内容 push 到 GitHub 并提交 PR，我就会将你的新增内容更新至文档中。
 
 ## 其他
 
