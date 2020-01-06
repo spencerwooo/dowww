@@ -19,8 +19,7 @@ module.exports = [
     title: 'Visual Studio Code',
     children: [
       '3-VSCode/3-0-Intro',
-      '3-VSCode/3-0-Terminal',
-      '3-VSCode/3-1-Git',
+      '3-VSCode/3-1-Remote-Dev',
       '3-VSCode/3-2-Code-Runner',
       '3-VSCode/3-3-Python',
       '3-VSCode/3-4-C_Cpp',
