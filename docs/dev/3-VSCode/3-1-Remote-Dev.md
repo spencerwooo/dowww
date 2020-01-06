@@ -50,9 +50,9 @@ VS Code 同样支持在 WSL 环境下的终端中直接用命令 `code` 打开�
 
 ## 环境集成
 
-### 集成终端
-
 ![](https://i.loli.net/2020/01/06/GCJnxcVNBylX2TM.png)
+
+### 集成终端
 
 在 WSL 环境下打开的 VS Code 集成终端唤起的是 WSL 默认 Shell，无需配置即可直接使用。^[[Dev on Windows with WSL - Shell 环境](/dev/2-Toolchain/2-2-Shell.html)]
 

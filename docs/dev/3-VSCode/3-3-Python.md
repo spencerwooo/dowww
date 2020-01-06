@@ -1,30 +1,42 @@
-# Python <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
+# Python <a href="https://github.com/spencerwooo"><BlueBadge text="@SpencerWoo" vertical="middle"/></a>
 
-::: tip
-在 Remote-WSL 环境下使用 VS Code 与 WSL 环境下安装的 Python 进行开发工作已经非常完善了。曾经所需要的复杂配置方法已经不再需要，按照在 Linux 下配置 Python 开发环境的方法进行即可。
-:::
+## 安装 VS Code 插件
 
-## 安装插件
+![](https://i.loli.net/2020/01/06/9aJgYSkujepmD4q.png)
 
 安装 Visual Studio Code [官方 Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python)。
 
 ## 安装 Python
 
-在 WSL 侧安装 Python：
+在 WSL 环境中安装 Python：
 
-- 安装一些必备工具：`sudo apt install -y make build-essential libssl-dev libffi-dev python3-dev`
-- 安装 Python 3.7（或者你想要的 Python 版本）：`sudo apt install python3.7`
-- 安装 Python 包管理 `pip`：`sudo apt install python3-pip`
-- 更新 `pip` 包管理源地址至清华大学 TUNA 站点：
-  - 在根目录下创建文件：`~/.pip/pip.conf`
-  - 在其中加入如下内容：
+- 使用 APT 安装最新版本的 Python 3：
 
-```
-[global]
-index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+```bash
+sudo apt install python3
 ```
 
-## 使用 pip 安装必要的代码优化工具
+- 安装 Python 包管理 `pip` 工具：
+
+```bash
+sudo apt install python3-pip
+```
+
+- 更新 `pip` 包管理源为清华大学 TUNA 镜像源：^[[pypi 镜像使用帮助 - TUNA](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)]
+
+```bash
+# 使用 TUNA 镜像源更新 pip
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+
+# 将 pip 源设置为 TUNA
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+```
+
+## 安装代码优化工具
+
+::: callout 🥝 注意
+在上面安装完成 VS Code 的 Python 插件之后，如果顺利，那么 VS Code 应该提示你直接按照下面的 `pylint` 和 `autopep8` 两个组件，根据 VS Code 的提示直接点击安装即可。如果没有出现提示，那么可能需要手动安装下面两个组件。
+:::
 
 - 安装自动代码检查 `pylint`
 
@@ -38,74 +50,48 @@ pip install pylint
 pip install autopep8
 ```
 
-:::warning
-下面这些配置内容在 2019 年 6 月，VS Code 官方团队实现了 Remote-WSL 插件之后基本不需要了。更多内容请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+## 用 pipenv 管理 Python 项目
+
+> Pipenv -- Sacred Marriage of Pipfile, Pip, & Virtualenv.^[[Pipenv: Python Dev Workflow for Humans](https://pipenv.kennethreitz.org/en/latest/)]
+
+::: callout 🌽 注意
+熟悉 Python 项目开发的同学可能知道，Python 需要利用虚拟环境工具 `virtualenv` 来创建虚拟环境运行 Python 项目，也需要 `pip` 包管理工具来安装 Python 依赖。使用两个单独的工具管理一个项目可能会出现诸多问题，同时 `requirements.txt` 的管理也相当不优雅。因此我们用 `pipenv` 作为统一管理 Python 环境和依赖的工具。
+
+`pipenv` 之于 Python 就如 `yarn` 之于 Node.js、`cargo` 之于 Rust、`composer` 之于 PHP……
 :::
 
-<details>
+### 安装 pipenv
 
-## 让 VSCode 集成 WSL 侧 Python <Badge text="deprecated" type="error" vertical="middle"/>
+在 Ubuntu 中安装 pipenv：
 
-> 以下内容、解决方案、代码和可执行文件来自 [plusls - VSCode using Python in WSL](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/)，致谢。
-
-首先从 [这里](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/wsl.zip) 下载由 plusls 编译的一些工具，下载的文件内容有：
-
-```
-.
-├── LocalDebugClient.js
-├── completion.py
-├── pydevd_file_utils.py
-└── wsl-tools
-    ├── autopep8.exe
-    ├── ctags.exe
-    ├── pylint.exe
-    ├── python.exe
-    ├── python2.exe
-    └── python3.exe
-
-1 directory, 9 files
-
+```bash
+sudo apt install pipenv
 ```
 
-将下载文件解压至本地目录下，留作后续使用。
+### 使用 pipenv 管理项目
 
-### 让 VSCode Python 插件识别到 WSL 环境下的 Python <Badge text="deprecated" type="error" vertical="middle"/>
+默认情况下，pipenv 会将项目安装的依赖统一用 `Pipfile` 管理，并会利用 `Pipfile.lock` 来「锁住」依赖版本。
 
-::: tip TIP
-以下内容以 Python 3 为例，其他版本的 Python 原理相同。
-:::
+安装所有依赖：
 
-在 VSCode 中设置如下：
-
-```json
-"python.pythonPath": "C:\\$更换为 python3.exe 的路径$\\python3.exe",
+```bash
+pipenv install
 ```
 
-### 让 Python 插件直接使用 WSL 侧的工具 <Badge text="deprecated" type="error" vertical="middle"/>
+安装某个 Python 库：
 
-官方 Python 插件集成了实时代码风格检查工具 `pylint`，快速定位工具 `ctags` 和代码美化插件 `autopep8`。这些同样也可以在 WSL 侧安装并从 Windows VSCode 侧调用。
-
-- 安装 `pylint`：`pip3 install pylint`
-- 安装 `exuberant ctags`：`sudo apt install exuberant-ctags`
-- 安装 `autopep8`：`pip3 install autopep8`
-- 在 VSCode 设置中加入：
-
-```json
-"python.linting.pylintPath": "C:\\$更换为 pylint.exe 的路径$\\pylint.exe",
-"python.workspaceSymbols.ctagsPath": "C:\\$更换为 ctags.exe 的路径$\\ctags.exe",
-"python.formatting.autopep8Path": "C:\\$更换为 autopep8.exe 的路径$\\autopep8.exe"
+```bash
+pipenv install {PYTHON_LIBRARY}
 ```
 
-那么现在拿 VSCode 写 Python 项目的时候应该可以自动代码补全、IntelliSense 和自动美化了。👍
+使用 pipenv 进入 Python 虚拟环境并运行 Python 文件：
 
-### 跳转定义、调试等内容的配置 <Badge text="deprecated" type="error" vertical="middle"/>
+```bash
+# 进入虚拟环境
+pipenv shell
 
-这部分内容由于涉及到修改 VSCode Python 官方插件代码，因此不建议进行配置。同时，随着插件的更新，修改的代码会失效，修改方法也不近相同，如果有需要可以考虑 [查看原文内容](http://blog.plusls.cn/windows/vscode-using-python-in-wsl/) 自行配置。
+# 执行 Python 文件 main.py
+python main.py
+```
 
-## Code Runner
-
-> 基础配置详见 > [Code Runner](/3-VSCode/3-2-Code-Runner.html)
-
-无需特殊配置，单个文件可以直接右键 `Run Code` 执行。
-
-</details>
+有关利用 VS Code 开发 Python 项目的配置，请大家参考：[Getting Started with Python in VS Code - Visual Studio Code Docs](https://code.visualstudio.com/docs/python/python-tutorial)
