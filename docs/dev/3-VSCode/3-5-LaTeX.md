@@ -14,7 +14,7 @@ sudo apt install -y texlive-full
 
 ## 安装和配置 LaTeX Workshop
 
-在 VSCode 的插件中心搜索 `LaTeX Workshop` 并安装，然后在 `settings.json` 添加以下设置：
+在 VS Code 的插件中心搜索 `LaTeX Workshop` 并安装，然后在 `settings.json` 添加以下设置：
 
 ```json
 "latex-workshop.latex.recipes": [{
