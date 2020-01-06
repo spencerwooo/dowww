@@ -1,18 +1,16 @@
 # 后记
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e3d608b81.png" alt="Thinking" width="20%"/></div>
+<!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e3d608b81.png" alt="Thinking" width="20%"/></div> -->
 
-## 终端
+## 体验
 
-WSL 终端下的开发环境是完全可用的一个完美 Linux 环境。美观、稳定、可定制化程度高。完美。👌
+事实上，从一个学生的角度来说，WSL 完完全全是可以胜任我们日常学习开发工作的。无论是在 ACM 中使用 C/C++ 编写算法，还是在学校课程中在 Linux 环境下进行软件开发，WSL 都 more than enough。特别是在 VS Code 能够借助于 Remote 远程开发组件包直接连接到 WSL 环境上之后，在 Windows 上用 VS Code 在原生 Windows 环境下开发和连接到 WSL 环境下开发的体验是几乎完全一致的。
 
-## VS Code + WSL 工具链
-
-在 Remote-WSL 诞生之后，我们完全可以直接使用 WSL 下的全部工具进行开发工作。详情请参考：[Remote-WSL 环境下 VS Code 的配置与特性](https://dowww.spencerwoo.com/3-VSCode/#remote-wsl-%E6%8F%92%E4%BB%B6)
+WSL 为我们在 Windows 系统中提供了一个近乎原生的 Linux 环境，让我们能在不折腾、尽量少折腾的情况下，运行完整的 Linux 发行版。这不论是对 Linux 开发者还是 Windows 开发者来说，都是一大利好。
 
 ## 参考资料
 
-感谢前辈总结的经验，没有以下这些文章我不可能总结出这些东西。
+感谢前辈总结的经验，没有以下这些文章我不可能总结出这些东西：
 
 - [lloydstubber/my-wsl-setup](https://github.com/lloydstubber/my-wsl-setup)
 - [Voronoff/wsl_setup.md](https://gist.github.com/Voronoff/059c50f9fd354386c305c55af1f3a61f#install-and-set-up-python-to-work-with-vscode-and-wsl)
@@ -23,11 +21,13 @@ WSL 终端下的开发环境是完全可用的一个完美 Linux 环境。美观
 - [在 WSL 下启动 VS Code](https://zhuanlan.zhihu.com/p/33226830)
 - [Setting proxy in git](https://gist.github.com/laispace/666dd7b27e9116faece6)
 
-也感谢 Freepik 给我提供如此优秀的平面设计灵感。
+也感谢 Freepik 给我提供如此优秀的平面设计灵感：
 
 - Website icons and its affiliated designs are licensed by [Freepik](https://www.freepik.com/free-vector/modern-web-design-concept-with-isometric-view_3086978.htm).
 
-## License 许可 <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+## License 许可
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 
 本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
 
