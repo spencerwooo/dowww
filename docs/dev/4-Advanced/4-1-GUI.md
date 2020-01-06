@@ -2,9 +2,9 @@
 
 <!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div> -->
 
-> 虽然上面的方案有时候能够解决问题，但是最为深度整合的方案是：在 WSL 侧的 Linux 环境下安装 VS Code 并从 Linux 侧打开，这样就一定能保证 VS Code 使用的工具链全部是 WSL 侧工具链了。
->
-> 方案：安装一个 XServer 来让 Linux 侧 GUI 程序有窗口显示。
+:::callout 🍋 本文内容
+WSL 是一个完全的「终端」命令行环境，默认情况下是没有窗口程序的。但并不是所有在 WSL 上运行的应用程序都能在「无窗口」环境下运行，也不是所有的开发工具都能像 VS Code 一样利用 Remote 远程开发插件连接，从而提供一个近似原生的开发体验。这时候，**我们就需要为 WSL 提供一个 GUI 环境**，来运行需要窗口的应用程序。
+:::
 
 ## 安装 XServer for windows
 
@@ -34,7 +34,7 @@ sudo apt install x11-apps -y && xeyes
 
 如果出现了这样的小眼睛盯着你的鼠标看，那么说明我们的 XServer 安装成功了。
 
-## 在 WSL 侧安装 Visual Studio Code
+## 在 WSL 环境中安装 VS Code
 
 - 添加 Visual Studio Code 库：
 
@@ -51,10 +51,16 @@ sudo apt update && sudo apt upgrade
 sudo apt install code
 ```
 
-:::tip
-有可能还需要安装 `libx11-xcb1`，安装即可：
+- 有可能还需要安装 `libx11-xcb1`，安装即可：
 
-![vscode-libx11-xcb1.png](https://i.loli.net/2019/04/05/5ca705028ca16.png)
-:::
+```bash
+sudo apt install libx11-xcb1
+```
+
+![](https://i.loli.net/2020/01/06/inUPZt7eWjxYNAX.png)
 
 - 打开 XServer 窗口，在 WSL 终端执行 `code`，应该就可以看到 WSL 中的 VS Code 窗口启动了。
+
+## 其他应用
+
+上面安装 VS Code 仅仅是一个 Proof of concept，来证明我们能够真的从 WSL 环境下启动「窗口程序」。接下来，我们可以借助于 XServer 来让 WSL 中安装的任意其他工具拥有 GUI 窗口。比如：Intellij IDEA、Android Studio 等程序。

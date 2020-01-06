@@ -1,4 +1,4 @@
-# LxRunOffline <a href="https://github.com/llinfeng"><Badge text="@llinfeng" vertical="middle"/></a>
+# LxRunOffline <a href="https://github.com/llinfeng"><BlueBadge text="@llinfeng" vertical="middle"/></a>
 
 <!-- 大佬自由发挥！ -->
 
