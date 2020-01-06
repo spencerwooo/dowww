@@ -6,7 +6,7 @@
 Visual Studio Code 是一款介乎于 Text Editor（文本编辑器）和 IDE（集成开发环境）之间的一款强大的代码编辑器。（后文以 VS Code 称呼。）借助于 VS Code 和 WSL 环境，我们可以在 Windows 环境下配置一个 Linux 风格的、用 Linux 工具的、符合 Linux 规范的开发环境。本章将对 VS Code 的安装以及让 VS Code 在 WSL 环境下运行进行介绍。
 :::
 
-VS Code 是一款强大的代码编辑器，也可能是市面上最受欢迎的代码编辑器。2019 年 6 月的今天，我不仅因为 [这里陈述的理由](https://sspai.com/post/47719) 推荐 VS Code，更因为 VS Code Stable 已经通过 Remote 插件家族直接支持了 WSL 下的开发调试。**一句话：如果你希望使用 WSL 作为你的主要开发环境，请直接考虑 VS Code。**
+VS Code 是一款强大的代码编辑器，也可能是市面上最受欢迎的代码编辑器。2019 年 6 月的今天，我不仅因为 [这里陈述的理由](https://sspai.com/post/47719) 推荐 VS Code，更因为 VS Code 已经通过 Remote 远程开发组件包直接支持了 WSL 下的开发调试。**一句话：如果你希望使用 WSL 作为你的主要开发环境，请直接考虑 VS Code。**
 
 ## 下载安装
 
