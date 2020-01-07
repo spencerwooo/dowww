@@ -179,3 +179,5 @@ VS Code 支持用户自定义代码片段，访问这里直接获取为 VS Code 
 ![](https://i.loli.net/2020/01/07/1rxFcwLmVA8WH7h.png)
 
 然后在左下角设置 > User Snippets 中添加这个代码片段，之后只需输入 `inputoutput` 就可以自动补全了。
+
+更多有关利用 VS Code 撰写、编译、调试 C/C++ 代码项目的方法，请参考：[C/C++ for Visual Studio Code (Preview) - Visual Studio Code Docs](https://code.visualstudio.com/docs/languages/cpp)
