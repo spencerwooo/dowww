@@ -30,6 +30,11 @@ module.exports = {
         { text: 'Telegram Channel', link: 'https://t.me/realSpencerWoo' }
       ]
     }, { text: '作者', link: 'https://spencerwoo.com' }],
+    algolia: {
+      apiKey: '6534c856e645507d6cf52052fdfd5611',
+      indexName: 'dowww',
+    },
+    searchPlaceholder: '搜索...',
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
