@@ -29,7 +29,7 @@
 
 <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
 
-<h6>🚀 重构进行时：Dev on Windows with WSL 正在进行重构优化，文档撰写工作正在进行，大家敬请期待。</h6>
+<h6>🎉 文档已经更新完成！Dev on Windows with WSL 达到 v1.0.0 里程碑，更新内容请查看：[CHANGELOG](CHANGELOG.md)</h6>
 
 ---
 
