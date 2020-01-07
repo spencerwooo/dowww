@@ -23,7 +23,7 @@ module.exports = {
       text: '联系', items: [
         { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' },
         { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
-        { text: '贡献规范', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md'}
+        { text: '贡献规范', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md' }
       ]
     }, {
       text: '加入讨论', items: [
@@ -37,14 +37,16 @@ module.exports = {
     smoothScroll: true
   },
   plugins: [
-    [
-      'vuepress-plugin-container',
-      {
-        type: 'callout',
-        before: info => `<div class="callout"><p class="title">${info}</p>`,
-        after: '</div>'
-      }
-    ],
+    ['vuepress-plugin-container', {
+      type: 'callout',
+      before: info => `<div class="callout"><p class="title">${info}</p>`,
+      after: '</div>'
+    }],
+    ['vuepress-plugin-container', {
+      type: 'tree',
+      before: `<pre class="tree"><code>`,
+      after: `</code></pre>`
+    }],
     ['@vuepress/back-to-top'],
     [
       '@vuepress/google-analytics',

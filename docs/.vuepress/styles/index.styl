@@ -25,6 +25,25 @@ h1, h2, h3
     font-size 0.9rem
     text-align right
 
+pre.tree
+  border-left-width: .5rem
+  border-left-style: solid
+  border-color: $accentColor !important
+  border-radius: 0
+  background-color: darken($backgroundColor, 60%) !important
+  & > code
+    font-size: 14px !important
+    & > p
+      margin: -5px 0 -20px 0
+    code
+      background-color: $accentColor !important
+      padding: 3px 5px
+      border-radius: 3px
+      color #ffffff
+    em
+      color #808080
+      font-weight light
+
 .hero img
     height: 180px
     width: 180px
