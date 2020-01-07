@@ -51,15 +51,14 @@ sudo apt update && sudo apt upgrade
 sudo apt install code
 ```
 
-- 有可能还需要安装 `libx11-xcb1`，安装即可：
+- 打开 XServer 窗口，在 WSL 终端执行 `code`，应该就可以看到 WSL 中的 VS Code 窗口启动了
+- 如果出现运行 `code` 命令报错，提示缺少 `libx11-xcb1` 库，那么按照下面的方法安装即可：
 
 ```bash
 sudo apt install libx11-xcb1
 ```
 
 ![](https://i.loli.net/2020/01/06/inUPZt7eWjxYNAX.png)
-
-- 打开 XServer 窗口，在 WSL 终端执行 `code`，应该就可以看到 WSL 中的 VS Code 窗口启动了。
 
 ## 其他应用
 

@@ -2,11 +2,21 @@
 
 <!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e3d608b81.png" alt="Thinking" width="20%"/></div> -->
 
+::: callout 🍓 结束语
+Dev on Windows with WSL 到这里基本介绍完成，我们将使用 WSL 中可能涉及到的一些问题、配置方法都进行了详细的介绍，对 WSL 的工作原理也进行了大致的讲解。本章主要介绍一些使用 WSL 进行开发的体验，文档涉及到的参考资料等内容。
+:::
+
 ## 体验
 
 事实上，从一个学生的角度来说，WSL 完完全全是可以胜任我们日常学习开发工作的。无论是在 ACM 中使用 C/C++ 编写算法，还是在学校课程中在 Linux 环境下进行软件开发，WSL 都 more than enough。特别是在 VS Code 能够借助于 Remote 远程开发组件包直接连接到 WSL 环境上之后，在 Windows 上用 VS Code 在原生 Windows 环境下开发和连接到 WSL 环境下开发的体验是几乎完全一致的。
 
 WSL 为我们在 Windows 系统中提供了一个近乎原生的 Linux 环境，让我们能在不折腾、尽量少折腾的情况下，运行完整的 Linux 发行版。这不论是对 Linux 开发者还是 Windows 开发者来说，都是一大利好。
+
+## 参与贡献
+
+一年前，Dev on Windows with WSL 仅仅是我一个个人的项目，而且仅仅是一篇文章。到今天，我和几位 Contributors 已经撰写了超过 5 个部分的 18 章内容。现在，希望有经验的同学前来与我共同完善本项目，不论是增加一门语言在 WSL 下的配置方法，还是增加一些高级的 WSL 使用操作，任何内容都是欢迎的。
+
+在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
 
 ## 参考资料
 
