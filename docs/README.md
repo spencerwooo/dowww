@@ -20,7 +20,7 @@ footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 Internatio
 <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
 
 :::callout 🎊 更新完成！
-文档已经更新完成！Dev on Windows with WSL 达到 v1.0.0 里程碑，更新内容请查看：[CHANGELOG](CHANGELOG.md)
+文档已经更新完成！Dev on Windows with WSL 达到 v1.0.0 里程碑，更新内容请查看：[CHANGELOG](https://github.com/spencerwooo/dowww/blob/master/CHANGELOG.md)
 :::
 
 ## 前言
