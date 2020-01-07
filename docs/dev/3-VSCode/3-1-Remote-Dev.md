@@ -2,7 +2,7 @@
 
 VS Code 远程开发组件包（VS Code Remote Development）允许 VS Code 将一个远程服务器上的环境、一个虚拟化容器中的环境或我们的 WSL 环境作为一个「全功能的开发环境」来使用。这里，我们将重点关注利用 VS Code 远程开发组件包让 VS Code 和 WSL 连接并直接开发的配置方法。
 
-![](https://i.loli.net/2020/01/06/8rZI9xgOyQ6kHM7.png)
+![](https://i.loli.net/2020/01/07/WbFyeYSLuZHr6cT.png)
 
 ## 安装 Remote 开发插件
 
@@ -54,8 +54,8 @@ VS Code 同样支持在 WSL 环境下的终端中直接用命令 `code` 打开�
 
 ### 集成终端
 
-在 WSL 环境下打开的 VS Code 集成终端唤起的是 WSL 默认 Shell，无需配置即可直接使用。^[[Dev on Windows with WSL - Shell 环境](/dev/2-Toolchain/2-2-Shell.html)]
+在 WSL 环境下打开的 VS Code 集成终端唤起的是 WSL 默认 Shell，无需配置即可直接使用。^[[Dev on Windows with WSL - Shell 环境](/dev/2-CLI/2-2-Shell.html)]
 
 ### 版本控制
 
-同样，WSL 环境中打开的 VS Code 使用的版本控制 Git 也是 WSL 中的 Git，无需配置即可直接使用。^[[Dev on Windows with WSL - 版本控制](/dev/2-Toolchain/2-3-Others.html#版本控制)]
+同样，WSL 环境中打开的 VS Code 使用的版本控制 Git 也是 WSL 中的 Git，无需配置即可直接使用。^[[Dev on Windows with WSL - 版本控制](/dev/2-CLI/2-3-Others.html#版本控制)]

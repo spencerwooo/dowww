@@ -1,6 +1,6 @@
 # 序论 <BlueBadge text="New" vertical="middle"/>
 
-![Run Linux on Windows 10](https://i.loli.net/2018/10/01/5bb1d3f780d16.jpg)
+![](https://i.loli.net/2020/01/07/J8GYW6wel7XjVvu.png)
 
 ::: callout 🍳 本章内容
 欢迎来到 **Dev on Windows with WSL —— 可能是市面上最详尽的中文 WSL 开发环境配置指南** 的文档现场，本章我们将对 WSL 本身、WSL 近期更新和 WSL 的优越特性进行简单介绍，带领你熟悉利用 WSL 在 Windows 上面开发学习的基础知识。
@@ -65,14 +65,14 @@ WSL 2 是 WSL 发展历史中的突破性进步，上述问题在 WSL 2 中得�
 另外，虽然 WSL 2 使用了虚拟化技术，但是官方宣称：
 
 > WSL 2 uses the latest and greatest in virtualization technology to run its Linux kernel inside of a lightweight utility virtual machine (VM).
-> 
+>
 > WSL 2 使用的是最新、最厉害的虚拟化技术，让 Linux 内核在一个非常轻量级的虚拟机中运行。
 
 实际使用中，你几乎不会察觉到和 WSL 1.0 版本有特别大的区别，不过 WSL 2 还是有一些和 WSL 1 不一样的地方：
 
 - 如果你在 WSL 2 中运行 Web 服务器，你会发现映射到 Windows 中的端口并不一样。不过这一不同并无大碍
 - 你会发现 WSL 2 中在 Windows 侧和 Linux 侧之间相互移动文件的速度会比 WSL 的 1.0 版本慢。因此，为了尽可能保证我们 WSL 文件系统的存储速度，**我们应该将在 Linux 中使用的文件全部放在 Linux 文件系统下**[^6]
-- WSL 2 目前对硬件的支持有限，因此你无法在 WSL 2 中直接访问 GPU、串口或 USB 接口[^5] 
+- WSL 2 目前对硬件的支持有限，因此你无法在 WSL 2 中直接访问 GPU、串口或 USB 接口[^5]
 - WSL 2 对 VMware 等虚拟机软件也有一些要求，也就是：你无法在运行 WSL 2 的情况下直接运行 VMware 或旧版本的 Virtual Box。这是因为 WSL 2 中的虚拟化技术依赖于 Hyper-V，而 VMware 和 6.0 版本之前的 Virtual Box 都和 Hyper-V 不兼容[^5]
 
 除此之外，WSL 2 就没有其他特别大的问题或局限性了。在接下来的安装中，我会继续介绍如何安装某个 Linux 发行版、如何初始化一个 Linux 发行版环境、发行版如何在 WSL 1 和 WSL 2 之间进行切换等等。同学们可以按照自己的需要，在 WSL 1 和 WSL 2 之间进行选择。**当然，我这里更推荐大家使用性能更好的 WSL 2。**

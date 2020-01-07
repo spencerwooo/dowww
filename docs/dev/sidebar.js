@@ -7,12 +7,12 @@ module.exports = [
     ]
   },
   {
-    title: 'Toolchain 工具链',
+    title: 'CLI 命令行环境',
     children: [
-      '2-Toolchain/2-0-Intro',
-      '2-Toolchain/2-1-Terminal',
-      '2-Toolchain/2-2-Shell',
-      '2-Toolchain/2-3-Others'
+      '2-CLI/2-0-Intro',
+      '2-CLI/2-1-Terminal',
+      '2-CLI/2-2-Shell',
+      '2-CLI/2-3-Others'
     ]
   },
   {

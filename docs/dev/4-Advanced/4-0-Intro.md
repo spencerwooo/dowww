@@ -1,6 +1,6 @@
-# 概要
+# 概要 <BlueBadge text="New" vertical="middle"/>
 
-![](https://i.loli.net/2019/05/13/5cd96b8cdc55749567.png)
+![](https://i.loli.net/2020/01/07/5mn29DSapsRxcWN.png)
 
 ::: callout 🍄 本章内容
 本章将对 WSL 中的一些高阶操作进行介绍。包括：为没有窗口界面的 WSL 安装 GUI 程序，以及 LxRunOffline 的功能和使用。

@@ -1,9 +1,9 @@
 # 概要 <BlueBadge text="New" vertical="middle"/>
 
-<div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e10ee254f.png" alt="oh-my-zsh" width="40%"/></div>
+![](https://i.loli.net/2020/01/07/NnuHrlqRUDfdG3b.png)
 
 ::: callout 🍳 本章内容
-欢迎来到 **Dev on Windows with WSL** 文档的第二部分 —— WSL 工具链的配置。本章我们将对 WSL 中开发学习涉及到的工具的配置方法进行介绍，这其中包括：终端工具、终端环境、Shell 的配置以及其他工具的配置。
+欢迎来到 **Dev on Windows with WSL** 文档的第二部分 —— WSL 命令行 CLI 环境的配置。本章我们将对 WSL 中开发学习涉及到的工具的配置方法进行介绍，这其中包括：终端工具、终端环境、Shell 的配置以及其他工具的配置。
 :::
 
 ## 背景知识

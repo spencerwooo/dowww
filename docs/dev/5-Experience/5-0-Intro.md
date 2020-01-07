@@ -1,6 +1,6 @@
-# 后记
+# 后记 <BlueBadge text="New" vertical="middle"/>
 
-<!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e3d608b81.png" alt="Thinking" width="20%"/></div> -->
+![](https://i.loli.net/2020/01/07/J6hx2UTlX3yDbgS.png)
 
 ::: callout 🍓 结束语
 Dev on Windows with WSL 到这里基本介绍完成，我们将使用 WSL 中可能涉及到的一些问题、配置方法都进行了详细的介绍，对 WSL 的工作原理也进行了大致的讲解。本章主要介绍一些使用 WSL 进行开发的体验，文档涉及到的参考资料等内容。
