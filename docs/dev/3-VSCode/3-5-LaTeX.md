@@ -4,38 +4,28 @@
 
 ## 安装 TeXLive
 
-在 WSL 下使用包管理器安装 `texlive-full`，比如：
+在 WSL 下使用包管理器安装 `texlive-full`：
 
 ```bash
 sudo apt install -y texlive-full
 ```
 
-这个安装过程会十分漫长，但是我十分强烈建议使用这个完整包。
+TeXLive 完整安装下来大概有 3GB 左右，这个安装过程会十分漫长，但是我十分强烈建议使用这个完整包。
 
-## 安装和配置 LaTeX Workshop
+## 安装 LaTeX Workshop
 
-在 VS Code 的插件中心搜索 `LaTeX Workshop` 并安装，然后在 `settings.json` 添加以下设置：
+在 VS Code 的插件中心搜索 `LaTeX Workshop` 并安装：
 
-```json
-"latex-workshop.latex.recipes": [{
-  "name": "Build using WSL",
-  "tools": [
-    "wsl-texlive"
-  ]
-}],
-"latex-workshop.latex.tools": [{
-  "name": "wsl-texlive",
-  "command": "wsl",
-  "args": [
-    "latexmk",
-    "-synctex=1",
-    "-interaction=nonstopmode",
-    "-pdf",
-    "%DOCFILE%"
-  ]
-}]
-```
+![](https://i.loli.net/2020/01/07/IpNznqVroX91Rd2.png)
 
-就这样配置成功了，以下是效果：
+当我们的 VS Code 使用 Remote 远程开发组件包连接 WSL 环境，并在 WSL 环境下直接编写 LaTeX 文档的时候，我们无需过多配置，使用 LaTeX Workshop 自带的几个编译命令（Recipe）即可。
+
+::: callout 🍑 注意
+如果在 LaTeX 文档中使用中文等 CJK 字符，那么推荐使用 `xelatex` 的命令进行编译。
+:::
+
+这样我们就基本配置成功了，以下是效果：
 
 ![](https://i.loli.net/2018/12/11/5c0fc821c5aed.jpg)
+
+更多有关 LaTeX Workshop 插件的配置，请参考：[James-Yu/LaTeX-Workshop - Wiki](https://github.com/James-Yu/LaTeX-Workshop/wiki)
