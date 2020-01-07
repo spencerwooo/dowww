@@ -4,6 +4,28 @@
 本文我们会对利用 VS Code 在 WSL 环境中编写 C、C++ 程序的方法进行介绍。本文主要面向学习 C、C++ 语言的同学，包括使用 C、C++ 实现各项算法的 ACM 竞赛同学，以及学习数据结构等知识的同学。值得注意的是，本文的配置项目可能仅仅适合单个 C、C++ 代码文件的编译运行，涉及到大型 C、C++ 项目我更加推荐使用专业 IDE（比如 Visual Studio）进行开发工作。
 :::
 
+在开始之前，我们先对编译运行 C、C++ 文件的基础知识进行简单的介绍。我们可以：
+
+- 使用 `gcc` 工具来编译运行 C 语言编写的代码文件
+- 使用 `g++` 工具来编译运行 C++ 语言编写的代码文件
+- 使用 `gdb` 工具来调试 C 或 C++ 语言编写的代码文件
+
+在命令行环境中，基本的编译运行命令大致如下：
+
+```bash
+# 使用 gcc 编译一个名叫 hello.c 的 C 文件，生成名为 hello 的可执行文件，或……
+gcc hello.c -o hello
+# 使用 g++ 编译一个名叫 hello.cpp 的 C++ 文件，生成名为 hello 的可执行文件
+g++ hello.cpp -o hello
+
+# 执行可执行文件 hello
+./hello
+```
+
+![](https://i.loli.net/2020/01/07/9moWQYJIjbcarRA.png)
+
+接下来，我们来看如何利用 VS Code 编译、调试 C/C++ 项目
+
 ## 安装 C/C++ 插件
 
 ![](https://i.loli.net/2020/01/07/FOeWlUyLGM4gpdI.png)
@@ -27,11 +49,11 @@ sudo apt install gcc g++ gdb
 - 再次确认安装状态：
   - 运行：`gcc --version` 与 `g++ --version`，如果有类似下面的输出，说明我们的 C/C++ 编译环境就安装成功了：
 
-  ![](https://i.loli.net/2019/01/01/5c2ad07c722b9.png)
+  ![](https://i.loli.net/2020/01/07/yhqkEV2X9zUCSf4.png)
 
   - 运行：`gdb --version`，如果有类似下面的输出，说明我们调试 C/C++ 程序的环境就安装成功了：
 
-  ![](https://i.loli.net/2019/01/01/5c2ad09f6eb99.png)
+  ![](https://i.loli.net/2020/01/07/2XNQJmBjEhen1YM.png)
 
 ## VS Code 智能代码提示
 
