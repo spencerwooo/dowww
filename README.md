@@ -6,15 +6,15 @@
 <strong>在 Windows 上面用 WSL 优雅开发</strong>
 
 <h3>
-<a href="https://dowww.spencerwoo.com/0.9/1-Preparations/1-0-Intro.html">准备工作</a>
+<a href="https://dowww.spencerwoo.com/1.0/1-Preparations/1-0-Intro.html">准备工作</a>
 <span> · </span>
-<a href="https://dowww.spencerwoo.com/0.9/2-Toolchain/2-0-Intro.html">工具链</a>
+<a href="https://dowww.spencerwoo.com/1.0/2-CLI/2-0-Intro.html">工具链</a>
 <span> · </span>
-<a href="https://dowww.spencerwoo.com/0.9/3-VSCode/3-0-Intro.html">Visual Studio Code</a>
+<a href="https://dowww.spencerwoo.com/1.0/3-VSCode/3-0-Intro.html">Visual Studio Code</a>
 <span> · </span>
-<a href="https://dowww.spencerwoo.com/0.9/4-Advanced/4-0-Intro.html">图形界面</a>
+<a href="https://dowww.spencerwoo.com/1.0/4-Advanced/4-0-Intro.html">图形界面</a>
 <span> · </span>
-<a href="https://dowww.spencerwoo.com/0.9/5-Experience/5-0-Intro.html">体验与参考</a>
+<a href="https://dowww.spencerwoo.com/1.0/5-Experience/5-0-Intro.html">体验与参考</a>
 <span> · </span>
 <a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
 </h3>
