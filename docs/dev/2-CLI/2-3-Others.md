@@ -233,6 +233,8 @@ wsl cat /etc/os-release
 
 ![](https://i.loli.net/2020/01/04/DZfJjm9PUhxl1AI.png)
 
+### 优化 WSL 2 虚拟磁盘占用空间
+
 WSL 2 使用 [VHDX](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu) 格式的虚拟磁盘储存文件，磁盘大小会在需要时自动扩容，长时间使用可能会占用较大的磁盘空间。我们可以通过 [`Optimize-VHD`](https://docs.microsoft.com/en-us/powershell/module/hyper-v/optimize-vhd?view=win10-ps) 命令来优化其占用空间。
 
 该命令是 Hyper-V 功能的一部分，我们需要在 [Windows 功能](https://jingyan.baidu.com/article/a378c960cb5b39b328283092.html)中启用 **Hyper-V » Hyper-V 管理工具 » Windows PowerShell 的 Hyper-V 模块** 以及 **Hyper-V » Hyper-V 平台 » Hyper-V 服务**：
