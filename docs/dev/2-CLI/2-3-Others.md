@@ -233,14 +233,19 @@ wsl cat /etc/os-release
 
 ![](https://i.loli.net/2020/01/04/DZfJjm9PUhxl1AI.png)
 
-WSL 命令行方面的配置、工具、操作和问题异常处理等内容基本介绍完毕。接下来的一章，我们将对利用 Visual Studio Code 和 WSL 配合进行工作开发的内容进行介绍。
-
-### 优化占用空间
-
 WSL 2 使用 [VHDX](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu) 格式的虚拟磁盘储存文件，磁盘大小会在需要时自动扩容，长时间使用可能会占用较大的磁盘空间。我们可以通过 [`Optimize-VHD`](https://docs.microsoft.com/en-us/powershell/module/hyper-v/optimize-vhd?view=win10-ps) 命令来优化其占用空间。
 
-该命令是 Hyper-V 功能的一部分，我们需要确保 **Hyper-V/Hyper-V 管理工具/Windows PowerShell 的 Hyper-V 模块**及**Hyper-V/Hyper-V 平台/Hyper-V 服务**处于启用状态：
+该命令是 Hyper-V 功能的一部分，我们需要在 [Windows 功能](https://jingyan.baidu.com/article/a378c960cb5b39b328283092.html)中启用 **Hyper-V » Hyper-V 管理工具 » Windows PowerShell 的 Hyper-V 模块** 以及 **Hyper-V » Hyper-V 平台 » Hyper-V 服务**：
 
 ![](https://i.loli.net/2020/02/29/u96cXs3QR7DFIew.png)
 
-然后以管理员权限执行 `Optimize-VHD -Path <VHDX 文件路径> -Mode Full` 即可。如果不清楚存储路径，可以运行注册表编辑器（`regedit`），在 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{随机 GUID}\BasePath` 下找到。
+也可以参照[开启「适用于 Linux 的 Windows 子系统」的附加功能](../1-Preparations/1-1-Installation.md#开启「适用于-linux-的-windows-子系统」的附加功能)一节，通过运行命令开启：
+
+```
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Services
+```
+
+然后以管理员权限执行 `Optimize-VHD -Path <VHDX 文件路径> -Mode Full` 即可。如果不清楚存储路径，可以打开[注册表编辑器](https://support.microsoft.com/help/4027573/windows-10-open-registry-editor)，在 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{随机 GUID}\BasePath` 下找到。
+
+WSL 命令行方面的配置、工具、操作和问题异常处理等内容基本介绍完毕。接下来的一章，我们将对利用 Visual Studio Code 和 WSL 配合进行工作开发的内容进行介绍。
