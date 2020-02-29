@@ -239,7 +239,7 @@ WSL 2 使用 [VHDX](https://docs.microsoft.com/en-us/windows-hardware/manufactur
 
 该命令是 Hyper-V 功能的一部分，我们需要在 [Windows 功能](https://jingyan.baidu.com/article/a378c960cb5b39b328283092.html)中启用 **Hyper-V » Hyper-V 管理工具 » Windows PowerShell 的 Hyper-V 模块** 以及 **Hyper-V » Hyper-V 平台 » Hyper-V 服务**：
 
-![](https://i.loli.net/2020/02/29/A2l1zHDUWQr6NL8.png)
+![](https://i.loli.net/2020/02/29/tUS8d3XZHY6CJcW.png)
 
 也可以参照[开启「适用于 Linux 的 Windows 子系统」的附加功能](../1-Preparations/1-1-Installation.md#开启「适用于-linux-的-windows-子系统」的附加功能)一节，通过运行命令开启：
 
