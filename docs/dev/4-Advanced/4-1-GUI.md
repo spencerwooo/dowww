@@ -1,7 +1,5 @@
 # GUI 图形化窗口
 
-<!-- <div align="center"><img src="https://i.loli.net/2018/10/17/5bc6e46095239.png" alt="GUI" width="20%"/></div> -->
-
 :::callout 🍋 本文内容
 WSL 是一个完全的「终端」命令行环境，默认情况下是没有窗口程序的。但并不是所有在 WSL 上运行的应用程序都能在「无窗口」环境下运行，也不是所有的开发工具都能像 VS Code 一样利用 Remote 远程开发插件连接，从而提供一个近似原生的开发体验。这时候，**我们就需要为 WSL 提供一个 GUI 环境**，来运行需要窗口的应用程序。
 :::
@@ -10,27 +8,31 @@ WSL 是一个完全的「终端」命令行环境，默认情况下是没有窗�
 
 - 推荐安装 [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/)，并以这样的配置打开：
 
-![](https://i.loli.net/2018/10/01/5bb1c9d292ce0.jpg)
+  ![](https://i.loli.net/2018/10/01/5bb1c9d292ce0.jpg)
 
 - 在 WSL 中安装必要组件：
 
-```bash
-sudo apt install libgtk2.0-0 libxss1 libasound2
-```
+  ```bash
+  sudo apt install libgtk2.0-0 libxss1 libasound2
+  ```
 
 - 配置 WSL 参数：
 
-```bash
-echo 'export DISPLAY=:0.0' >> .profile
-```
+  ```bash
+  # 如果你使用的是 WSL 1
+  echo 'export DISPLAY=:0.0' >> .profile
+
+  # 如果你使用的是 WSL 2：填入 {YOUR_WINDOWS_IP}，你的本机 IP 地址
+  echo 'export DISPLAY={YOUR_WINDOWS_IP}:0.0' >> .profile
+  ```
 
 - 安装一个小眼睛，看看图形窗口安装成功没有：
 
-```bash
-sudo apt install x11-apps -y && xeyes
-```
+  ```bash
+  sudo apt install x11-apps -y && xeyes
+  ```
 
-![](https://i.loli.net/2018/10/01/5bb1cc9565f02.png)
+  ![](https://i.loli.net/2018/10/01/5bb1cc9565f02.png)
 
 如果出现了这样的小眼睛盯着你的鼠标看，那么说明我们的 XServer 安装成功了。
 
