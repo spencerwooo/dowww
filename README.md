@@ -76,7 +76,7 @@ This project exists thanks to all the people who contribute.
 
 |                                        微信支付                                        |                                       支付宝支付                                       |
 | :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| <img src="https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg" alt="微信支付" width="40%"> | <img src="https://i.loli.net/2018/03/13/5aa7ae11339cd.jpg" alt="微信支付" width="40%"> |
+| <img src="https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg" alt="微信支付" width="40%"> | <img src="https://i.loli.net/2020/03/26/f2GT6StAchgqea4.png" alt="支付宝支付" width="40%"> |
 
 ## License 许可
 
