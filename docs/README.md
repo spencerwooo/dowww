@@ -66,11 +66,15 @@ This project exists thanks to all the people who contribute.
 | Support this project by becoming a backer. Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)] | Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🌏 [[Become a sponsor](https://opencollective.com/dowww#sponsor)] |
 |     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>      |           <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
 
-另外，我们同样接受以下形式的小额赞助，感谢您考虑赞助我们的项目：
+对于国内用户，我们支持直接通过微信和支付宝进行小额赞助！
 
-|                                        微信支付                                        |                                       支付宝支付                                       |
-| :------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------: |
-| <img src="https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg" alt="微信支付" width="40%"> | <img src="https://i.loli.net/2020/03/26/f2GT6StAchgqea4.png" alt="支付宝支付" width="40%"> |
+|                                         微信支付                                         |                                          支付宝支付                                          |
+| :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
+| <img src="https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg" alt="微信支付" width="200px"> | <img src="https://i.loli.net/2020/03/26/f2GT6StAchgqea4.png" alt="支付宝支付" width="200px"> |
+
+您也可以利用「爱发电」来对我进行支持！
+
+[![爱发电](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-@SpencerWoo-946ce6?labelColor=24292e&style=for-the-badge)](https://afdian.net/@spencerwoo)
 
 ## License 许可
 
