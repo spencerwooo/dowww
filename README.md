@@ -29,8 +29,6 @@
 
 <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
 
-<h6>🎉 文档已经更新完成！Dev on Windows with WSL 达到 v1.0.0 里程碑，更新内容请查看：<a href="./CHANGELOG.md">CHANGELOG</a></h6>
-
 ---
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
