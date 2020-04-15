@@ -40,7 +40,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
     "defaultProfile": "{d317d852-8b6a-4936-b241-58c11be8aeb2}",
     // …
   },
-  "profiles": 
+  "profiles":
   [
     {
       "guid": "{d317d852-8b6a-4936-b241-58c11be8aeb2}",
@@ -56,7 +56,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 ```json {6}
 {
   // …
-  "schemes" : 
+  "schemes" :
   [
     {
       "name" : "Dracula",
@@ -194,7 +194,7 @@ Terminus 的设置是 GUI 界面的，配置简单友好，这里就不做过多
 
 Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定制化程度最高的终端。
 
-**推荐阅读：**[HOW TO | 让自己的终端漂亮得不像实力派](https://spencerwoo.com/2018/06/16/Terminal/)
+**推荐阅读：**[打造高颜值终端——Hyper](https://sspai.com/post/56081)。
 
 ![](https://i.loli.net/2018/10/01/5bb1aa3bc42fa.png)
 
