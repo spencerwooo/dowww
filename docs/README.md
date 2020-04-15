@@ -1,5 +1,6 @@
 ---
 home: true
+heroText: Dev on Windows with WSL
 heroImage: /hero.png
 actionText: 入坑指南 →
 actionLink: /1.1/1-Preparations/1-0-Intro
@@ -13,11 +14,9 @@ features:
 footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
 ---
 
-<div align="right">
-<a href="#changelog-更新日志">Changelog 更新日志</a> | <a href="#contributing-贡献">Contributing 贡献</a> | <a href="#sponsoring-赞助">Sponsoring 赞助</a>
-</div>
+<a href="#changelog-更新日志">Changelog 更新日志</a> · <a href="#contributing-贡献">Contributing 贡献</a> · <a href="#sponsoring-赞助">Sponsoring 赞助</a>
 
-<div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
+<!-- <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div> -->
 
 ## 前言
 
@@ -74,7 +73,7 @@ This project exists thanks to all the people who contribute.
 
 ## License 许可
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://camo.githubusercontent.com/d1b3cb5c3bc0b0de6fb5445b1657c03464125482/68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792d73612f342e302f38307831352e706e67" /></a>
 
 本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
 
