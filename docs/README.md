@@ -2,7 +2,7 @@
 home: true
 heroImage: /hero.png
 actionText: 入坑指南 →
-actionLink: /1.0/1-Preparations/1-0-Intro
+actionLink: /1.1/1-Preparations/1-0-Intro
 features:
 - title: 🍳
   details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。
