@@ -1,35 +1,16 @@
-<div align="center">
-<img src="docs/.vuepress/public/hero.png" alt="icon" width="180px"/>
-
-<h1>Dev on Windows with WSL</h1>
+<h1><img src="docs/.vuepress/public/hero.png" alt="icon" width="45px" height="auto" align="left"/>Dev on Windows with WSL</h1>
 
 <strong>在 Windows 上面用 WSL 优雅开发</strong>
 
-<h3>
-<a href="https://dowww.spencerwoo.com/1.0/1-Preparations/1-0-Intro.html">准备工作</a>
-<span> · </span>
-<a href="https://dowww.spencerwoo.com/1.0/2-CLI/2-0-Intro.html">工具链</a>
-<span> · </span>
-<a href="https://dowww.spencerwoo.com/1.0/3-VSCode/3-0-Intro.html">Visual Studio Code</a>
-<span> · </span>
-<a href="https://dowww.spencerwoo.com/1.0/4-Advanced/4-0-Intro.html">图形界面</a>
-<span> · </span>
-<a href="https://dowww.spencerwoo.com/1.0/5-Experience/5-0-Intro.html">体验与参考</a>
-<span> · </span>
-<a href="https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md">参与贡献</a>
-</h3>
+[![GitHub contributors](https://img.shields.io/github/contributors/spencerwooo/dowww?color=2db74d&logo=github&labelColor=212c42)](#contributing-贡献)
+[![Open Collective backers and sponsors](https://img.shields.io/opencollective/all/dowww?logo=open-collective&color=2db74d&logoColor=ffffff&labelColor=212c42)](#sponsoring-赞助)
+[![Windows](https://img.shields.io/badge/windows-%E2%9D%A4%20linux-212c42?logo=windows&labelColor=0078d6)](https://cloudblogs.microsoft.com/windowsserver/2015/05/06/microsoft-loves-linux/)
+[![License: CC BY-SA 4.0](https://img.shields.io/github/license/spencerwooo/dowww?color=265ca2&labelColor=212c42)](http://creativecommons.org/licenses/by-sa/4.0/)
+[![GitHub stars](https://img.shields.io/github/stars/spencerwooo/dowww?style=social)](https://github.com/spencerwooo/dowww)
 
-[![Contributors on Open Collective](https://flat.badgen.net/opencollective/contributors/dowww)](#contributing-贡献)
-[![Sponsors on Open Collective](https://flat.badgen.net/opencollective/backers/dowww)](#sponsoring-赞助)
-[![Windows](https://flat.badgen.net/badge/Windows/❤%20Linux/pink?icon=windows)](https://cloudblogs.microsoft.com/windowsserver/2015/05/06/microsoft-loves-linux/)
-[![License: CC BY-SA 4.0](https://flat.badgen.net/badge/license/CC%20BY-SA%204.0/03A9F4)](http://creativecommons.org/licenses/by-sa/4.0/)
-[![GitHub stars](https://flat.badgen.net/github/stars/spencerwooo/dowww?icon=github&color=orange)](https://github.com/spencerwooo/dowww)
+<!-- <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div> -->
 
-</div>
-
-<div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div>
-
----
+## 前言
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
