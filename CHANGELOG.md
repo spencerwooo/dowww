@@ -1,6 +1,21 @@
 # Changelog 更新日志
 
-## [1.0.0] - 2019-1-7 🎉🎉🎉
+## [1.1] - 2020-4-15
+
+将从 1.0 版本开始陆续新增的 PR 和改动进行了整合，达到 1.1 版本。
+
+### Features
+
+- 新增了 WSL 2 IP 地址需要手动修改的注意事项：[WSL 2 中的网络访问问题](https://dowww.spencerwoo.com/1.1/2-CLI/2-3-Others.html#wsl-2-%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98)（Issue #49）
+- 新增了 WSL 2 虚拟磁盘空间优化的建议：[优化 WSL 2 虚拟磁盘占用空间](https://dowww.spencerwoo.com/1.1/2-CLI/2-3-Others.html#%E4%BC%98%E5%8C%96-wsl-2-%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98%E5%8D%A0%E7%94%A8%E7%A9%BA%E9%97%B4)（PR #45）
+- 新增了 GitHub Sponsors 和爱发电链接，~~请给我打钱！~~（不是）
+
+### Bugs and fixes
+
+- 修复了 GitHub 主页 README 支付宝二维码失效的问题
+- 修复了 Hyper 终端介绍链接失效的问题：[终端 Terminal - Hyper](https://dowww.spencerwoo.com/1.1/2-CLI/2-1-Terminal.html#hyper)
+
+## [1.0.0] - 2020-1-7 🎉🎉🎉
 
 我们终于迎来了 v1.0.0 的里程碑！文档重构完成，重大更新。历经一周有余，文档几乎全新开始。感谢大家的期待 (✿◡‿◡)
 
