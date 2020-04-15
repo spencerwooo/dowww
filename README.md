@@ -11,7 +11,17 @@
 
 <!-- <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div> -->
 
-## 前言
+<h2>Table of contents 目录</h2>
+
+- [Introduction 前言](#introduction-%e5%89%8d%e8%a8%80)
+- [Changelog 更新日志](#changelog-%e6%9b%b4%e6%96%b0%e6%97%a5%e5%bf%97)
+- [Contributing 贡献](#contributing-%e8%b4%a1%e7%8c%ae)
+  - [Contributors 贡献者](#contributors-%e8%b4%a1%e7%8c%ae%e8%80%85)
+  - [How to contribute 贡献规范](#how-to-contribute-%e8%b4%a1%e7%8c%ae%e8%a7%84%e8%8c%83)
+- [Sponsoring 赞助](#sponsoring-%e8%b5%9e%e5%8a%a9)
+- [License 许可](#license-%e8%ae%b8%e5%8f%af)
+
+## Introduction 前言
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
@@ -41,7 +51,7 @@ This project exists thanks to all the people who contribute.
 
 目前来讲，Dev on Windows with WSL 仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目，鞠躬。
 
-在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范 > [CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
+在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
 
 ## Sponsoring 赞助
 
