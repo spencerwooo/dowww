@@ -19,6 +19,8 @@
 
 推荐阅读：[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始 - 少数派](https://sspai.com/post/52868)
 
+推荐阅读 2：[What's the difference between a console, a terminal, and a shell?](https://www.hanselman.com/blog/WhatsTheDifferenceBetweenAConsoleATerminalAndAShell.aspx)
+
 ## 主要内容
 
 接下来的几篇文章中，我将具体介绍下面的工具、环境的配置方法，包括但不限于：
