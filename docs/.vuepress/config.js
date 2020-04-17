@@ -9,7 +9,9 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
   ],
+  theme: 'default-prefers-color-scheme',
   themeConfig: {
+    // defaultTheme: 'light',
     repo: 'spencerwooo/dowww',
     docsDir: 'docs/',
     versions: {
@@ -38,7 +40,8 @@ module.exports = {
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
-    sidebarDepth: 2
+    sidebarDepth: 2,
+    smoothScroll: true
   },
   plugins: [
     ['vuepress-plugin-container', {

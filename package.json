@@ -12,15 +12,16 @@
   "author": "spencerwooo <spencerwoo98@foxmail.com>",
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
-    "fs-extra": "^8.1.0",
-    "vuepress": "^1.2.0",
-    "opencollective": "^1.0.3",
-    "opencollective-postinstall": "^2.0.1",
-    "vuepress-plugin-container": "^2.1.2",
     "@markspec/vuepress-plugin-footnote": "^1.1.1",
     "@vuepress/plugin-back-to-top": "^1.2.0",
     "@vuepress/plugin-google-analytics": "^1.2.0",
-    "@vuepress/plugin-medium-zoom": "^1.2.0"
+    "@vuepress/plugin-medium-zoom": "^1.2.0",
+    "fs-extra": "^8.1.0",
+    "opencollective": "^1.0.3",
+    "opencollective-postinstall": "^2.0.1",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-theme-default-prefers-color-scheme": "^1.0.6"
   },
   "collective": {
     "type": "opencollective",
