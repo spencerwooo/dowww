@@ -8,16 +8,16 @@ const path = process.cwd()
 module.exports = {
   versions: {
     // latest stable release
-    get latest () {
+    get latest() {
       return versions[1]
     },
-    get all () {
+    get all() {
       return versions
     }
   },
   // Generate a single object that represents all versions from each sidebar
   // https://vuepress.vuejs.org/theme/default-theme-config.html#multiple-sidebars
-  get sidebars () {
+  get sidebars() {
     let sidebars = {}
 
     versions.forEach((version) => {
@@ -28,20 +28,18 @@ module.exports = {
     return sidebars
   },
   // Build dropdown items for each version
-  linksFor (url) {
+  linksFor(url) {
     let links = []
 
     versions.forEach(version => {
-      if (version != 'dev') {
-        let item = { text: version, link: `/${version}/${url}` }
-        links.push(item)
-      }
+      let item = { text: version, link: `/${version}/${url}` }
+      links.push(item)
     })
 
     return links
   },
   // Generate a new version
-  generate (version) {
+  generate(version) {
     version = version || process.argv[1]
     console.log('\n')
 
@@ -81,14 +79,14 @@ module.exports = {
       this.error(e)
     }
   },
-  error (message) {
+  error(message) {
     console.log("\x1b[41m%s\x1b[0m", ' ERROR ', `${message}\n`)
     process.exit(0)
   },
-  info (message) {
+  info(message) {
     console.log("\x1b[44m%s\x1b[0m", ' INFO ', `${message}\n`)
   },
-  success (message) {
+  success(message) {
     console.log("\x1b[42m\x1b[30m%s\x1b[0m", ' DONE ', `${message}\n`)
   }
 }

@@ -11,19 +11,12 @@ module.exports = {
   ],
   themeConfig: {
     nav: [{
-      text: '版本', items: [
-        {
-          text: 'Dev 分支版本', items: [
-            { text: 'Dev', link: '/dev/1-Preparations/1-0-Intro' }
-          ]
-        },
-        { text: '历史版本', items: versioning.linksFor('1-Preparations/1-0-Intro.md') }
-      ]
+      text: '文档', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
     }, {
       text: '联系', items: [
         { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' },
-        { text: '反馈 / 提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
-        { text: '贡献规范', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md' }
+        { text: '反馈提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
+        { text: '参与贡献', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md' }
       ]
     }, {
       text: '加入讨论', items: [
