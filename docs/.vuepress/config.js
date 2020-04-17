@@ -10,6 +10,13 @@ module.exports = {
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
   ],
   themeConfig: {
+    repo: 'spencerwooo/dowww',
+    docsDir: 'docs/',
+    versions: {
+      latest: versioning.versions.latest,
+      selected: versioning.versions.latest,
+      all: versioning.versions.all
+    },
     nav: [{
       text: '文档', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
     }, {
@@ -31,8 +38,7 @@ module.exports = {
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
-    sidebarDepth: 2,
-    smoothScroll: true
+    sidebarDepth: 2
   },
   plugins: [
     ['vuepress-plugin-container', {
