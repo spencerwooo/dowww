@@ -27,7 +27,7 @@ module.exports = {
       apiKey: '6534c856e645507d6cf52052fdfd5611',
       indexName: 'dowww',
     },
-    searchPlaceholder: '搜索...',
+    searchPlaceholder: 'Search...',
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
