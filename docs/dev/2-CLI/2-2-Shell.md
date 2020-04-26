@@ -247,7 +247,7 @@ mountFsTab = true
 - 重启 WSL，所有的盘符就会使用上面的配置自动挂载（可以使用 `mount -l` 查看）
 
 ::: callout 🔁 重启 WSL 环境
-我们在退出所有开启 WSL 的终端 session 后，可以在 Windows 侧（比如 PowerShell 中）使用命令 `wsl -t <Distro Name>` **来关闭 WSL 环境。**其中，WSL 发行版的名字可以用命令 `wsl -l` 列出，比如：你安装的是 Ubuntu，那么在运行 `wsl -t Ubuntu` 后再打开 WSL，就能观察到重新挂载盘符了。
+我们在退出所有开启 WSL 的终端 session 后，可以在 Windows 侧（比如 PowerShell 中）使用命令 `wsl -t <Distro Name>` **来关闭 WSL 环境**。其中，WSL 发行版的名字可以用命令 `wsl -l` 列出，比如：你安装的是 Ubuntu，那么在运行 `wsl -t Ubuntu` 后再打开 WSL，就能观察到重新挂载盘符了。
 :::
 
 另外，如果你想要给不同的盘符设定不同的挂载参数（上面的方法对所有盘符都有效，如果你想在 WSL 中运行 Windows 下的应用程序，就得每次都 `chmod +x` 一下，所以我一般都会把 C: 排除掉），就需要手动修改 `/etc/fstab`。首先确保 `wsl.conf` 中的 `mountFsTab` 为 `true`，然后编辑 `/etc/fstab`，添加如下内容：
