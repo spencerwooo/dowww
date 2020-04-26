@@ -14,15 +14,11 @@ features:
 footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
 ---
 
-<a href="#changelog-更新日志">Changelog 更新日志</a> · <a href="#contributing-贡献">Contributing 贡献</a> · <a href="#sponsoring-赞助">Sponsoring 赞助</a>
-
-<!-- <div align="center"><img alt="demo screenshot" src="https://i.loli.net/2019/12/31/jm5fChvuENwR1ae.png" width="80%" /></div> -->
+[Changelog 更新日志](#changelog-更新日志) · [Contributing 贡献](#contributing-贡献) · [Sponsoring 赞助](#sponsoring-赞助)
 
 ## 前言
 
 首先达成一个共识：Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
-
-<!-- ![](https://i.loli.net/2019/12/23/oduGKT5LqivekMh.png) -->
 
 WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linux，即适用于 Linux 的 Windows 子系统。在 2019 年的夏天，微软官方推出了 [WSL 2：基于最新虚拟化技术的 WSL 引擎。](https://docs.microsoft.com/en-us/windows/wsl/wsl2-about)强大的 WSL 2 直接将一个 Linux 内核放入 WSL 架构中，使得 Linux 子系统的 I/O 效率急速提升，也让 Linux 子系统能真正执行「全部 Linux 原生的系统调用（Full System Call Compatibility）」。无论是 WSL 还是 WSL 2，我们都可以借助之来给我们的 Windows 配置一个美观可用的 **学习编程的开发环境**，包括：
 
@@ -56,10 +52,10 @@ This project exists thanks to all the people who contribute.
 
 谢谢金主爸爸们，我们通过 Open Collective 平台接受赞助。
 
-|                                                              Backers 支持者                                                              |                                                                            Sponsors 赞助商                                                                             |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                             Backers 支持者                                                              |                                                                            Sponsors 赞助商                                                                            |
+| :-------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Support this project by becoming a backer. Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)] | Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🌏 [[Become a sponsor](https://opencollective.com/dowww#sponsor)] |
-|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>      |           <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
+|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>     |          <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
 
 对于国内用户，我们支持直接通过微信和支付宝进行小额赞助！
 
@@ -73,7 +69,7 @@ This project exists thanks to all the people who contribute.
 
 ## License 许可
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://camo.githubusercontent.com/d1b3cb5c3bc0b0de6fb5445b1657c03464125482/68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792d73612f342e302f38307831352e706e67" /></a>
+[![知识共享许可协议](https://camo.githubusercontent.com/d1b3cb5c3bc0b0de6fb5445b1657c03464125482/68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792d73612f342e302f38307831352e706e67)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
 

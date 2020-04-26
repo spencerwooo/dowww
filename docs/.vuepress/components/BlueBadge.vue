@@ -32,5 +32,9 @@ export default {
   border-radius 3px
   padding 0 6px
   color white
-  background-color #255b9f
+  background-color $accentColor
+
+  @media (prefers-color-scheme: dark)
+    background-color $accentDarkColor
+    color $textColor
 </style>

@@ -9,7 +9,16 @@ module.exports = {
     ['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'manifest', href: '/site.webmanifest' }],
   ],
+  theme: 'default-prefers-color-scheme',
   themeConfig: {
+    // defaultTheme: 'light',
+    repo: 'spencerwooo/dowww',
+    docsDir: 'docs/',
+    versions: {
+      latest: versioning.versions.latest,
+      selected: versioning.versions.latest,
+      all: versioning.versions.all
+    },
     nav: [{
       text: '文档', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
     }, {
@@ -27,7 +36,7 @@ module.exports = {
       apiKey: '6534c856e645507d6cf52052fdfd5611',
       indexName: 'dowww',
     },
-    searchPlaceholder: '搜索...',
+    searchPlaceholder: 'Search...',
     sidebar: versioning.sidebars,
     lastUpdated: 'Last Updated',
     logo: '/hero.png',
