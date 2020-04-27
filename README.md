@@ -1,5 +1,5 @@
 <!-- <h1><img src="docs/.vuepress/public/hero.png" alt="icon" width="45px" height="auto" align="left"/>Dev on Windows with WSL</h1> -->
-<img src="docs/.vuepress/public/banner.png" alt="Dev on Windows with WSL" width="540px" height="auto" />
+[![Dev on Windows with WSL](docs/.vuepress/public/banner.png)](https://dowww.spencerwoo.com)
 
 <h6>在 Windows 上面用 WSL 优雅开发</h6>
 
