@@ -2,44 +2,44 @@ module.exports = [
   {
     title: 'Preparations 准备工作',
     children: [
-      '1-Preparations/1-0-Intro',
-      '1-Preparations/1-1-Installation'
+      '1-preparations/1-0-intro',
+      '1-preparations/1-1-installation'
     ]
   },
   {
     title: 'CLI 命令行环境',
     children: [
-      '2-CLI/2-0-Intro',
-      '2-CLI/2-1-Terminal',
-      '2-CLI/2-2-Shell',
-      '2-CLI/2-3-Others'
+      '2-cli/2-0-intro',
+      '2-cli/2-1-terminal',
+      '2-cli/2-2-shell',
+      '2-cli/2-3-others'
     ]
   },
   {
     title: 'Visual Studio Code',
     children: [
-      '3-VSCode/3-0-Intro',
-      '3-VSCode/3-1-Remote-Dev',
-      '3-VSCode/3-2-Code-Runner',
-      '3-VSCode/3-3-Python',
-      '3-VSCode/3-4-C_Cpp',
-      '3-VSCode/3-5-LaTeX',
-      '3-VSCode/3-6-NodeJS',
-      '3-VSCode/3-7-DotNetCore'
+      '3-vscode/3-0-intro',
+      '3-vscode/3-1-remote-dev',
+      '3-vscode/3-2-code-runner',
+      '3-vscode/3-3-python',
+      '3-vscode/3-4-c_cpp',
+      '3-vscode/3-5-latex',
+      '3-vscode/3-6-nodejs',
+      '3-vscode/3-7-dotnetcore'
     ]
   },
   {
     title: 'Advanced 高阶操作',
     children: [
-      '4-Advanced/4-0-Intro',
-      '4-Advanced/4-1-GUI',
-      '4-Advanced/4-2-LxRunOffline'
+      '4-advanced/4-0-intro',
+      '4-advanced/4-1-gui',
+      '4-advanced/4-2-lxrunoffline'
     ]
   },
   {
     title: 'Experience 体验与参考',
     children: [
-      '5-Experience/5-0-Intro'
+      '5-experience/5-0-intro'
     ]
   }
 ]
