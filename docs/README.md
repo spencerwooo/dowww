@@ -3,7 +3,7 @@ home: true
 heroText: Dev on Windows with WSL
 heroImage: /hero.png
 actionText: 入坑指南 →
-actionLink: /1.1/1-Preparations/1-0-Intro
+actionLink: /1.1/1-preparations/1-0-intro
 features:
 - title: 🍳
   details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。

@@ -20,7 +20,7 @@ module.exports = {
       all: versioning.versions.all
     },
     nav: [{
-      text: '文档', items: versioning.linksFor('1-Preparations/1-0-Intro.md')
+      text: '文档', items: versioning.linksFor('1-preparations/1-0-intro.md')
     }, {
       text: '联系', items: [
         { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' },
