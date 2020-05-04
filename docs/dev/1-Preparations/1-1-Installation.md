@@ -30,7 +30,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 ## WSL
 
 ::: callout 🍰 Linux 发行版
-市面上基于 WSL 有很多 Linux 发行版，有广受大家欢迎的 Ubuntu、备受黑客喜爱的 Kali Linux、以及极客们都说好的 Arch Linux。大家可以根据自己的选择进行安装。如果没有特殊的需求，那么直接[安装 Ubuntu 最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)准没错。如果你想我一样，喜欢滚动更新的 Arch Linux 发行版，那么[安装 Arch WSL](https://github.com/yuk7/ArchWSL) 即可。
+市面上基于 WSL 有很多 Linux 发行版，有广受大家欢迎的 Ubuntu、备受黑客喜爱的 Kali Linux、以及极客们都说好的 Arch Linux。大家可以根据自己的选择进行安装。如果没有特殊的需求，那么直接[安装 Ubuntu 最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)准没错。如果你像我一样，喜欢滚动更新的 Arch Linux 发行版，那么[安装 Arch WSL](https://github.com/yuk7/ArchWSL) 即可。
 :::
 
 ### 官方版本 WSL
