@@ -25,7 +25,7 @@
 
 - Terminal 工具：Windows Terminal、Fluent Terminal、Hyper、Terminus……
 - Shell 环境：`bash`、`zsh`、`fish`……
-- Ubuntu 包管理工具：`apt` - Ubuntu's Advanced Packaging Tool
+- Ubuntu 中的包管理工具：`apt` - Debian's Advanced Packaging Tool
 - 版本控制工具：Git
 - 远程登陆工具：SSH - Secure Shell、Mosh - the mobile shell
 - Windows 和 WSL 文件互访的方法

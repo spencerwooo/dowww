@@ -43,7 +43,7 @@ sudo apt update && sudo apt upgrade
 
 ## APT
 
-APT - Ubuntu's Advanced Packaging Tool 是 Ubuntu 默认包管理工具。使用 Ubuntu 等 Linux 发行版时，我们往往都会使用 APT 等相似的包管理工具来安装、更新我们的软件包。命令 `apt` 和 `apt-get` 与 APT 不同，它们是用来和 APT 进行交互的高层命令执行工具。请大家清楚二者的区别。
+APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是由 Debian 社区开发的。使用 Ubuntu 等基于 Debian 的 Linux 发行版时，我们往往都会使用 APT 等相似的包管理工具来安装、更新我们的软件包。命令 `apt` 和 `apt-get` 与 APT 不同，它们是用来和 APT 进行交互的高层命令执行工具。请大家清楚二者的区别。
 
 其中，在 Ubuntu 16.04 中 Ubuntu 引入了 `apt` 命令来代替曾经老用户熟悉的 `apt-get`，提供了更用户友好的操作和命令行界面，对软件包 cache 缓存的处理也更为优雅。这里我推荐大家使用 `apt` 命令来与 APT 包管理工具交互，安装、管理和更新软件和依赖，接下来的文档中，我也都会使用 `apt` 命令进行介绍。
 
@@ -117,7 +117,7 @@ chsh -s $(which zsh)
 
 ### 安装 fish
 
-同样使用 Ubuntu 包管理工具安装 `fish`：
+同样使用 Ubuntu 中的包管理工具安装 `fish`：
 
 ```bash
 sudo apt install fish
