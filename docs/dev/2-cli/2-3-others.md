@@ -66,7 +66,7 @@ alias myip="curl cip.cc"
 
 Git 是目前版本控制工具的典范、代表，如果你使用 GitHub，那么我相信你已经非常了解 Git 及其使用原理和方法了。
 
-使用 Ubuntu 的 apt 安装 Git：
+使用 Ubuntu 中的 apt 安装 Git：
 
 ```bash
 sudo apt install git
