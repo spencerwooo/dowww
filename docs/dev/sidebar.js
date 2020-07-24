@@ -33,7 +33,8 @@ module.exports = [
     children: [
       '4-advanced/4-0-intro',
       '4-advanced/4-1-gui',
-      '4-advanced/4-2-lxrunoffline'
+      '4-advanced/4-2-lxrunoffline',
+      '4-advanced/4-3-wslconfig'
     ]
   },
   {
