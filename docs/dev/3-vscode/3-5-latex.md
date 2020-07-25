@@ -1,4 +1,4 @@
-# LaTeX <a href="https://patrickwu.space"><BlueBadge text="@patrick330602" vertical="middle"/></a>
+# LaTeX <a href="https://patrickwu.space"><Badge text="@patrick330602" vertical="middle"/></a>
 
 用 WSL 下的 TeXLive 和 Visual Studio Code 的 LaTeX Workshop 可以完全配置好一个可用的 Windows LaTeX 环境，摆脱 Windows 下蛋疼的 TexLive 安装包。
 

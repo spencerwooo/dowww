@@ -4,7 +4,7 @@
 本文中，除了默认 WSL 终端，我们还将介绍由微软官方开发的 Windows Terminal、Windows 上面第一个 UWP 终端 Fluent Terminal、跨平台的终端 Hyper 和 Terminus 的配置。在这里面，**我更加推荐 Windows Terminal**，因为这一终端是由 WSL 项目组自己开发的原生 Windows 终端，拥有最好的性能、最美的外观和最强的定制性。
 :::
 
-## Windows Terminal <BlueBadge text="best"/>
+## Windows Terminal <Badge text="best"/>
 
 在 Microsoft Build 2019 大会上，微软发布了新一代 Windows 终端工具：Windows Terminal。其令人惊艳的 Fluent UI 设计、亚克力半透明材质的背景和对 UTF-8、Emoji 等特殊字符的支持让大家赞叹不已。^[[Introducing Windows Terminal - Windows Command Line](https://devblogs.microsoft.com/commandline/introducing-windows-terminal/)]目前，Windows Terminal 已经可以直接从 Microsoft Store 中直接下载。
 
@@ -40,7 +40,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
     "defaultProfile": "{d317d852-8b6a-4936-b241-58c11be8aeb2}",
     // …
   },
-  "profiles": 
+  "profiles":
   [
     {
       "guid": "{d317d852-8b6a-4936-b241-58c11be8aeb2}",
@@ -56,7 +56,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 ```json {6}
 {
   // …
-  "schemes" : 
+  "schemes" :
   [
     {
       "name" : "Dracula",

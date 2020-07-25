@@ -1,7 +1,7 @@
 # 安装
 
 ::: callout 🍫 本文内容
-在安装 WSL 之前，有一些对 Windows 的配置工作必不可少，也有一些常识性的问题需要知道。本章主要介绍 Windows 方面的准备工作、WSL 的安装方法以及注意事项。 
+在安装 WSL 之前，有一些对 Windows 的配置工作必不可少，也有一些常识性的问题需要知道。本章主要介绍 Windows 方面的准备工作、WSL 的安装方法以及注意事项。
 :::
 
 ## Windows 10
@@ -44,9 +44,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - SUSE Linux Enterprise Server: [12](https://www.microsoft.com/store/productId/9P32MWBH6CNS), [15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
 - [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
 - [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
-- [Pengwin](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P) - [GitHub | WhitewaterFoundry/Pengwin](https://github.com/WhitewaterFoundry/Pengwin)<BlueBadge text="付费" vertical="top"/>
+- [Pengwin](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P) - [GitHub | WhitewaterFoundry/Pengwin](https://github.com/WhitewaterFoundry/Pengwin)<Badge text="付费" vertical="top"/>
 - [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395) - [GitHub | agowa338/WSL-DistroLauncher-Alpine](https://github.com/agowa338/WSL-DistroLauncher-Alpine)
-- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc) - [GitHub | WhitewaterFoundry/Fedora-Remix-for-WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL) <BlueBadge text="付费" vertical="top"/>
+- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc) - [GitHub | WhitewaterFoundry/Fedora-Remix-for-WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL) <Badge text="付费" vertical="top"/>
 
 ### 社区支持的 WSL
 

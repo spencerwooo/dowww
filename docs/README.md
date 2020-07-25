@@ -3,7 +3,7 @@ home: true
 heroText: Dev on Windows with WSL
 heroImage: /hero.png
 actionText: 入坑指南 →
-actionLink: /1.1/1-preparations/1-0-intro
+actionLink: /1.2/1-preparations/1-0-intro
 features:
 - title: 🍳
   details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。
@@ -68,8 +68,6 @@ This project exists thanks to all the people who contribute.
 [![爱发电](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-@SpencerWoo-946ce6?labelColor=24292e&style=for-the-badge)](https://afdian.net/@spencerwoo)
 
 ## License 许可
-
-[![知识共享许可协议](https://camo.githubusercontent.com/d1b3cb5c3bc0b0de6fb5445b1657c03464125482/68747470733a2f2f692e6372656174697665636f6d6d6f6e732e6f72672f6c2f62792d73612f342e302f38307831352e706e67)](http://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
 

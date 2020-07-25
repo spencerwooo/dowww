@@ -1,4 +1,4 @@
-# 概要 <BlueBadge text="New" vertical="middle"/>
+# 概要 <Badge text="New" vertical="middle"/>
 
 ![](https://i.loli.net/2020/01/07/NnuHrlqRUDfdG3b.png)
 

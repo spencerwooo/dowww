@@ -4,7 +4,7 @@
 本文将对 WSL 上常用命令、常见工具、常见使用场景等内容进行介绍和说明。接下来的内容为了方便介绍，我将以 zsh 为 WSL 的默认 Shell 进行讲述。
 :::
 
-## WSL 2 中的网络访问问题 <BlueBadge text="WSL 2"/>
+## WSL 2 中的网络访问问题 <Badge text="WSL 2"/>
 
 :::danger 🚨 使用 WSL 2 时需注意的 IP 地址问题
 由于 WSL 2 实际上是一个 Linux 内核运行在 Hyper-V 虚拟机中，因此 WSL 2 目前并不能和 Windows 共享 localhost（也就是下文中涉及到的 `127.0.0.1`）。**以下内容仅适用于 WSL 2 环境。**

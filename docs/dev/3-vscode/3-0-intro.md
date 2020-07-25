@@ -1,4 +1,4 @@
-# Visual Studio Code <BlueBadge text="New" vertical="middle"/>
+# Visual Studio Code <Badge text="New" vertical="middle"/>
 
 ![](https://i.loli.net/2020/01/07/Grfl75iqXISehYx.png)
 

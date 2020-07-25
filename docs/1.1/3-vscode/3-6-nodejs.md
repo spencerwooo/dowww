@@ -1,4 +1,4 @@
-# Node.js <a href="https://github.com/suyanhanx"><BlueBadge text="@suyanhanx" vertical="middle"/></a>
+# Node.js <a href="https://github.com/suyanhanx"><Badge text="@suyanhanx" vertical="middle"/></a>
 
 首先，明确几个概念：
 
@@ -106,7 +106,7 @@ yarn set registry https://registry.npm.taobao.org
 $LANG=en.us-utf8
 ```
 
-## 配置 ESLint <a href="https://github.com/spencerwooo"><BlueBadge text="Updated by @SpencerWoo" vertical="middle"/></a>
+## 配置 ESLint <a href="https://github.com/spencerwooo"><Badge text="Updated by @SpencerWoo" vertical="middle"/></a>
 
 > A fully pluggable tool for identifying and reporting on patterns in JavaScript.
 

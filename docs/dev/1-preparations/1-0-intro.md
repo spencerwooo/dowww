@@ -1,4 +1,4 @@
-# 序论 <BlueBadge text="New" vertical="middle"/>
+# 序论 <Badge text="New" vertical="middle"/>
 
 ![](https://i.loli.net/2020/01/07/J8GYW6wel7XjVvu.png)
 

@@ -1,4 +1,4 @@
-# 后记 <BlueBadge text="New" vertical="middle"/>
+# 后记 <Badge text="New" vertical="middle"/>
 
 ![](https://i.loli.net/2020/01/07/J6hx2UTlX3yDbgS.png)
 
