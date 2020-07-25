@@ -1,5 +1,23 @@
 # Changelog 更新日志
 
+## [1.2] - 2020-7-25
+
+将从 1.1 版本开始陆续新增的 PR 和改动进行了整合，达到 1.2 版本。
+
+### Features
+
+- 新增了关于 WSL 2 配置文件 `.wslconfig` 的说明：[配置 WSL 2 全局选项](https://dowww.spencerwoo.com/1.2/4-advanced/4-3-wslconfig.html)
+- 新增了关于重启 WSL 的提示和方法（为了让 WSL 重新挂载 `/mnt` 下的盘符）：[🔁 重启 WSL 环境](https://dowww.spencerwoo.com/1.2/2-cli/2-2-shell.html#%E8%A7%A3%E5%86%B3-ls-%E5%91%BD%E4%BB%A4%E8%83%8C%E6%99%AF%E8%89%B2%E9%97%AE%E9%A2%98)
+- 新增了全新的 README 头图 Banner
+- 重新设计了全新的 Dev on Win with WSL 图标
+
+### Bug fixes
+
+- 修改了 APT 包管理工具的称谓（`Ubuntu` -> `Debian`）
+- 修改了有关 Windows Hyper-V 虚拟机的具体称谓（`已安装的虚拟机平台` -> `虚拟机平台`）
+- 修复了在 Netlify 平台部署时路径大小写不匹配导致无法通过侧边栏导航的问题，错误复盘：[Netlify or VuePress：大型悬疑推理篇之——报错到底是谁的锅？](https://blog.spencerwoo.com/2020/05/debugging-netlify-static-site/)
+- 修改若干错别字（[#59](https://github.com/spencerwooo/dowww/pull/59)）
+
 ## [1.1] - 2020-4-15
 
 将从 1.0 版本开始陆续新增的 PR 和改动进行了整合，达到 1.1 版本。

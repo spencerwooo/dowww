@@ -20,18 +20,26 @@ module.exports = {
       all: versioning.versions.all
     },
     nav: [{
-      text: '文档', items: versioning.linksFor('1-preparations/1-0-intro.md')
+      text: '文档版本', items: versioning.linksFor('1-preparations/1-0-intro.md')
+    }, {
+      text: '更新信息', link: 'https://github.com/spencerwooo/dowww/blob/master/CHANGELOG.md'
     }, {
       text: '联系', items: [
-        { text: 'GitHub', link: 'https://github.com/spencerwooo/dowww' },
-        { text: '反馈提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
-        { text: '参与贡献', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md' }
+        {
+          text: 'GitHub', items: [
+            { text: '项目地址', link: 'https://github.com/spencerwooo/dowww' },
+            { text: '反馈提问', link: 'https://github.com/spencerwooo/dowww/issues/new/choose' },
+            { text: '参与贡献', link: 'https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md' },
+          ]
+        },
+        {
+          text: '关于作者', items: [
+            { text: '个人主页', link: 'https://spencerwoo.com' },
+            { text: 'Telegram 频道', link: 'https://t.me/realSpencerWoo' }
+          ]
+        }
       ]
-    }, {
-      text: '加入讨论', items: [
-        { text: 'Telegram Channel', link: 'https://t.me/realSpencerWoo' }
-      ]
-    }, { text: '作者', link: 'https://spencerwoo.com' }],
+    }],
     algolia: {
       apiKey: '6534c856e645507d6cf52052fdfd5611',
       indexName: 'dowww',
