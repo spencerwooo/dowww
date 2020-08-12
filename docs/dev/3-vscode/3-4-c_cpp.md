@@ -167,11 +167,16 @@ printf("time = %ld ms", _end_time - _begin_time);
 #endif
 ```
 
-同时要在头文件定义时加入：
+同时要修改 `tasks.json` 中 `args` 字段，增加参数 `-DSUBMIT` 让编译器定义 `SUBMIT` 宏，未定义该宏的环境中上面的代码段则不会被编译：
 
-```c
-//本地运行这行留下，提交代码直接注释掉
-#define SUBMIT
+```json
+"args": [
+  "-DSUBMIT",
+  "-g",
+  "${file}",
+  "-o",
+  "${fileDirname}/${fileBasenameNoExtension}"
+],
 ```
 
 VS Code 支持用户自定义代码片段，访问这里直接获取为 VS Code 生成的代码片段设置 > [Snippet Generator](https://url.cn/5wqOpNm)：
