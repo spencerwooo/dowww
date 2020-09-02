@@ -3,7 +3,7 @@
 
 <h1>Dev on Windows with WSL</h1>
 
-<h3><em>在 Windows 上面用 WSL 优雅开发</em></h3>
+<h4>在 Windows 上面用 WSL 优雅开发</h4>
 
 [![GitHub contributors](https://img.shields.io/github/contributors/spencerwooo/dowww?color=2db74d&logo=github&labelColor=212c42)](#contributing-贡献)
 [![Open Collective backers and sponsors](https://img.shields.io/opencollective/all/dowww?logo=open-collective&color=2db74d&logoColor=ffffff&labelColor=212c42)](#sponsoring-赞助)
