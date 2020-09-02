@@ -1,21 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Miriam+Libre:400,700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 // GENERAL
 body
-  font-family $secondaryFont !important
+  font-family $secondaryFont
 
 h1, h2, h3, h4, h5, h6
-  font-family $primaryFont, sans-serif
-
-h1, h2, h3
-  font-weight 700 !important
-
-@media (prefers-color-scheme: dark)
-  .home .hero .action-button
-    color $textColor !important
-
-    &:hover
-      background-color lighten($accentDarkColor, 10%) !important
+  font-family $primaryFont !important
+  font-weight bold
 
 .callout
   margin 1rem 0
@@ -23,117 +14,20 @@ h1, h2, h3
   border-radius 0.4rem
   background-color #255b9f09
 
-  @media (prefers-color-scheme: dark)
-    background-color lighten($bgDarkColor, 5%) !important
-
   .title
     font-weight bold
 
-.custom-block
-  &.right
-    color transparentify($textColor, 0.5)
-    font-size 0.9rem
-    text-align right
+.hero
+  img
+    width 160px
+    height auto
 
-pre
-  white-space pre-wrap !important
-  white-space -moz-pre-wrap !important
-  white-space -pre-wrap !important
-  white-space -o-pre-wrap !important
+  h1
+    border none
+    padding-bottom 0
 
-pre.tree
-  border-left-width 0.5rem
-  border-left-style solid
-  border-color $accentColor !important
-  border-radius 0
-  background-color $codeBgLightColor !important
+#search-form
+  line-height inherit
 
-  @media (prefers-color-scheme: dark)
-    border-color $accentDarkColor !important
-    background-color $codeBgColor !important
-
-  & > code
-    font-size 14px !important
-
-    & > p
-      margin -5px 0 -20px 0
-
-    code
-      background-color $accentColor !important
-      color #ffffff
-
-      @media (prefers-color-scheme: dark)
-        color $textColor !important
-        background-color $accentDarkColor !important
-
-      padding 3px 5px
-      border-radius 3px
-
-    em
-      color #808080
-      font-weight light
-
-.hero img
-  width 160px
-  height auto
-
-// NAVBAR
-.navbar
-  border-bottom none !important
-  box-shadow 0 2px 4px 0 rgba(0, 0, 0, 0.05) !important
-
-.navbar .site-name
-  font-weight 400 !important
-  font-family $primaryFont
-
-@media (max-width: 719px)
-  .navbar .home-link .can-hide
-    display inline-block !important
-
-// SIDEBAR
-#app .sidebar
-  width 17rem !important
-  border-right none !important
-  background-color darken($backgroundColor, 60%) !important
-
-  @media (prefers-color-scheme: dark)
-    background-color lighten($bgDarkColor, 5%) !important
-
-.sidebar-group:not(.collapsable) .sidebar-heading, .sidebar-heading
-  text-transform uppercase !important
-  letter-spacing 0.13rem !important
-  font-size 12px !important
-  font-weight 800 !important
-  color #C1CDDB !important
-
-a.sidebar-link
-  color $sidebarTextColor !important
-  border-left 0.125rem solid transparent !important
-
-a.sidebar-link:hover
-  color $sidebarTextColor !important
-  opacity 0.5 !important
-  border-left-color rgba(255, 255, 255, 0.7) !important
-
-a.sidebar-link:active
-  color $sidebarTextColor !important
-  opacity 0.7 !important
-  border-left-color $accentColor !important
-
-  @media (prefers-color-scheme: dark)
-    border-left-color $accentDarkColor !important
-
-a.sidebar-link.active
-  color #fff !important
-  border-left-color $accentColor !important
-
-  @media (prefers-color-scheme: dark)
-    border-left-color $accentDarkColor !important
-
-@media (max-width: 959px)
-  .sidebar .nav-links
-    border-bottom 2px solid rgba(255, 255, 255, 0.1)
-
-@media (max-width: 719px)
-  .nav-links a.nav-link, .nav-links a.repo-link, .nav-links .dropdown-title
-    color $sidebarTextColor
+.sidebar-links a.sidebar-link:hover
+  background-color #e6ecf1 !important
