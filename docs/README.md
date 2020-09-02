@@ -3,14 +3,14 @@ home: true
 heroText: Dev on Windows with WSL
 heroImage: /hero.png
 actionText: 入坑指南 →
-actionLink: /1.2/1-preparations/1-0-intro
+actionLink: /1-preparations/1-0-intro
 features:
-- title: 🍳
-  details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。
-- title: 💡
-  details: 原汁原味的 Unix 开发环境，又有着 Windows 强大的生产力。
-- title: 🎉
-  details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
+  - title: 🍳
+    details: 在 Windows 下，解决那令人烦恼的非 Unix 环境。
+  - title: 💡
+    details: 原汁原味的 Unix 开发环境，又有着 Windows 强大的生产力。
+  - title: 🎉
+    details: 与 Visual Studio Code 联合，打造最为健壮的 Windows 开发环境。
 footer: 2018 - 2020 ©Spencer Woo. Released under the CC BY-NC-SA 4.0 International License.
 ---
 
@@ -26,7 +26,7 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 - 一行命令管理所有软件包的 APT 包管理工具（Debian's Advanced Packaging Tool）
 - 在 Visual Studio Code 中直接编写、开发、调试你的项目
 
-如果你对这些内容感兴趣，那么 [**直接进入文档**](https://dowww.spencerwoo.com/)，放飞自我，尽情折腾。\\(￣︶￣*\\))
+如果你对这些内容感兴趣，那么 [**直接进入文档**](https://dowww.spencerwoo.com/)，放飞自我，尽情折腾。\\(￣︶￣\*\\))
 
 ## Changelog 更新日志
 
@@ -52,10 +52,10 @@ This project exists thanks to all the people who contribute.
 
 谢谢金主爸爸们，我们通过 Open Collective 平台接受赞助。
 
-|                                                             Backers 支持者                                                              |                                                                            Sponsors 赞助商                                                                            |
-| :-------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                              Backers 支持者                                                              |                                                                            Sponsors 赞助商                                                                             |
+| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Support this project by becoming a backer. Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)] | Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🌏 [[Become a sponsor](https://opencollective.com/dowww#sponsor)] |
-|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>     |          <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
+|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>      |           <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
 
 对于国内用户，我们支持直接通过微信和支付宝进行小额赞助！
 
@@ -69,8 +69,8 @@ This project exists thanks to all the people who contribute.
 
 ## License 许可
 
-本作品采用 [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/) 进行许可。
+本作品采用  [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/)  进行许可。
 
-本著作係採用 [創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款](https://creativecommons.org/licenses/by-sa/4.0/) 授權.
+本著作係採用  [創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款](https://creativecommons.org/licenses/by-sa/4.0/)  授權.
 
 This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
