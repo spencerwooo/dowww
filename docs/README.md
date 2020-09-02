@@ -28,13 +28,13 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 如果你对这些内容感兴趣，那么 [**直接进入文档**](https://dowww.spencerwoo.com/)，放飞自我，尽情折腾。\\(￣︶￣\*\\))
 
-## Changelog 更新日志
+## 更新日志
 
-🌟 Star and watch，时刻掌握最新教程。更新日志在 [CHANGELOG.md](https://github.com/spencerwooo/dowww/blob/master/CHANGELOG.md) 中维护，请直接参考链接内容进行查看。
+🌟 Star and watch，时刻掌握最新教程。更新日志在 [CHANGELOG](https://dowww.spencerwoo.com/changelog/) 中维护，请直接参考链接内容进行查看。
 
-## Contributing 贡献
+## 贡献
 
-### Contributors 贡献者
+### 贡献者
 
 感谢参与这个项目的所有贡献者。
 
@@ -42,13 +42,13 @@ This project exists thanks to all the people who contribute.
 
 <a href="https://github.com/spencerwooo/dowww/graphs/contributors"><img src="https://opencollective.com/dowww/contributors.svg?button=false" /></a>
 
-### How to contribute 贡献规范
+### 贡献规范
 
 目前来讲，Dev on Windows with WSL 仍然有很多地方需要完善，当然 WSL 本身也有很多小 bug，希望有经验的同学前来帮我共同完善本项目，鞠躬。
 
-在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范 > [CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
+在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范 > [贡献指南](https://dowww.spencerwoo.com/contributing/)
 
-## Sponsoring 赞助
+## 赞助
 
 谢谢金主爸爸们，我们通过 Open Collective 平台接受赞助。
 
@@ -67,7 +67,7 @@ This project exists thanks to all the people who contribute.
 
 [![爱发电](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-@SpencerWoo-946ce6?labelColor=24292e&style=for-the-badge)](https://afdian.net/@spencerwoo)
 
-## License 许可
+## 许可
 
 本作品采用  [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/)  进行许可。
 
