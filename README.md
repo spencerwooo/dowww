@@ -15,11 +15,14 @@
 <h2>目录</h2>
 
 - [前言](#前言)
-- [更新日志](#更新日志)
 - [贡献](#贡献)
   - [贡献者](#贡献者)
   - [贡献规范](#贡献规范)
 - [赞助](#赞助)
+  - [Star](#star)
+  - [微信、支付宝](#微信支付宝)
+  - [爱发电](#爱发电)
+  - [Open Collective](#open-collective)
 - [许可](#许可)
 
 ## 前言
@@ -33,10 +36,6 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 - 在 Visual Studio Code 中直接编写、开发、调试你的项目
 
 如果你对这些内容感兴趣，那么请[直接进入文档](https://dowww.spencerwoo.com/1-preparations/1-0-intro)，放飞自我，尽情折腾。ヾ(•ω•`)o
-
-## 更新日志
-
-更新日志在 [CHANGELOG](https://dowww.spencerwoo.com/changelog/) 中维护，请直接参考链接内容进行查看。
 
 ## 贡献
 
@@ -52,22 +51,32 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ## 赞助
 
-谢谢大家的喜欢，我们通过 Open Collective 平台接受赞助。
+### Star
 
-|                                                              Backers 支持者                                                              |                                                                            Sponsors 赞助商                                                                             |
-| :--------------------------------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| Support this project by becoming a backer. Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)] | Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🌏 [[Become a sponsor](https://opencollective.com/dowww#sponsor)] |
-|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>      |           <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
+如果你觉得本文档干货满满，对你使用 WSL 有着巨大的帮助，请帮我[在 GitHub 上](https://github.com/spencerwooo/dowww)为此仓库点个 Star！感谢 (｡･∀･)ﾉﾞ
 
-对于国内用户，我们支持直接通过微信和支付宝进行小额赞助！
+### 微信、支付宝
+
+对于中国的同学，欢迎直接通过微信和支付宝对我本人进行投喂！
 
 |                                         微信支付                                         |                                          支付宝支付                                          |
 | :--------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------: |
 | <img src="https://i.loli.net/2018/03/13/5aa7ae214b63f.jpg" alt="微信支付" width="200px"> | <img src="https://i.loli.net/2020/03/26/f2GT6StAchgqea4.png" alt="支付宝支付" width="200px"> |
 
-您也可以利用「爱发电」来对我进行支持！
+### 爱发电
+
+各位也可以利用「爱发电」来对我进行支持！
 
 [![爱发电](https://img.shields.io/badge/%E7%88%B1%E5%8F%91%E7%94%B5-@SpencerWoo-946ce6?labelColor=24292e&style=for-the-badge)](https://afdian.net/@spencerwoo)
+
+### Open Collective
+
+Thank you for your interest! Dev on Windows with WSL is a joint effort. We currently support funding via Open Collective.
+
+|                                                                 Backers                                                                 |                                                                               Sponsors                                                                                |
+| :-------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| Support this project by becoming a backer. Thank you to all our backers! 🙏 [[Become a backer](https://opencollective.com/dowww#backer)] | Support this project by becoming a sponsor. Your logo will show up here with a link to your website. 🌏 [[Become a sponsor](https://opencollective.com/dowww#sponsor)] |
+|     <a href="https://opencollective.com/dowww#backers" target="_blank"><img src="https://opencollective.com/dowww/backers.svg"></a>     |          <a href="https://opencollective.com/dowww/sponsor/0/website" target="_blank"><img src="https://opencollective.com/dowww/sponsor/0/avatar.svg"></a>           |
 
 ## 许可
 
