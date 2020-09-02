@@ -16,7 +16,7 @@ WSL 为我们在 Windows 系统中提供了一个近乎原生的 Linux 环境，
 
 一年前，Dev on Windows with WSL 仅仅是我一个个人的项目，而且仅仅是一篇文章。到今天，我和几位 Contributors 已经撰写了超过 5 个部分的 18 章内容。现在，希望有经验的同学前来与我共同完善本项目，不论是增加一门语言在 WSL 下的配置方法，还是增加一些高级的 WSL 使用操作，任何内容都是欢迎的。
 
-在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[CONTRIBUTING.md](https://github.com/spencerwooo/dowww/blob/master/.github/CONTRIBUTING.md)
+在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[CONTRIBUTING](/contributing/)。
 
 ## 参考资料
 
