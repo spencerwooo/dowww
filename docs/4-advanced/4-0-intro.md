@@ -1,6 +1,6 @@
 # 概要 <Badge text="New" vertical="middle"/>
 
-![](https://i.loli.net/2020/01/07/5mn29DSapsRxcWN.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221200.png)
 
 ::: callout 🍄 本章内容
 本章将对 WSL 中的一些附加功能进行介绍。包括：为没有窗口界面的 WSL 安装 GUI 程序，以及 LxRunOffline 的功能和使用。

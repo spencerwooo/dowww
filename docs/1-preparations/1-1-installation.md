@@ -59,7 +59,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 ## WSL 的安装
 
-![](https://i.loli.net/2020/01/02/lRCjZ5uJ7KzkVY6.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220319.png)
 
 在 [开启「适用于 Linux 的 Windows 子系统」的附加功能](#开启「适用于-linux-的-windows-子系统」的附加功能) 之后，我们以 Ubuntu 最新版为例，在微软商店中点击安装即可。
 
@@ -67,7 +67,7 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 
 下载成功后，我们需要对刚刚这一发行版进行初始化。在开始菜单中，没有意外的话，你应该看到刚刚下载完成的 Ubuntu 快捷方式，我们点击打开 Ubuntu，等待初始化完成即可。（初始化过程会将下载好的 Linux 发行版的文件解压缩，并存储在电脑上供你使用，往往会需要 1 分钟甚至更多。）
 
-![](https://i.loli.net/2020/01/02/q2e8AzdJwC4pO67.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220319-1.png)
 
 初始化完成之后，Linux 会提示你输入一个 UNIX 用户名并为之设置一个 UNIX 密码。这一用户名和密码与你的 Windows 登录账号密码完全无关，你可以任意设置。完成之后，你的 Ubuntu 发行版就安装成功了。
 
@@ -119,7 +119,7 @@ wsl --set-default-version 2
 wsl --list --verbose
 ```
 
-![](https://i.loli.net/2020/01/02/6lr8QJL2f1xInRi.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220319-2.png)
 
 到这里，你应该已经成功安装完成了 WSL 的某个发行版，并成功设置了 UNIX 用户名和密码，登入 WSL 系统。接下来，我将以 Ubuntu 为例子，从终端工具、Visual Studio Code 开发环境以及更高阶的操作功能这三个角度，具体介绍如何对 WSL 进行配置，使之更加「开发环境友好」。
 

@@ -8,7 +8,7 @@ WSL 是一个完全的「终端」命令行环境，默认情况下是没有窗�
 
 - 推荐安装 [VcXsrv Windows X Server](https://sourceforge.net/projects/vcxsrv/)，并以这样的配置打开：
 
-  ![](https://i.loli.net/2018/10/01/5bb1c9d292ce0.jpg)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221232.jpg)
 
 - 在 WSL 中安装必要组件：
 
@@ -32,7 +32,7 @@ WSL 是一个完全的「终端」命令行环境，默认情况下是没有窗�
   sudo apt install x11-apps -y && xeyes
   ```
 
-  ![](https://i.loli.net/2018/10/01/5bb1cc9565f02.png)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221232-1.png)
 
 如果出现了这样的小眼睛盯着你的鼠标看，那么说明我们的 XServer 安装成功了。
 
@@ -60,7 +60,7 @@ sudo apt install code
 sudo apt install libx11-xcb1
 ```
 
-![](https://i.loli.net/2020/01/06/inUPZt7eWjxYNAX.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221232-2.png)
 
 ## 其他应用
 

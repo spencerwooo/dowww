@@ -81,7 +81,7 @@ sudo apt install zsh
 sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-![](https://i.loli.net/2020/01/04/eExvWYtpKfNmwA5.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651.png)
 
 - 将 `zsh` 作为默认的 Shell 环境（如果刚刚安装脚本没有这样做的话）：
 
@@ -95,7 +95,7 @@ chsh -s $(which zsh)
 
 #### 插件
 
-![](https://i.loli.net/2020/01/04/ji165ZrSAFhWeGQ.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-1.png)
 
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)：为 `zsh` 提供基于输入历史的自动命令提示
 - [autojump](https://github.com/wting/autojump)：快速跳转不同的目录、路径、文件夹
@@ -103,7 +103,7 @@ chsh -s $(which zsh)
 
 #### 主题模板
 
-![](https://i.loli.net/2020/01/04/gaIPd2Zkmxw9yUp.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-2.png)
 
 - [starship - The cross-shell prompt for astronauts](https://starship.rs/)
 - [powerlevel10k - A fast reimplementation of Powerlevel9k ZSH theme](https://github.com/romkatv/powerlevel10k)
@@ -130,7 +130,7 @@ chsh -s $(which fish)
 
 ### 配置
 
-![](https://i.loli.net/2020/01/04/R7uBaJeKgznVqcf.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-3.png)
 
 未经任何配置的 `fish` 即直接支持了诸多优秀的命令行交互特性。上图的例子中，我们可以看到 `fish` 开箱自带的几个功能：
 
@@ -153,7 +153,7 @@ chsh -s $(which fish)
 
 最方便、理智、没有妥协的方法：使用 Windows Terminal。🤣
 
-![](https://i.loli.net/2020/01/04/eIiLFwgWKGay1U8.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-4.png)
 
 最新的 Windows Terminal 在底层修改了字符的渲染方式，采取最新的渲染引擎，拥有最好的性能和最美的 UI，能够支持几乎全部字符的渲染（甚至包括 Emoji），我认为没有不选择直接使用 Windows Terminal 的理由。
 
@@ -193,13 +193,13 @@ Windows 终端输出错位、光标错位的根本原因在于 Windows 终端默
 
 - 首先，在「控制面板 → 区域」，选择「非 Unicode 程序语言设置」，更改为「英语」，并勾选下方「Beta：使用 Unicode UTF-8 支持全球语言」的选项
 
-![](https://i.loli.net/2019/04/08/5cab126f55e54.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-5.png)
 
 - 之后，在 PowerShell 终端中输入 `chcp 65001`，切换为 UTF-8 代码页
 
 理论上，你就可以成功将 Windows 全部终端环境切换为 UTF-8 的编码格式了。也就是说，就算是在 Fluent Terminal 中显示下面带有左右 Prompt 的 Powerlevel9k 配置，你的终端显示都是正确无误的，光标位置也是符合预期的。
 
-![](https://i.loli.net/2019/04/08/5cab1506db02b.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-6.png)
 
 但是这种方法比较玄学，因此如果你并没有成功解决问题，还请使用第一种办法。与此同时，这种方法也可能对中文环境下的一些程序造成显示乱码的问题，就我遇到的问题来说：TIM（QQ 办公简洁版客户端）的输入框显示字体从微软雅黑变成了中易宋体，另外一些个人开发者的应用程序（比如酷安 @晨钟酱 开发的多亲 AI 工具箱）完全乱码。请大家谨慎操作。
 
@@ -209,7 +209,7 @@ Windows 终端输出错位、光标错位的根本原因在于 Windows 终端默
 感谢 [@printempw](https://github.com/printempw) 提供的从根源解决这个问题的方式。由于 DrvFs 文件权限问题导致出现有问题的背景色根本原因在于这里：[DrvFs 文件权限问题](https://printempw.github.io/wsl-guide/#6-6-DrvFs-%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90%E9%97%AE%E9%A2%98)。
 :::
 
-![](https://i.loli.net/2020/01/04/YT6ISrf7Nd2eHjM.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651-7.png)
 
 可以发现，上面我们在 Linux 自己的文件系统中时，`ls` 命令的输出没什么问题，但是当我们在 WSL 中进入 Windows 文件系统中时，`ls` 命令输出则变成了白底绿色背景。简单来说，这是由于 DrvFs 文件系统的权限问题，导致 Windows 原有 NTFS 文件系统中的文件到 WSL 下权限全部变成 0777。这样在 WSL 中执行 `ls` 和 `cd` 命令之后，显示出来的结果背景色就会出现「问题」。（不过，事实上这是有意而为之的。）
 

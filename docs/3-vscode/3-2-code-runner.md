@@ -6,14 +6,14 @@ Code Runner 是一个能够一键执行编译运行的 VS Code 插件，支持�
 
 下载安装 Code Runner 插件：[Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner).
 
-![](https://i.loli.net/2020/01/06/y8UBFRqrutQJGAV.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221512.png)
 
 并在 VS Code 设置中将 Code Runner 设置为在终端中运行。
 
-![](https://i.loli.net/2020/01/06/WV5jsOMKuzgZqce.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221512-1.png)
 
 ## 使用 Code Runner 运行文件
 
-![](https://i.loli.net/2020/01/06/PyDTdzjp6KM5Aq4.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221512-2.png)
 
 点击右上角 `▶`（或快捷键 `Ctrl + Alt + N`）即可运行当前文件。Code Runner 可以非常方便的运行单文件，也可以运行多个文件的小项目。

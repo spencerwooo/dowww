@@ -82,6 +82,6 @@ curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l ~/vsdbg
 
 按 F5 进入调试：
 
-![](https://i.loli.net/2019/03/03/5c7b5f34d16e1.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221819.png)
 
 更多配置信息请阅读：[Configuring debugging](https://github.com/OmniSharp/omnisharp-vscode/wiki/Windows-Subsystem-for-Linux#configuring-debugging)

@@ -1,6 +1,6 @@
 # 概要 <Badge text="New" vertical="middle"/>
 
-![](https://i.loli.net/2020/01/07/NnuHrlqRUDfdG3b.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220447.png)
 
 ::: callout 🍳 本章内容
 欢迎来到 **Dev on Windows with WSL** 文档的第二部分 —— WSL 命令行 CLI 环境的配置。本章我们将对 WSL 中开发学习涉及到的工具的配置方法进行介绍，这其中包括：终端工具、终端环境、Shell 的配置以及其他工具的配置。
@@ -15,7 +15,7 @@
 
 也正因如此，Windows 最新的 Shell 叫 PowerShell。（控制台 Console 则是相对古老的概念，是大型机物理意义上面的独立终端，我们在这里先不探讨这个话题。）使用 macOS 和 Linux 的同学如果听说过 `bash` 和 `zsh` 的话，它们同样也是 Shell。
 
-![](https://i.loli.net/2020/01/02/CXukNvPpoziL9ZF.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220447-1.png)
 
 **推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始 - 少数派](https://sspai.com/post/52868)
 

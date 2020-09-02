@@ -22,7 +22,7 @@ ip route | grep default | awk '{print $3}'
 cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 ```
 
-![](https://i.loli.net/2020/04/15/EsxFz7StvR3dm5a.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808.png)
 
 ## 代理配置
 
@@ -153,7 +153,7 @@ sudo chmod 400 ~/.ssh/{SSH_KEY_FILENAME}.pem
 ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem {USERNAME}@{HOST_IP_OR_URL}
 ```
 
-![](https://i.loli.net/2020/01/04/YW6m7wMkHt4dR2D.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-1.png)
 
 另外，我们可以配置将 Windows 侧和 WSL 2 的 SSH 密钥共享使用。详见：[Sharing SSH keys between Windows and WSL 2 - Windows Command Line](https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/)
 
@@ -214,11 +214,11 @@ cd /home/spencer
 explorer.exe .
 ```
 
-![](https://i.loli.net/2020/01/04/s1vB2WfHgmQ7ikU.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-2.png)
 
 日后，为了方便我们直接访问 WSL 文件系统中的用户根目录，我们甚至可以直接将这一路径固定在「快速访问」中，完全没有任何问题。WSL 环境中的文件可以被 Windows 直接无障碍访问，用正常 Windows 应用程序打开，没有问题。
 
-![](https://i.loli.net/2020/01/04/K9boPU2S5CwXeuk.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-3.png)
 
 事实上，Windows 的 `explorer.exe` 命令能够将任意文件按照默认打开方式打开。也就是说，我们也可以直接在 WSL 中用 `explorer.exe` 打开图片、Markdown 文件、音频、视频等。比如，我们在 WSL 环境下进入 Linux 文件系统中的某个目录，希望用 Windows 的「照片」应用打开其中的一张 PNG 图片，那么我们可以直接：
 
@@ -226,7 +226,7 @@ explorer.exe .
 explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
 ```
 
-![](https://i.loli.net/2020/01/04/NPO3zAcMSGgKnWQ.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-4.png)
 
 ### 命令执行
 
@@ -239,7 +239,7 @@ explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
 uname -r | clip.exe
 ```
 
-![](https://i.loli.net/2020/01/04/yhBra9jMVXe3EDN.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-5.png)
 
 在 Windows 侧（PowerShell 中）执行 WSL 的命令也同样相似，我们只需要在命令之前加上 `wsl` 即可。比如：
 
@@ -251,7 +251,7 @@ wsl uname -a
 wsl cat /etc/os-release
 ```
 
-![](https://i.loli.net/2020/01/04/DZfJjm9PUhxl1AI.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-6.png)
 
 ### 优化 WSL 2 虚拟磁盘占用空间
 
@@ -259,7 +259,7 @@ WSL 2 使用 [VHDX](https://docs.microsoft.com/en-us/windows-hardware/manufactur
 
 该命令是 Hyper-V 功能的一部分，我们需要在 [Windows 功能](https://jingyan.baidu.com/article/a378c960cb5b39b328283092.html)中启用 **Hyper-V » Hyper-V 管理工具 » Windows PowerShell 的 Hyper-V 模块** 以及 **Hyper-V » Hyper-V 平台 » Hyper-V 服务**：
 
-![](https://i.loli.net/2020/02/29/tUS8d3XZHY6CJcW.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-7.png)
 
 也可以参照[开启「适用于 Linux 的 Windows 子系统」的附加功能](../1-Preparations/1-1-Installation.md#开启「适用于-linux-的-windows-子系统」的附加功能)一节，通过运行命令开启：
 

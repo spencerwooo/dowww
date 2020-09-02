@@ -129,7 +129,7 @@ eslint --init
 ./node_modules/.bin/eslint --init
 ```
 
-![](https://i.loli.net/2018/12/30/5c284ff7e19c0.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221830.png)
 
 之后，VS Code 的 ESLint 插件便可以跟我们安装的 ESLint 工具协调运行，帮助我们保证自己的 JavaScript 项目代码的干净整洁。
 

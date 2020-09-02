@@ -1,6 +1,6 @@
 # 序论 <Badge text="New" vertical="middle"/>
 
-![](https://i.loli.net/2020/01/07/J8GYW6wel7XjVvu.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220309.png)
 
 ::: callout 🍳 本章内容
 欢迎来到 **Dev on Windows with WSL —— 可能是市面上最详尽的中文 WSL 开发环境配置指南** 的文档现场，本章我们将对 WSL 本身、WSL 近期更新和 WSL 的优越特性进行简单介绍，带领你熟悉利用 WSL 在 Windows 上面开发学习的基础知识。
@@ -54,7 +54,7 @@ WSL 的 1.0 版本确实为 Windows 带来了新鲜的血液，但是 WSL 自发
 
 WSL 2 是 WSL 发展历史中的突破性进步，上述问题在 WSL 2 中得到了根本性的解决。
 
-![](https://i.loli.net/2020/01/02/wyaDZMQ3mIxWoSc.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220309-1.png)
 
 在 WSL 2 中，微软直接将一个完整的 Linux 内核放在 WSL 的架构之中[^4]，通过 Hyper-V 的技术为 WSL 构造一个轻量级、几乎不消耗额外系统开销的虚拟环境，从而让 WSL 2 实现了：
 

@@ -2,7 +2,7 @@
 
 ## 安装 VS Code 插件
 
-![](https://i.loli.net/2020/01/06/9aJgYSkujepmD4q.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221536.png)
 
 安装 Visual Studio Code [官方 Python 插件](https://marketplace.visualstudio.com/items?itemName=ms-python.python)。
 

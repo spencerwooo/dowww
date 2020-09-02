@@ -1,6 +1,6 @@
 # Visual Studio Code <Badge text="New" vertical="middle"/>
 
-![](https://i.loli.net/2020/01/07/Grfl75iqXISehYx.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221343.png)
 
 :::callout 👓 本章内容
 Visual Studio Code 是一款介乎于 Text Editor（文本编辑器）和 IDE（集成开发环境）之间的一款强大的代码编辑器。（后文以 VS Code 称呼。）借助于 VS Code 和 WSL 环境，我们可以在 Windows 环境下配置一个 Linux 风格的、用 Linux 工具的、符合 Linux 规范的开发环境。本章将对 VS Code 的安装以及让 VS Code 在 WSL 环境下运行进行介绍。
@@ -35,7 +35,7 @@ code .
 
 ## 功能简介
 
-![](https://i.loli.net/2020/01/06/avGVL54ceIBFhxR.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221343-1.png)
 
 VS Code 的界面清晰易懂，主界面由：
 
