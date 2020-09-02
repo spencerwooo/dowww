@@ -115,6 +115,7 @@ module.exports = {
           '4-advanced/4-1-gui',
           '4-advanced/4-2-lxrunoffline',
           '4-advanced/4-3-wslconfig',
+          '4-advanced/4-4-usb'
         ],
       },
       {
