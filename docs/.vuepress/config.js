@@ -40,6 +40,10 @@ module.exports = {
         link: '/1-preparations/1-0-intro',
       },
       {
+        text: '捐赠',
+        link: '/5-others/5-1-donating',
+      },
+      {
         text: '贡献指南',
         link: '/contributing/',
       },
@@ -47,6 +51,7 @@ module.exports = {
         text: '更新日志',
         link: '/changelog/',
       },
+
       {
         text: '联系',
         items: [
@@ -115,13 +120,13 @@ module.exports = {
           '4-advanced/4-1-gui',
           '4-advanced/4-2-lxrunoffline',
           '4-advanced/4-3-wslconfig',
-          '4-advanced/4-4-usb'
+          '4-advanced/4-4-usb',
         ],
       },
       {
         title: 'Experience 体验与参考',
         collapsable: false,
-        children: ['5-experience/5-0-intro'],
+        children: ['5-others/5-0-intro', '5-others/5-1-donating'],
       },
     ],
     lastUpdated: 'Last updated',

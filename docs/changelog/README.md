@@ -11,6 +11,7 @@ sidebar: auto
 - 移除了全部无用的 CSS 代码，使用 `vuepress-theme-book` 构建文档。
 - 抛弃了以版本号更新文档的策略，使用滚动更新策略更新文档。
 - 添加自定义滚动条。
+- 新增了 WSL 2 中连接 USB 设备的方法。
 
 ### Bug fixes
 

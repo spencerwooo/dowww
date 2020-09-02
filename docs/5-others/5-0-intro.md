@@ -14,9 +14,9 @@ WSL 为我们在 Windows 系统中提供了一个近乎原生的 Linux 环境，
 
 ## 参与贡献
 
-一年前，Dev on Windows with WSL 仅仅是我一个个人的项目，而且仅仅是一篇文章。到今天，我和几位 Contributors 已经撰写了超过 5 个部分的 18 章内容。现在，希望有经验的同学前来与我共同完善本项目，不论是增加一门语言在 WSL 下的配置方法，还是增加一些高级的 WSL 使用操作，任何内容都是欢迎的。
+2018 年的时候，Dev on Windows with WSL 仅仅是我一个个人的项目，而且仅仅是一篇文章。到今天，我和几位 Contributors 已经撰写了超过 5 个部分的 20 章内容。现在，希望有经验的同学前来与我共同完善本项目，不论是增加一门语言在 WSL 下的配置方法，还是增加一些高级的 WSL 使用操作，任何内容都是欢迎的。
 
-在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[CONTRIBUTING](/contributing/)。
+在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[贡献指南](/contributing/)。
 
 ## 参考资料
 
@@ -30,21 +30,3 @@ WSL 为我们在 Windows 系统中提供了一个近乎原生的 Linux 环境，
 - [如何在 Windows Subsystem for Linux (WSL) 上运行 Linux GUI 软件](<http://www.yuan-ji.me/%E5%A6%82%E4%BD%95%E5%9C%A8Windows-Subsystem-for-Linux-(WSL)-%E4%B8%8A%E8%BF%90%E8%A1%8CLinux-GUI-%E8%BD%AF%E4%BB%B6/>)
 - [在 WSL 下启动 VS Code](https://zhuanlan.zhihu.com/p/33226830)
 - [Setting proxy in git](https://gist.github.com/laispace/666dd7b27e9116faece6)
-
-## License 许可
-
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
-
-本作品采用  [知识共享署名-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-sa/4.0/)  进行许可。
-
-本著作係採用  [創用 CC 姓名標示-相同方式分享 4.0 國際 授權條款](https://creativecommons.org/licenses/by-sa/4.0/)  授權.
-
-This work is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
----
-
-📟 **Dev on Windows with WSL** ©Spencer Woo. Released under the CC BY-SA 4.0 International License.
-
-Authored and maintained by Spencer Woo.
-
-[@Portfolio](https://spencerwoo.com/) · [@Blog](https://blog.spencerwoo.com/) · [@GitHub](https://github.com/spencerwooo)
