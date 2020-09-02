@@ -1,4 +1,4 @@
-# 配置 WSL 2 全局选项 <a href="https://github.com/Diffumist"><Badge text="@Diffumist" vertical="middle"/></a>
+# 配置 WSL 2 全局设置 <a href="https://github.com/Diffumist"><Badge text="@Diffumist" vertical="middle"/></a>
 
 ::: callout 📟 版本限制
 请注意，这些配置可在 Windows Build 19041 及以后版本中使用，且仅限 WSL 2。

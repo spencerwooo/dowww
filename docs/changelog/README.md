@@ -1,13 +1,29 @@
+---
+sidebar: auto
+---
+
 # Changelog 更新日志
 
-## [1.2] - 2020-7-25
+## [1.3.0] - 2020-9-2
+
+### Features
+
+- 移除了全部无用的 CSS 代码，使用 `vuepress-theme-book` 构建文档。
+- 抛弃了以版本号更新文档的策略，使用滚动更新策略更新文档。
+
+### Bug fixes
+
+- 更新了全部依赖。
+- 移除了脚注构建插件，使用 `markdown-it-footnote` 插件构建脚注。
+
+## [1.2.0] - 2020-7-25
 
 将从 1.1 版本开始陆续新增的 PR 和改动进行了整合，达到 1.2 版本。
 
 ### Features
 
-- 新增了关于 WSL 2 配置文件 `.wslconfig` 的说明：[配置 WSL 2 全局选项](https://dowww.spencerwoo.com/1.2/4-advanced/4-3-wslconfig.html)
-- 新增了关于重启 WSL 的提示和方法（为了让 WSL 重新挂载 `/mnt` 下的盘符）：[🔁 重启 WSL 环境](https://dowww.spencerwoo.com/1.2/2-cli/2-2-shell.html#%E8%A7%A3%E5%86%B3-ls-%E5%91%BD%E4%BB%A4%E8%83%8C%E6%99%AF%E8%89%B2%E9%97%AE%E9%A2%98)
+- 新增了关于 WSL 2 配置文件 `.wslconfig` 的说明：[配置 WSL 2 全局选项](https://dowww.spencerwoo.com/4-advanced/4-3-wslconfig.html)
+- 新增了关于重启 WSL 的提示和方法（为了让 WSL 重新挂载 `/mnt` 下的盘符）：[🔁 重启 WSL 环境](https://dowww.spencerwoo.com/2-cli/2-2-shell.html#%E8%A7%A3%E5%86%B3-ls-%E5%91%BD%E4%BB%A4%E8%83%8C%E6%99%AF%E8%89%B2%E9%97%AE%E9%A2%98)
 - 新增了全新的 README 头图 Banner
 - 重新设计了全新的 Dev on Win with WSL 图标
 
@@ -18,20 +34,20 @@
 - 修复了在 Netlify 平台部署时路径大小写不匹配导致无法通过侧边栏导航的问题，错误复盘：[Netlify or VuePress：大型悬疑推理篇之——报错到底是谁的锅？](https://blog.spencerwoo.com/2020/05/debugging-netlify-static-site/)
 - 修改若干错别字（[#59](https://github.com/spencerwooo/dowww/pull/59)）
 
-## [1.1] - 2020-4-15
+## [1.1.0] - 2020-4-15
 
 将从 1.0 版本开始陆续新增的 PR 和改动进行了整合，达到 1.1 版本。
 
 ### Features
 
-- 新增了 WSL 2 IP 地址需要手动修改的注意事项：[WSL 2 中的网络访问问题](https://dowww.spencerwoo.com/1.1/2-CLI/2-3-Others.html#wsl-2-%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98)（Issue #49）
-- 新增了 WSL 2 虚拟磁盘空间优化的建议：[优化 WSL 2 虚拟磁盘占用空间](https://dowww.spencerwoo.com/1.1/2-CLI/2-3-Others.html#%E4%BC%98%E5%8C%96-wsl-2-%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98%E5%8D%A0%E7%94%A8%E7%A9%BA%E9%97%B4)（PR #45）
+- 新增了 WSL 2 IP 地址需要手动修改的注意事项：[WSL 2 中的网络访问问题](https://dowww.spencerwoo.com/2-CLI/2-3-Others.html#wsl-2-%E4%B8%AD%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BF%E9%97%AE%E9%97%AE%E9%A2%98)（Issue #49）
+- 新增了 WSL 2 虚拟磁盘空间优化的建议：[优化 WSL 2 虚拟磁盘占用空间](https://dowww.spencerwoo.com/2-CLI/2-3-Others.html#%E4%BC%98%E5%8C%96-wsl-2-%E8%99%9A%E6%8B%9F%E7%A3%81%E7%9B%98%E5%8D%A0%E7%94%A8%E7%A9%BA%E9%97%B4)（PR #45）
 - 新增了 GitHub Sponsors 和爱发电链接，~~请给我打钱！~~（不是）
 
 ### Bugs and fixes
 
 - 修复了 GitHub 主页 README 支付宝二维码失效的问题
-- 修复了 Hyper 终端介绍链接失效的问题：[终端 Terminal - Hyper](https://dowww.spencerwoo.com/1.1/2-CLI/2-1-Terminal.html#hyper)
+- 修复了 Hyper 终端介绍链接失效的问题：[终端 Terminal - Hyper](https://dowww.spencerwoo.com/2-CLI/2-1-Terminal.html#hyper)
 
 ## [1.0.0] - 2020-1-7 🎉🎉🎉
 
@@ -45,26 +61,26 @@
 - 在 VuePress 默认主题的基础之上，实现了版本切换、版本归档（`yarn bump-version <VERSION_NUMBER>`）
 - 全新设计了每个部分的「题图」banner，统一设计风格
 - 新增了 WSL 序论、安装部分：
-  - 新增了 [关于 WSL、WSL 2 架构设计的介绍](https://dowww.spencerwoo.com/1.0/1-Preparations/1-0-Intro.html)
-  - 新增了 [关于 WSL、WSL 2 安装的方法介绍](https://dowww.spencerwoo.com/1.0/1-Preparations/1-1-Installation.html)
+  - 新增了 [关于 WSL、WSL 2 架构设计的介绍](https://dowww.spencerwoo.com/1-Preparations/1-0-Intro.html)
+  - 新增了 [关于 WSL、WSL 2 安装的方法介绍](https://dowww.spencerwoo.com/1-Preparations/1-1-Installation.html)
 - 新增了 CLI 命令行环境中其他工具的配置：
-  - 新增了远程登录的配置：[SSH、Mosh 工具的使用](https://dowww.spencerwoo.com/1.0/2-CLI/2-3-Others.html#%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95)
-  - 新增了 [Windows 和 WSL 之间互相文件访问、互相执行命令的方法](https://dowww.spencerwoo.com/1.0/2-CLI/2-3-Others.html#windows-%E5%92%8C-wsl-%E4%B9%8B%E9%97%B4%E4%BA%92%E7%9B%B8%E8%AE%BF%E9%97%AE)
+  - 新增了远程登录的配置：[SSH、Mosh 工具的使用](https://dowww.spencerwoo.com/2-CLI/2-3-Others.html#%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95)
+  - 新增了 [Windows 和 WSL 之间互相文件访问、互相执行命令的方法](https://dowww.spencerwoo.com/2-CLI/2-3-Others.html#windows-%E5%92%8C-wsl-%E4%B9%8B%E9%97%B4%E4%BA%92%E7%9B%B8%E8%AE%BF%E9%97%AE)
 
 ### Changes
 
 - 文档部署到 Netlify，加速中国用户访问
 - 修改了「工具链」部分，将用词切换为「命令行环境 CLI」，更为恰当
-- 修改了 [终端工具 Terminal 环境的配置](https://dowww.spencerwoo.com/1.0/2-CLI/2-1-Terminal.html)
-- 修改了 [命令行工具 Shell 环境的配置](https://dowww.spencerwoo.com/1.0/2-CLI/2-2-Shell.html)
+- 修改了 [终端工具 Terminal 环境的配置](https://dowww.spencerwoo.com/2-CLI/2-1-Terminal.html)
+- 修改了 [命令行工具 Shell 环境的配置](https://dowww.spencerwoo.com/2-CLI/2-2-Shell.html)
 - 更新了 VS Code 和 WSL 配合开发的方法：
-  - 更新了 [VS Code 远程开发组件包的配置手段](https://dowww.spencerwoo.com/1.0/3-VSCode/3-1-Remote-Dev.html)
-  - 更新了 [VS Code 使用 Code Runner 一键执行代码文件的配置](https://dowww.spencerwoo.com/1.0/3-VSCode/3-2-Code-Runner.html)
-  - 更新了 [VS Code 连接 WSL 环境开发 Python 项目的配置方法](https://dowww.spencerwoo.com/1.0/3-VSCode/3-3-Python.html)
-  - 更新了 [VS Code 连接 WSL 环境开发 C、C++ 项目的配置方法](https://dowww.spencerwoo.com/1.0/3-VSCode/3-4-C_Cpp.html)
-  - 更新了 [VS Code 连接 WSL 环境开发 Node.js 项目的配置方法](https://dowww.spencerwoo.com/1.0/3-VSCode/3-6-NodeJS.html)
-  - 更新了 [VS Code 连接 WSL 环境撰写 LaTeX 文档的配置方法](https://dowww.spencerwoo.com/1.0/3-VSCode/3-5-LaTeX.html)
-- 修改了 [体验、参考、后记](https://dowww.spencerwoo.com/1.0/5-Experience/5-0-Intro.html)
+  - 更新了 [VS Code 远程开发组件包的配置手段](https://dowww.spencerwoo.com/3-VSCode/3-1-Remote-Dev.html)
+  - 更新了 [VS Code 使用 Code Runner 一键执行代码文件的配置](https://dowww.spencerwoo.com/3-VSCode/3-2-Code-Runner.html)
+  - 更新了 [VS Code 连接 WSL 环境开发 Python 项目的配置方法](https://dowww.spencerwoo.com/3-VSCode/3-3-Python.html)
+  - 更新了 [VS Code 连接 WSL 环境开发 C、C++ 项目的配置方法](https://dowww.spencerwoo.com/3-VSCode/3-4-C_Cpp.html)
+  - 更新了 [VS Code 连接 WSL 环境开发 Node.js 项目的配置方法](https://dowww.spencerwoo.com/3-VSCode/3-6-NodeJS.html)
+  - 更新了 [VS Code 连接 WSL 环境撰写 LaTeX 文档的配置方法](https://dowww.spencerwoo.com/3-VSCode/3-5-LaTeX.html)
+- 修改了 [体验、参考、后记](https://dowww.spencerwoo.com/5-Experience/5-0-Intro.html)
 
 ### Removed / Fixed
 

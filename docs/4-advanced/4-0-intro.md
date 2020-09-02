@@ -3,7 +3,7 @@
 ![](https://i.loli.net/2020/01/07/5mn29DSapsRxcWN.png)
 
 ::: callout 🍄 本章内容
-本章将对 WSL 中的一些高阶操作进行介绍。包括：为没有窗口界面的 WSL 安装 GUI 程序，以及 LxRunOffline 的功能和使用。
+本章将对 WSL 中的一些附加功能进行介绍。包括：为没有窗口界面的 WSL 安装 GUI 程序，以及 LxRunOffline 的功能和使用。
 :::
 
 WSL 的基本功能和配置在前面我们基本介绍完毕，但是还有一些特殊的操作或者工具需要我们了解。它们可能：

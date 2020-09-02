@@ -7,7 +7,7 @@
     "docs:build": "vuepress build docs"
   },
   "repository": "https://github.com/spencerwooo/dowww",
-  "author": "spencerwooo <spencerwoo98@foxmail.com>",
+  "author": "spencerwooo",
   "license": "CC-BY-NC-SA-4.0",
   "dependencies": {
     "@vuepress/plugin-back-to-top": "^1.2.0",
