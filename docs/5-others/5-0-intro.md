@@ -1,4 +1,4 @@
-# 后记 <Badge text="New" vertical="middle"/>
+# 后记 <Badge text="New"/>
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221105.png)
 

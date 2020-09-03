@@ -1,4 +1,4 @@
-# Python <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
+# Python <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
 
 ## 安装 VS Code 插件
 

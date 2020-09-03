@@ -1,4 +1,4 @@
-# C/C++ <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo" vertical="middle"/></a>
+# C/C++ <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
 
 ::: callout 🥐 本文内容
 本文我们会对利用 VS Code 在 WSL 环境中编写 C、C++ 程序的方法进行介绍。本文主要面向学习 C、C++ 语言的同学，包括使用 C、C++ 实现各项算法的 ACM 竞赛同学，以及学习数据结构等知识的同学。值得注意的是，本文的配置项目可能仅仅适合单个 C、C++ 代码文件的编译运行，涉及到大型 C、C++ 项目我更加推荐使用专业 IDE（比如 Visual Studio）进行开发工作。

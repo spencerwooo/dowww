@@ -47,7 +47,7 @@ WSL 的出现似乎缓解了这些烦恼。WSL —— Windows Subsystem for Linu
 
 ### 贡献规范
 
-欢迎任何有经验的同学前来帮我共同完善本项目，鞠躬。在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范 > [贡献指南](https://dowww.spencerwoo.com/contributing/)
+欢迎任何有经验的同学前来帮我共同完善本项目，鞠躬。在你着手准备给这个项目提交一些新内容前，请务必阅读「贡献」相关内容说明与规范：[贡献指南](https://dowww.spencerwoo.com/contributing/)。
 
 ## 赞助
 

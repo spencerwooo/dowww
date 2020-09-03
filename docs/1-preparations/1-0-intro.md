@@ -1,4 +1,4 @@
-# 序论 <Badge text="New" vertical="middle"/>
+# 序论 <Badge text="New"/>
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220309.png)
 

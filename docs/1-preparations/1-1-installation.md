@@ -46,9 +46,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-L
 - SUSE Linux Enterprise Server: [12](https://www.microsoft.com/store/productId/9P32MWBH6CNS), [15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
 - [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)
 - [Kali Linux](https://www.microsoft.com/store/productId/9PKR34TNCV07)
-- [Pengwin](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P) - [GitHub | WhitewaterFoundry/Pengwin](https://github.com/WhitewaterFoundry/Pengwin)<Badge text="付费" vertical="top"/>
+- [Pengwin](https://www.microsoft.com/store/productId/9NV1GV1PXZ6P) - [GitHub | WhitewaterFoundry/Pengwin](https://github.com/WhitewaterFoundry/Pengwin)<Badge text="付费"/>
 - [Alpine WSL](https://www.microsoft.com/store/productId/9P804CRF0395) - [GitHub | agowa338/WSL-DistroLauncher-Alpine](https://github.com/agowa338/WSL-DistroLauncher-Alpine)
-- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc) - [GitHub | WhitewaterFoundry/Fedora-Remix-for-WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL) <Badge text="付费" vertical="top"/>
+- [Fedora Remix for WSL](https://www.microsoft.com/en-us/p/fedora-remix-for-wsl/9n6gdm4k2hnc) - [GitHub | WhitewaterFoundry/Fedora-Remix-for-WSL](https://github.com/WhitewaterFoundry/Fedora-Remix-for-WSL) <Badge text="付费"/>
 
 ### 社区支持的 WSL
 

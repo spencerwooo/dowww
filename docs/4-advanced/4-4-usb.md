@@ -1,4 +1,4 @@
-# 让 WSL 2 支持 USB <Badge text="WSL 2" vertical="middle"/>
+# 让 WSL 2 支持 USB <Badge text="WSL 2"/>
 
 ::: callout 📟 版本限制
 请注意，本文方法需要 Windows Build 19041 及以后版本，且仅限 WSL 2 使用。本部分参考了这一 GitHub 仓库中的介绍：[Adding USB support to WSL 2](https://github.com/rpasek/usbip-wsl2-instructions).

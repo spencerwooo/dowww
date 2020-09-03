@@ -1,4 +1,4 @@
-# Code Runner <a href="https://github.com/spencerwooo"> <Badge text="@SpencerWoo" vertical="middle"/></a>
+# Code Runner <a href="https://github.com/spencerwooo"> <Badge text="@SpencerWoo"/></a>
 
 Code Runner 是一个能够一键执行编译运行的 VS Code 插件，支持多达 44 种语言。支持在代码工作区右键选择 `Run Code`、在 Command Palette (`Ctrl + Shift + P`) 输入 Run Code、或者直接快捷键 `Ctrl + Alt + N` 快速编译执行代码。无论哪种语言的开发环境，我都推荐安装。
 
