@@ -17,6 +17,29 @@ h1, h2, h3, h4, h5, h6
   .title
     font-weight bold
 
+pre.tree
+  border-left-width 0.5rem
+  border-left-style solid
+  border-color $accentColor !important
+  border-radius 0
+
+  & > code
+    font-size 14px !important
+
+    & > p
+      margin -5px 0 -20px 0
+
+    code
+      background-color $accentColor !important
+      color #ffffff
+
+      padding 3px 5px
+      border-radius 3px
+
+    em
+      color #808080
+      font-weight light
+
 .hero
   img
     width 240px

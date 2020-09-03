@@ -86,15 +86,15 @@ poetry new poetry-demo
 
 这一命令会在 `poetry-demo` 目录下生成如下的文件内容：
 
-:::tree
+::: tree
 `poetry-demo`
 ├── pyproject.toml
 ├── README.rst
 ├── `poetry_demo`
-│   └── __init__.py
+│   └── \_\_init\_\_.py
 └── `tests`
-    ├── __init__.py
-    └── test_poetry_demo.py
+<span>    </span>├── \_\_init\_\_.py
+<span>    </span>└── test_poetry_demo.py
 :::
 
 其中的 `pyproject.toml` 文件就是定义我们当前 Python 项目所使用依赖库的文件。
