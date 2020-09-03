@@ -1,147 +1,54 @@
 # Node.js <a href="https://github.com/suyanhanx"><Badge text="@suyanhanx"/></a>
 
-首先，明确几个概念：
+:::callout 🥂 版本更新
+由于 VS Code 在支持 Remote-WSL 之后，在 WSL 中开发 Node.js 项目和正常无异，因此我（[@SpencerWoo](https://github.com/spencerwooo)）重新撰写了这部分内容，和 @suyanhanx 原先贡献的内容有较大变动。
+:::
 
-| 工具 / 名词 | 概念                                                                                  | 作用                                           |
-| :---------- | :------------------------------------------------------------------------------------ | :--------------------------------------------- |
-| Node.js     | A JavaScript runtime built on Chrome's V8 JavaScript engine.                          | 一个 JavaScript 运行环境                       |
-| nvm         | Node Version Manager - Simple bash script to manage multiple active node.js versions. | 一个简单的 Node.js 的版本管理工具              |
-| npm、yarn   | Node Package Managers                                                                 | 分别是不同的 Node.js 包管理工具，推荐使用 yarn |
+在开始之前，我先来介绍几个 Node.js 相关的概念：
+
+- Node.js - A JavaScript runtime built on Chrome's V8 JavaScript engine 是一个不依赖浏览器的 JavaScript 运行环境，大部分前端项目比如 Vue、React 和后端项目比如 Express、Koa 均依赖于 Node.js 生态系统；
+- `n` - Interactively Manage Your Node.js Versions：是一个 Node.js 版本管理工具，我们可以使用 `n` 来安装不同版本的 Node.js 环境；
+- npm 和 yarn，分别是 Node.js 的包管理工具，其中我更推荐大家使用后者（yarn）来管理安装 Node.js 依赖；
+
+接下来，我们将在 WSL 中使用 `n` 来安装 Node.js 环境，并配置包管理工具 yarn 来管理 Node.js 环境中的依赖。
 
 ## 安装 Node.js
 
-强烈建议使用 `nvm` 来管理与安装 Node.js，便于切换版本和快捷安装。
+建议大家使用 [`n`](https://github.com/tj/n) 来管理与安装 Node.js，便于切换版本和快捷安装。首先，我们使用 [n-install](https://github.com/mklement0/n-install) 安装 `n`：
 
-- 安装 `nvm`：
+```bash
+$ curl -L https://git.io/n-install | bash
+```
 
-  ```bash
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-  ```
+n-install（也就是上面的命令）默认会自动帮我们将 `n` 的重要环境变量 `PREFIX` 和 `N_PREFIX` 设置到 `$HOME/n`，并将 `n` 安装到 `$HOME/n/bin`。同时，n-install 会帮助我们更新当前我们所使用的 Shell（比如 zsh），在相应的配置文件中将 `$HOME/n/bin` 添加到 `PATH` 中。最后，n-install 会帮我们安装最新的 LTS 版本的 Node.js 环境。
 
-- 一般来说上一步的脚本会添加以下内容（`nvm` 的环境变量）到命令行的用户 Shell 配置文件 profile（对 zsh 来说就是 `.zshrc`）里，可以通过 `source ~/.zshrc` 等类似的方法重新加载用户配置使之生效：
-
-  ```bash
-  export NVM_DIR="$HOME/.nvm"
-  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-  ```
-
-  如果重新加载配置后还是没有 `nvm` 的相关命令，也可以自行添加上面的内容到 profile 中再加载配置文件。
-
-- 安装 Node.js 和 `npm`：
-
-  ```bash
-  # 安装当前的稳定版
-  nvm install stable
-
-  # 等待安装完毕后，激活该版本
-  nvm use stable
-  ```
-
-注意：
-
-- 如果出现 `sudo npm` 找不到命令问题，这里可以做一下软链接：
-
-  ```bash
-  sudo ln -s $(which node) /usr/bin/node
-  sudo ln -s $(which npm) /usr/bin/npm
-  ```
-
-- 更换 `nvm` 镜像（如更换为淘宝镜像源），在用户 Shell 配置文件 profile 中加入下面内容：
-
-  ```bash
-  export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
-  ```
+> 更多关于 n-install 的使用，请参考 [n-install 的 README 文档](https://github.com/mklement0/n-install)。
 
 ## 配置 Node.js 包管理工具
 
-首先，Node.js 自带了 `npm` 包管理工具。为了加速在中国大陆地区 `npm` 包的下载速度，我们为之更换镜像源。
-
-- 考虑将 `npm` 更换源至淘宝镜像（推荐）：
-
-  ```bash
-  npm set registry https://registry.npm.taobao.org
-  ```
-
-- 或直接安装 `cnpm`，一个阿里官方的 Node.js 包管理工具，默认源为淘宝镜像源：
-
-  ```bash
-  npm install -g cnpm --registry=https://registry.npm.taobao.org
-  ```
-
-给 `npm` 下的模块命令添加权限：
-
-:::callout 🥑 注意
-没有权限会很容易在安装某些需要编译的模块发生失败。
-:::
+接下来，我们安装 [yarn](https://yarnpkg.com/)，推荐大家安装使用 yarn：这个更加现代、科学的 Node.js 包管理工具。刚刚下载的 Node.js 中包含有 npm，因此我们可以直接用 npm 来安装 yarn：
 
 ```bash
-sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
+$ npm install -g yarn
 ```
 
-上面是单独的 `npm` 目录权限修改，避免 `sudo` 找不到命令而直接运行安装又权限不够的问题。
-
-接下来，我们安装 `yarn`。推荐大家安装使用 `yarn` —— 这个更加现代、科学的 Node.js 包管理工具：
-
-- 配置 `yarn` 下载仓库：
-
-  ```bash
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  ```
-
-- 安装 `yarn`：
-
-  ```bash
-  sudo apt-get update && sudo apt-get install yarn
-  ```
-
-- 考虑更换 `yarn` 下载源至淘宝镜像：
-
-  ```bash
-  yarn set registry https://registry.npm.taobao.org
-  ```
-
-- 解决 `yarn` 进度条显示错误的问题，在命令行 profile 文件中输出环境变量：
-
-  ```bash
-  $LANG=en.us-utf8
-  ```
-
-## 配置 ESLint <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
-
-> A fully pluggable tool for identifying and reporting on patterns in JavaScript.
-
-**ESLint 是 JavaScript 强大的代码实时风格检测与错误纠正工具**。利用 ESLint 我们可以保证 JavaScript 代码的正确、合理，符合规范。
-
-- 下载 VS Code 的 ESLint 插件：[ESLint | Integrates ESLint JavaScript into VS Code.](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- 在当前开发环境中加入 ESLint 模块：
-
-  ```bash
-  yarn add eslint
-  ```
-
-- 初始化 ESLint 模块：
-
-  ```bash
-  # 如果 PATH 中有 eslint
-  eslint --init
-  # 如果没识别到 eslint
-  ./node_modules/.bin/eslint --init
-  ```
-
-  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221830.png)
-
-之后，VS Code 的 ESLint 插件便可以跟我们安装的 ESLint 工具协调运行，帮助我们保证自己的 JavaScript 项目代码的干净整洁。
-
-## NativeModule 的再编译
-
-大部分模块即使在 Windows 中被安装也能在 WSL 中使用，反之亦然。但有些模块是分不同系统平台的。切换系统需要重新编译。可以在项目根目录下载 Windows 命令行里执行以下命令：
+此时我们安装的 yarn 实际上是 1.22.0：
 
 ```bash
-npm install
-bash -i -c "npm rebuild"
+$ yarn --version
+
+1.22.4
 ```
 
-当然直接 WSL 里执行 `npm rebuild` 也是可以的。
+yarn 在 2.0+ 版本中经历了重大的变化，因此如果我们需要对某个项目开启 yarn 的 2.0 版本，需要使用下面的命令手动开启：
 
-有关在 VS Code 中开发 Node.js 程序的方法，更多请参考：[Node.js tutorial in Visual Studio Code - Visual Studio Code Docs](https://code.visualstudio.com/docs/nodejs/working-with-javascript)
+```bash
+$ yarn set version berry
+```
+
+其中，yarn 2.0 所支持的 Plug and play - Plug'n'Play 功能是 yarn 2.0 的重磅功能，也是我们使用 yarn 2.0 的主要原因，Plug'n'Play 重点解决了 Node.js 的 `node_modules` 存在于每个项目中的问题，更多内容请见：[yarn - Plug'n'Play](https://yarnpkg.com/features/pnp)。需要注意的是，并非不是所有的 Node.js 库均支持 yarn 2.0，因此推荐预先查看你所使用的库是否支持 yarn 2.0：[Compatibility Table](https://yarnpkg.com/features/pnp#compatibility-table)。
+
+> 如果你之前使用 yarn 1.0 版本，推荐查看 yarn 官方的 1.0 至 2.0 版本迁移指南：[Migrating from Yarn 1](https://yarnpkg.com/advanced/migration)。
+
+
+有关在 VS Code 中开发 Node.js 项目的方法，更多请参考：[Node.js tutorial in Visual Studio Code - Visual Studio Code Docs](https://code.visualstudio.com/docs/nodejs/working-with-javascript)

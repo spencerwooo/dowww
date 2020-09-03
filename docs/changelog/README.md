@@ -10,10 +10,11 @@ sidebar: auto
 
 小版本更新，将所有 outdated 信息进行了更新：
 
+- 新增了 WSL 2 设置 Git 代理、ssh 登录 GitHub 代理以及自动化配置脚本的方法。
 - 更新了 WSL 2 的 Windows 10 系统版本要求。
 - 更新了 Fluent Terminal 的安装方式，新增了 Fluent Terminal 在 Microsoft Store 微软商店的下载链接。
-- 将 Python 环境管理工具由 `pipenv` 改为更加优秀的 `poetry`。
-- 将 Node.js 版本管理工具由 `nvm` 改为更为先进的 `n`。
+- 将 Python 环境管理工具由 `pipenv` 改为更加优秀的 Poetry。
+- 将 Node.js 版本管理工具由 `nvm` 改为更为先进的 `n`，重构了 Node.js 部分的文档。
 
 为了提升体验：
 
