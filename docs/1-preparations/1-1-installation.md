@@ -24,7 +24,7 @@
 - 运行下面的命令：
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+$ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
 - 按照提示重启电脑
@@ -87,8 +87,8 @@ WSL 2 需要在 WSL 已经安装完毕的基础之上才能进行安装。
 - 运行下面的命令：
 
 ```powershell
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 - 根据提示重启电脑
@@ -99,27 +99,27 @@ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nores
 
 - 执行下面命令找到你当前安装的 Linux 发行版及其名字：
 
-```powershell
-wsl --list
-```
+  ```powershell
+  $ wsl --list
+  ```
 
 - 之后，执行下面的命令将你需要的发行版设置为由 WSL 2 支持，将其中的 `<Distro>` 修改为 Linux 发行版名称：
 
-```powershell
-wsl --set-version <Distro> 2
-```
+  ```powershell
+  $ wsl --set-version <Distro> 2
+  ```
 
 - 另外，你也可以通过下面的命令将之后新安装的发行版均设置为默认由 WSL 2 支持：
 
-```powershell
-wsl --set-default-version 2
-```
+  ```powershell
+  $ wsl --set-default-version 2
+  ```
 
 - 执行下面的命令，如果发现最后一列的 `VERSION` 数为 2，说明你的配置是成功的：
 
-```powershell
-wsl --list --verbose
-```
+  ```powershell
+  $ wsl --list --verbose
+  ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220319-2.png)
 

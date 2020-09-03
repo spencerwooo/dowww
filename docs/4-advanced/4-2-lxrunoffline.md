@@ -13,7 +13,7 @@
 The best way to install is to use `choco`. As suggested in the project's home page, pick either Command Prompt or PowerShell to execud the following installation command:
 
 ```powershell
-choco install lxrunoffline
+$ choco install lxrunoffline
 ```
 
 Note, you will need to press `y` key, for once, to confirm something.
@@ -27,7 +27,7 @@ Note, you will need to press `y` key, for once, to confirm something.
 2. Store it somewhere, and run the following `LxRunOffline` command through, preferrably, a Command Prompt window with Admin privilege. (You can press `Win + X`, and then `A`, to get it.)
 
 ```powershell
-LxRunOffline i -n UF -d c:\WSL\Full -f <c:\whereabouts_of_the_downloaded_image> -s
+$ LxRunOffline i -n UF -d c:\WSL\Full -f <c:\whereabouts_of_the_downloaded_image> -s
 ```
 
 Upon filling up the precise absolute path to the `16.04.2-server-cloudimg-amd64-root.tar.gz` file, the command shall create a distribution named as UF, in directory `c:\WSL\UFull`.
@@ -41,7 +41,7 @@ Docker is meant to be as light-weight as possbile, and a functional Linux distri
 From any console interface, be it PowerShell or Command Prompt, if you have followed the naming convention above, the following set of command will load the newly minted Linux distro:
 
 ```powershell
-Lx Run Offline run -n UF
+$ LxRunOffline run -n UF
 ```
 
 Other frequently commands include:
@@ -64,7 +64,7 @@ Here goes a wish list of pending items to be added, including:
    1. Use the default settings for Xming, which open port `:0` for display
    2. Add the following setting into `~/.bashrc` (or the setup file for your Fish/Zsh shell):
       ```bash
-      export DISPLAY=:0
+      $ export DISPLAY=:0
       ```
 2. Firing `LxRunOffline`-deployed WSL from a console emulator (ConEmu, Hyper.is,
    or Cmder). Currently, one will need to access the Comand Prompt or PowerShell first, then to the root user, then to the desired user.

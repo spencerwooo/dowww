@@ -20,9 +20,10 @@
 > 来自：[WSL2 的一些网络访问问题 - 获取主机的 IP](https://lengthmin.me/posts/wsl2-network-tricks/#%E8%8E%B7%E5%8F%96%E4%B8%BB%E6%9C%BA%E7%9A%84-ip)。
 
 ```bash
-ip route | grep default | awk '{print $3}'
-# 或者
-cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
+# 一种方法
+$ ip route | grep default | awk '{print $3}'
+# 或者另一种方法
+$ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_131940.png)
@@ -36,7 +37,7 @@ Git 是目前版本控制工具的典范、代表，如果你使用 GitHub，那
 我们可以使用 Ubuntu 包管理工具 APT 安装 Git：
 
 ```bash
-sudo apt install git
+$ sudo apt install git
 ```
 
 ### 配置 Git 使用代理
@@ -48,13 +49,13 @@ sudo apt install git
 配置 Git 访问 GitHub 时使用代理：
 
 ```bash
-git config --global http.https://github.com.proxy 'http://<WSL IP 地址>:<代理端口>'
+$ git config --global http.https://github.com.proxy 'http://<WSL IP 地址>:<代理端口>'
 ```
 
 取消 Git 代理：
 
 ```bash
-git config --global --unset http.https://github.com.proxy
+$ git config --global --unset http.https://github.com.proxy
 ```
 
 ### 使用 ssh 与 Git 登录管理 GitHub 仓库
@@ -66,29 +67,29 @@ git config --global --unset http.https://github.com.proxy
 - 在 WSL 下生成 SSH 公钥 — 私钥对（将邮箱替换为你的邮箱），此时生成的 SSH 密钥默认位于 `~/.ssh` 路径下，公钥为 `id_rsa.pub`，私钥为 `id_rsa`：
 
   ```bash
-  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  $ ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
   ```
 
 - 打开 ssh-agent 使之在后台运行：
 
   ```bash
-  eval "$(ssh-agent -s)"
+  $ eval "$(ssh-agent -s)"
   ```
 
 - 将私钥添加到 ssh-agent 之中：
 
   ```bash
-  ssh-add ~/.ssh/id_rsa
+  $ ssh-add ~/.ssh/id_rsa
   ```
 
 - 查看公钥并将之复制到剪贴板：
 
   ```bash
   # 查看公钥内容
-  cat ~/.ssh/id_rsa.pub
+  $ cat ~/.ssh/id_rsa.pub
 
   # 将公钥复制到剪贴板
-  cat ~/.ssh/id_rsa.pub | clip.exe
+  $ cat ~/.ssh/id_rsa.pub | clip.exe
   ```
 
 - 将复制好的公钥添加到 GitHub 账户密钥里面：[Adding a new SSH key to your GitHub account - GitHub Help](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
@@ -256,24 +257,24 @@ $ git config --global gpg.program /usr/bin/gpg
 使用下面的命令将当前 session（会话）的代理进行配置：
 
 ```bash
-export http_proxy=http://<WSL IP 地址>:<代理端口>
-export https_proxy=http://<WSL IP 地址>:<代理端口>
+$ export http_proxy=http://<WSL IP 地址>:<代理端口>
+$ export https_proxy=http://<WSL IP 地址>:<代理端口>
 ```
 
 使用下面的命令取消代理：
 
 ```bash
-unset http_proxy https_proxy
+$ unset http_proxy https_proxy
 ```
 
 我们可以使用下面的命令检测自己的对外端口：
 
 ```bash
 # 一个接口
-curl ipinfo.io
+$ curl ipinfo.io
 
 # 另一个接口
-curl cip.cc
+$ curl cip.cc
 ```
 
 ### 自动化执行代理配置
@@ -339,14 +340,14 @@ ssh — Secure Shell 工具是与远程服务器沟通的渠道。我们不仅�
 
   ```bash
   # 赋予只读权限
-  sudo chmod 400 ~/.ssh/{SSH_KEY_FILENAME}.pem
+  $ sudo chmod 400 ~/.ssh/{SSH_KEY_FILENAME}.pem
   ```
 
 - 之后，登录服务器就只需要执行类似下面的命令：
 
   ```bash
   # 以 {USERNAME} 的身份登录地址（或 IP）位于 {HOST_IP_OR_URL} 的远程服务器
-  ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem {USERNAME}@{HOST_IP_OR_URL}
+  $ ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem {USERNAME}@{HOST_IP_OR_URL}
   ```
 
   ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-1.png)
@@ -364,23 +365,23 @@ Windows 原生环境下没有 Mosh 的可安装、可执行版本，因此如果
 在本机 WSL 环境下安装 Mosh：
 
 ```bash
-sudo apt install mosh
+$ sudo apt install mosh
 ```
 
 ssh 登录远程服务器之后，在服务器上面同时安装 Mosh。我的服务器是 CentOS 7 系统，以 CentOS 为例：
 
 ```bash
-sudo yum install mosh
+$ sudo yum install mosh
 ```
 
 由于 Mosh 在建立 SSH 连接之后，会使用 60000 - 61000 之间的某个端口，因此我们需要为服务器防火墙打开 60000 - 61000 端口的 UDP 转发服务：
 
 ```bash
-sudo firewall-cmd --zone=public --permanent --add-port=60000-61000/udp
+$ sudo firewall-cmd --zone=public --permanent --add-port=60000-61000/udp
 ```
 
 之后，我们在本机通过 Mosh 就可以直接登录远程服务器：
 
 ```bash
-mosh {USERNAME}@{HOST_IP_OR_URL} --ssh="ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem"
+$ mosh {USERNAME}@{HOST_IP_OR_URL} --ssh="ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem"
 ```

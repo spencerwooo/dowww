@@ -111,27 +111,27 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 - 然后，打开 Windows 默认终端，定位至刚刚解压好有 `ColorTool.exe` 的下载文件夹
 - 首先我们通过这个命令来看看默认有哪些自带的主题供我们使用：
 
-```powershell
-ColorTool.exe -s
-```
+  ```powershell
+  $ ColorTool.exe -s
+  ```
 
-::: callout 🤗 没关系
-是的，不需要怀疑自己，你可以直接在 WSL 里面执行 `exe` 程序，只是需要输全程序名称包括 `exe` 程序后缀。
-:::
+  ::: callout 🤗 没关系
+  是的，不需要怀疑自己，你可以直接在 WSL 里面执行 `exe` 程序，只是需要输全程序名称包括 `exe` 程序后缀。
+  :::
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220913-3.png)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220913-3.png)
 
 - 之后，我们就可以通过 `ColorTool.exe <主题名称>` 命令来预览我们当前使用的终端主题，比如：
 
-```powershell
-ColorTool.exe solarized_dark.itermcolors
-```
+  ```powershell
+  $ ColorTool.exe solarized_dark.itermcolors
+  ```
 
 - 使用下面的命令应用主题：
 
-```powershell
-ColorTool.exe -d <主题名称>
-```
+  ```powershell
+  $ ColorTool.exe -d <主题名称>
+  ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220913-4.png)
 
@@ -156,8 +156,8 @@ Fluent Terminal 开源在 [felixse/FluentTerminal](https://github.com/felixse/Fl
 安装 Scoop 之后，我们在 PowerShell 中执行下面的命令，即可安装 Fluent Terminal：
 
 ```powershell
-scoop bucket add nonportable
-scoop install fluent-terminal-np
+$ scoop bucket add nonportable
+$ scoop install fluent-terminal-np
 ```
 
 拥有图形化设置界面的 Fluent Terminal 配置非常直观简单，这里就不再赘述。

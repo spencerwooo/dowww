@@ -24,13 +24,13 @@ VS Code 是一款强大的代码编辑器，也可能是市面上最受欢迎的
 如果没有出现问题，那么你可以通过开始菜单点击打开 VS Code，也可以在 WSL 环境或 Windows PowerShell 环境的终端下，使用下面的命令用 VS Code 打开某个目录（某个文件夹）：
 
 ```bash
-code {DIRECTORY_PATH}
+$ code {DIRECTORY_PATH}
 ```
 
 另外，你也可以用下面的命令用 VS Code 打开当前文件夹：
 
 ```bash
-code .
+$ code .
 ```
 
 ## 功能简介

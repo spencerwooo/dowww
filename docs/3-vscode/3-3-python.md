@@ -14,26 +14,26 @@
 
   ```bash
   # 安装最新版本的 Python 3（大概率已经自带）
-  sudo apt install python3
+  $ sudo apt install python3
 
   # 安装执行版本的 Python（比如 Python 3.8）
-  sudo apt install python3.8
+  $ sudo apt install python3.8
   ```
 
 - 安装 Python 包管理 `pip` 工具：
 
   ```bash
-  sudo apt install python-pip
+  $ sudo apt install python-pip
   ```
 
 - 更新 `pip` 包管理源为清华大学 TUNA 镜像源：^[[pypi 镜像使用帮助 - TUNA](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)]
 
   ```bash
   # 使用 TUNA 镜像源更新 pip
-  pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
+  $ pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U
 
   # 将 pip 源设置为 TUNA
-  pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
+  $ pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
   ```
 
 ## 安装代码优化工具
@@ -45,13 +45,13 @@
 - 安装 Python 代码检查工具，VS Code 支持 Pylint（默认）、Flake8、mypy 等多个 Python linter，我更推荐大家使用 [Flake8](https://flake8.pycqa.org/en/latest/)：
 
   ```bash
-  pip install flake8
+  $ pip install flake8
   ```
 
 - 安装 Python 格式化代码工具，VS Code 支持 autopep8（默认）、yapf 和 black，我更推荐大家使用 [black](https://black.readthedocs.io/en/stable/) 来格式化代码：
 
   ```bash
-  pip install black
+  $ pip install black
   ```
 
 ## 用 Poetry 管理 Python 项目
@@ -67,13 +67,13 @@
 在 WSL 中安装 Poetry：
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
+$ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 ```
 
 将 Tab 补全加入我们所使用的 Shell 环境，比如 zsh 中：
 
 ```bash
-poetry completions zsh > ~/.zfunc/_poetry
+$ poetry completions zsh > ~/.zfunc/_poetry
 ```
 
 ### 基本使用
@@ -81,7 +81,7 @@ poetry completions zsh > ~/.zfunc/_poetry
 我们可以用 Poetry 直接新建一个模板 Python 项目，比如叫做 `poetry-demo`：
 
 ```bash
-poetry new poetry-demo
+$ poetry new poetry-demo
 ```
 
 这一命令会在 `poetry-demo` 目录下生成如下的文件内容：
@@ -103,26 +103,26 @@ poetry new poetry-demo
 
 ```bash
 # 安装一个依赖
-poetry add requests
+$ poetry add requests
 
 # 安装一个仅在开发中使用的依赖（比如格式化工具 black）
-poetry add black --dev # 或 -D
+$ poetry add black --dev # 或 -D
 ```
 
 对于一个已定义 `pyproject.toml` 的项目，我们可以用下面的命令安装所有依赖：
 
 ```bash
 # 安装所有依赖
-poetry install
+$ poetry install
 
 # 安装除了仅限开发使用的依赖外的所有依赖库
-poetry install --no-dev
+$ poetry install --no-dev
 ```
 
 使用 remove 关键词来移除某个依赖：
 
 ```bash
-poetry remove requests
+$ poetry remove requests
 ```
 
 > 更多 Poetry 命令行工具的使用，推荐大家参考 Poetry 官方文档：[Poetry - Commands](https://python-poetry.org/docs/cli/).

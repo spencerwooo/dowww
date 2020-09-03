@@ -11,7 +11,7 @@
 - 备份原文件：
 
   ```bash
-  sudo cp /etc/apt/sources.list /etc/apt/sources.list.bac
+  $ sudo cp /etc/apt/sources.list /etc/apt/sources.list.bac
   ```
 
 - 在配置文件 `/etc/apt/sources.list` 最前面添加下面的内容（下面内容为默认 Ubuntu 20.04 LTS 版本的内容）：
@@ -35,7 +35,7 @@
 - 更新缓存：
 
   ```bash
-  sudo apt update && sudo apt upgrade
+  $ sudo apt update && sudo apt upgrade
   ```
 
 更多内容请参考：[Ubuntu 镜像使用帮助 - 清华大学开源软件镜像站](https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)
@@ -70,7 +70,7 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 - 利用 apt 安装 `zsh`
 
   ```bash
-  sudo apt install zsh
+  $ sudo apt install zsh
   ```
 
 下载安装 [oh-my-zsh](https://ohmyz.sh/)，可能是市面上最好的 `zsh` 配置管理工具：
@@ -78,7 +78,7 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 - 运行命令下载安装
 
   ```bash
-  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
 
   ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651.png)
@@ -86,7 +86,7 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 - 将 `zsh` 作为默认的 Shell 环境（如果刚刚安装脚本没有这样做的话）：
 
   ```bash
-  chsh -s $(which zsh)
+  $ chsh -s $(which zsh)
   ```
 
 ### 插件、主题模板推荐
@@ -119,13 +119,13 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 同样使用 Ubuntu 中的包管理工具安装 `fish`：
 
 ```bash
-sudo apt install fish
+$ sudo apt install fish
 ```
 
 将 `fish` 作为默认 Shell：
 
 ```bash
-chsh -s $(which fish)
+$ chsh -s $(which fish)
 ```
 
 ### 配置

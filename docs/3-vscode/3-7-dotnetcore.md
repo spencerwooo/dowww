@@ -13,19 +13,19 @@
 以下内容以 Ubuntu 18.04 为例，其他发行版请参考：[官方文档](https://dotnet.microsoft.com/download/linux-package-manager/rhel/sdk-current)。
 
 ```bash
-wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo add-apt-repository universe
-sudo apt install apt-transport-https
-sudo apt update
-sudo apt install dotnet-sdk-2.2
+$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+$ sudo dpkg -i packages-microsoft-prod.deb
+$ sudo add-apt-repository universe
+$ sudo apt install apt-transport-https
+$ sudo apt update
+$ sudo apt install dotnet-sdk-2.2
 ```
 
 ## 在 WSL 侧安装 Debugger
 
 ```bash
-sudo apt install unzip
-curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l ~/vsdbg
+$ sudo apt install unzip
+$ curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l ~/vsdbg
 ```
 
 ## 调试 .Net Core 程序

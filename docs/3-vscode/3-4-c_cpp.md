@@ -14,12 +14,12 @@
 
 ```bash
 # 使用 gcc 编译一个名叫 hello.c 的 C 文件，生成名为 hello 的可执行文件，或……
-gcc hello.c -o hello
+$ gcc hello.c -o hello
 # 使用 g++ 编译一个名叫 hello.cpp 的 C++ 文件，生成名为 hello 的可执行文件
-g++ hello.cpp -o hello
+$ g++ hello.cpp -o hello
 
 # 执行可执行文件 hello
-./hello
+$ ./hello
 ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_222006.png)
@@ -37,13 +37,13 @@ g++ hello.cpp -o hello
 - 下载安装包含大部分开发所需组件的 `build-essential` 组件包：
 
   ```bash
-  sudo apt install build-essential
+  $ sudo apt install build-essential
   ```
 
 - 为了确保安装了编译 C/C++ 的组件，我们尝试安装编译工具 `gcc`、`g++` 和调试工具 `gdb`：
 
   ```bash
-  sudo apt install gcc g++ gdb
+  $ sudo apt install gcc g++ gdb
   ```
 
 - 再次确认安装状态：

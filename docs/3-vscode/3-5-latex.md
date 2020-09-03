@@ -7,7 +7,7 @@
 在 WSL 下使用包管理器安装 `texlive-full`：
 
 ```bash
-sudo apt install -y texlive-full
+$ sudo apt install -y texlive-full
 ```
 
 TeXLive 完整安装下来大概有 3GB 左右，这个安装过程会十分漫长，但是我十分强烈建议使用这个完整包。

@@ -46,28 +46,28 @@ sidebar: auto
    - 如果你依旧在使用 Windows 侧的开发环境，推荐使用 Windows 的「包管理」工具 - [`scoop`](https://github.com/lukesampson/scoop)：
      - 安装 `scoop`，PowerShell 中运行：
        ```powershell
-       iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+       $ iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
        ```
      - 安装 `nvm`：
        ```powershell
-       scoop install nvm
+       $ scoop install nvm
        ```
      - 安装最新稳定版本的 `Node.js`：
        ```powershell
-       nvm install latest
+       $ nvm install latest
        ```
      - 安装 `yarn`：
        ```powershell
-       scoop install yarn
+       $ scoop install yarn
        ```
    - 如果你并没有在用 Windows ... 那你怎么看到这个项目了 ∑( 口 ||
 4. 安装相关依赖：
    ```bash
-   yarn install
+   $ yarn install
    ```
 5. 本地预览：
    ```bash
-   yarn docs:dev
+   $ yarn docs:dev
    ```
 
 ### 结构
@@ -123,7 +123,7 @@ module.exports = [
 之后，在本地构建预览：
 
 ```bash
-yarn docs:dev
+$ yarn docs:dev
 ```
 
 这样就可以在本地预览你的文章了。

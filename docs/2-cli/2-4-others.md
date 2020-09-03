@@ -19,10 +19,10 @@ Windows 和 WSL 相互配合的一大利好就是能够直接在 Linux 中执行
 
 ```bash
 # 进入目标目录
-cd /home/spencer
+$ cd /home/spencer
 
 # 用 Windows 文件资源管理器打开目录
-explorer.exe .
+$ explorer.exe .
 ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-2.png)
@@ -34,7 +34,7 @@ explorer.exe .
 事实上，Windows 的 `explorer.exe` 命令能够将任意文件按照默认打开方式打开。也就是说，我们也可以直接在 WSL 中用 `explorer.exe` 打开图片、Markdown 文件、音频、视频等。比如，我们在 WSL 环境下进入 Linux 文件系统中的某个目录，希望用 Windows 的「照片」应用打开其中的一张 PNG 图片，那么我们可以直接：
 
 ```bash
-explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
+$ explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
 ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-4.png)
@@ -47,7 +47,7 @@ explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
 - 工具 `clip.exe` 是 Windows 侧的剪贴板，我们可以将 WSL 侧的命令输出利用 `clip.exe` 导入 Windows 剪贴板。比如：
 
 ```bash
-uname -r | clip.exe
+$ uname -r | clip.exe
 ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-5.png)
@@ -56,10 +56,10 @@ uname -r | clip.exe
 
 ```powershell
 # 查看 WSL 内核版本
-wsl uname -a
+$ wsl uname -a
 
 # 查看 WSL 发行版信息
-wsl cat /etc/os-release
+$ wsl cat /etc/os-release
 ```
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-6.png)
@@ -74,9 +74,9 @@ WSL 2 使用 [VHDX](https://docs.microsoft.com/en-us/windows-hardware/manufactur
 
 也可以参照[开启「适用于 Linux 的 Windows 子系统」的附加功能](../1-Preparations/1-1-Installation.md#开启「适用于-linux-的-windows-子系统」的附加功能)一节，通过运行命令开启：
 
-```
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Services
+```powershell
+$ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
+$ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Services
 ```
 
 然后以管理员权限执行 `Optimize-VHD -Path <VHDX 文件路径> -Mode Full` 即可。如果不清楚存储路径，可以打开[注册表编辑器](https://support.microsoft.com/help/4027573/windows-10-open-registry-editor)，在 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{随机 GUID}\BasePath` 下找到。
