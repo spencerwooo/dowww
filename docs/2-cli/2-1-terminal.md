@@ -22,7 +22,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 
 - 如果希望始终保持 Windows Terminal 的主题颜色为暗色方案，而不跟随 Windows 系统亮暗主题：可以在 `globals` 项目下的 `requestedTheme` 属性中这样配置：
 
-```json {4}
+```json {3}
 {
   "globals": {
     "requestedTheme": "dark"
@@ -32,7 +32,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 
 - 如果希望将 Ubuntu WSL 设置为 Windows Terminal 打开唤起的默认环境：可以复制 Ubuntu WSL Profile 中的 `guid`，将之粘贴至 `globals` 项目下的 `defaultProfile` 属性，类似这样：
 
-```json {4,10}
+```json {3,8}
 {
   "globals": {
     "defaultProfile": "{d317d852-8b6a-4936-b241-58c11be8aeb2}"
@@ -51,7 +51,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
 
 - 如果希望将 Dracula 的配色方案添加进入 Windows Terminal：可以到 [iTerm2-Color-Scheme - Windows Terminal](https://github.com/mbadolato/iTerm2-Color-Schemes/tree/master/windowsterminal) 仓库下找到自己想要使用的配色方案，将 `JSON` 格式的配色复制进入 Windows Terminal 配置文件即可。比如我希望添加 Dracula 配色方案，只需要访问 [Dracula.json](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/windowsterminal/Dracula.json)，将代码部分复制，并粘贴到 Windows Terminal `JSON` 配置文件中：
 
-```json {6}
+```json {5}
 {
   // …
   "schemes": [
@@ -72,7 +72,7 @@ Windows Terminal 的配置文件是 `JSON` 的格式，如果你安装有 VS Cod
   - 将 `useAcrylic` 设置为 `true`
   - 将 `acrylicOpacity` 设置为 `0.95`
 
-```json {5-6,8-9,11-12}
+```json {4-5,7-8,10-11}
 {
   "profiles": [
     {
@@ -135,7 +135,7 @@ ColorTool.exe -d <主题名称>
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220913-4.png)
 
-**推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始](https://sspai.com/post/52868)
+> **推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始](https://sspai.com/post/52868)
 
 ColorTool 自带了一些常见的主题供我们直接使用，你也可以从这里下载更多的 iTerm 主题配置文件 — [iTerm2-Color-Schemes](https://github.com/mbadolato/iTerm2-Color-Schemes) — 来使用。
 
@@ -145,9 +145,13 @@ Fluent Terminal 是目前相对稳定的非 Electron 构建的终端。得益于
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220913-5.png)
 
-Fluent Terminal 开源在 [felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)，由于种种原因，Fluent Terminal 并没有上架 Microsoft Store。这里推荐大家使用 Windows 上可能是最好的「包管理工具」— [Scoop](https://scoop.sh/) — 进行安装。
+Fluent Terminal 开源在 [felixse/FluentTerminal](https://github.com/felixse/FluentTerminal)，并已经上架于 Microsoft Store 微软商店，我们可以直接下载：
 
-**推荐阅读：**[「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件](https://sspai.com/post/52496)
+<a href='//www.microsoft.com/store/apps/9p2krlmfxf9t?cid=storebadge&ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='Get it from Microsoft' style='width: 160px;' /></a>
+
+另外，大家也可以使用 Windows 上可能是最好的「包管理工具」— [Scoop](https://scoop.sh/) — 进行安装。
+
+> **推荐阅读：**[「一行代码」搞定软件安装卸载，用 Scoop 管理你的 Windows 软件](https://sspai.com/post/52496)
 
 安装 Scoop 之后，我们在 PowerShell 中执行下面的命令，即可安装 Fluent Terminal：
 
@@ -176,13 +180,13 @@ Terminus 是基于 Electron 的 Terminal。相比下文推荐的 Hyper 终端，
 
 Terminus 的设置是 GUI 界面的，配置简单友好，这里就不做过多描述了，如果要达到截图中的效果：
 
-|           设置项            |                                          参数 / 属性                                           |
-| :-------------------------: | :--------------------------------------------------------------------------------------------: |
-|            字体             | [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) |
-|            配色             |  [ayu](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/ayu.itermcolors)  |
-|        Terminus 主题        |                                            Standard                                            |
-| Terminus Acrylic background |                                               ✔                                                |
-|  Terminus Background Type   |                                             Fluent                                             |
+| 设置项                      | 参数 / 属性                                                                                    |
+| :-------------------------- | :--------------------------------------------------------------------------------------------- |
+| 字体                        | [Iosevka Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/Iosevka) |
+| 配色                        | [ayu](https://github.com/mbadolato/iTerm2-Color-Schemes/blob/master/schemes/ayu.itermcolors)   |
+| Terminus 主题               | Standard                                                                                       |
+| Terminus Acrylic background | ✔                                                                                              |
+| Terminus Background Type    | Fluent                                                                                         |
 
 ## Hyper
 
@@ -208,9 +212,9 @@ Hyper 是基于 Electron 的 Terminal，也可能是目前 Windows 上面可定�
 
 ```js
 config: {
-    shell: 'C:\\Windows\\System32\\wsl.exe',
-    shellArgs: [],
-    env: {}
+  shell: 'C:\\Windows\\System32\\wsl.exe',
+  shellArgs: [],
+  env: {}
 }
 ```
 

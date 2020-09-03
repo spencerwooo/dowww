@@ -17,7 +17,7 @@
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220447-1.png)
 
-**推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始 - 少数派](https://sspai.com/post/52868)
+> **推荐阅读：**[告别 Windows 终端的难看难用，从改造 PowerShell 的外观开始 - 少数派](https://sspai.com/post/52868)
 
 ## 主要内容
 

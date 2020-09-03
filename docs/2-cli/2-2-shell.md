@@ -46,7 +46,7 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 
 其中，在 Ubuntu 16.04 中 Ubuntu 引入了 `apt` 命令来代替曾经老用户熟悉的 `apt-get`，提供了更用户友好的操作和命令行界面，对软件包 cache 缓存的处理也更为优雅。这里我推荐大家使用 `apt` 命令来与 APT 包管理工具交互，安装、管理和更新软件和依赖，接下来的文档中，我也都会使用 `apt` 命令进行介绍。
 
-**推荐阅读：**[Difference Between apt and apt-get Explained - It's FOSS](https://itsfoss.com/apt-vs-apt-get-difference/)
+> **推荐阅读：**[Difference Between apt and apt-get Explained - It's FOSS](https://itsfoss.com/apt-vs-apt-get-difference/)
 
 ## bash
 
@@ -59,7 +59,7 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 
 同学们可以根据自己实际情况，在这两个 Shell 中二选一即可。**在之后的文档中，我会用 zsh 作为默认的 Shell 进行介绍。**
 
-**推荐阅读：**[为什么说 zsh 是 shell 中的极品？ - 韦易笑的回答 - 知乎](https://www.zhihu.com/question/21418449/answer/300879747)。
+> **推荐阅读：**[为什么说 zsh 是 shell 中的极品？ - 韦易笑的回答 - 知乎](https://www.zhihu.com/question/21418449/answer/300879747)。
 
 ## zsh
 
@@ -166,14 +166,14 @@ chsh -s $(which fish)
 - 在 `~/.oh-my-zsh/themes` 目录下打开 oh-my-zsh 默认主题文件：`robbyrussell.zsh-theme`，将其中的全角 Unicode 字符「➜」更改为其他字符（比如「>」或者「→」）
 - 加载设置：`source ~/.zshrc`
 
-需要注意的是，很多 `oh-my-zsh` 主题（包括 [更加酷炫的 `Powerlevel9k` 主题包](https://github.com/bhilburn/powerlevel9k)）都用到了上文提到的 Powerline Fonts 和 Nerd Fonts，而这些字形在 Windows 任何终端下都没有很好的支持，因此目前一个很好的解决方法是：
+需要注意的是，很多 `oh-my-zsh` 主题（包括 [更加酷炫的 `Powerlevel10k` 主题包](https://github.com/romkatv/powerlevel10k)）都用到了上文提到的 Powerline Fonts 和 Nerd Fonts，而这些字形在 Windows 任何终端下都没有很好的支持，因此目前一个很好的解决方法是：
 
 - 将酷炫的命令前部分放在一行单独显示
 - 将需要输入的带有光标的命令部分放在第二行显示
 
 ![](https://user-images.githubusercontent.com/32114380/50538113-00a78a00-0ba5-11e9-8a7a-db8d709e8d88.png)
 
-比如：如果你使用了 [Powerlevel9k 主题包](https://github.com/bhilburn/powerlevel9k)，可以考虑将下面的内容加入 `.zshrc` 来实现命令单独在第二行的显示：
+比如：如果你使用了 [Powerlevel10k 主题包](https://github.com/romkatv/powerlevel10k)，可以考虑将下面的内容加入 `.zshrc` 来实现命令单独在第二行的显示：
 
 ```bash
 # 让命令主体单独在第二行显示
