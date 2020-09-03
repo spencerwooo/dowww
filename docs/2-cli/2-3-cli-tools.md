@@ -1,7 +1,7 @@
-# 其他工具
+# 命令行工具
 
 ::: callout 🍊 本文内容
-本文将对 WSL 上常用命令、常见工具、常见使用场景等内容进行介绍和说明。接下来的内容为了方便介绍，我将以 zsh 为 WSL 的默认 Shell 进行讲述。
+本文将对 WSL 上使用 Git 进行版本控制，使用 GPG 为 Git commit 签名，设置 WSL 代理以及 WSL 中访问远程服务器等内容进行介绍和说明。接下来的内容为了方便介绍，我将以 zsh 为 WSL 的默认 Shell 进行讲述。
 :::
 
 ## WSL 2 中的网络访问问题 <Badge text="WSL 2"/>
@@ -120,6 +120,132 @@ Host github.com
 之后我们即可通过代理登录 GitHub 了。我们可以通过命令 `ssh -T git@github.com` 来测试我们是否能够登录成功。
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_152333.png)
+
+## 使用 GPG 为 Git commit 签名
+
+:::callout 🎫 Why GPG?
+明明前面的配置内容已经完全足够我们使用 Git 来管理发布 GitHub 仓库了，为什么我们还需要使用 GPG 签名？**因为伪造一个 Git commit 的作者和邮箱轻而易举，任何人都可能用你的身份伪造一份 Git commit，来栽赃于你。**
+
+GPG 全称为 GNU Privacy Guard，GPG 通过非对称加密来帮助我们从密码学的角度在互联网上证明「我是我」，也从而证明「这不一定真的是我」。为了防止出现我这篇文章中讲述的事情：[震惊！竟然有人在 GitHub 上冒充我的身份！](https://blog.spencerwoo.com/2020/08/wait-this-is-not-my-commit/)，推荐所有人使用 GPG 为自己的 commit 签名。
+:::
+
+### 生成 GPG 密钥对
+
+首先，大部分 Linux 发行版已经安装有 GPG 工具了，在 WSL 中执行 `gpg --version` 即可查看当前 GPG 工具的安装情况：
+
+```bash
+$ gpg --version
+
+gpg (GnuPG) 2.2.19
+libgcrypt 1.8.5
+Copyright (C) 2019 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /home/spencer/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+```
+
+同时，请注意并记住 GPG 存储根目录：即输出内容中的 Home 目录。此例子中的目录为：`/home/spencer/.gnupg`。
+
+之后，我们就可以用下面的命令来为自己生成一个 GPG 公钥和私钥：
+
+```bash
+$ gpg --full-generate-key
+```
+
+- 在密钥种类处：选择默认 RSA and DSA 即可；
+- 在密钥长度选项处：按照 GitHub 的要求选择 4096 bits；
+- 在密钥过期时间处：按照自己的需要选择，默认为永不过期；
+- 在我们的用户 ID 和 GPG key 签名邮箱处：填写我们的常用用户名，并填入 GitHub 上面认证过的邮箱；
+- 最后，为密钥设置一个安全的密码，并一定记住这一密码。
+
+这样，我们就生成了我们的第一对 GPG 密钥！我们可以用这样的命令查看当前我们拥有的所有 GPG key：
+
+```bash
+$ gpg --list-secret-keys --keyid-format LONG
+
+/home/spencer/.gnupg/pubring.kbx
+--------------------------------
+sec   rsa4096/24CD550268849CA0 2020-08-29 [SC]
+      9433E1B6807DE7C15E20DC3B24CD550268849CA0
+uid                 [ultimate] Spencer Woo (My GPG key) <my@email.com>
+ssb   rsa4096/EB754D2B2409E9FE 2020-08-29 [E]
+```
+
+其中，sec 一行的 `rsa4096/24CD550268849CA0` 就是我们的 GPG 私钥，其中的 `24CD550268849CA0` 即为我们的 GPG 私钥 ID。
+
+### 配置 Git 默认使用 GPG 对 commit 签名
+
+生成了 GPG 密钥，并拿到了我们的 GPG 私钥 ID 后，我们即可让 Git 用这一 GPG key 为我们的 commit 进行签名：
+
+```bash
+$ git config --global user.signingkey 24CD550268849CA0
+$ git config --global commit.gpgsign true
+```
+
+这样设置后，如果没有问题，之后的 commit 中 Git 就会自动为我们用这一 GPG 私钥进行签名。我们可以用这一命令确认签名的存在：
+
+```bash
+$ git log --show-signature
+
+commit c407d4efc980cbee981da50d714a751999b19ddf (HEAD -> master)
+gpg: Signature made Sun Aug 30 17:16:18 2020 CST
+gpg:                using RSA key 9433E1B6807DE7C15E20DC3B24CD550268849CA0
+gpg: Good signature from "Spencer Woo (My GPG key) <my@email.com>" [ultimate]
+Author: spencerwooo <my@email.com>
+Date:   Sun Aug 30 17:16:18 2020 +0800
+
+    Signed by GPG
+```
+
+另外，此时我们再次用之前查看 commit 详细信息的命令查看本次 commit，我们会发现 GPG 签名已经直接保存于这一 commit 之中了：
+
+```bash
+$ git cat-file -p c407d4e
+```
+
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_194423.png)
+
+最后，我们需要告诉 GitHub 我们使用的 GPG 公钥。对于刚刚我们拿到的私钥 ID：24CD550268849CA0，我们使用下面的命令即可导出我们的 GPG 公钥：
+
+```bash
+$ gpg --armor --export 24CD550268849CA0
+```
+
+将输出粘贴进入 GitHub 的 [Settings » SSH and GPG keys » New GPG key](https://github.com/settings/keys)，并保存。之后，我们就可以开始在 GitHub 上享受 Verified 被钦定的感觉！
+
+### 错误排查
+
+首先，由于 WSL 没有图形界面，因此在 WSL 中使用 GPG 在全新的配置环境下很可能出现问题。在出现问题时，我们可以使用 `--debug-all` 来让 GPG 输出更多错误日志，从而找到问题所在。我们可以用下面的命令来在不必每次都需要建立一个 commit 的情况下复现 GPG 签名中出现的问题：
+
+```bash
+$ echo "test" | gpg --clear-sign --debug-all
+```
+
+首先，你可能发现了我们每次使用 GPG 密钥签发 commit 时，都需要输入一次 GPG 密码。此时，如果我们在 Windows 上，那么会弹出 Pinentry 这个图形化的密码输入窗口，但是 WSL 并没有图形界面，因此如果我们不设置 Pinentry 的具体程序，那么每次使用 GPG 签名都会失败。这里我们有两种解决办法：
+
+- 在 WSL 中设置 `GPG_TTY` 环境变量：在 `~/.zshrc` 中加入 `export GPG_TTY="$(tty)"`，从而让 GPG 知道当前的输出终端，从而弹出命令行界面的 `pinentry-curses` 来输入 GPG 密码。但是，我个人发现这种办法偶尔在第一次启动 WSL 的时候无法设置 `GPG_TTY`（即使我将其放在 `.zshrc` 里面），也就是当我执行 `echo $GPG_TTY` 时出现 not a tty 的错误信息，此时我们就需要第二种方法；
+- 让 WSL 中的 GPG 使用 Windows 的 Pinentry 窗口程序：如果我们在 Windows 中也安装了 GPG 程序（可以通过 scoop 安装），那么我们应该在 GPG 的安装目录下找到叫做 `pinentry-basic.exe` 的程序。是的，**WSL 中安装的 GPG 同样可以使用 Windows 中的 Pinentry 来输入密码**！我们在 WSL 里面，在前面提到的 GPG 的 Home 目录（默认 `~/.gnupg`）中创建名为 `gpg-agent.conf` 的文件，并在其中写入：
+
+  ```
+  pinentry-program /mnt/c/Users/Spencer/scoop/apps/gpg/current/bin/pinentry-basic.exe
+  ```
+
+  这样一来，WSL 中的 GPG 每次进行签名，都会调用 Windows 的 Pinentry GUI，从而避免了我们 WSL 没有图形界面的尴尬局面，这一解决方法也能够避免 VS Code 在 Remote-WSL 环境下直接进行 Git commit 时由于无法开启命令行界面导致无法启动 Pinentry 的问题。
+
+
+另外，在使用 Git 进行 commit 的时候，如果出现类似 Error: “signing failed: No secret key” 的报错信息，可能是 Git 使用的 GPG 命令行工具跟我们生成密钥使用的不一致。我们可以首先用 which gpg 来找到我们所使用的 GPG 工具的具体地址，比如 /usr/bin/gpg，之后告诉 Git 使用这一 GPG binary 即可：
+
+```bash
+$ git config --global gpg.program /usr/bin/gpg
+```
 
 ## 代理配置
 
@@ -258,86 +384,3 @@ sudo firewall-cmd --zone=public --permanent --add-port=60000-61000/udp
 ```bash
 mosh {USERNAME}@{HOST_IP_OR_URL} --ssh="ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem"
 ```
-
-## Windows 和 WSL 之间互相访问
-
-Windows 和 WSL 相互配合的一大利好就是能够直接在 Linux 中执行 Windows 可执行文件（`exe` 文件），也可以反过来在 Windows 中执行 Linux 可执行文件。同时，WSL 2 的出现让我们能够直接在 Windows 的文件资源管理器中访问 Linux 文件系统，而不会像 WSL 1.0 一样对 Linux 中的文件造成无法逆转的影响。
-
-### 文件系统
-
-::: callout ❗ 注意
-[WSL 2 架构](/dev/1-Preparations/1-0-Intro.html#wsl-2-中采用的新措施)允许我们通过 [Plan 9 文件系统协议（9P protocol server）](<https://en.wikipedia.org/wiki/9P_(protocol)>)来从 Windows 侧访问 Linux 文件，与访问网络资源类似。这不意味着你可以直接通过 AppData 文件目录去访问 Linux 文件，如果你这样做，依旧会对 WSL 造成不可逆的影响。
-:::
-
-在 WSL 环境中：
-
-- Windows 目录往往位于 `/mnt/c/Users/{WINDOWS_USERNAME}` 下
-- Linux 目录往往位于 `/home/{WSL_USERNAME}` 下
-
-我们在 WSL 中可以通过下面的命令在文件资源管理器中打开 Linux 文件系统中的某个目录：
-
-```bash
-# 进入目标目录
-cd /home/spencer
-
-# 用 Windows 文件资源管理器打开目录
-explorer.exe .
-```
-
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-2.png)
-
-日后，为了方便我们直接访问 WSL 文件系统中的用户根目录，我们甚至可以直接将这一路径固定在「快速访问」中，完全没有任何问题。WSL 环境中的文件可以被 Windows 直接无障碍访问，用正常 Windows 应用程序打开，没有问题。
-
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-3.png)
-
-事实上，Windows 的 `explorer.exe` 命令能够将任意文件按照默认打开方式打开。也就是说，我们也可以直接在 WSL 中用 `explorer.exe` 打开图片、Markdown 文件、音频、视频等。比如，我们在 WSL 环境下进入 Linux 文件系统中的某个目录，希望用 Windows 的「照片」应用打开其中的一张 PNG 图片，那么我们可以直接：
-
-```bash
-explorer.exe {IMAGE_PATH}/{IMAGE_NAME}.png
-```
-
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-4.png)
-
-### 命令执行
-
-在 WSL 环境下执行 Windows 侧的命令非常直接易懂，就是在 Windows 命令后面加上可执行文件后缀 `exe`。比如：
-
-- 执行 `explorer.exe` 打开文件资源管理器，和上面的介绍类似
-- 工具 `clip.exe` 是 Windows 侧的剪贴板，我们可以将 WSL 侧的命令输出利用 `clip.exe` 导入 Windows 剪贴板。比如：
-
-```bash
-uname -r | clip.exe
-```
-
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-5.png)
-
-在 Windows 侧（PowerShell 中）执行 WSL 的命令也同样相似，我们只需要在命令之前加上 `wsl` 即可。比如：
-
-```powershell
-# 查看 WSL 内核版本
-wsl uname -a
-
-# 查看 WSL 发行版信息
-wsl cat /etc/os-release
-```
-
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-6.png)
-
-### 优化 WSL 2 虚拟磁盘占用空间
-
-WSL 2 使用 [VHDX](https://docs.microsoft.com/en-us/windows-hardware/manufacture/desktop/boot-to-vhd--native-boot--add-a-virtual-hard-disk-to-the-boot-menu) 格式的虚拟磁盘储存文件，磁盘大小会在需要时自动扩容，长时间使用可能会占用较大的磁盘空间。我们可以通过 [`Optimize-VHD`](https://docs.microsoft.com/en-us/powershell/module/hyper-v/optimize-vhd?view=win10-ps) 命令来优化其占用空间。
-
-该命令是 Hyper-V 功能的一部分，我们需要在 [Windows 功能](https://jingyan.baidu.com/article/a378c960cb5b39b328283092.html)中启用 **Hyper-V » Hyper-V 管理工具 » Windows PowerShell 的 Hyper-V 模块** 以及 **Hyper-V » Hyper-V 平台 » Hyper-V 服务**：
-
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-7.png)
-
-也可以参照[开启「适用于 Linux 的 Windows 子系统」的附加功能](../1-Preparations/1-1-Installation.md#开启「适用于-linux-的-windows-子系统」的附加功能)一节，通过运行命令开启：
-
-```
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Management-PowerShell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V-Services
-```
-
-然后以管理员权限执行 `Optimize-VHD -Path <VHDX 文件路径> -Mode Full` 即可。如果不清楚存储路径，可以打开[注册表编辑器](https://support.microsoft.com/help/4027573/windows-10-open-registry-editor)，在 `HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Lxss\{随机 GUID}\BasePath` 下找到。
-
-WSL 命令行方面的配置、工具、操作和问题异常处理等内容基本介绍完毕。接下来的一章，我们将对利用 Visual Studio Code 和 WSL 配合进行工作开发的内容进行介绍。

@@ -95,7 +95,8 @@ module.exports = {
           '2-cli/2-0-intro',
           '2-cli/2-1-terminal',
           '2-cli/2-2-shell',
-          '2-cli/2-3-others',
+          '2-cli/2-3-cli-tools',
+          '2-cli/2-4-others',
         ],
       },
       {
