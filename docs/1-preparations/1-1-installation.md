@@ -12,7 +12,9 @@
 
 只有 Windows 10 版本 16215 或以后的版本才能够正常运行 WSL。你可以在「Windows 设置 > 系统 > 关于」处找到你的 Windows 10 操作系统版本。
 
-**只有 Windows 10 版本 18917 或以后的版本才能够正常运行 WSL 2**。需要明确，WSL 2 目前依旧只能在 Windows 10 预览体验计划的版本中使用，因此你需要在「Windows 设置 > 更新和安全 > Windows 预览体验计划」处选择加入 Fast ring 或 Slow ring，这样才能使用正确的 Windows 10 版本安装 WSL 2。
+**只有 Windows 10 版本 18362 或 18363 以及以后的版本，或小版本号为 1049 的版本，才能够正常运行 WSL 2**。需要明确，WSL 2 目前只能在 Windows 10 版本 1903、1909 和 2004 中使用（其中 1903 和 1909 仅支持 **x64 系统**），因此你需要将自己的 Windows 系统进行升级至合适的版本，才能使用正确的 Windows 10 版本安装 WSL 2。
+
+> 见 WSL 2 向前兼容 Windows 10 版本 1903、1909 的博客文章：[WSL 2 Support is coming to Windows 10 Versions 1903 and 1909](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/).
 
 ### 开启「适用于 Linux 的 Windows 子系统」的附加功能
 
