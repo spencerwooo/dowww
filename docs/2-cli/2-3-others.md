@@ -22,7 +22,7 @@ ip route | grep default | awk '{print $3}'
 cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 ```
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_131940.png)
 
 ## 代理配置
 
