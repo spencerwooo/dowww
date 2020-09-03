@@ -242,7 +242,7 @@ $ echo "test" | gpg --clear-sign --debug-all
   这样一来，WSL 中的 GPG 每次进行签名，都会调用 Windows 的 Pinentry GUI，从而避免了我们 WSL 没有图形界面的尴尬局面，这一解决方法也能够避免 VS Code 在 Remote-WSL 环境下直接进行 Git commit 时由于无法开启命令行界面导致无法启动 Pinentry 的问题。
 
 
-另外，在使用 Git 进行 commit 的时候，如果出现类似 Error: “signing failed: No secret key” 的报错信息，可能是 Git 使用的 GPG 命令行工具跟我们生成密钥使用的不一致。我们可以首先用 which gpg 来找到我们所使用的 GPG 工具的具体地址，比如 /usr/bin/gpg，之后告诉 Git 使用这一 GPG binary 即可：
+另外，在使用 Git 进行 commit 的时候，如果出现类似 Error: “signing failed: No secret key” 的报错信息，可能是 Git 使用的 GPG 命令行工具跟我们生成密钥使用的不一致。我们可以首先用 `which gpg` 来找到我们所使用的 GPG 工具的具体地址，比如 `/usr/bin/gpg`，之后告诉 Git 使用这一 GPG binary 即可：
 
 ```bash
 $ git config --global gpg.program /usr/bin/gpg
