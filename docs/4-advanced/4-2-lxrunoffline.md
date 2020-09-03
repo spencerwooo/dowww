@@ -32,8 +32,8 @@ LxRunOffline i -n UF -d c:\WSL\Full -f <c:\whereabouts_of_the_downloaded_image> 
 
 Upon filling up the precise absolute path to the `16.04.2-server-cloudimg-amd64-root.tar.gz` file, the command shall create a distribution named as UF, in directory `c:\WSL\UFull`.
 
-:::tip
-**Comments about those "docker images"**: docker is meant to be as light-weight as possbile, and a functional Linux distribution may come in size of less than 20MB. Yet, with these skinny super-light-weight Linux distro, at times, you won't even have the `apt-get` command.
+:::callout 🍼 Comments about those "docker images"
+Docker is meant to be as light-weight as possbile, and a functional Linux distribution may come in size of less than 20MB. Yet, with these skinny super-light-weight Linux distro, at times, you won't even have the `apt-get` command.
 :::
 
 ### Accessing the newly installed image

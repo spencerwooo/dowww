@@ -10,33 +10,33 @@
 
 - 备份原文件：
 
-```bash
-sudo cp /etc/apt/sources.list /etc/apt/sources.list.bac
-```
+  ```bash
+  sudo cp /etc/apt/sources.list /etc/apt/sources.list.bac
+  ```
 
-- 在配置文件 `/etc/apt/sources.list` 最前面添加下面的内容：
+- 在配置文件 `/etc/apt/sources.list` 最前面添加下面的内容（下面内容为默认 Ubuntu 20.04 LTS 版本的内容）：
 
-```bash
-# 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse
-deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse
+  ```bash
+  # 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+  deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
 
-# 预发布软件源，不建议启用
-# deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-# deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse
-```
+  # 预发布软件源，不建议启用
+  # deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+  # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-proposed main restricted universe multiverse
+  ```
 
 - 更新缓存：
 
-```bash
-sudo apt update && sudo apt upgrade
-```
+  ```bash
+  sudo apt update && sudo apt upgrade
+  ```
 
 更多内容请参考：[Ubuntu 镜像使用帮助 - 清华大学开源软件镜像站](https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)
 
@@ -69,25 +69,25 @@ APT - Debian's Advanced Packaging Tool 是 Ubuntu 默认包管理工具，它是
 
 - 利用 apt 安装 `zsh`
 
-```bash
-sudo apt install zsh
-```
+  ```bash
+  sudo apt install zsh
+  ```
 
 下载安装 [oh-my-zsh](https://ohmyz.sh/)，可能是市面上最好的 `zsh` 配置管理工具：
 
 - 运行命令下载安装
 
-```bash
-sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
+  ```bash
+  sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  ```
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651.png)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220651.png)
 
 - 将 `zsh` 作为默认的 Shell 环境（如果刚刚安装脚本没有这样做的话）：
 
-```bash
-chsh -s $(which zsh)
-```
+  ```bash
+  chsh -s $(which zsh)
+  ```
 
 ### 插件、主题模板推荐
 
@@ -217,15 +217,15 @@ Windows 终端输出错位、光标错位的根本原因在于 Windows 终端默
 
 - 可以在 `.zshrc` 最尾部添加如下代码
 
-```bash
-# Change ls colours
-LS_COLORS="ow=01;36;40" && export LS_COLORS
+  ```bash
+  # Change ls colours
+  LS_COLORS="ow=01;36;40" && export LS_COLORS
 
-# make cd use the ls colours
-zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
-autoload -Uz compinit
-compinit
-```
+  # make cd use the ls colours
+  zstyle ':completion:*' list-colors "${(@s.:.)LS_COLORS}"
+  autoload -Uz compinit
+  compinit
+  ```
 
 - 加载设置：`source ~/.zshrc`
 
@@ -235,13 +235,13 @@ compinit
 
 - 在 WSL 中创建 `/etc/wsl.conf`，在其中填写如下内容：
 
-```
-[automount]
-enabled = true
-root = /mnt/
-options = "metadata,umask=22,fmask=111"
-mountFsTab = true
-```
+  ```
+  [automount]
+  enabled = true
+  root = /mnt/
+  options = "metadata,umask=22,fmask=111"
+  mountFsTab = true
+  ```
 
 - 重启 WSL，所有的盘符就会使用上面的配置自动挂载（可以使用 `mount -l` 查看）
 

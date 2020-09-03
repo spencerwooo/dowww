@@ -48,7 +48,7 @@ $ uname -r
 4.19.43-microsoft-standard
 ```
 
-:::tip 🌏 名称提示
+:::callout 🌏 名称提示
 这里我们得到的 `4.19.43-microsoft-standard` 即为 WSL 的 Linux 内核名称。下文命令中将以此作为命令中所使用的内核名称，因此请将下文中涉及到这一内容的部分替换为你自己的内核版本名称。
 :::
 

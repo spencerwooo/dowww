@@ -40,27 +40,27 @@ WSL 是一个完全的「终端」命令行环境，默认情况下是没有窗�
 
 - 添加 Visual Studio Code 库：
 
-```bash
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-```
+  ```bash
+  curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+  sudo mv microsoft.gpg /etc/apt/trusted.gpg.d/microsoft.gpg
+  sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+  ```
 
 - 安装 Visual Studio Code：
 
-```bash
-sudo apt update && sudo apt upgrade
-sudo apt install code
-```
+  ```bash
+  sudo apt update && sudo apt upgrade
+  sudo apt install code
+  ```
 
 - 打开 XServer 窗口，在 WSL 终端执行 `code`，应该就可以看到 WSL 中的 VS Code 窗口启动了
 - 如果出现运行 `code` 命令报错，提示缺少 `libx11-xcb1` 库，那么按照下面的方法安装即可：
 
-```bash
-sudo apt install libx11-xcb1
-```
+  ```bash
+  sudo apt install libx11-xcb1
+  ```
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221232-2.png)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221232-2.png)
 
 ## 其他应用
 

@@ -36,25 +36,25 @@ g++ hello.cpp -o hello
 
 - 下载安装包含大部分开发所需组件的 `build-essential` 组件包：
 
-```bash
-sudo apt install build-essential
-```
+  ```bash
+  sudo apt install build-essential
+  ```
 
 - 为了确保安装了编译 C/C++ 的组件，我们尝试安装编译工具 `gcc`、`g++` 和调试工具 `gdb`：
 
-```bash
-sudo apt install gcc g++ gdb
-```
+  ```bash
+  sudo apt install gcc g++ gdb
+  ```
 
 - 再次确认安装状态：
 
   - 运行：`gcc --version` 与 `g++ --version`，如果有类似下面的输出，说明我们的 C/C++ 编译环境就安装成功了：
 
-  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_222006-2.png)
+    ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_222006-2.png)
 
   - 运行：`gdb --version`，如果有类似下面的输出，说明我们调试 C/C++ 程序的环境就安装成功了：
 
-  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_222006-3.png)
+    ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_222006-3.png)
 
 ## VS Code 智能代码提示
 

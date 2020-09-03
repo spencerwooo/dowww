@@ -14,9 +14,9 @@
 
 - 安装 `nvm`：
 
-```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-```
+  ```bash
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  ```
 
 - 一般来说上一步的脚本会添加以下内容（`nvm` 的环境变量）到命令行的用户 Shell 配置文件 profile（对 zsh 来说就是 `.zshrc`）里，可以通过 `source ~/.zshrc` 等类似的方法重新加载用户配置使之生效：
 
@@ -29,28 +29,28 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | 
 
 - 安装 Node.js 和 `npm`：
 
-```bash
-# 安装当前的稳定版
-nvm install stable
+  ```bash
+  # 安装当前的稳定版
+  nvm install stable
 
-# 等待安装完毕后，激活该版本
-nvm use stable
-```
+  # 等待安装完毕后，激活该版本
+  nvm use stable
+  ```
 
 注意：
 
 - 如果出现 `sudo npm` 找不到命令问题，这里可以做一下软链接：
 
-```bash
-sudo ln -s $(which node) /usr/bin/node
-sudo ln -s $(which npm) /usr/bin/npm
-```
+  ```bash
+  sudo ln -s $(which node) /usr/bin/node
+  sudo ln -s $(which npm) /usr/bin/npm
+  ```
 
 - 更换 `nvm` 镜像（如更换为淘宝镜像源），在用户 Shell 配置文件 profile 中加入下面内容：
 
-```bash
-export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
-```
+  ```bash
+  export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
+  ```
 
 ## 配置 Node.js 包管理工具
 
@@ -58,15 +58,15 @@ export NVM_NODEJS_ORG_MIRROR="https://npm.taobao.org/mirrors/node"
 
 - 考虑将 `npm` 更换源至淘宝镜像（推荐）：
 
-```bash
-npm set registry https://registry.npm.taobao.org
-```
+  ```bash
+  npm set registry https://registry.npm.taobao.org
+  ```
 
 - 或直接安装 `cnpm`，一个阿里官方的 Node.js 包管理工具，默认源为淘宝镜像源：
 
-```bash
-npm install -g cnpm --registry=https://registry.npm.taobao.org
-```
+  ```bash
+  npm install -g cnpm --registry=https://registry.npm.taobao.org
+  ```
 
 给 `npm` 下的模块命令添加权限：
 
@@ -84,28 +84,28 @@ sudo chown -R $(whoami) $(npm config get prefix)/{lib/node_modules,bin,share}
 
 - 配置 `yarn` 下载仓库：
 
-```bash
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-```
+  ```bash
+  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  ```
 
 - 安装 `yarn`：
 
-```bash
-sudo apt-get update && sudo apt-get install yarn
-```
+  ```bash
+  sudo apt-get update && sudo apt-get install yarn
+  ```
 
 - 考虑更换 `yarn` 下载源至淘宝镜像：
 
-```bash
-yarn set registry https://registry.npm.taobao.org
-```
+  ```bash
+  yarn set registry https://registry.npm.taobao.org
+  ```
 
 - 解决 `yarn` 进度条显示错误的问题，在命令行 profile 文件中输出环境变量：
 
-```bash
-$LANG=en.us-utf8
-```
+  ```bash
+  $LANG=en.us-utf8
+  ```
 
 ## 配置 ESLint <a href="https://github.com/spencerwooo"><Badge text="@SpencerWoo"/></a>
 
@@ -116,20 +116,20 @@ $LANG=en.us-utf8
 - 下载 VS Code 的 ESLint 插件：[ESLint | Integrates ESLint JavaScript into VS Code.](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
 - 在当前开发环境中加入 ESLint 模块：
 
-```bash
-yarn add eslint
-```
+  ```bash
+  yarn add eslint
+  ```
 
 - 初始化 ESLint 模块：
 
-```bash
-# 如果 PATH 中有 eslint
-eslint --init
-# 如果没识别到 eslint
-./node_modules/.bin/eslint --init
-```
+  ```bash
+  # 如果 PATH 中有 eslint
+  eslint --init
+  # 如果没识别到 eslint
+  ./node_modules/.bin/eslint --init
+  ```
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221830.png)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221830.png)
 
 之后，VS Code 的 ESLint 插件便可以跟我们安装的 ESLint 工具协调运行，帮助我们保证自己的 JavaScript 项目代码的干净整洁。
 

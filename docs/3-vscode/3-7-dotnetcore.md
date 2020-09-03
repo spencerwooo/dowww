@@ -32,55 +32,55 @@ curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l ~/vsdbg
 
 - 配置 `.vscode/launch.json`：
 
-```json
-{
-  "version": "0.2.0",
-  "configurations": [
-    {
-      "name": ".NET Core Launch (console)",
-      "type": "coreclr",
-      "request": "launch",
-      "preLaunchTask": "build",
-      "program": "/mnt/c/your-project-path/<insert-project-name-here>.dll",
-      "cwd": "/mnt/c/your-project-path",
-      "console": "internalConsole",
-      "pipeTransport": {
-        "pipeCwd": "${workspaceRoot}",
-        "pipeProgram": "bash.exe",
-        "pipeArgs": ["-c"],
-        "debuggerPath": "~/vsdbg/vsdbg"
-      },
-      "sourceFileMap": {
-        "/mnt/c/your-project-path": "C:\\your-project-path"
+  ```json
+  {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": ".NET Core Launch (console)",
+        "type": "coreclr",
+        "request": "launch",
+        "preLaunchTask": "build",
+        "program": "/mnt/c/your-project-path/<insert-project-name-here>.dll",
+        "cwd": "/mnt/c/your-project-path",
+        "console": "internalConsole",
+        "pipeTransport": {
+          "pipeCwd": "${workspaceRoot}",
+          "pipeProgram": "bash.exe",
+          "pipeArgs": ["-c"],
+          "debuggerPath": "~/vsdbg/vsdbg"
+        },
+        "sourceFileMap": {
+          "/mnt/c/your-project-path": "C:\\your-project-path"
+        }
       }
-    }
-  ]
-}
-```
+    ]
+  }
+  ```
 
 - 配置 `.vscode/task.json`：
 
-```json
-{
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "build",
-      "command": "dotnet",
-      "type": "shell",
-      "args": ["build", "/mnt/c/your-project-path/projectname.csproj"],
-      "options": {
-        "shell": {
-          "executable": "bash.exe",
-          "args": ["-c"]
+  ```json
+  {
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "command": "dotnet",
+        "type": "shell",
+        "args": ["build", "/mnt/c/your-project-path/projectname.csproj"],
+        "options": {
+          "shell": {
+            "executable": "bash.exe",
+            "args": ["-c"]
+          }
         }
       }
-    }
-  ]
-}
-```
+    ]
+  }
+  ```
 
-按 F5 进入调试：
+按 <kbd>F5</kbd> 进入调试：
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_221819.png)
 
