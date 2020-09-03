@@ -7,12 +7,15 @@
 ## WSL 2 中的网络访问问题 <Badge text="WSL 2"/>
 
 :::danger 🚨 使用 WSL 2 时需注意的 IP 地址问题
-由于 WSL 2 实际上是一个 Linux 内核运行在 Hyper-V 虚拟机中，因此 WSL 2 目前并不能和 Windows 共享 localhost（也就是下文中涉及到的 `127.0.0.1`）。**以下内容仅适用于 WSL 2 环境。**
+由于 WSL 2 实际上是一个 Linux 内核运行在 Hyper-V 虚拟机中，因此 WSL 2 目前并不能和 Windows 共享 localhost（也就是下文中涉及到的 `127.0.0.1`）。
 :::
 
-目前，WSL 2 在和本机 Windows 互相访问的时候，有时候需要我们手动使用 WSL 虚拟机映射出来的 IP 地址才能正确进行代理配置、网络访问等。因此，如果你正在使用 WSL 2 环境进行开发工作，**下面的配置中的所有 `127.0.0.1` 都可能需要置换为 WSL 2 的 IP 地址。**
+目前，WSL 2 在和本机 Windows 互相访问的时候，有时候需要我们手动使用 WSL 虚拟机映射出来的 IP 地址才能正确进行代理配置、网络访问等。为了方便下文表述，我们在文档中使用 `<WSL IP 地址>` 来表示你的 WSL 侧的 IP 地址：
 
-你可以使用下面的命令来找到当前 WSL 2 的 IP 地址：
+- 如果你正在使用 WSL 2 环境进行开发工作，**那么下文提到的所有 `<WSL IP 地址>` 都是需要我们用下面介绍的方法手动获取的 WSL 2 的 IP 地址。**
+- 如果你仍使用 WSL 1，那么下面的配置中的 `<WSL IP 地址>` 即为 `127.0.0.1`。
+
+你可以使用下面的命令来获取当前 WSL 2 的 IP 地址：
 
 > 来自：[WSL2 的一些网络访问问题 - 获取主机的 IP](https://lengthmin.me/posts/wsl2-network-tricks/#%E8%8E%B7%E5%8F%96%E4%B8%BB%E6%9C%BA%E7%9A%84-ip)。
 
@@ -24,22 +27,120 @@ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
 
 ![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_131940.png)
 
+## 版本控制
+
+Git 是目前版本控制工具的典范、代表，如果你使用 GitHub，那么我相信你已经非常了解 Git 及其使用原理和方法了。
+
+### 安装 Git
+
+我们可以使用 Ubuntu 包管理工具 APT 安装 Git：
+
+```bash
+sudo apt install git
+```
+
+### 配置 Git 使用代理
+
+:::callout 🍐 剧情预告
+这里介绍 Git 使用代理，以及下面介绍 ssh 通过代理登录 GitHub，重点为了让各位熟悉命令。在「[#自动化执行代理配置](#自动化执行代理配置)」部分我们将介绍通过脚本自动化执行配置过程的方法，避免每次需要手动获取 WSL 的 IP 地址并为每个工具设定代理。
+:::
+
+配置 Git 访问 GitHub 时使用代理：
+
+```bash
+git config --global http.https://github.com.proxy 'http://<WSL IP 地址>:<代理端口>'
+```
+
+取消 Git 代理：
+
+```bash
+git config --global --unset http.https://github.com.proxy
+```
+
+### 使用 ssh 与 Git 登录管理 GitHub 仓库
+
+我们可以使用 ssh 在不输入 GitHub 账户密码的情况下将 Git 仓库内容推送至 GitHub 远程仓库。ssh 是我们与远程服务器认证沟通的工具，详见下一节：[远程登录 - ssh](#远程登录)。
+
+接下来，我们配置与 GitHub 连接的 SSH 密钥：^[[Generating a new SSH key and adding it to the ssh-agent - GitHub Help](https://help.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)]
+
+- 在 WSL 下生成 SSH 公钥 — 私钥对（将邮箱替换为你的邮箱），此时生成的 SSH 密钥默认位于 `~/.ssh` 路径下，公钥为 `id_rsa.pub`，私钥为 `id_rsa`：
+
+  ```bash
+  ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+  ```
+
+- 打开 ssh-agent 使之在后台运行：
+
+  ```bash
+  eval "$(ssh-agent -s)"
+  ```
+
+- 将私钥添加到 ssh-agent 之中：
+
+  ```bash
+  ssh-add ~/.ssh/id_rsa
+  ```
+
+- 查看公钥并将之复制到剪贴板：
+
+  ```bash
+  # 查看公钥内容
+  cat ~/.ssh/id_rsa.pub
+
+  # 将公钥复制到剪贴板
+  cat ~/.ssh/id_rsa.pub | clip.exe
+  ```
+
+- 将复制好的公钥添加到 GitHub 账户密钥里面：[Adding a new SSH key to your GitHub account - GitHub Help](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account).
+
+### 让 ssh 登录 GitHub 也经由代理
+
+上面配置了 Git 使用代理，但并没有配置 ssh 通过代理的登录过程，因此我们可能遇到 ssh 认证过程无法连接的情况。为了解决这一问题，我们需要继续对 ssh 连接登录 GitHub 的认证过程进行配置。
+
+ssh 默认的配置文件位于 `~/.ssh/config`，在此文件中，我们可以配置 ssh 访问某个主机时经由代理访问，因此我们可以配置当访问 `github.com` 主机时通过代理，来加速 ssh 登录过程。
+
+在 WSL 大部分 Linux 发行版中都有 `netcat` 这一工具，`netcat` 即 `nc`，是一个 Linux 上用于执行和 TCP、UDP 或其他网络协议相关操作的工具，我们可以使用 `nc` 来让 ssh 登录过程通过代理登录。
+
+> The nc (or netcat) utility is used for just about anything under the sun involving TCP, UDP, or UNIX-domain sockets.  It can open TCP connections, send UDP packets, listen on arbitrary TCP and UDP ports, do port scanning, and deal with both IPv4 and IPv6.^[[nc — arbitrary TCP and UDP connections and listens](http://manpages.ubuntu.com/manpages/bionic/man1/nc_openbsd.1.html)]
+
+ssh 登录 GitHub 时：
+
+- 我们的主机名称 Host 为 `github.com`；
+- 我们的 ssh 用户 User 为 `git`；
+- 我们需要用这一命令让 ssh 登录过程经由代理：`nc -X 5 -x <WSL IP 地址>:<代理端口> %h %p`；
+
+我们将以上配置用如下的语法写入 `~/.ssh/config`：
+
+```
+Host github.com
+  User git
+  ProxyCommand nc -X 5 -x <WSL IP 地址>:<代理端口> %h %p
+```
+
+之后我们即可通过代理登录 GitHub 了。我们可以通过命令 `ssh -T git@github.com` 来测试我们是否能够登录成功。
+
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_152333.png)
+
 ## 代理配置
+
+上面介绍的方法仅能对 Git 开启代理访问功能，如果我们希望 WSL 中的工具均能经由代理，那么需要通过环境变量 `http_proxy` 和 `https_proxy` 进行配置。
+
+### 基础配置
 
 使用下面的命令将当前 session（会话）的代理进行配置：
 
 ```bash
-set http_proxy=http://127.0.0.1:{端口号}
-set https_proxy=http://127.0.0.1:{端口号}
+export http_proxy=http://<WSL IP 地址>:<代理端口>
+export https_proxy=http://<WSL IP 地址>:<代理端口>
 ```
 
-使用下面的命令取消代理，使用系统代理：
+使用下面的命令取消代理：
 
 ```bash
 unset http_proxy https_proxy
 ```
 
-可以使用下面的命令检测自己的对外端口：
+我们可以使用下面的命令检测自己的对外端口：
 
 ```bash
 # 一个接口
@@ -49,111 +150,80 @@ curl ipinfo.io
 curl cip.cc
 ```
 
-上面的命令可以通过 alias（别名）加入 `~/.zshrc` 中，方便快速输入。在 `~/.zshrc` 中添加如下内容：
+### 自动化执行代理配置
+
+不难发现，上面的配置非常繁琐，对于不同的工具需要不同的命令手段，使用 WSL 2 还需要手动获取 IP，为了自动化整个过程，实现一行命令设置代理，我们可以在 `~/.zshrc` 或你使用的 Shell 的配置文件中添加这样的内容，来自动化配置代理：
 
 ```bash
-# 出去
-alias fuckgfw="set http_proxy=http://127.0.0.1:{端口号} && set https_proxy=http://127.0.0.1:{端口号}"
-# 回来
-alias unfuckgfw="unset http_proxy https_proxy"
-# 测试 IP
-alias myip="curl cip.cc"
+# Fetch WSL 2 ip address
+WSL_IP=$(ip route | grep default | awk '{print $3}')
+PROXY_HTTP="http://${WSL_IP}:<代理端口>"
+PROXY_SOCKS5="${WSL_IP}:<代理端口>"
+
+# Git & SSH for Git proxy
+proxy_git () {
+  git config --global http.https://github.com.proxy ${PROXY_HTTP}
+  if ! grep -qF "Host github.com" ~/.ssh/config ; then
+    echo "Host github.com" >> ~/.ssh/config
+    echo "  User git" >> ~/.ssh/config
+    echo "  ProxyCommand nc -X 5 -x ${PROXY_SOCKS5} %h %p" >> ~/.ssh/config
+  else
+    lino=$(($(awk '/Host github.com/{print NR}'  ~/.ssh/config)+2))
+    sed -i "${lino}c\  ProxyCommand nc -X 5 -x ${PROXY_SOCKS5} %h %p" ~/.ssh/config
+  fi
+}
+
+# Set proxy
+set_proxy () {
+  export http_proxy="${PROXY_HTTP}"
+  export https_proxy="${PROXY_HTTP}"
+  proxy_git
+}
+
+# Unset proxy
+unset_proxy () {
+  unset http_proxy
+  unset https_proxy
+  git config --global --unset http.https://github.com.proxy
+}
+
+# Set alias
+alias proxy=set_proxy
+alias deproxy=unset_proxy
 ```
 
-然后执行 `source ~/.zshrc` 加载配置文件。
+其中：
 
-## 版本控制
+- 第一行 `WSL_IP=$(ip route | grep default | awk '{print $3}')` 让我们使用 WSL 2 时可以自动获取最新的 WSL IP 地址，WSL 1 可以直接将 `WSL_IP` 设置为 `127.0.0.1`；
+- 之后的 `PROXY_HTTP` 和 `PROXY_SOCKS5` 分别是我们代理的 HTTP 协议地址和 SOCKS5 地址；
+- 函数 `proxy_git()` 让我们直接设置 Git 自己的代理和 ssh 登录 GitHub 的代理；
+- 后续的 `set_proxy()` 和 `unset_proxy()` 就分别是设定 Git 代理和环境变量，以及取消 Git 代理、删除环境变量；
 
-Git 是目前版本控制工具的典范、代表，如果你使用 GitHub，那么我相信你已经非常了解 Git 及其使用原理和方法了。
-
-使用 Ubuntu 中的 apt 安装 Git：
-
-```bash
-sudo apt install git
-```
-
-配置 Git 使用代理：
-
-```bash
-git config --global http.proxy 'http://127.0.0.1:{端口号}'
-git config --global https.proxy 'https://127.0.0.1:{端口号}'
-```
-
-取消 Git 代理：
-
-```bash
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-```
-
-为了方便使用，可以将上面两个命令设置为 alias，即别名。在 `~/.zshrc` 中添加如下内容：
-
-```bash
-alias fuckgit="git config --global http.proxy 'socks5://127.0.0.1:1080' && git config --global https.proxy 'socks5://127.0.0.1:1080'"
-alias unfuckgit="git config --global --unset http.proxy && git config --global --unset https.proxy"
-```
-
-然后执行 `source ~/.zshrc` 加载配置文件。
+最后，我们使用命令 `proxy` 和 `deproxy` 即可开启、关闭 WSL 中工具使用代理的功能。
 
 ## 远程登录
 
 ### ssh
 
-ssh — Secure Shell 工具是与远程服务器沟通的渠道。我们不仅可以使用 ssh 登录远程服务器，还可以利用 ssh 在不输入 GitHub 账户密码的情况下将 Git 仓库内容推送至 GitHub 远程仓库。
-
-#### ssh 登录 GitHub
-
-下面配置与 GitHub 连接的 SSH 密钥：^[[Generating a new SSH key and adding it to the ssh-agent - GitHub Help](https://help.github.com/cn/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)]
-
-- 在 WSL 下生成 SSH 公钥 — 私钥对（将邮箱替换为你的邮箱），此时生成的 SSH 密钥默认位于 `~/.ssh` 路径下，公钥为 `id_rsa.pub`，私钥为 `id_rsa`：
-
-```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
-```
-
-- 打开 ssh-agent 使之在后台运行：
-
-```bash
-eval "$(ssh-agent -s)"
-```
-
-- 将私钥添加到 ssh-agent 之中：
-
-```bash
-ssh-add ~/.ssh/id_rsa
-```
-
-- 查看公钥并将之复制到剪贴板：
-
-```bash
-# 查看公钥内容
-cat ~/.ssh/id_rsa.pub
-
-# 将公钥复制到剪贴板
-cat ~/.ssh/id_rsa.pub | clip.exe
-```
-
-- 将复制好的公钥添加到 GitHub 账户密钥里面^[[Adding a new SSH key to your GitHub account - GitHub Help](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)]
-
-#### ssh 登录远程服务器
+ssh — Secure Shell 工具是与远程服务器沟通的渠道。我们不仅可以使用 ssh 登录远程服务器，还可以利用 ssh 在不输入 GitHub 账户密码的情况下将 Git 仓库内容推送至 GitHub 远程仓库。上面我们已经配置好了 ssh 登录 GitHub 的功能，接下来我们配置在 WSL 中登录远程服务器的功能。
 
 一般远程服务器都会为你提供上传 SSH 密钥的功能，或者提供生成 SSH 密钥对供你下载使用的功能。这里以阿里云服务器为例子，阿里云为我提供了一个 `.pem` 的密钥，这一密钥就是我们的「私钥」，在执行 ssh 登录的时候，我们将以命令行参数的形式用「密钥」进行身份认证：
 
 - 一般情况下，我们会将 SSH 密钥（公钥和私钥）存储在 `~/.ssh` 目录下。为了安全且符合 ssh 工具标准，我们需要为密钥先赋予正确的权限：
 
-```bash
-# 赋予只读权限
-sudo chmod 400 ~/.ssh/{SSH_KEY_FILENAME}.pem
-```
+  ```bash
+  # 赋予只读权限
+  sudo chmod 400 ~/.ssh/{SSH_KEY_FILENAME}.pem
+  ```
 
 - 之后，登录服务器就只需要执行类似下面的命令：
 
-```bash
-# 以 {USERNAME} 的身份登录地址（或 IP）位于 {HOST_IP_OR_URL} 的远程服务器
-ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem {USERNAME}@{HOST_IP_OR_URL}
-```
+  ```bash
+  # 以 {USERNAME} 的身份登录地址（或 IP）位于 {HOST_IP_OR_URL} 的远程服务器
+  ssh -i ~/.ssh/{SSH_KEY_FILENAME}.pem {USERNAME}@{HOST_IP_OR_URL}
+  ```
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-1.png)
+  ![](https://cdn.spencer.felinae98.cn/github/2020/09/200902_220808-1.png)
 
 另外，我们可以配置将 Windows 侧和 WSL 2 的 SSH 密钥共享使用。详见：[Sharing SSH keys between Windows and WSL 2 - Windows Command Line](https://devblogs.microsoft.com/commandline/sharing-ssh-keys-between-windows-and-wsl-2/)
 
