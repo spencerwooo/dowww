@@ -24,6 +24,36 @@ n-install（也就是上面的命令）默认会自动帮我们将 `n` 的重要
 
 > 更多关于 n-install 的使用，请参考 [n-install 的 README 文档](https://github.com/mklement0/n-install)。
 
+使用 n-install 安装好 `n` 以及 Node.js 之后，我们可以通过下面的命令进行验证：
+
+```bash
+# 验证 n 的安装情况
+$ n --version
+6.7.0
+
+# 验证 Node.js 的安装情况
+$ node --version
+v12.18.3
+
+# 验证 npm 的安装情况
+$ npm --version
+6.14.6
+```
+
+另外，我们也可以用 `n` 下载其他版本的 Node.js：
+
+```bash
+# 下载最新的 LTS 版本 Node.js
+$ n lts
+
+# 下载特定版本的 Node.js
+$ n 10.16.0
+```
+
+直接运行命令 `n` 也可以进入 interactive 界面，让我们选择使用某个版本的 Node.js。
+
+> 有关使用 `n` 下载安装与使用 Node.js 的命令和方法，请参考 [n 的官方 README 文档](https://github.com/tj/n)。
+
 ## 配置 Node.js 包管理工具
 
 接下来，我们安装 [yarn](https://yarnpkg.com/)，推荐大家安装使用 yarn：这个更加现代、科学的 Node.js 包管理工具。刚刚下载的 Node.js 中包含有 npm，因此我们可以直接用 npm 来安装 yarn：
@@ -40,7 +70,7 @@ $ yarn --version
 1.22.4
 ```
 
-yarn 在 2.0+ 版本中经历了重大的变化，因此如果我们需要对某个项目开启 yarn 的 2.0 版本，需要使用下面的命令手动开启：
+此时我们安装的是 yarn 1.0 版本，也就是比较传统的管理安装 Node.js 依赖的工具，跟 npm 比较类似。yarn 在 2.0+ 版本中经历了重大的变化，因此如果我们需要对某个项目开启 yarn 的 2.0 版本，需要使用下面的命令手动开启：
 
 ```bash
 $ yarn set version berry
