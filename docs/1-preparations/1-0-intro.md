@@ -22,9 +22,9 @@ WSL 的全称叫做：Windows Subsystem for Linux，即「适用于 Linux 的 Wi
 
 最为重要的是，利用 WSL 我们可以直接在 **不抛弃 Windows 全部优秀工具的前提下**，**在没有因为虚拟机开销而牺牲太多性能的情况下**，直接运行使用完整的 Linux 系统。
 
-在[前言](/#前言)中我提到了：
+在 [README 的前言](https://github.com/spencerwooo/dowww#%E5%89%8D%E8%A8%80)中，我提到了：
 
-> Windows 给 **编程初学者** 带来了很大的困难。比如 **缺乏好用的包管理系统**、**终端环境难看难用** 和 **环境变量不易配置** 等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
+> Windows 给编程初学者带来了很大的困难。比如缺乏好用的包管理系统、终端环境难看难用、环境变量不易配置等等，这些都让 Windows 在开发体验上难以匹敌 Linux 甚至 macOS。
 
 WSL 的超能力，就是为我们扫清了 Windows 对开发人员不友好的障碍，让我们在 Windows 上同样享受 Linux 等 Unix 风格系统的开发特色。
 

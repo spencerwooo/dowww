@@ -236,11 +236,10 @@ $ echo "test" | gpg --clear-sign --debug-all
 - 让 WSL 中的 GPG 使用 Windows 的 Pinentry 窗口程序：如果我们在 Windows 中也安装了 GPG 程序（可以通过 scoop 安装），那么我们应该在 GPG 的安装目录下找到叫做 `pinentry-basic.exe` 的程序。是的，**WSL 中安装的 GPG 同样可以使用 Windows 中的 Pinentry 来输入密码**！我们在 WSL 里面，在前面提到的 GPG 的 Home 目录（默认 `~/.gnupg`）中创建名为 `gpg-agent.conf` 的文件，并在其中写入：
 
   ```
-  pinentry-program /mnt/c/Users/Spencer/scoop/apps/gpg/current/bin/pinentry-basic.exe
+  pinentry-program /mnt/c/<PATH_TO_GPG_INSTALLATION_DIRECTORY>/pinentry-basic.exe
   ```
 
-  这样一来，WSL 中的 GPG 每次进行签名，都会调用 Windows 的 Pinentry GUI，从而避免了我们 WSL 没有图形界面的尴尬局面，这一解决方法也能够避免 VS Code 在 Remote-WSL 环境下直接进行 Git commit 时由于无法开启命令行界面导致无法启动 Pinentry 的问题。
-
+  其中 `PATH_TO_GPG_INSTALLATION_DIRECTORY` 就是 GPG 工具在 Windows 上的安装目录，这样设置后，WSL 中的 GPG 每次进行签名，都会调用 Windows 的 Pinentry GUI，从而避免了我们 WSL 没有图形界面的尴尬局面，这一解决方法也能够避免 VS Code 在 Remote-WSL 环境下直接进行 Git commit 时由于无法开启命令行界面导致无法启动 Pinentry 的问题。
 
 另外，在使用 Git 进行 commit 的时候，如果出现类似 Error: “signing failed: No secret key” 的报错信息，可能是 Git 使用的 GPG 命令行工具跟我们生成密钥使用的不一致。我们可以首先用 `which gpg` 来找到我们所使用的 GPG 工具的具体地址，比如 `/usr/bin/gpg`，之后告诉 Git 使用这一 GPG binary 即可：
 
