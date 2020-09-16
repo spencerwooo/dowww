@@ -10,12 +10,17 @@
 由于 WSL 2 实际上是一个 Linux 内核运行在 Hyper-V 虚拟机中，因此 WSL 2 目前并不能和 Windows 共享 localhost（也就是下文中涉及到的 `127.0.0.1`）。
 :::
 
-目前，WSL 2 在和本机 Windows 互相访问的时候，有时候需要我们手动使用 WSL 虚拟机映射出来的 IP 地址才能正确进行代理配置、网络访问等。为了方便下文表述，我们在文档中使用 `<WSL IP 地址>` 来表示你的 WSL 侧的 IP 地址：
+目前，WSL 2 在和本机 Windows 互相访问的时候，有这样的两种情况：
 
-- 如果你正在使用 WSL 2 环境进行开发工作，**那么下文提到的所有 `<WSL IP 地址>` 都是需要我们用下面介绍的方法手动获取的 WSL 2 的 IP 地址。**
-- 如果你仍使用 WSL 1，那么下面的配置中的 `<WSL IP 地址>` 即为 `127.0.0.1`。
+- 从 Windows 主机一侧访问 WSL 中的服务：比如在 WSL 中运行一个 HTTP 服务器并监听 3000 端口，在 Windows 侧用浏览器打开 `http://<WSL IP 地址>:3000` 这一 URL 来访问这一 HTTP 服务器；
+- 从 WSL 一侧访问 Windows 中部署的服务：比如在 Windows 中运行 HTTP / SOCKS5 代理，并让 WSL 中的网络请求也经由 Windows 中启动的代理；
 
-你可以使用下面的命令来获取当前 WSL 2 的 IP 地址：
+其中，前者 WSL 官方已经进行了完善的支持，我们可以直接在 Windows 中通过通用的 `127.0.0.1` 来访问 WSL 中启动的服务。但是对于后者来说，有时候需要我们手动在 WSL 中获取 Windows 主机的 IP 地址才能正确进行代理配置、网络访问等。为了方便下文表述，我们在文档中使用 `<Windows 主机的 IP 地址>` 来表示你在 WSL 中访问 Windows 主机的 IP 地址：
+
+- 如果你正在使用 WSL 2 环境进行开发工作，**那么下文提到的所有 `<Windows 主机的 IP 地址>` 都是需要我们用下面介绍的方法手动获取的 Windows 主机 IP 地址。**
+- 如果你仍使用 WSL 1，那么下面的配置中的 `<Windows 主机的 IP 地址>` 即为 `127.0.0.1`。
+
+你可以使用下面的命令来在 WSL 中获取 Windows 主机的 IP 地址：
 
 > 来自：[WSL2 的一些网络访问问题 - 获取主机的 IP](https://lengthmin.me/posts/wsl2-network-tricks/#%E8%8E%B7%E5%8F%96%E4%B8%BB%E6%9C%BA%E7%9A%84-ip)。
 
@@ -23,10 +28,14 @@
 # 一种方法
 $ ip route | grep default | awk '{print $3}'
 # 或者另一种方法
-$ cat /etc/resolv.conf | grep nameserver | awk '{ print $2 }'
+$ cat /etc/resolv.conf | grep nameserver | awk '{print $2}'
 ```
 
-![](https://cdn.spencer.felinae98.cn/github/2020/09/200903_131940.png)
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200916_094051.png)
+
+另外，[@implic](https://github.com/implic) 发现 `<主机名>.mshome.net` 这一特殊的 URL 可以用来在 WSL 2 中访问 Windows 主机（其中的 `<主机名>` 即为「Windows 设置 » 系统 » 关于」中所设置的设备名称的小写）。
+
+![](https://cdn.spencer.felinae98.cn/github/2020/09/200916_094137.png)
 
 ## 版本控制
 
@@ -49,7 +58,7 @@ $ sudo apt install git
 配置 Git 访问 GitHub 时使用代理：
 
 ```bash
-$ git config --global http.https://github.com.proxy 'http://<WSL IP 地址>:<代理端口>'
+$ git config --global http.https://github.com.proxy 'http://<Windows 主机的 IP 地址>:<代理端口>'
 ```
 
 取消 Git 代理：
@@ -108,14 +117,14 @@ ssh 登录 GitHub 时：
 
 - 我们的主机名称 Host 为 `github.com`；
 - 我们的 ssh 用户 User 为 `git`；
-- 我们需要用这一命令让 ssh 登录过程经由代理：`nc -X 5 -x <WSL IP 地址>:<代理端口> %h %p`；
+- 我们需要用这一命令让 ssh 登录过程经由代理：`nc -X 5 -x <Windows 主机的 IP 地址>:<代理端口> %h %p`；
 
 我们将以上配置用如下的语法写入 `~/.ssh/config`：
 
 ```
 Host github.com
   User git
-  ProxyCommand nc -X 5 -x <WSL IP 地址>:<代理端口> %h %p
+  ProxyCommand nc -X 5 -x <Windows 主机的 IP 地址>:<代理端口> %h %p
 ```
 
 之后我们即可通过代理登录 GitHub 了。我们可以通过命令 `ssh -T git@github.com` 来测试我们是否能够登录成功。
@@ -256,8 +265,8 @@ $ git config --global gpg.program /usr/bin/gpg
 使用下面的命令将当前 session（会话）的代理进行配置：
 
 ```bash
-$ export http_proxy=http://<WSL IP 地址>:<代理端口>
-$ export https_proxy=http://<WSL IP 地址>:<代理端口>
+$ export http_proxy=http://<Windows 主机的 IP 地址>:<代理端口>
+$ export https_proxy=http://<Windows 主机的 IP 地址>:<代理端口>
 ```
 
 使用下面的命令取消代理：
@@ -281,10 +290,10 @@ $ curl cip.cc
 不难发现，上面的配置非常繁琐，对于不同的工具需要不同的命令手段，使用 WSL 2 还需要手动获取 IP，为了自动化整个过程，实现一行命令设置代理，我们可以在 `~/.zshrc` 或你使用的 Shell 的配置文件中添加这样的内容，来自动化配置代理：
 
 ```bash
-# Fetch WSL 2 ip address
-WSL_IP=$(ip route | grep default | awk '{print $3}')
-PROXY_HTTP="http://${WSL_IP}:<代理端口>"
-PROXY_SOCKS5="${WSL_IP}:<代理端口>"
+# Fetch Windows ip address inside WSL environment
+WINDOWS_IP=$(ip route | grep default | awk '{print $3}')
+PROXY_HTTP="http://${WINDOWS_IP}:<代理端口>"
+PROXY_SOCKS5="${WINDOWS_IP}:<代理端口>"
 
 # Git & SSH for Git proxy
 proxy_git () {
@@ -320,7 +329,7 @@ alias deproxy=unset_proxy
 
 其中：
 
-- 第一行 `WSL_IP=$(ip route | grep default | awk '{print $3}')` 让我们使用 WSL 2 时可以自动获取最新的 WSL IP 地址，WSL 1 可以直接将 `WSL_IP` 设置为 `127.0.0.1`；
+- 第一行 `WINDOWS_IP=$(ip route | grep default | awk '{print $3}')` 让我们使用 WSL 2 时可以自动获取最新的 WSL IP 地址，WSL 1 可以直接将 `WINDOWS_IP` 设置为 `127.0.0.1`；
 - 之后的 `PROXY_HTTP` 和 `PROXY_SOCKS5` 分别是我们代理的 HTTP 协议地址和 SOCKS5 地址；
 - 函数 `proxy_git()` 让我们直接设置 Git 自己的代理和 ssh 登录 GitHub 的代理；
 - 后续的 `set_proxy()` 和 `unset_proxy()` 就分别是设定 Git 代理和环境变量，以及取消 Git 代理、删除环境变量；
