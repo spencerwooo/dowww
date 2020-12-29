@@ -41,7 +41,7 @@ $ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem
 
 官方支持的 Linux 发行版有：
 
-- Ubuntu: [最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)，[16.04 LTS](https://www.microsoft.com/store/productId/9PJN388HP8C9) 和 [18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q)
+- Ubuntu: [最新版](https://www.microsoft.com/store/productId/9NBLGGH4MSV6)，[16.04 LTS](https://www.microsoft.com/store/productId/9PJN388HP8C9)，[18.04 LTS](https://www.microsoft.com/store/productId/9N9TNGVNDL3Q)，和 [20.04 LTS](https://www.microsoft.com/p/ubuntu-2004-lts/9n6svws3rx71)
 - OpenSUSE Leap: [42](https://www.microsoft.com/store/productId/9NJVJTS82TJX), [15.0](https://www.microsoft.com/store/productId/9N1TB6FPVJ8C)
 - SUSE Linux Enterprise Server: [12](https://www.microsoft.com/store/productId/9P32MWBH6CNS), [15](https://www.microsoft.com/store/productId/9PMW35D7FNLX)
 - [Debian GNU/Linux](https://www.microsoft.com/store/productId/9MSVKQC78PK6)

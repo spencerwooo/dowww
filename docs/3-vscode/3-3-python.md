@@ -13,17 +13,14 @@
 - 使用 APT 安装最新版本的 Python 3：
 
   ```bash
-  # 安装最新版本的 Python 3（大概率已经自带）
-  $ sudo apt install python3
-
-  # 安装执行版本的 Python（比如 Python 3.8）
-  $ sudo apt install python3.8
+  # 安装最新版本的 Python 3
+  $ sudo apt install python-is-python3
   ```
 
 - 安装 Python 包管理 `pip` 工具：
 
   ```bash
-  $ sudo apt install python-pip
+  $ sudo apt install python3-pip
   ```
 
 - 更新 `pip` 包管理源为清华大学 TUNA 镜像源：^[[pypi 镜像使用帮助 - TUNA](https://mirror.tuna.tsinghua.edu.cn/help/pypi/)]

@@ -1,4 +1,4 @@
-# .Net Core <a href="https://github.com/dhssingle"><Badge text="@dhssingle"/></a>
+# .NET Core <a href="https://github.com/dhssingle"><Badge text="@dhssingle"/></a>
 
 :::callout 🥦 前导知识
 [.NET Core](https://docs.microsoft.com/zh-cn/dotnet/core/about) 是开放源代码通用开发平台，由 Microsoft 和 .NET 社区在 [GitHub](https://github.com/dotnet/core) 上共同维护。它跨平台（支持 Windows、macOS 和 Linux），并且可用于生成设备、云和 IoT 应用程序。
@@ -8,13 +8,16 @@
 
 下载 Visual Studio Code 官方 C# 插件：[C# for Visual Studio Code (powered by OmniSharp).](https://marketplace.visualstudio.com/items?itemName=ms-vscode.csharp).
 
-## 在 WSL 侧安装 .Net Core
+## 在 WSL 侧安装 .NET Core
 
-以下内容以 Ubuntu 18.04 为例，其他发行版请参考：[官方文档](https://dotnet.microsoft.com/download/linux-package-manager/rhel/sdk-current)。
+以下内容以 Ubuntu 20.04 为例，其他发行版请参考：[官方文档](https://dotnet.microsoft.com/download/linux-package-manager/rhel/sdk-current)。
 
 ```bash
-$ wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
+# 下载 .NET 安装包
+$ wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
 $ sudo dpkg -i packages-microsoft-prod.deb
+
+# 使用 APT 下载安装合适的 .NET SDK
 $ sudo add-apt-repository universe
 $ sudo apt install apt-transport-https
 $ sudo apt update
@@ -28,7 +31,7 @@ $ sudo apt install unzip
 $ curl -sSL https://aka.ms/getvsdbgsh | bash /dev/stdin -v latest -l ~/vsdbg
 ```
 
-## 调试 .Net Core 程序
+## 调试 .NET Core 程序
 
 - 配置 `.vscode/launch.json`：
 

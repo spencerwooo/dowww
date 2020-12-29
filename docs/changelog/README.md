@@ -130,7 +130,7 @@ sidebar: auto
 
 ### Add
 
-- 新增了 [.Net Core 的配置](https://dowww.spencerwoo.com/3-VSCode/3-7-DotNetCore.html)，[PR #21](https://github.com/spencerwooo/dowww/pull/21)。
+- 新增了 [.NET Core 的配置](https://dowww.spencerwoo.com/3-VSCode/3-7-DotNetCore.html)，[PR #21](https://github.com/spencerwooo/dowww/pull/21)。
 
 ## [0.0.6] - 2019-1-24
 
