@@ -56,8 +56,18 @@ $ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem
 
 - [Arch Linux](https://github.com/yuk7/ArchWSL)
 - [Alpine Linux](https://github.com/yuk7/AlpineWSL)
+- [Fedora](https://github.com/yosukes-dev/FedoraWSL)
+- [Manjaro Linux](https://github.com/sileshn/ManjaroWSL)
 
 第三方支持的发行版需要按照其官方使用说明进行安装。有需要的同学请自行查看。
+
+> 如果想要获取更多的社区支持的 WSL，请前往 [Awesome-WSL](https://github.com/sirredbeard/Awesome-WSL#unofficial-distributions)。
+
+### 给 WSL 导入自己的发行版
+
+如果你想要的 Linux 发行版既没有官方支持，也没有社区支持，你还可以自己导入想要的发行版。
+
+详见微软官方文档 [导入要用于 WSL 的任何 Linux 分发版](https://docs.microsoft.com/zh-cn/windows/wsl/use-custom-distro)
 
 ## WSL 的安装
 
