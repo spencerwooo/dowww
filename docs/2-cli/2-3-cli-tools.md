@@ -260,6 +260,8 @@ $ git config --global gpg.program /usr/bin/gpg
 
 上面介绍的方法仅能对 Git 开启代理访问功能，如果我们希望 WSL 中的工具均能经由代理，那么需要通过环境变量 `http_proxy` 和 `https_proxy` 进行配置。
 
+> 注意：本机的代理需要开启 `Allow LAN`，否则 WSL2 中的代理会被 refuse。
+
 ### 基础配置
 
 使用下面的命令将当前 session（会话）的代理进行配置：
